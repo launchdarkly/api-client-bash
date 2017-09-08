@@ -10,7 +10,7 @@
 # !
 # ! Based on: https://github.com/Valodim/zsh-curl-completion/blob/master/_curl
 # !
-# ! Generated on: 2017-09-08T15:45:33.882-07:00
+# ! Generated on: 2017-09-08T16:04:30.225-07:00
 # !
 # !
 # ! Installation:
@@ -297,13 +297,279 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-
+            "getAuditLogEntries[Fetch a list of all webhooks]" \
+            "getAuditLogEntry[Get a webhook by ID]"             "deleteEnvironment[Delete an environment by ID]" \
+            "getEnvironment[Get an environment by key.]" \
+            "patchEnvironment[Modify an environment by ID]" \
+            "postEnvironment[Create an environment]"             "deleteFeatureFlag[Delete a feature flag by ID]" \
+            "getFeatureFlag[Get a single feature flag by key.]" \
+            "getFeatureFlagStatus[Get a list of statuses for all feature flags]" \
+            "getFeatureFlagStatuses[Get a list of statuses for all feature flags]" \
+            "getFeatureFlags[Get a list of all features in the given project.]" \
+            "patchFeatureFlag[Modify a feature flag by ID]" \
+            "postFeatureFlag[Create a feature flag]"             "deleteProject[Delete a project by ID]" \
+            "getProject[Get a project by key.]" \
+            "getProjects[Returns a list of all projects in the account.]" \
+            "patchProject[Modify a project by ID]" \
+            "postProject[Create a project]"             "getRoot[Get the root resource]"             "getUserFlagSetting[Get a user by key.]" \
+            "getUserFlagSettings[Lists the current flag settings for a given user.]" \
+            "putFlagSetting[Specifically enable or disable a feature flag for a user based on their key.]"             "deleteUser[Delete a user by ID]" \
+            "getSearchUsers[Search users in LaunchDarkly based on their last active date, or a search query.]" \
+            "getUser[Get a user by key.]" \
+            "getUsers[List all users in the environment.]"             "deleteWebhook[Delete a webhook by ID]" \
+            "getWebhook[Get a webhook by ID]" \
+            "getWebhooks[Fetch a list of all webhooks]" \
+            "patchWebhook[Modify a webhook by ID]" \
+            "postWebhook[Create a webhook]" 
     _arguments "(--help)--help[Print information about operation]"
 
     ret=0
     ;;
   args)
     case $line[1] in
+      getAuditLogEntries)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getAuditLogEntry)
+        local -a _op_arguments
+        _op_arguments=(
+          "resourceId=:[PATH] The resource ID"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      deleteEnvironment)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+"environmentKey=:[PATH] The environment key"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getEnvironment)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+"environmentKey=:[PATH] The environment key"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      patchEnvironment)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+"environmentKey=:[PATH] The environment key"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      postEnvironment)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      deleteFeatureFlag)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+"featureFlagKey=:[PATH] The feature flags key"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getFeatureFlag)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+"featureFlagKey=:[PATH] The feature flags key"
+          "environmentKeyQuery=:[QUERY] The environment key"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getFeatureFlagStatus)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+"environmentKey=:[PATH] The environment key"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getFeatureFlagStatuses)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+"environmentKey=:[PATH] The environment key"
+"featureFlagKey=:[PATH] The feature flags key"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getFeatureFlags)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+          "environmentKeyQuery=:[QUERY] The environment key"
+"tag=:[QUERY] Filter by tag"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      patchFeatureFlag)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+"featureFlagKey=:[PATH] The feature flags key"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      postFeatureFlag)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+"featureFlagKey=:[PATH] The feature flags key"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      deleteProject)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getProject)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getProjects)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      patchProject)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      postProject)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getRoot)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getUserFlagSetting)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+"environmentKey=:[PATH] The environment key"
+"userKey=:[PATH] The user&#39;s key"
+"featureFlagKey=:[PATH] The feature flags key"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getUserFlagSettings)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+"environmentKey=:[PATH] The environment key"
+"userKey=:[PATH] The user&#39;s key"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      putFlagSetting)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+"environmentKey=:[PATH] The environment key"
+"userKey=:[PATH] The user&#39;s key"
+"featureFlagKey=:[PATH] The feature flags key"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      deleteUser)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+"environmentKey=:[PATH] The environment key"
+"userKey=:[PATH] The user&#39;s key"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getSearchUsers)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+"environmentKey=:[PATH] The environment key"
+          "q=:[QUERY] Search query"
+"limit=:[QUERY] Pagination limit"
+"offset=:[QUERY] Specifies the first item to return in the collection"
+"after=:[QUERY] A unix epoch time in milliseconds specifying the maximum last time a user requested a feature flag"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getUser)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+"environmentKey=:[PATH] The environment key"
+"userKey=:[PATH] The user&#39;s key"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getUsers)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key"
+"environmentKey=:[PATH] The environment key"
+          "limit=:[QUERY] Pagination limit"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      deleteWebhook)
+        local -a _op_arguments
+        _op_arguments=(
+          "resourceId=:[PATH] The resource ID"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getWebhook)
+        local -a _op_arguments
+        _op_arguments=(
+          "resourceId=:[PATH] The resource ID"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getWebhooks)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      patchWebhook)
+        local -a _op_arguments
+        _op_arguments=(
+          "resourceId=:[PATH] The resource ID"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      postWebhook)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
     esac
     ;;
 

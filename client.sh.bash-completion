@@ -8,7 +8,7 @@
 # ! swagger-codegen (https://github.com/swagger-api/swagger-codegen)
 # ! FROM SWAGGER SPECIFICATION IN JSON.
 # !
-# ! Generated on: 2017-09-08T15:45:33.882-07:00
+# ! Generated on: 2017-09-08T16:04:30.225-07:00
 # !
 # !
 # ! System wide installation:
@@ -69,10 +69,72 @@ _()
     # The list of available operation in the REST service
     # It's modelled as an associative array for efficient key lookup
     declare -A operations
+    operations["getAuditLogEntries"]=1
+    operations["getAuditLogEntry"]=1
+    operations["deleteEnvironment"]=1
+    operations["getEnvironment"]=1
+    operations["patchEnvironment"]=1
+    operations["postEnvironment"]=1
+    operations["deleteFeatureFlag"]=1
+    operations["getFeatureFlag"]=1
+    operations["getFeatureFlagStatus"]=1
+    operations["getFeatureFlagStatuses"]=1
+    operations["getFeatureFlags"]=1
+    operations["patchFeatureFlag"]=1
+    operations["postFeatureFlag"]=1
+    operations["deleteProject"]=1
+    operations["getProject"]=1
+    operations["getProjects"]=1
+    operations["patchProject"]=1
+    operations["postProject"]=1
+    operations["getRoot"]=1
+    operations["getUserFlagSetting"]=1
+    operations["getUserFlagSettings"]=1
+    operations["putFlagSetting"]=1
+    operations["deleteUser"]=1
+    operations["getSearchUsers"]=1
+    operations["getUser"]=1
+    operations["getUsers"]=1
+    operations["deleteWebhook"]=1
+    operations["getWebhook"]=1
+    operations["getWebhooks"]=1
+    operations["patchWebhook"]=1
+    operations["postWebhook"]=1
 
     # An associative array of operations to their parameters
     # Only include path, query and header parameters
     declare -A operation_parameters
+    operation_parameters["getAuditLogEntries"]=""
+    operation_parameters["getAuditLogEntry"]="resourceId= "
+    operation_parameters["deleteEnvironment"]="projectKey= environmentKey= "
+    operation_parameters["getEnvironment"]="projectKey= environmentKey= "
+    operation_parameters["patchEnvironment"]="projectKey= environmentKey= "
+    operation_parameters["postEnvironment"]="projectKey= "
+    operation_parameters["deleteFeatureFlag"]="projectKey= featureFlagKey= "
+    operation_parameters["getFeatureFlag"]="projectKey= featureFlagKey= environmentKeyQuery= "
+    operation_parameters["getFeatureFlagStatus"]="projectKey= environmentKey= "
+    operation_parameters["getFeatureFlagStatuses"]="projectKey= environmentKey= featureFlagKey= "
+    operation_parameters["getFeatureFlags"]="projectKey= environmentKeyQuery= tag= "
+    operation_parameters["patchFeatureFlag"]="projectKey= featureFlagKey= "
+    operation_parameters["postFeatureFlag"]="projectKey= featureFlagKey= "
+    operation_parameters["deleteProject"]="projectKey= "
+    operation_parameters["getProject"]="projectKey= "
+    operation_parameters["getProjects"]=""
+    operation_parameters["patchProject"]="projectKey= "
+    operation_parameters["postProject"]=""
+    operation_parameters["getRoot"]=""
+    operation_parameters["getUserFlagSetting"]="projectKey= environmentKey= userKey= featureFlagKey= "
+    operation_parameters["getUserFlagSettings"]="projectKey= environmentKey= userKey= "
+    operation_parameters["putFlagSetting"]="projectKey= environmentKey= userKey= featureFlagKey= "
+    operation_parameters["deleteUser"]="projectKey= environmentKey= userKey= "
+    operation_parameters["getSearchUsers"]="projectKey= environmentKey= q= limit= offset= after= "
+    operation_parameters["getUser"]="projectKey= environmentKey= userKey= "
+    operation_parameters["getUsers"]="projectKey= environmentKey= limit= "
+    operation_parameters["deleteWebhook"]="resourceId= "
+    operation_parameters["getWebhook"]="resourceId= "
+    operation_parameters["getWebhooks"]=""
+    operation_parameters["patchWebhook"]="resourceId= "
+    operation_parameters["postWebhook"]=""
 
     # An associative array of possible values for enum parameters
     declare -A operation_parameters_enum_values
