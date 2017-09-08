@@ -10,7 +10,7 @@
 # !
 # ! Based on: https://github.com/Valodim/zsh-curl-completion/blob/master/_curl
 # !
-# ! Generated on: 2017-09-08T14:58:38.076-07:00
+# ! Generated on: 2017-09-08T15:45:33.882-07:00
 # !
 # !
 # ! Installation:
@@ -297,56 +297,13 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "getRoot[Get the root resource]"             "deleteWebhook[Delete a webhook by ID]" \
-            "getWebhook[Get a webhook by ID]" \
-            "getWebhooks[Fetch a list of all webhooks]" \
-            "patchWebhook[Modify a webhook by ID]" \
-            "postWebhook[Create a webhook]" 
+
     _arguments "(--help)--help[Print information about operation]"
 
     ret=0
     ;;
   args)
     case $line[1] in
-      getRoot)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      deleteWebhook)
-        local -a _op_arguments
-        _op_arguments=(
-          "webhookId=:[PATH] The webhook ID"
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getWebhook)
-        local -a _op_arguments
-        _op_arguments=(
-          "webhookId=:[PATH] The webhook ID"
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getWebhooks)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      patchWebhook)
-        local -a _op_arguments
-        _op_arguments=(
-          "webhookId=:[PATH] The webhook ID"
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      postWebhook)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
     esac
     ;;
 

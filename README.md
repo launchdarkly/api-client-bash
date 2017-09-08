@@ -1,7 +1,7 @@
-# LaunchDarkly REST API Bash client
+#  Bash client
 
 ## Overview
-This is a Bash client script for accessing LaunchDarkly REST API service.
+This is a Bash client script for accessing  service.
 
 The script uses  cURL underneath for making all REST calls.
 
