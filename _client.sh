@@ -10,7 +10,7 @@
 # !
 # ! Based on: https://github.com/Valodim/zsh-curl-completion/blob/master/_curl
 # !
-# ! Generated on: 2017-09-08T16:04:30.225-07:00
+# ! Generated on: 2017-10-02T17:24:45.410-05:00
 # !
 # !
 # ! Installation:
@@ -343,7 +343,7 @@ case $state in
       deleteEnvironment)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "environmentKey=:[PATH] The environment key"
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
@@ -351,7 +351,7 @@ case $state in
       getEnvironment)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "environmentKey=:[PATH] The environment key"
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
@@ -359,7 +359,7 @@ case $state in
       patchEnvironment)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "environmentKey=:[PATH] The environment key"
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
@@ -367,23 +367,23 @@ case $state in
       postEnvironment)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       deleteFeatureFlag)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
-"featureFlagKey=:[PATH] The feature flags key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       getFeatureFlag)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
-"featureFlagKey=:[PATH] The feature flags key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
           "environmentKeyQuery=:[QUERY] The environment key"
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
@@ -391,7 +391,7 @@ case $state in
       getFeatureFlagStatus)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "environmentKey=:[PATH] The environment key"
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
@@ -399,48 +399,47 @@ case $state in
       getFeatureFlagStatuses)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "environmentKey=:[PATH] The environment key"
-"featureFlagKey=:[PATH] The feature flags key"
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       getFeatureFlags)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
           "environmentKeyQuery=:[QUERY] The environment key"
-"tag=:[QUERY] Filter by tag"
+"tag=:[QUERY] Filter by tag. A tag can be used to group flags across projects."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       patchFeatureFlag)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
-"featureFlagKey=:[PATH] The feature flags key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       postFeatureFlag)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
-"featureFlagKey=:[PATH] The feature flags key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       deleteProject)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       getProject)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -453,7 +452,7 @@ case $state in
       patchProject)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -472,17 +471,17 @@ case $state in
       getUserFlagSetting)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "environmentKey=:[PATH] The environment key"
 "userKey=:[PATH] The user&#39;s key"
-"featureFlagKey=:[PATH] The feature flags key"
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       getUserFlagSettings)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "environmentKey=:[PATH] The environment key"
 "userKey=:[PATH] The user&#39;s key"
                     )
@@ -491,17 +490,17 @@ case $state in
       putFlagSetting)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "environmentKey=:[PATH] The environment key"
 "userKey=:[PATH] The user&#39;s key"
-"featureFlagKey=:[PATH] The feature flags key"
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       deleteUser)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "environmentKey=:[PATH] The environment key"
 "userKey=:[PATH] The user&#39;s key"
                     )
@@ -510,7 +509,7 @@ case $state in
       getSearchUsers)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "environmentKey=:[PATH] The environment key"
           "q=:[QUERY] Search query"
 "limit=:[QUERY] Pagination limit"
@@ -522,7 +521,7 @@ case $state in
       getUser)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "environmentKey=:[PATH] The environment key"
 "userKey=:[PATH] The user&#39;s key"
                     )
@@ -531,7 +530,7 @@ case $state in
       getUsers)
         local -a _op_arguments
         _op_arguments=(
-          "projectKey=:[PATH] The project key"
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "environmentKey=:[PATH] The environment key"
           "limit=:[QUERY] Pagination limit"
           )

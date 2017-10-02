@@ -8,7 +8,7 @@
 # ! swagger-codegen (https://github.com/swagger-api/swagger-codegen)
 # ! FROM SWAGGER SPECIFICATION IN JSON.
 # !
-# ! Generated on: 2017-09-08T16:04:30.225-07:00
+# ! Generated on: 2017-10-02T17:24:45.410-05:00
 # !
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -94,7 +94,6 @@ operation_parameters_minimum_occurences["patchFeatureFlag:::projectKey"]=1
 operation_parameters_minimum_occurences["patchFeatureFlag:::featureFlagKey"]=1
 operation_parameters_minimum_occurences["patchFeatureFlag:::patchDelta"]=1
 operation_parameters_minimum_occurences["postFeatureFlag:::projectKey"]=1
-operation_parameters_minimum_occurences["postFeatureFlag:::featureFlagKey"]=1
 operation_parameters_minimum_occurences["postFeatureFlag:::featureFlagBody"]=1
 operation_parameters_minimum_occurences["deleteProject:::projectKey"]=1
 operation_parameters_minimum_occurences["getProject:::projectKey"]=1
@@ -168,7 +167,6 @@ operation_parameters_maximum_occurences["patchFeatureFlag:::projectKey"]=0
 operation_parameters_maximum_occurences["patchFeatureFlag:::featureFlagKey"]=0
 operation_parameters_maximum_occurences["patchFeatureFlag:::patchDelta"]=0
 operation_parameters_maximum_occurences["postFeatureFlag:::projectKey"]=0
-operation_parameters_maximum_occurences["postFeatureFlag:::featureFlagKey"]=0
 operation_parameters_maximum_occurences["postFeatureFlag:::featureFlagBody"]=0
 operation_parameters_maximum_occurences["deleteProject:::projectKey"]=0
 operation_parameters_maximum_occurences["getProject:::projectKey"]=0
@@ -239,7 +237,6 @@ operation_parameters_collection_type["patchFeatureFlag:::projectKey"]=""
 operation_parameters_collection_type["patchFeatureFlag:::featureFlagKey"]=""
 operation_parameters_collection_type["patchFeatureFlag:::patchDelta"]=
 operation_parameters_collection_type["postFeatureFlag:::projectKey"]=""
-operation_parameters_collection_type["postFeatureFlag:::featureFlagKey"]=""
 operation_parameters_collection_type["postFeatureFlag:::featureFlagBody"]=""
 operation_parameters_collection_type["deleteProject:::projectKey"]=""
 operation_parameters_collection_type["getProject:::projectKey"]=""
@@ -1032,7 +1029,7 @@ print_deleteEnvironment_help() {
     echo -e "$(tput bold)$(tput setaf 7)deleteEnvironment - Delete an environment by ID$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)environmentKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The environment key $(tput setaf 3)Specify as: environmentKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "$(tput bold)$(tput setaf 7)Responses$(tput sgr0)"
@@ -1107,7 +1104,7 @@ print_getEnvironment_help() {
     echo -e "$(tput bold)$(tput setaf 7)getEnvironment - Get an environment by key.$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)environmentKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The environment key $(tput setaf 3)Specify as: environmentKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "$(tput bold)$(tput setaf 7)Responses$(tput sgr0)"
@@ -1182,7 +1179,7 @@ print_patchEnvironment_help() {
     echo -e "$(tput bold)$(tput setaf 7)patchEnvironment - Modify an environment by ID$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)environmentKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The environment key $(tput setaf 3)Specify as: environmentKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)body$(tput sgr0) $(tput setaf 4)[application/json]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - http://jsonpatch.com/" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
@@ -1279,7 +1276,7 @@ print_postEnvironment_help() {
     echo -e "$(tput bold)$(tput setaf 7)postEnvironment - Create an environment$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)body$(tput sgr0) $(tput setaf 4)[application/json]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - New environment" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
@@ -1375,8 +1372,8 @@ print_deleteFeatureFlag_help() {
     echo -e "$(tput bold)$(tput setaf 7)deleteFeatureFlag - Delete a feature flag by ID$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * $(tput setaf 2)featureFlagKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The feature flags key $(tput setaf 3)Specify as: featureFlagKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)featureFlagKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The feature flag's key. The key identifies the flag in your code. $(tput setaf 3)Specify as: featureFlagKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "$(tput bold)$(tput setaf 7)Responses$(tput sgr0)"
     case 204 in
@@ -1450,8 +1447,8 @@ print_getFeatureFlag_help() {
     echo -e "$(tput bold)$(tput setaf 7)getFeatureFlag - Get a single feature flag by key.$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * $(tput setaf 2)featureFlagKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The feature flags key $(tput setaf 3)Specify as: featureFlagKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)featureFlagKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The feature flag's key. The key identifies the flag in your code. $(tput setaf 3)Specify as: featureFlagKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)environmentKeyQuery$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0)$(tput sgr0) - The environment key$(tput setaf 3) Specify as: environmentKeyQuery=value$(tput sgr0)" \
         | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
@@ -1527,7 +1524,7 @@ print_getFeatureFlagStatus_help() {
     echo -e "$(tput bold)$(tput setaf 7)getFeatureFlagStatus - Get a list of statuses for all feature flags$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)environmentKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The environment key $(tput setaf 3)Specify as: environmentKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "$(tput bold)$(tput setaf 7)Responses$(tput sgr0)"
@@ -1582,9 +1579,9 @@ print_getFeatureFlagStatuses_help() {
     echo -e "$(tput bold)$(tput setaf 7)getFeatureFlagStatuses - Get a list of statuses for all feature flags$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)environmentKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The environment key $(tput setaf 3)Specify as: environmentKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * $(tput setaf 2)featureFlagKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The feature flags key $(tput setaf 3)Specify as: featureFlagKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)featureFlagKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The feature flag's key. The key identifies the flag in your code. $(tput setaf 3)Specify as: featureFlagKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "$(tput bold)$(tput setaf 7)Responses$(tput sgr0)"
     case 200 in
@@ -1638,10 +1635,10 @@ print_getFeatureFlags_help() {
     echo -e "$(tput bold)$(tput setaf 7)getFeatureFlags - Get a list of all features in the given project.$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)environmentKeyQuery$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0)$(tput sgr0) - The environment key$(tput setaf 3) Specify as: environmentKeyQuery=value$(tput sgr0)" \
         | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * $(tput setaf 2)tag$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0)$(tput sgr0) - Filter by tag$(tput setaf 3) Specify as: tag=value$(tput sgr0)" \
+    echo -e "  * $(tput setaf 2)tag$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0)$(tput sgr0) - Filter by tag. A tag can be used to group flags across projects.$(tput setaf 3) Specify as: tag=value$(tput sgr0)" \
         | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "$(tput bold)$(tput setaf 7)Responses$(tput sgr0)"
@@ -1696,8 +1693,8 @@ print_patchFeatureFlag_help() {
     echo -e "$(tput bold)$(tput setaf 7)patchFeatureFlag - Modify a feature flag by ID$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * $(tput setaf 2)featureFlagKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The feature flags key $(tput setaf 3)Specify as: featureFlagKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)featureFlagKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The feature flag's key. The key identifies the flag in your code. $(tput setaf 3)Specify as: featureFlagKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)body$(tput sgr0) $(tput setaf 4)[application/json]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - http://jsonpatch.com/" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
@@ -1813,8 +1810,7 @@ print_postFeatureFlag_help() {
     echo -e "$(tput bold)$(tput setaf 7)postFeatureFlag - Create a feature flag$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * $(tput setaf 2)featureFlagKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The feature flags key $(tput setaf 3)Specify as: featureFlagKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)body$(tput sgr0) $(tput setaf 4)[application/json]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - Create a new feature flag" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
@@ -1910,7 +1906,7 @@ print_deleteProject_help() {
     echo -e "$(tput bold)$(tput setaf 7)deleteProject - Delete a project by ID$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "$(tput bold)$(tput setaf 7)Responses$(tput sgr0)"
     case 204 in
@@ -1984,7 +1980,7 @@ print_getProject_help() {
     echo -e "$(tput bold)$(tput setaf 7)getProject - Get a project by key.$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "$(tput bold)$(tput setaf 7)Responses$(tput sgr0)"
     case 200 in
@@ -2110,7 +2106,7 @@ print_patchProject_help() {
     echo -e "$(tput bold)$(tput setaf 7)patchProject - Modify a project by ID$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)body$(tput sgr0) $(tput setaf 4)[application/json]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - http://jsonpatch.com/" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
@@ -2353,10 +2349,10 @@ print_getUserFlagSetting_help() {
     echo -e "$(tput bold)$(tput setaf 7)getUserFlagSetting - Get a user by key.$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)environmentKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The environment key $(tput setaf 3)Specify as: environmentKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)userKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The user's key $(tput setaf 3)Specify as: userKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * $(tput setaf 2)featureFlagKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The feature flags key $(tput setaf 3)Specify as: featureFlagKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)featureFlagKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The feature flag's key. The key identifies the flag in your code. $(tput setaf 3)Specify as: featureFlagKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "$(tput bold)$(tput setaf 7)Responses$(tput sgr0)"
     case 200 in
@@ -2430,7 +2426,7 @@ print_getUserFlagSettings_help() {
     echo -e "$(tput bold)$(tput setaf 7)getUserFlagSettings - Lists the current flag settings for a given user.$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)environmentKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The environment key $(tput setaf 3)Specify as: environmentKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)userKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The user's key $(tput setaf 3)Specify as: userKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
@@ -2506,10 +2502,10 @@ print_putFlagSetting_help() {
     echo -e "$(tput bold)$(tput setaf 7)putFlagSetting - Specifically enable or disable a feature flag for a user based on their key.$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)environmentKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The environment key $(tput setaf 3)Specify as: environmentKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)userKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The user's key $(tput setaf 3)Specify as: userKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * $(tput setaf 2)featureFlagKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The feature flags key $(tput setaf 3)Specify as: featureFlagKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)featureFlagKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The feature flag's key. The key identifies the flag in your code. $(tput setaf 3)Specify as: featureFlagKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)body$(tput sgr0) $(tput setaf 4)[application/json]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - " | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
@@ -2605,7 +2601,7 @@ print_deleteUser_help() {
     echo -e "$(tput bold)$(tput setaf 7)deleteUser - Delete a user by ID$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)environmentKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The environment key $(tput setaf 3)Specify as: environmentKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)userKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The user's key $(tput setaf 3)Specify as: userKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
@@ -2681,7 +2677,7 @@ print_getSearchUsers_help() {
     echo -e "$(tput bold)$(tput setaf 7)getSearchUsers - Search users in LaunchDarkly based on their last active date, or a search query.$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)environmentKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The environment key $(tput setaf 3)Specify as: environmentKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)q$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0)$(tput sgr0) - Search query$(tput setaf 3) Specify as: q=value$(tput sgr0)" \
         | fold -sw 80 | sed '2,$s/^/    /'
@@ -2744,7 +2740,7 @@ print_getUser_help() {
     echo -e "$(tput bold)$(tput setaf 7)getUser - Get a user by key.$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)environmentKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The environment key $(tput setaf 3)Specify as: environmentKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)userKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The user's key $(tput setaf 3)Specify as: userKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
@@ -2820,7 +2816,7 @@ print_getUsers_help() {
     echo -e "$(tput bold)$(tput setaf 7)getUsers - List all users in the environment.$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
-    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)environmentKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The environment key $(tput setaf 3)Specify as: environmentKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * $(tput setaf 2)limit$(tput sgr0) $(tput setaf 4)[Integer]$(tput sgr0)$(tput sgr0) - Pagination limit$(tput setaf 3) Specify as: limit=value$(tput sgr0)" \
         | fold -sw 80 | sed '2,$s/^/    /'
@@ -3764,14 +3760,14 @@ call_patchFeatureFlag() {
 #
 ##############################################################################
 call_postFeatureFlag() {
-    local path_parameter_names=(projectKey featureFlagKey)
+    local path_parameter_names=(projectKey)
     local query_parameter_names=()
 
     if [[ $force = false ]]; then
-        validate_request_parameters "/api/v2/flags/{projectKey}/{featureFlagKey}" path_parameter_names query_parameter_names
+        validate_request_parameters "/api/v2/flags/{projectKey}" path_parameter_names query_parameter_names
     fi
 
-    local path=$(build_request_path "/api/v2/flags/{projectKey}/{featureFlagKey}" path_parameter_names query_parameter_names)
+    local path=$(build_request_path "/api/v2/flags/{projectKey}" path_parameter_names query_parameter_names)
     local method="POST"
     local headers_curl=$(header_arguments_to_curl)
     if [[ -n $header_accept ]]; then
