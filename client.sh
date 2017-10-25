@@ -8,7 +8,7 @@
 # ! swagger-codegen (https://github.com/swagger-api/swagger-codegen)
 # ! FROM SWAGGER SPECIFICATION IN JSON.
 # !
-# ! Generated on: 2017-10-02T18:49:00.558-05:00
+# ! Generated on: 2017-10-25T12:45:32.661-07:00
 # !
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -755,8 +755,8 @@ EOF
     echo ""
     echo -e "$(tput bold)$(tput setaf 7)[auditLog]$(tput sgr0)"
 read -d '' ops <<EOF
-  $(tput setaf 6)getAuditLogEntries$(tput sgr0);Fetch a list of all webhooks
-  $(tput setaf 6)getAuditLogEntry$(tput sgr0);Get a webhook by ID
+  $(tput setaf 6)getAuditLogEntries$(tput sgr0);Fetch a list of all audit log entries
+  $(tput setaf 6)getAuditLogEntry$(tput sgr0);Get an audit log entry by ID
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -777,14 +777,14 @@ read -d '' ops <<EOF
   $(tput setaf 6)getFeatureFlagStatuses$(tput sgr0);Get a list of statuses for all feature flags
   $(tput setaf 6)getFeatureFlags$(tput sgr0);Get a list of all features in the given project.
   $(tput setaf 6)patchFeatureFlag$(tput sgr0);Modify a feature flag by ID
-  $(tput setaf 6)postFeatureFlag$(tput sgr0);Create a feature flag
+  $(tput setaf 6)postFeatureFlag$(tput sgr0);Creates a new feature flag.
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "$(tput bold)$(tput setaf 7)[projects]$(tput sgr0)"
 read -d '' ops <<EOF
   $(tput setaf 6)deleteProject$(tput sgr0);Delete a project by ID
-  $(tput setaf 6)getProject$(tput sgr0);Get a project by key.
+  $(tput setaf 6)getProject$(tput sgr0);Fetch a single project by key.
   $(tput setaf 6)getProjects$(tput sgr0);Returns a list of all projects in the account.
   $(tput setaf 6)patchProject$(tput sgr0);Modify a project by ID
   $(tput setaf 6)postProject$(tput sgr0);Create a project
@@ -880,7 +880,7 @@ print_version() {
 ##############################################################################
 print_getAuditLogEntries_help() {
     echo ""
-    echo -e "$(tput bold)$(tput setaf 7)getAuditLogEntries - Fetch a list of all webhooks$(tput sgr0)"
+    echo -e "$(tput bold)$(tput setaf 7)getAuditLogEntries - Fetch a list of all audit log entries$(tput sgr0)"
     echo -e ""
     echo ""
     echo -e "$(tput bold)$(tput setaf 7)Responses$(tput sgr0)"
@@ -952,7 +952,7 @@ print_getAuditLogEntries_help() {
 ##############################################################################
 print_getAuditLogEntry_help() {
     echo ""
-    echo -e "$(tput bold)$(tput setaf 7)getAuditLogEntry - Get a webhook by ID$(tput sgr0)"
+    echo -e "$(tput bold)$(tput setaf 7)getAuditLogEntry - Get an audit log entry by ID$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
     echo -e "  * $(tput setaf 2)resourceId$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The resource ID $(tput setaf 3)Specify as: resourceId=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
@@ -1807,7 +1807,7 @@ print_patchFeatureFlag_help() {
 ##############################################################################
 print_postFeatureFlag_help() {
     echo ""
-    echo -e "$(tput bold)$(tput setaf 7)postFeatureFlag - Create a feature flag$(tput sgr0)"
+    echo -e "$(tput bold)$(tput setaf 7)postFeatureFlag - Creates a new feature flag.$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
     echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
@@ -1977,7 +1977,7 @@ print_deleteProject_help() {
 ##############################################################################
 print_getProject_help() {
     echo ""
-    echo -e "$(tput bold)$(tput setaf 7)getProject - Get a project by key.$(tput sgr0)"
+    echo -e "$(tput bold)$(tput setaf 7)getProject - Fetch a single project by key.$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
     echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
@@ -1985,22 +1985,22 @@ print_getProject_help() {
     echo -e "$(tput bold)$(tput setaf 7)Responses$(tput sgr0)"
     case 200 in
         1*)
-        echo -e "$(tput setaf 7)  200;Project response$(tput sgr0)" | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "$(tput setaf 7)  200;Successful Project response$(tput sgr0)" | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         ;;
         2*)
-        echo -e "$(tput setaf 2)  200;Project response$(tput sgr0)" | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "$(tput setaf 2)  200;Successful Project response$(tput sgr0)" | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         ;;
         3*)
-        echo -e "$(tput setaf 3)  200;Project response$(tput sgr0)" | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "$(tput setaf 3)  200;Successful Project response$(tput sgr0)" | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         ;;
         4*)
-        echo -e "$(tput setaf 1)  200;Project response$(tput sgr0)" | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "$(tput setaf 1)  200;Successful Project response$(tput sgr0)" | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         ;;
         5*)
-        echo -e "$(tput setaf 5)  200;Project response$(tput sgr0)" | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "$(tput setaf 5)  200;Successful Project response$(tput sgr0)" | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         ;;
         *)
-        echo -e "$(tput setaf 7)  200;Project response$(tput sgr0)" | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "$(tput setaf 7)  200;Successful Project response$(tput sgr0)" | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
         ;;
     esac
     case 401 in

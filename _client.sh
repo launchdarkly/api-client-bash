@@ -10,7 +10,7 @@
 # !
 # ! Based on: https://github.com/Valodim/zsh-curl-completion/blob/master/_curl
 # !
-# ! Generated on: 2017-10-02T18:49:00.558-05:00
+# ! Generated on: 2017-10-25T12:45:32.661-07:00
 # !
 # !
 # ! Installation:
@@ -297,8 +297,8 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "getAuditLogEntries[Fetch a list of all webhooks]" \
-            "getAuditLogEntry[Get a webhook by ID]"             "deleteEnvironment[Delete an environment by ID]" \
+            "getAuditLogEntries[Fetch a list of all audit log entries]" \
+            "getAuditLogEntry[Get an audit log entry by ID]"             "deleteEnvironment[Delete an environment by ID]" \
             "getEnvironment[Get an environment by key.]" \
             "patchEnvironment[Modify an environment by ID]" \
             "postEnvironment[Create an environment]"             "deleteFeatureFlag[Delete a feature flag by ID]" \
@@ -307,8 +307,8 @@ case $state in
             "getFeatureFlagStatuses[Get a list of statuses for all feature flags]" \
             "getFeatureFlags[Get a list of all features in the given project.]" \
             "patchFeatureFlag[Modify a feature flag by ID]" \
-            "postFeatureFlag[Create a feature flag]"             "deleteProject[Delete a project by ID]" \
-            "getProject[Get a project by key.]" \
+            "postFeatureFlag[Creates a new feature flag.]"             "deleteProject[Delete a project by ID]" \
+            "getProject[Fetch a single project by key.]" \
             "getProjects[Returns a list of all projects in the account.]" \
             "patchProject[Modify a project by ID]" \
             "postProject[Create a project]"             "getRoot[Get the root resource]"             "getUserFlagSetting[Get a user by key.]" \
