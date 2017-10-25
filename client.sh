@@ -8,7 +8,7 @@
 # ! swagger-codegen (https://github.com/swagger-api/swagger-codegen)
 # ! FROM SWAGGER SPECIFICATION IN JSON.
 # !
-# ! Generated on: 2017-10-25T12:58:17.005-07:00
+# ! Generated on: 2017-10-25T13:57:33.156-07:00
 # !
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -763,9 +763,9 @@ echo "  $ops" | column -t -s ';'
     echo -e "$(tput bold)$(tput setaf 7)[environments]$(tput sgr0)"
 read -d '' ops <<EOF
   $(tput setaf 6)deleteEnvironment$(tput sgr0);Delete an environment by ID
-  $(tput setaf 6)getEnvironment$(tput sgr0);Get an environment by key.
+  $(tput setaf 6)getEnvironment$(tput sgr0);Get an environment given a project and key.
   $(tput setaf 6)patchEnvironment$(tput sgr0);Modify an environment by ID
-  $(tput setaf 6)postEnvironment$(tput sgr0);Create an environment
+  $(tput setaf 6)postEnvironment$(tput sgr0);Create a new environment in a specified project with a given name, key, and swatch color.
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -776,7 +776,7 @@ read -d '' ops <<EOF
   $(tput setaf 6)getFeatureFlagStatus$(tput sgr0);Get a list of statuses for all feature flags
   $(tput setaf 6)getFeatureFlagStatuses$(tput sgr0);Get a list of statuses for all feature flags
   $(tput setaf 6)getFeatureFlags$(tput sgr0);Get a list of all features in the given project.
-  $(tput setaf 6)patchFeatureFlag$(tput sgr0);Modify a feature flag by ID
+  $(tput setaf 6)patchFeatureFlag$(tput sgr0);Perform a partial update to a feature.
   $(tput setaf 6)postFeatureFlag$(tput sgr0);Creates a new feature flag.
 EOF
 echo "  $ops" | column -t -s ';'
@@ -800,7 +800,7 @@ echo "  $ops" | column -t -s ';'
     echo -e "$(tput bold)$(tput setaf 7)[userSettings]$(tput sgr0)"
 read -d '' ops <<EOF
   $(tput setaf 6)getUserFlagSetting$(tput sgr0);Get a user by key.
-  $(tput setaf 6)getUserFlagSettings$(tput sgr0);Lists the current flag settings for a given user.
+  $(tput setaf 6)getUserFlagSettings$(tput sgr0);Fetch a single flag setting for a user by key.
   $(tput setaf 6)putFlagSetting$(tput sgr0);Specifically enable or disable a feature flag for a user based on their key.
 EOF
 echo "  $ops" | column -t -s ';'
@@ -808,9 +808,9 @@ echo "  $ops" | column -t -s ';'
     echo -e "$(tput bold)$(tput setaf 7)[users]$(tput sgr0)"
 read -d '' ops <<EOF
   $(tput setaf 6)deleteUser$(tput sgr0);Delete a user by ID
-  $(tput setaf 6)getSearchUsers$(tput sgr0);Search users in LaunchDarkly based on their last active date, or a search query.
+  $(tput setaf 6)getSearchUsers$(tput sgr0);Search users in LaunchDarkly based on their last active date, or a search query. It should not be used to enumerate all users in LaunchDarkly-- use the List users API resource.
   $(tput setaf 6)getUser$(tput sgr0);Get a user by key.
-  $(tput setaf 6)getUsers$(tput sgr0);List all users in the environment.
+  $(tput setaf 6)getUsers$(tput sgr0);List all users in the environment. Includes the total count of users. In each page, there will be up to 'limit' users returned (default 20). This is useful for exporting all users in the system for further analysis. Paginated collections will include a next link containing a URL with the next set of elements in the collection.
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -1101,7 +1101,7 @@ print_deleteEnvironment_help() {
 ##############################################################################
 print_getEnvironment_help() {
     echo ""
-    echo -e "$(tput bold)$(tput setaf 7)getEnvironment - Get an environment by key.$(tput sgr0)"
+    echo -e "$(tput bold)$(tput setaf 7)getEnvironment - Get an environment given a project and key.$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
     echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
@@ -1273,7 +1273,7 @@ print_patchEnvironment_help() {
 ##############################################################################
 print_postEnvironment_help() {
     echo ""
-    echo -e "$(tput bold)$(tput setaf 7)postEnvironment - Create an environment$(tput sgr0)"
+    echo -e "$(tput bold)$(tput setaf 7)postEnvironment - Create a new environment in a specified project with a given name, key, and swatch color.$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
     echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
@@ -1690,7 +1690,7 @@ print_getFeatureFlags_help() {
 ##############################################################################
 print_patchFeatureFlag_help() {
     echo ""
-    echo -e "$(tput bold)$(tput setaf 7)patchFeatureFlag - Modify a feature flag by ID$(tput sgr0)"
+    echo -e "$(tput bold)$(tput setaf 7)patchFeatureFlag - Perform a partial update to a feature.$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
     echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
@@ -2423,7 +2423,7 @@ print_getUserFlagSetting_help() {
 ##############################################################################
 print_getUserFlagSettings_help() {
     echo ""
-    echo -e "$(tput bold)$(tput setaf 7)getUserFlagSettings - Lists the current flag settings for a given user.$(tput sgr0)"
+    echo -e "$(tput bold)$(tput setaf 7)getUserFlagSettings - Fetch a single flag setting for a user by key.$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
     echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
@@ -2674,7 +2674,7 @@ print_deleteUser_help() {
 ##############################################################################
 print_getSearchUsers_help() {
     echo ""
-    echo -e "$(tput bold)$(tput setaf 7)getSearchUsers - Search users in LaunchDarkly based on their last active date, or a search query.$(tput sgr0)"
+    echo -e "$(tput bold)$(tput setaf 7)getSearchUsers - Search users in LaunchDarkly based on their last active date, or a search query. It should not be used to enumerate all users in LaunchDarkly-- use the List users API resource.$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
     echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'
@@ -2813,7 +2813,7 @@ print_getUser_help() {
 ##############################################################################
 print_getUsers_help() {
     echo ""
-    echo -e "$(tput bold)$(tput setaf 7)getUsers - List all users in the environment.$(tput sgr0)"
+    echo -e "$(tput bold)$(tput setaf 7)getUsers - List all users in the environment. Includes the total count of users. In each page, there will be up to 'limit' users returned (default 20). This is useful for exporting all users in the system for further analysis. Paginated collections will include a next link containing a URL with the next set of elements in the collection.$(tput sgr0)"
     echo -e ""
     echo -e "$(tput bold)$(tput setaf 7)Parameters$(tput sgr0)"
     echo -e "  * $(tput setaf 2)projectKey$(tput sgr0) $(tput setaf 4)[String]$(tput sgr0) $(tput setaf 1)(required)$(tput sgr0)$(tput sgr0) - The project key, used to tie the flags together under one project so they can be managed together. $(tput setaf 3)Specify as: projectKey=value$(tput sgr0)" | fold -sw 80 | sed '2,$s/^/    /'

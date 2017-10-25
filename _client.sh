@@ -10,7 +10,7 @@
 # !
 # ! Based on: https://github.com/Valodim/zsh-curl-completion/blob/master/_curl
 # !
-# ! Generated on: 2017-10-25T12:58:17.005-07:00
+# ! Generated on: 2017-10-25T13:57:33.156-07:00
 # !
 # !
 # ! Installation:
@@ -299,24 +299,24 @@ case $state in
     _values "Operations" \
             "getAuditLogEntries[Fetch a list of all audit log entries]" \
             "getAuditLogEntry[Get an audit log entry by ID]"             "deleteEnvironment[Delete an environment by ID]" \
-            "getEnvironment[Get an environment by key.]" \
+            "getEnvironment[Get an environment given a project and key.]" \
             "patchEnvironment[Modify an environment by ID]" \
-            "postEnvironment[Create an environment]"             "deleteFeatureFlag[Delete a feature flag by ID]" \
+            "postEnvironment[Create a new environment in a specified project with a given name, key, and swatch color.]"             "deleteFeatureFlag[Delete a feature flag by ID]" \
             "getFeatureFlag[Get a single feature flag by key.]" \
             "getFeatureFlagStatus[Get a list of statuses for all feature flags]" \
             "getFeatureFlagStatuses[Get a list of statuses for all feature flags]" \
             "getFeatureFlags[Get a list of all features in the given project.]" \
-            "patchFeatureFlag[Modify a feature flag by ID]" \
+            "patchFeatureFlag[Perform a partial update to a feature.]" \
             "postFeatureFlag[Creates a new feature flag.]"             "deleteProject[Delete a project by ID]" \
             "getProject[Fetch a single project by key.]" \
             "getProjects[Returns a list of all projects in the account.]" \
             "patchProject[Modify a project by ID]" \
             "postProject[Create a project]"             "getRoot[Get the root resource]"             "getUserFlagSetting[Get a user by key.]" \
-            "getUserFlagSettings[Lists the current flag settings for a given user.]" \
+            "getUserFlagSettings[Fetch a single flag setting for a user by key.]" \
             "putFlagSetting[Specifically enable or disable a feature flag for a user based on their key.]"             "deleteUser[Delete a user by ID]" \
-            "getSearchUsers[Search users in LaunchDarkly based on their last active date, or a search query.]" \
+            "getSearchUsers[Search users in LaunchDarkly based on their last active date, or a search query. It should not be used to enumerate all users in LaunchDarkly-- use the List users API resource.]" \
             "getUser[Get a user by key.]" \
-            "getUsers[List all users in the environment.]"             "deleteWebhook[Delete a webhook by ID]" \
+            "getUsers[List all users in the environment. Includes the total count of users. In each page, there will be up to 'limit' users returned (default 20). This is useful for exporting all users in the system for further analysis. Paginated collections will include a next link containing a URL with the next set of elements in the collection.]"             "deleteWebhook[Delete a webhook by ID]" \
             "getWebhook[Get a webhook by ID]" \
             "getWebhooks[Fetch a list of all webhooks]" \
             "patchWebhook[Modify a webhook by ID]" \
