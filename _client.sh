@@ -10,7 +10,7 @@
 # !
 # ! Based on: https://github.com/Valodim/zsh-curl-completion/blob/master/_curl
 # !
-# ! Generated on: 2017-10-25T13:57:33.156-07:00
+# ! Generated on: 2018-04-19T14:16:29.274-07:00
 # !
 # !
 # ! Installation:
@@ -297,30 +297,38 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "getAuditLogEntries[Fetch a list of all audit log entries]" \
-            "getAuditLogEntry[Get an audit log entry by ID]"             "deleteEnvironment[Delete an environment by ID]" \
+            "getAuditLogEntries[Get a list of all audit log entries. The query parameters allow you to restrict the returned results by date ranges, resource specifiers, or a full-text search query.]" \
+            "getAuditLogEntry[Use this endpoint to fetch a single audit log entry by its resouce ID.]"             "deleteCustomRole[Delete a custom role by key.]" \
+            "getCustomRole[Get one custom role by key.]" \
+            "getCustomRoles[Return a complete list of custom roles.]" \
+            "patchCustomRole[Modify a custom role by key.]" \
+            "postCustomRole[Create a new custom role.]"             "deleteEnvironment[Delete an environment in a specific project.]" \
             "getEnvironment[Get an environment given a project and key.]" \
-            "patchEnvironment[Modify an environment by ID]" \
-            "postEnvironment[Create a new environment in a specified project with a given name, key, and swatch color.]"             "deleteFeatureFlag[Delete a feature flag by ID]" \
+            "patchEnvironment[Modify an environment by ID.]" \
+            "postEnvironment[Create a new environment in a specified project with a given name, key, and swatch color.]"             "deleteFeatureFlag[Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.]" \
             "getFeatureFlag[Get a single feature flag by key.]" \
-            "getFeatureFlagStatus[Get a list of statuses for all feature flags]" \
-            "getFeatureFlagStatuses[Get a list of statuses for all feature flags]" \
+            "getFeatureFlagStatus[Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.]" \
+            "getFeatureFlagStatuses[Get the status for a particular feature flag.]" \
             "getFeatureFlags[Get a list of all features in the given project.]" \
             "patchFeatureFlag[Perform a partial update to a feature.]" \
-            "postFeatureFlag[Creates a new feature flag.]"             "deleteProject[Delete a project by ID]" \
+            "postFeatureFlag[Creates a new feature flag.]"             "deleteProject[Delete a project by key. Caution-- deleting a project will delete all associated environments and feature flags. You cannot delete the last project in an account.]" \
             "getProject[Fetch a single project by key.]" \
             "getProjects[Returns a list of all projects in the account.]" \
-            "patchProject[Modify a project by ID]" \
-            "postProject[Create a project]"             "getRoot[Get the root resource]"             "getUserFlagSetting[Get a user by key.]" \
+            "patchProject[Modify a project by ID.]" \
+            "postProject[Create a new project with the given key and name.]"             "getRoot[]"             "deleteMember[Delete a team member by ID.]" \
+            "getMember[Get a single team member by ID.]" \
+            "getMembers[Returns a list of all members in the account.]" \
+            "patchMember[Modify a team member by ID.]" \
+            "postMembers[Invite new members.]"             "getUserFlagSetting[Fetch a single flag setting for a user by key.]" \
             "getUserFlagSettings[Fetch a single flag setting for a user by key.]" \
-            "putFlagSetting[Specifically enable or disable a feature flag for a user based on their key.]"             "deleteUser[Delete a user by ID]" \
+            "putFlagSetting[Specifically enable or disable a feature flag for a user based on their key.]"             "deleteUser[Delete a user by ID.]" \
             "getSearchUsers[Search users in LaunchDarkly based on their last active date, or a search query. It should not be used to enumerate all users in LaunchDarkly-- use the List users API resource.]" \
             "getUser[Get a user by key.]" \
-            "getUsers[List all users in the environment. Includes the total count of users. In each page, there will be up to 'limit' users returned (default 20). This is useful for exporting all users in the system for further analysis. Paginated collections will include a next link containing a URL with the next set of elements in the collection.]"             "deleteWebhook[Delete a webhook by ID]" \
-            "getWebhook[Get a webhook by ID]" \
-            "getWebhooks[Fetch a list of all webhooks]" \
-            "patchWebhook[Modify a webhook by ID]" \
-            "postWebhook[Create a webhook]" 
+            "getUsers[List all users in the environment. Includes the total count of users. In each page, there will be up to 'limit' users returned (default 20). This is useful for exporting all users in the system for further analysis. Paginated collections will include a next link containing a URL with the next set of elements in the collection.]"             "deleteWebhook[Delete a webhook by ID.]" \
+            "getWebhook[Get a webhook by ID.]" \
+            "getWebhooks[Fetch a list of all webhooks.]" \
+            "patchWebhook[Modify a webhook by ID.]" \
+            "postWebhook[Create a webhook.]" 
     _arguments "(--help)--help[Print information about operation]"
 
     ret=0
@@ -330,21 +338,59 @@ case $state in
       getAuditLogEntries)
         local -a _op_arguments
         _op_arguments=(
-                              )
+                    "before=:[QUERY] A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have before this timestamp."
+"after=:[QUERY] A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have occured after this timestamp."
+"q=:[QUERY] Text to search for. You can search for the full or partial name of the resource involved or fullpartial email address of the member who made the change."
+"limit=:[QUERY] A limit on the number of audit log entries to be returned, between 1 and 20."
+"spec=:[QUERY] A resource specifier, allowing you to filter audit log listings by resource."
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       getAuditLogEntry)
         local -a _op_arguments
         _op_arguments=(
-          "resourceId=:[PATH] The resource ID"
+          "resourceId=:[PATH] The resource ID."
                     )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      deleteCustomRole)
+        local -a _op_arguments
+        _op_arguments=(
+          "customRoleKey=:[PATH] The custom role key."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getCustomRole)
+        local -a _op_arguments
+        _op_arguments=(
+          "customRoleKey=:[PATH] The custom role key."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getCustomRoles)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      patchCustomRole)
+        local -a _op_arguments
+        _op_arguments=(
+          "customRoleKey=:[PATH] The custom role key."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      postCustomRole)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       deleteEnvironment)
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-"environmentKey=:[PATH] The environment key"
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -352,7 +398,7 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-"environmentKey=:[PATH] The environment key"
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -360,7 +406,7 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-"environmentKey=:[PATH] The environment key"
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -384,7 +430,7 @@ case $state in
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
-          "environmentKeyQuery=:[QUERY] The environment key"
+          "env=:[QUERY] By default, each feature will include configurations for each environment. You can filter environments with the env query parameter. For example, setting env&#x3D;production will restrict the returned configurations to just your production environment."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -392,7 +438,7 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-"environmentKey=:[PATH] The environment key"
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -400,7 +446,7 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-"environmentKey=:[PATH] The environment key"
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
 "featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
@@ -409,7 +455,7 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-          "environmentKeyQuery=:[QUERY] The environment key"
+          "env=:[QUERY] By default, each feature will include configurations for each environment. You can filter environments with the env query parameter. For example, setting env&#x3D;production will restrict the returned configurations to just your production environment."
 "tag=:[QUERY] Filter by tag. A tag can be used to group flags across projects."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
@@ -468,12 +514,45 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      deleteMember)
+        local -a _op_arguments
+        _op_arguments=(
+          "memberId=:[PATH] The member ID."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getMember)
+        local -a _op_arguments
+        _op_arguments=(
+          "memberId=:[PATH] The member ID."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getMembers)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      patchMember)
+        local -a _op_arguments
+        _op_arguments=(
+          "memberId=:[PATH] The member ID."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      postMembers)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       getUserFlagSetting)
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-"environmentKey=:[PATH] The environment key"
-"userKey=:[PATH] The user&#39;s key"
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"userKey=:[PATH] The user&#39;s key."
 "featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
@@ -482,8 +561,8 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-"environmentKey=:[PATH] The environment key"
-"userKey=:[PATH] The user&#39;s key"
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"userKey=:[PATH] The user&#39;s key."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -491,8 +570,8 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-"environmentKey=:[PATH] The environment key"
-"userKey=:[PATH] The user&#39;s key"
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"userKey=:[PATH] The user&#39;s key."
 "featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
@@ -501,8 +580,8 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-"environmentKey=:[PATH] The environment key"
-"userKey=:[PATH] The user&#39;s key"
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"userKey=:[PATH] The user&#39;s key."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -510,11 +589,11 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-"environmentKey=:[PATH] The environment key"
-          "q=:[QUERY] Search query"
-"limit=:[QUERY] Pagination limit"
-"offset=:[QUERY] Specifies the first item to return in the collection"
-"after=:[QUERY] A unix epoch time in milliseconds specifying the maximum last time a user requested a feature flag"
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+          "q=:[QUERY] Search query."
+"limit=:[QUERY] Pagination limit."
+"offset=:[QUERY] Specifies the first item to return in the collection."
+"after=:[QUERY] A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have occured after this timestamp."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -522,8 +601,8 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-"environmentKey=:[PATH] The environment key"
-"userKey=:[PATH] The user&#39;s key"
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"userKey=:[PATH] The user&#39;s key."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -531,22 +610,24 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-"environmentKey=:[PATH] The environment key"
-          "limit=:[QUERY] Pagination limit"
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+          "limit=:[QUERY] Pagination limit."
+"h=:[QUERY] Next link query parameter."
+"scrollId=:[QUERY] Next link query parameter."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       deleteWebhook)
         local -a _op_arguments
         _op_arguments=(
-          "resourceId=:[PATH] The resource ID"
+          "resourceId=:[PATH] The resource ID."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       getWebhook)
         local -a _op_arguments
         _op_arguments=(
-          "resourceId=:[PATH] The resource ID"
+          "resourceId=:[PATH] The resource ID."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -559,7 +640,7 @@ case $state in
       patchWebhook)
         local -a _op_arguments
         _op_arguments=(
-          "resourceId=:[PATH] The resource ID"
+          "resourceId=:[PATH] The resource ID."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;

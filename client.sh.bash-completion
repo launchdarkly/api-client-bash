@@ -8,7 +8,7 @@
 # ! swagger-codegen (https://github.com/swagger-api/swagger-codegen)
 # ! FROM SWAGGER SPECIFICATION IN JSON.
 # !
-# ! Generated on: 2017-10-25T13:57:33.156-07:00
+# ! Generated on: 2018-04-19T14:16:29.274-07:00
 # !
 # !
 # ! System wide installation:
@@ -71,6 +71,11 @@ _()
     declare -A operations
     operations["getAuditLogEntries"]=1
     operations["getAuditLogEntry"]=1
+    operations["deleteCustomRole"]=1
+    operations["getCustomRole"]=1
+    operations["getCustomRoles"]=1
+    operations["patchCustomRole"]=1
+    operations["postCustomRole"]=1
     operations["deleteEnvironment"]=1
     operations["getEnvironment"]=1
     operations["patchEnvironment"]=1
@@ -88,6 +93,11 @@ _()
     operations["patchProject"]=1
     operations["postProject"]=1
     operations["getRoot"]=1
+    operations["deleteMember"]=1
+    operations["getMember"]=1
+    operations["getMembers"]=1
+    operations["patchMember"]=1
+    operations["postMembers"]=1
     operations["getUserFlagSetting"]=1
     operations["getUserFlagSettings"]=1
     operations["putFlagSetting"]=1
@@ -104,17 +114,22 @@ _()
     # An associative array of operations to their parameters
     # Only include path, query and header parameters
     declare -A operation_parameters
-    operation_parameters["getAuditLogEntries"]=""
+    operation_parameters["getAuditLogEntries"]="before= after= q= limit= spec= "
     operation_parameters["getAuditLogEntry"]="resourceId= "
+    operation_parameters["deleteCustomRole"]="customRoleKey= "
+    operation_parameters["getCustomRole"]="customRoleKey= "
+    operation_parameters["getCustomRoles"]=""
+    operation_parameters["patchCustomRole"]="customRoleKey= "
+    operation_parameters["postCustomRole"]=""
     operation_parameters["deleteEnvironment"]="projectKey= environmentKey= "
     operation_parameters["getEnvironment"]="projectKey= environmentKey= "
     operation_parameters["patchEnvironment"]="projectKey= environmentKey= "
     operation_parameters["postEnvironment"]="projectKey= "
     operation_parameters["deleteFeatureFlag"]="projectKey= featureFlagKey= "
-    operation_parameters["getFeatureFlag"]="projectKey= featureFlagKey= environmentKeyQuery= "
+    operation_parameters["getFeatureFlag"]="projectKey= featureFlagKey= env= "
     operation_parameters["getFeatureFlagStatus"]="projectKey= environmentKey= "
     operation_parameters["getFeatureFlagStatuses"]="projectKey= environmentKey= featureFlagKey= "
-    operation_parameters["getFeatureFlags"]="projectKey= environmentKeyQuery= tag= "
+    operation_parameters["getFeatureFlags"]="projectKey= env= tag= "
     operation_parameters["patchFeatureFlag"]="projectKey= featureFlagKey= "
     operation_parameters["postFeatureFlag"]="projectKey= "
     operation_parameters["deleteProject"]="projectKey= "
@@ -123,13 +138,18 @@ _()
     operation_parameters["patchProject"]="projectKey= "
     operation_parameters["postProject"]=""
     operation_parameters["getRoot"]=""
+    operation_parameters["deleteMember"]="memberId= "
+    operation_parameters["getMember"]="memberId= "
+    operation_parameters["getMembers"]=""
+    operation_parameters["patchMember"]="memberId= "
+    operation_parameters["postMembers"]=""
     operation_parameters["getUserFlagSetting"]="projectKey= environmentKey= userKey= featureFlagKey= "
     operation_parameters["getUserFlagSettings"]="projectKey= environmentKey= userKey= "
     operation_parameters["putFlagSetting"]="projectKey= environmentKey= userKey= featureFlagKey= "
     operation_parameters["deleteUser"]="projectKey= environmentKey= userKey= "
     operation_parameters["getSearchUsers"]="projectKey= environmentKey= q= limit= offset= after= "
     operation_parameters["getUser"]="projectKey= environmentKey= userKey= "
-    operation_parameters["getUsers"]="projectKey= environmentKey= limit= "
+    operation_parameters["getUsers"]="projectKey= environmentKey= limit= h= scrollId= "
     operation_parameters["deleteWebhook"]="resourceId= "
     operation_parameters["getWebhook"]="resourceId= "
     operation_parameters["getWebhooks"]=""
