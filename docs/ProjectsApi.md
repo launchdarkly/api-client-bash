@@ -112,7 +112,7 @@ Modify a project by ID.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
- **patchDelta** | [**array[PatchDelta]**](PatchDelta.md) | Requires a JSON Patch representation of the desired changes to the project. 'http://jsonpatch.com/' |
+ **patchDelta** | [**array[PatchOperation]**](PatchOperation.md) | Requires a JSON Patch representation of the desired changes to the project. 'http://jsonpatch.com/' |
 
 ### Return type
 

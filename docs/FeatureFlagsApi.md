@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**deleteFeatureFlag**](FeatureFlagsApi.md#deleteFeatureFlag) | **DELETE** /flags/{projectKey}/{featureFlagKey} | Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.
 [**getFeatureFlag**](FeatureFlagsApi.md#getFeatureFlag) | **GET** /flags/{projectKey}/{featureFlagKey} | Get a single feature flag by key.
-[**getFeatureFlagStatus**](FeatureFlagsApi.md#getFeatureFlagStatus) | **GET** /flag-statuses/{projectKey}/{environmentKey} | Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.
-[**getFeatureFlagStatuses**](FeatureFlagsApi.md#getFeatureFlagStatuses) | **GET** /flag-statuses/{projectKey}/{environmentKey}/{featureFlagKey} | Get the status for a particular feature flag.
+[**getFeatureFlagStatus**](FeatureFlagsApi.md#getFeatureFlagStatus) | **GET** /flag-statuses/{projectKey}/{environmentKey}/{featureFlagKey} | Get the status for a particular feature flag.
+[**getFeatureFlagStatuses**](FeatureFlagsApi.md#getFeatureFlagStatuses) | **GET** /flag-statuses/{projectKey}/{environmentKey} | Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.
 [**getFeatureFlags**](FeatureFlagsApi.md#getFeatureFlags) | **GET** /flags/{projectKey} | Get a list of all features in the given project.
 [**patchFeatureFlag**](FeatureFlagsApi.md#patchFeatureFlag) | **PATCH** /flags/{projectKey}/{featureFlagKey} | Perform a partial update to a feature.
 [**postFeatureFlag**](FeatureFlagsApi.md#postFeatureFlag) | **POST** /flags/{projectKey} | Creates a new feature flag.
@@ -78,11 +78,11 @@ Name | Type | Description  | Notes
 
 ## **getFeatureFlagStatus**
 
-Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.
+Get the status for a particular feature flag.
 
 ### Example
 ```bash
- getFeatureFlagStatus projectKey=value environmentKey=value
+ getFeatureFlagStatus projectKey=value environmentKey=value featureFlagKey=value
 ```
 
 ### Parameters
@@ -91,10 +91,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
  **environmentKey** | **string** | The environment key, used to tie together flag configuration and users under one environment so they can be managed together. |
+ **featureFlagKey** | **string** | The feature flag's key. The key identifies the flag in your code. |
 
 ### Return type
 
-[**FeatureFlagStatuses**](FeatureFlagStatuses.md)
+[**FeatureFlagStatus**](FeatureFlagStatus.md)
 
 ### Authorization
 
@@ -109,11 +110,11 @@ Name | Type | Description  | Notes
 
 ## **getFeatureFlagStatuses**
 
-Get the status for a particular feature flag.
+Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.
 
 ### Example
 ```bash
- getFeatureFlagStatuses projectKey=value environmentKey=value featureFlagKey=value
+ getFeatureFlagStatuses projectKey=value environmentKey=value
 ```
 
 ### Parameters
@@ -122,11 +123,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
  **environmentKey** | **string** | The environment key, used to tie together flag configuration and users under one environment so they can be managed together. |
- **featureFlagKey** | **string** | The feature flag's key. The key identifies the flag in your code. |
 
 ### Return type
 
-[**FeatureFlagStatus**](FeatureFlagStatus.md)
+[**FeatureFlagStatuses**](FeatureFlagStatuses.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
  **featureFlagKey** | **string** | The feature flag's key. The key identifies the flag in your code. |
- **patchComment** | [**PatchComment**](PatchComment.md) | Requires a JSON Patch representation of the desired changes to the project. 'http://jsonpatch.com/' Feature flag patches also support JSON Merge Patch format. 'https://tools.ietf.org/html/rfc7386' The addition of comments is also supported. |
+ **patchComment** | [**PatchComment**](PatchComment.md) | Requires a JSON Patch representation of the desired changes to the project, and an optional comment. 'http://jsonpatch.com/' Feature flag patches also support JSON Merge Patch format. 'https://tools.ietf.org/html/rfc7386' The addition of comments is also supported. |
 
 ### Return type
 

@@ -1,22 +1,23 @@
-# UsersApi
+# UserSegmentsApi
 
 All URIs are relative to */api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteUser**](UsersApi.md#deleteUser) | **DELETE** /users/{projectKey}/{environmentKey}/{userKey} | Delete a user by ID.
-[**getSearchUsers**](UsersApi.md#getSearchUsers) | **GET** /user-search/{projectKey}/{environmentKey} | Search users in LaunchDarkly based on their last active date, or a search query. It should not be used to enumerate all users in LaunchDarkly-- use the List users API resource.
-[**getUser**](UsersApi.md#getUser) | **GET** /users/{projectKey}/{environmentKey}/{userKey} | Get a user by key.
-[**getUsers**](UsersApi.md#getUsers) | **GET** /users/{projectKey}/{environmentKey} | List all users in the environment. Includes the total count of users. In each page, there will be up to &#39;limit&#39; users returned (default 20). This is useful for exporting all users in the system for further analysis. Paginated collections will include a next link containing a URL with the next set of elements in the collection.
+[**deleteUserSegment**](UserSegmentsApi.md#deleteUserSegment) | **DELETE** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Delete a user segment.
+[**getUserSegment**](UserSegmentsApi.md#getUserSegment) | **GET** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Get a single user segment by key.
+[**getUserSegments**](UserSegmentsApi.md#getUserSegments) | **GET** /segments/{projectKey}/{environmentKey} | Get a list of all user segments in the given project.
+[**patchUserSegment**](UserSegmentsApi.md#patchUserSegment) | **PATCH** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Perform a partial update to a user segment.
+[**postUserSegment**](UserSegmentsApi.md#postUserSegment) | **POST** /segments/{projectKey}/{environmentKey} | Creates a new user segment.
 
 
-## **deleteUser**
+## **deleteUserSegment**
 
-Delete a user by ID.
+Delete a user segment.
 
 ### Example
 ```bash
- deleteUser projectKey=value environmentKey=value userKey=value
+ deleteUserSegment projectKey=value environmentKey=value userSegmentKey=value
 ```
 
 ### Parameters
@@ -25,7 +26,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
  **environmentKey** | **string** | The environment key, used to tie together flag configuration and users under one environment so they can be managed together. |
- **userKey** | **string** | The user's key. |
+ **userSegmentKey** | **string** | The user segment's key. The key identifies the user segment in your code. |
 
 ### Return type
 
@@ -42,13 +43,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## **getSearchUsers**
+## **getUserSegment**
 
-Search users in LaunchDarkly based on their last active date, or a search query. It should not be used to enumerate all users in LaunchDarkly-- use the List users API resource.
+Get a single user segment by key.
 
 ### Example
 ```bash
- getSearchUsers projectKey=value environmentKey=value  q=value  limit=value  offset=value  after=value
+ getUserSegment projectKey=value environmentKey=value userSegmentKey=value
 ```
 
 ### Parameters
@@ -57,14 +58,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
  **environmentKey** | **string** | The environment key, used to tie together flag configuration and users under one environment so they can be managed together. |
- **q** | **string** | Search query. | [optional]
- **limit** | **integer** | Pagination limit. | [optional]
- **offset** | **integer** | Specifies the first item to return in the collection. | [optional]
- **after** | **integer** | A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have occured after this timestamp. | [optional]
+ **userSegmentKey** | **string** | The user segment's key. The key identifies the user segment in your code. |
 
 ### Return type
 
-[**Users**](Users.md)
+[**UserSegment**](UserSegment.md)
 
 ### Authorization
 
@@ -77,13 +75,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## **getUser**
+## **getUserSegments**
 
-Get a user by key.
+Get a list of all user segments in the given project.
 
 ### Example
 ```bash
- getUser projectKey=value environmentKey=value userKey=value
+ getUserSegments projectKey=value environmentKey=value  tag=value
 ```
 
 ### Parameters
@@ -92,11 +90,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
  **environmentKey** | **string** | The environment key, used to tie together flag configuration and users under one environment so they can be managed together. |
- **userKey** | **string** | The user's key. |
+ **tag** | **string** | Filter by tag. A tag can be used to group flags across projects. | [optional]
 
 ### Return type
 
-[**User**](User.md)
+[**UserSegments**](UserSegments.md)
 
 ### Authorization
 
@@ -109,13 +107,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## **getUsers**
+## **patchUserSegment**
 
-List all users in the environment. Includes the total count of users. In each page, there will be up to 'limit' users returned (default 20). This is useful for exporting all users in the system for further analysis. Paginated collections will include a next link containing a URL with the next set of elements in the collection.
+Perform a partial update to a user segment.
 
 ### Example
 ```bash
- getUsers projectKey=value environmentKey=value  limit=value  h=value  scrollId=value
+ patchUserSegment projectKey=value environmentKey=value userSegmentKey=value
 ```
 
 ### Parameters
@@ -124,13 +122,44 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
  **environmentKey** | **string** | The environment key, used to tie together flag configuration and users under one environment so they can be managed together. |
- **limit** | **integer** | Pagination limit. | [optional]
- **h** | **string** | This parameter is required when following \"next\" links. | [optional]
- **scrollId** | **string** | This parameter is required when following \"next\" links. | [optional]
+ **userSegmentKey** | **string** | The user segment's key. The key identifies the user segment in your code. |
+ **patchOnly** | [**array[PatchOperation]**](PatchOperation.md) | Requires a JSON Patch representation of the desired changes to the project. 'http://jsonpatch.com/' Feature flag patches also support JSON Merge Patch format. 'https://tools.ietf.org/html/rfc7386' The addition of comments is also supported. |
 
 ### Return type
 
-[**Users**](Users.md)
+[**UserSegment**](UserSegment.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+## **postUserSegment**
+
+Creates a new user segment.
+
+### Example
+```bash
+ postUserSegment projectKey=value environmentKey=value
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
+ **environmentKey** | **string** | The environment key, used to tie together flag configuration and users under one environment so they can be managed together. |
+ **userSegmentBody** | [**UserSegmentBody**](UserSegmentBody.md) | Create a new user segment. |
+
+### Return type
+
+(empty response body)
 
 ### Authorization
 

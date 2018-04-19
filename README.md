@@ -112,8 +112,8 @@ Class | Method | HTTP request | Description
 *EnvironmentsApi* | [**postEnvironment**](docs/EnvironmentsApi.md#postenvironment) | **POST** /projects/{projectKey}/environments | Create a new environment in a specified project with a given name, key, and swatch color.
 *FeatureFlagsApi* | [**deleteFeatureFlag**](docs/FeatureFlagsApi.md#deletefeatureflag) | **DELETE** /flags/{projectKey}/{featureFlagKey} | Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.
 *FeatureFlagsApi* | [**getFeatureFlag**](docs/FeatureFlagsApi.md#getfeatureflag) | **GET** /flags/{projectKey}/{featureFlagKey} | Get a single feature flag by key.
-*FeatureFlagsApi* | [**getFeatureFlagStatus**](docs/FeatureFlagsApi.md#getfeatureflagstatus) | **GET** /flag-statuses/{projectKey}/{environmentKey} | Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.
-*FeatureFlagsApi* | [**getFeatureFlagStatuses**](docs/FeatureFlagsApi.md#getfeatureflagstatuses) | **GET** /flag-statuses/{projectKey}/{environmentKey}/{featureFlagKey} | Get the status for a particular feature flag.
+*FeatureFlagsApi* | [**getFeatureFlagStatus**](docs/FeatureFlagsApi.md#getfeatureflagstatus) | **GET** /flag-statuses/{projectKey}/{environmentKey}/{featureFlagKey} | Get the status for a particular feature flag.
+*FeatureFlagsApi* | [**getFeatureFlagStatuses**](docs/FeatureFlagsApi.md#getfeatureflagstatuses) | **GET** /flag-statuses/{projectKey}/{environmentKey} | Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.
 *FeatureFlagsApi* | [**getFeatureFlags**](docs/FeatureFlagsApi.md#getfeatureflags) | **GET** /flags/{projectKey} | Get a list of all features in the given project.
 *FeatureFlagsApi* | [**patchFeatureFlag**](docs/FeatureFlagsApi.md#patchfeatureflag) | **PATCH** /flags/{projectKey}/{featureFlagKey} | Perform a partial update to a feature.
 *FeatureFlagsApi* | [**postFeatureFlag**](docs/FeatureFlagsApi.md#postfeatureflag) | **POST** /flags/{projectKey} | Creates a new feature flag.
@@ -128,6 +128,11 @@ Class | Method | HTTP request | Description
 *TeamMembersApi* | [**getMembers**](docs/TeamMembersApi.md#getmembers) | **GET** /members | Returns a list of all members in the account.
 *TeamMembersApi* | [**patchMember**](docs/TeamMembersApi.md#patchmember) | **PATCH** /members/{memberId} | Modify a team member by ID.
 *TeamMembersApi* | [**postMembers**](docs/TeamMembersApi.md#postmembers) | **POST** /members | Invite new members.
+*UserSegmentsApi* | [**deleteUserSegment**](docs/UserSegmentsApi.md#deleteusersegment) | **DELETE** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Delete a user segment.
+*UserSegmentsApi* | [**getUserSegment**](docs/UserSegmentsApi.md#getusersegment) | **GET** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Get a single user segment by key.
+*UserSegmentsApi* | [**getUserSegments**](docs/UserSegmentsApi.md#getusersegments) | **GET** /segments/{projectKey}/{environmentKey} | Get a list of all user segments in the given project.
+*UserSegmentsApi* | [**patchUserSegment**](docs/UserSegmentsApi.md#patchusersegment) | **PATCH** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Perform a partial update to a user segment.
+*UserSegmentsApi* | [**postUserSegment**](docs/UserSegmentsApi.md#postusersegment) | **POST** /segments/{projectKey}/{environmentKey} | Creates a new user segment.
 *UserSettingsApi* | [**getUserFlagSetting**](docs/UserSettingsApi.md#getuserflagsetting) | **GET** /users/{projectKey}/{environmentKey}/{userKey}/flags/{featureFlagKey} | Fetch a single flag setting for a user by key.
 *UserSettingsApi* | [**getUserFlagSettings**](docs/UserSettingsApi.md#getuserflagsettings) | **GET** /users/{projectKey}/{environmentKey}/{userKey}/flags | Fetch a single flag setting for a user by key.
 *UserSettingsApi* | [**putFlagSetting**](docs/UserSettingsApi.md#putflagsetting) | **PUT** /users/{projectKey}/{environmentKey}/{userKey}/flags/{featureFlagKey} | Specifically enable or disable a feature flag for a user based on their key.
@@ -156,24 +161,23 @@ Class | Method | HTTP request | Description
  - [CustomRoles](docs/CustomRoles.md)
  - [Environment](docs/Environment.md)
  - [EnvironmentBody](docs/EnvironmentBody.md)
+ - [Fallthrough](docs/Fallthrough.md)
  - [FeatureFlag](docs/FeatureFlag.md)
  - [FeatureFlagBody](docs/FeatureFlagBody.md)
  - [FeatureFlagConfig](docs/FeatureFlagConfig.md)
- - [FeatureFlagConfig_fallthrough](docs/FeatureFlagConfig_fallthrough.md)
  - [FeatureFlagStatus](docs/FeatureFlagStatus.md)
  - [FeatureFlagStatuses](docs/FeatureFlagStatuses.md)
  - [FeatureFlags](docs/FeatureFlags.md)
- - [FlagsprojectKeyfeatureFlagKey_patch](docs/FlagsprojectKeyfeatureFlagKey_patch.md)
  - [Id](docs/Id.md)
  - [Link](docs/Link.md)
  - [Links](docs/Links.md)
  - [Member](docs/Member.md)
  - [Members](docs/Members.md)
  - [MembersBody](docs/MembersBody.md)
- - [NonOwnerRole](docs/NonOwnerRole.md)
  - [PatchComment](docs/PatchComment.md)
- - [PatchDelta](docs/PatchDelta.md)
+ - [PatchOperation](docs/PatchOperation.md)
  - [Policy](docs/Policy.md)
+ - [Prerequisite](docs/Prerequisite.md)
  - [Project](docs/Project.md)
  - [ProjectBody](docs/ProjectBody.md)
  - [Projects](docs/Projects.md)
@@ -188,6 +192,11 @@ Class | Method | HTTP request | Description
  - [User](docs/User.md)
  - [UserFlagSetting](docs/UserFlagSetting.md)
  - [UserFlagSettings](docs/UserFlagSettings.md)
+ - [UserRecord](docs/UserRecord.md)
+ - [UserSegment](docs/UserSegment.md)
+ - [UserSegmentBody](docs/UserSegmentBody.md)
+ - [UserSegmentRule](docs/UserSegmentRule.md)
+ - [UserSegments](docs/UserSegments.md)
  - [UserSettingsBody](docs/UserSettingsBody.md)
  - [Users](docs/Users.md)
  - [Variation](docs/Variation.md)

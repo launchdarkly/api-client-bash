@@ -8,7 +8,7 @@
 # ! swagger-codegen (https://github.com/swagger-api/swagger-codegen)
 # ! FROM SWAGGER SPECIFICATION IN JSON.
 # !
-# ! Generated on: 2018-04-19T14:20:40.764-07:00
+# ! Generated on: 2018-04-19T14:58:48.697-07:00
 # !
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -123,9 +123,9 @@ operation_parameters_minimum_occurrences["getFeatureFlag:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["getFeatureFlag:::env"]=0
 operation_parameters_minimum_occurrences["getFeatureFlagStatus:::projectKey"]=1
 operation_parameters_minimum_occurrences["getFeatureFlagStatus:::environmentKey"]=1
+operation_parameters_minimum_occurrences["getFeatureFlagStatus:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["getFeatureFlagStatuses:::projectKey"]=1
 operation_parameters_minimum_occurrences["getFeatureFlagStatuses:::environmentKey"]=1
-operation_parameters_minimum_occurrences["getFeatureFlagStatuses:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["getFeatureFlags:::projectKey"]=1
 operation_parameters_minimum_occurrences["getFeatureFlags:::env"]=0
 operation_parameters_minimum_occurrences["getFeatureFlags:::tag"]=0
@@ -144,6 +144,22 @@ operation_parameters_minimum_occurrences["getMember:::memberId"]=1
 operation_parameters_minimum_occurrences["patchMember:::memberId"]=1
 operation_parameters_minimum_occurrences["patchMember:::patchDelta"]=1
 operation_parameters_minimum_occurrences["postMembers:::membersBody"]=1
+operation_parameters_minimum_occurrences["deleteUserSegment:::projectKey"]=1
+operation_parameters_minimum_occurrences["deleteUserSegment:::environmentKey"]=1
+operation_parameters_minimum_occurrences["deleteUserSegment:::userSegmentKey"]=1
+operation_parameters_minimum_occurrences["getUserSegment:::projectKey"]=1
+operation_parameters_minimum_occurrences["getUserSegment:::environmentKey"]=1
+operation_parameters_minimum_occurrences["getUserSegment:::userSegmentKey"]=1
+operation_parameters_minimum_occurrences["getUserSegments:::projectKey"]=1
+operation_parameters_minimum_occurrences["getUserSegments:::environmentKey"]=1
+operation_parameters_minimum_occurrences["getUserSegments:::tag"]=0
+operation_parameters_minimum_occurrences["patchUserSegment:::projectKey"]=1
+operation_parameters_minimum_occurrences["patchUserSegment:::environmentKey"]=1
+operation_parameters_minimum_occurrences["patchUserSegment:::userSegmentKey"]=1
+operation_parameters_minimum_occurrences["patchUserSegment:::PatchOnly"]=1
+operation_parameters_minimum_occurrences["postUserSegment:::projectKey"]=1
+operation_parameters_minimum_occurrences["postUserSegment:::environmentKey"]=1
+operation_parameters_minimum_occurrences["postUserSegment:::userSegmentBody"]=1
 operation_parameters_minimum_occurrences["getUserFlagSetting:::projectKey"]=1
 operation_parameters_minimum_occurrences["getUserFlagSetting:::environmentKey"]=1
 operation_parameters_minimum_occurrences["getUserFlagSetting:::userKey"]=1
@@ -213,9 +229,9 @@ operation_parameters_maximum_occurrences["getFeatureFlag:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["getFeatureFlag:::env"]=0
 operation_parameters_maximum_occurrences["getFeatureFlagStatus:::projectKey"]=0
 operation_parameters_maximum_occurrences["getFeatureFlagStatus:::environmentKey"]=0
+operation_parameters_maximum_occurrences["getFeatureFlagStatus:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["getFeatureFlagStatuses:::projectKey"]=0
 operation_parameters_maximum_occurrences["getFeatureFlagStatuses:::environmentKey"]=0
-operation_parameters_maximum_occurrences["getFeatureFlagStatuses:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::projectKey"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::env"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::tag"]=0
@@ -234,6 +250,22 @@ operation_parameters_maximum_occurrences["getMember:::memberId"]=0
 operation_parameters_maximum_occurrences["patchMember:::memberId"]=0
 operation_parameters_maximum_occurrences["patchMember:::patchDelta"]=0
 operation_parameters_maximum_occurrences["postMembers:::membersBody"]=0
+operation_parameters_maximum_occurrences["deleteUserSegment:::projectKey"]=0
+operation_parameters_maximum_occurrences["deleteUserSegment:::environmentKey"]=0
+operation_parameters_maximum_occurrences["deleteUserSegment:::userSegmentKey"]=0
+operation_parameters_maximum_occurrences["getUserSegment:::projectKey"]=0
+operation_parameters_maximum_occurrences["getUserSegment:::environmentKey"]=0
+operation_parameters_maximum_occurrences["getUserSegment:::userSegmentKey"]=0
+operation_parameters_maximum_occurrences["getUserSegments:::projectKey"]=0
+operation_parameters_maximum_occurrences["getUserSegments:::environmentKey"]=0
+operation_parameters_maximum_occurrences["getUserSegments:::tag"]=0
+operation_parameters_maximum_occurrences["patchUserSegment:::projectKey"]=0
+operation_parameters_maximum_occurrences["patchUserSegment:::environmentKey"]=0
+operation_parameters_maximum_occurrences["patchUserSegment:::userSegmentKey"]=0
+operation_parameters_maximum_occurrences["patchUserSegment:::PatchOnly"]=0
+operation_parameters_maximum_occurrences["postUserSegment:::projectKey"]=0
+operation_parameters_maximum_occurrences["postUserSegment:::environmentKey"]=0
+operation_parameters_maximum_occurrences["postUserSegment:::userSegmentBody"]=0
 operation_parameters_maximum_occurrences["getUserFlagSetting:::projectKey"]=0
 operation_parameters_maximum_occurrences["getUserFlagSetting:::environmentKey"]=0
 operation_parameters_maximum_occurrences["getUserFlagSetting:::userKey"]=0
@@ -300,9 +332,9 @@ operation_parameters_collection_type["getFeatureFlag:::featureFlagKey"]=""
 operation_parameters_collection_type["getFeatureFlag:::env"]=""
 operation_parameters_collection_type["getFeatureFlagStatus:::projectKey"]=""
 operation_parameters_collection_type["getFeatureFlagStatus:::environmentKey"]=""
+operation_parameters_collection_type["getFeatureFlagStatus:::featureFlagKey"]=""
 operation_parameters_collection_type["getFeatureFlagStatuses:::projectKey"]=""
 operation_parameters_collection_type["getFeatureFlagStatuses:::environmentKey"]=""
-operation_parameters_collection_type["getFeatureFlagStatuses:::featureFlagKey"]=""
 operation_parameters_collection_type["getFeatureFlags:::projectKey"]=""
 operation_parameters_collection_type["getFeatureFlags:::env"]=""
 operation_parameters_collection_type["getFeatureFlags:::tag"]=""
@@ -321,6 +353,22 @@ operation_parameters_collection_type["getMember:::memberId"]=""
 operation_parameters_collection_type["patchMember:::memberId"]=""
 operation_parameters_collection_type["patchMember:::patchDelta"]=
 operation_parameters_collection_type["postMembers:::membersBody"]=
+operation_parameters_collection_type["deleteUserSegment:::projectKey"]=""
+operation_parameters_collection_type["deleteUserSegment:::environmentKey"]=""
+operation_parameters_collection_type["deleteUserSegment:::userSegmentKey"]=""
+operation_parameters_collection_type["getUserSegment:::projectKey"]=""
+operation_parameters_collection_type["getUserSegment:::environmentKey"]=""
+operation_parameters_collection_type["getUserSegment:::userSegmentKey"]=""
+operation_parameters_collection_type["getUserSegments:::projectKey"]=""
+operation_parameters_collection_type["getUserSegments:::environmentKey"]=""
+operation_parameters_collection_type["getUserSegments:::tag"]=""
+operation_parameters_collection_type["patchUserSegment:::projectKey"]=""
+operation_parameters_collection_type["patchUserSegment:::environmentKey"]=""
+operation_parameters_collection_type["patchUserSegment:::userSegmentKey"]=""
+operation_parameters_collection_type["patchUserSegment:::PatchOnly"]=
+operation_parameters_collection_type["postUserSegment:::projectKey"]=""
+operation_parameters_collection_type["postUserSegment:::environmentKey"]=""
+operation_parameters_collection_type["postUserSegment:::userSegmentBody"]=""
 operation_parameters_collection_type["getUserFlagSetting:::projectKey"]=""
 operation_parameters_collection_type["getUserFlagSetting:::environmentKey"]=""
 operation_parameters_collection_type["getUserFlagSetting:::userKey"]=""
@@ -700,7 +748,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 1.0.7)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -764,8 +812,8 @@ echo "  $ops" | column -t -s ';'
 read -r -d '' ops <<EOF
   ${CYAN}deleteFeatureFlag${OFF};Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application. (AUTH)
   ${CYAN}getFeatureFlag${OFF};Get a single feature flag by key. (AUTH)
-  ${CYAN}getFeatureFlagStatus${OFF};Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag. (AUTH)
-  ${CYAN}getFeatureFlagStatuses${OFF};Get the status for a particular feature flag. (AUTH)
+  ${CYAN}getFeatureFlagStatus${OFF};Get the status for a particular feature flag. (AUTH)
+  ${CYAN}getFeatureFlagStatuses${OFF};Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag. (AUTH)
   ${CYAN}getFeatureFlags${OFF};Get a list of all features in the given project. (AUTH)
   ${CYAN}patchFeatureFlag${OFF};Perform a partial update to a feature. (AUTH)
   ${CYAN}postFeatureFlag${OFF};Creates a new feature flag. (AUTH)
@@ -795,6 +843,16 @@ read -r -d '' ops <<EOF
   ${CYAN}getMembers${OFF};Returns a list of all members in the account. (AUTH)
   ${CYAN}patchMember${OFF};Modify a team member by ID. (AUTH)
   ${CYAN}postMembers${OFF};Invite new members. (AUTH)
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
+    echo -e "${BOLD}${WHITE}[userSegments]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}deleteUserSegment${OFF};Delete a user segment. (AUTH)
+  ${CYAN}getUserSegment${OFF};Get a single user segment by key. (AUTH)
+  ${CYAN}getUserSegments${OFF};Get a list of all user segments in the given project. (AUTH)
+  ${CYAN}patchUserSegment${OFF};Perform a partial update to a user segment. (AUTH)
+  ${CYAN}postUserSegment${OFF};Creates a new user segment. (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -851,7 +909,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 1.0.7)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.0)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -871,7 +929,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 1.0.7)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 2.0.0)${OFF}"
     echo ""
 }
 
@@ -1173,15 +1231,16 @@ print_getFeatureFlag_help() {
 ##############################################################################
 print_getFeatureFlagStatus_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}getFeatureFlagStatus - Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}getFeatureFlagStatus - Get the status for a particular feature flag.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;List of feature flag statuses.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;Status of the requested feature flag.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -1192,16 +1251,15 @@ print_getFeatureFlagStatus_help() {
 ##############################################################################
 print_getFeatureFlagStatuses_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}getFeatureFlagStatuses - Get the status for a particular feature flag.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}getFeatureFlagStatuses - Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Status of the requested feature flag.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;List of feature flag statuses.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -1239,7 +1297,7 @@ print_patchFeatureFlag_help() {
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Requires a JSON Patch representation of the desired changes to the project. 'http://jsonpatch.com/' Feature flag patches also support JSON Merge Patch format. 'https://tools.ietf.org/html/rfc7386' The addition of comments is also supported." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Requires a JSON Patch representation of the desired changes to the project, and an optional comment. 'http://jsonpatch.com/' Feature flag patches also support JSON Merge Patch format. 'https://tools.ietf.org/html/rfc7386' The addition of comments is also supported." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -1508,6 +1566,124 @@ print_postMembers_help() {
 }
 ##############################################################################
 #
+# Print help for deleteUserSegment operation
+#
+##############################################################################
+print_deleteUserSegment_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}deleteUserSegment - Delete a user segment.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}userSegmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The user segment's key. The key identifies the user segment in your code. ${YELLOW}Specify as: userSegmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=204
+    echo -e "${result_color_table[${code:0:1}]}  204;Action completed successfully.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getUserSegment operation
+#
+##############################################################################
+print_getUserSegment_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getUserSegment - Get a single user segment by key.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}userSegmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The user segment's key. The key identifies the user segment in your code. ${YELLOW}Specify as: userSegmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;User segment response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getUserSegments operation
+#
+##############################################################################
+print_getUserSegments_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getUserSegments - Get a list of all user segments in the given project.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}tag${OFF} ${BLUE}[string]${OFF}${OFF} - Filter by tag. A tag can be used to group flags across projects.${YELLOW} Specify as: tag=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Segments response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for patchUserSegment operation
+#
+##############################################################################
+print_patchUserSegment_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}patchUserSegment - Perform a partial update to a user segment.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}userSegmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The user segment's key. The key identifies the user segment in your code. ${YELLOW}Specify as: userSegmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Requires a JSON Patch representation of the desired changes to the project. 'http://jsonpatch.com/' Feature flag patches also support JSON Merge Patch format. 'https://tools.ietf.org/html/rfc7386' The addition of comments is also supported." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;User segment response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=409
+    echo -e "${result_color_table[${code:0:1}]}  409;Status conflict.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for postUserSegment operation
+#
+##############################################################################
+print_postUserSegment_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}postUserSegment - Creates a new user segment.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Create a new user segment." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Resource created.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=409
+    echo -e "${result_color_table[${code:0:1}]}  409;Status conflict.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for getUserFlagSetting operation
 #
 ##############################################################################
@@ -1663,9 +1839,9 @@ print_getUsers_help() {
     echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}limit${OFF} ${BLUE}[integer]${OFF}${OFF} - Pagination limit.${YELLOW} Specify as: limit=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}h${OFF} ${BLUE}[string]${OFF}${OFF} - Next link query parameter.${YELLOW} Specify as: h=value${OFF}" \
+    echo -e "  * ${GREEN}h${OFF} ${BLUE}[string]${OFF}${OFF} - This parameter is required when following \"next\" links.${YELLOW} Specify as: h=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}scrollId${OFF} ${BLUE}[string]${OFF}${OFF} - Next link query parameter.${YELLOW} Specify as: scrollId=value${OFF}" \
+    echo -e "  * ${GREEN}scrollId${OFF} ${BLUE}[string]${OFF}${OFF} - This parameter is required when following \"next\" links.${YELLOW} Specify as: scrollId=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2423,13 +2599,13 @@ call_getFeatureFlag() {
 call_getFeatureFlagStatus() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local path_parameter_names=(projectKey environmentKey)
+    local path_parameter_names=(projectKey environmentKey featureFlagKey)
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v2/flag-statuses/{projectKey}/{environmentKey}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/flag-statuses/{projectKey}/{environmentKey}/{featureFlagKey}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -2459,13 +2635,13 @@ call_getFeatureFlagStatus() {
 call_getFeatureFlagStatuses() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local path_parameter_names=(projectKey environmentKey featureFlagKey)
+    local path_parameter_names=(projectKey environmentKey)
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v2/flag-statuses/{projectKey}/{environmentKey}/{featureFlagKey}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/flag-statuses/{projectKey}/{environmentKey}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -3180,6 +3356,270 @@ call_postMembers() {
     local path
 
     if ! path=$(build_request_path "/api/v2/members" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the Swagger specification
+    # if values produces and consumes are defined unambigously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call deleteUserSegment operation
+#
+##############################################################################
+call_deleteUserSegment() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey userSegmentKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/segments/{projectKey}/{environmentKey}/{userSegmentKey}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getUserSegment operation
+#
+##############################################################################
+call_getUserSegment() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey userSegmentKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/segments/{projectKey}/{environmentKey}/{userSegmentKey}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getUserSegments operation
+#
+##############################################################################
+call_getUserSegments() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(tag  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/segments/{projectKey}/{environmentKey}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call patchUserSegment operation
+#
+##############################################################################
+call_patchUserSegment() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey userSegmentKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/segments/{projectKey}/{environmentKey}/{userSegmentKey}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PATCH"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the Swagger specification
+    # if values produces and consumes are defined unambigously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call postUserSegment operation
+#
+##############################################################################
+call_postUserSegment() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/segments/{projectKey}/{environmentKey}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -3985,6 +4425,21 @@ case $key in
     postMembers)
     operation="postMembers"
     ;;
+    deleteUserSegment)
+    operation="deleteUserSegment"
+    ;;
+    getUserSegment)
+    operation="getUserSegment"
+    ;;
+    getUserSegments)
+    operation="getUserSegments"
+    ;;
+    patchUserSegment)
+    operation="patchUserSegment"
+    ;;
+    postUserSegment)
+    operation="postUserSegment"
+    ;;
     getUserFlagSetting)
     operation="getUserFlagSetting"
     ;;
@@ -4191,6 +4646,21 @@ case $operation in
     ;;
     postMembers)
     call_postMembers
+    ;;
+    deleteUserSegment)
+    call_deleteUserSegment
+    ;;
+    getUserSegment)
+    call_getUserSegment
+    ;;
+    getUserSegments)
+    call_getUserSegments
+    ;;
+    patchUserSegment)
+    call_patchUserSegment
+    ;;
+    postUserSegment)
+    call_postUserSegment
     ;;
     getUserFlagSetting)
     call_getUserFlagSetting

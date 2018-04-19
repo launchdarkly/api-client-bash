@@ -8,7 +8,7 @@
 # ! swagger-codegen (https://github.com/swagger-api/swagger-codegen)
 # ! FROM SWAGGER SPECIFICATION IN JSON.
 # !
-# ! Generated on: 2018-04-19T14:20:40.764-07:00
+# ! Generated on: 2018-04-19T14:58:48.697-07:00
 # !
 # !
 # ! System wide installation:
@@ -98,6 +98,11 @@ _()
     operations["getMembers"]=1
     operations["patchMember"]=1
     operations["postMembers"]=1
+    operations["deleteUserSegment"]=1
+    operations["getUserSegment"]=1
+    operations["getUserSegments"]=1
+    operations["patchUserSegment"]=1
+    operations["postUserSegment"]=1
     operations["getUserFlagSetting"]=1
     operations["getUserFlagSettings"]=1
     operations["putFlagSetting"]=1
@@ -127,8 +132,8 @@ _()
     operation_parameters["postEnvironment"]="projectKey= "
     operation_parameters["deleteFeatureFlag"]="projectKey= featureFlagKey= "
     operation_parameters["getFeatureFlag"]="projectKey= featureFlagKey= env= "
-    operation_parameters["getFeatureFlagStatus"]="projectKey= environmentKey= "
-    operation_parameters["getFeatureFlagStatuses"]="projectKey= environmentKey= featureFlagKey= "
+    operation_parameters["getFeatureFlagStatus"]="projectKey= environmentKey= featureFlagKey= "
+    operation_parameters["getFeatureFlagStatuses"]="projectKey= environmentKey= "
     operation_parameters["getFeatureFlags"]="projectKey= env= tag= "
     operation_parameters["patchFeatureFlag"]="projectKey= featureFlagKey= "
     operation_parameters["postFeatureFlag"]="projectKey= "
@@ -143,6 +148,11 @@ _()
     operation_parameters["getMembers"]=""
     operation_parameters["patchMember"]="memberId= "
     operation_parameters["postMembers"]=""
+    operation_parameters["deleteUserSegment"]="projectKey= environmentKey= userSegmentKey= "
+    operation_parameters["getUserSegment"]="projectKey= environmentKey= userSegmentKey= "
+    operation_parameters["getUserSegments"]="projectKey= environmentKey= tag= "
+    operation_parameters["patchUserSegment"]="projectKey= environmentKey= userSegmentKey= "
+    operation_parameters["postUserSegment"]="projectKey= environmentKey= "
     operation_parameters["getUserFlagSetting"]="projectKey= environmentKey= userKey= featureFlagKey= "
     operation_parameters["getUserFlagSettings"]="projectKey= environmentKey= userKey= "
     operation_parameters["putFlagSetting"]="projectKey= environmentKey= userKey= featureFlagKey= "

@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **key** | **string** |  | [optional] [default to null]
 **name** | **string** |  | [optional] [default to null]
+**description** | **string** |  | [optional] [default to null]
 **kind** | **string** |  | [optional] [default to null]
 **creationDate** | **integer** |  | [optional] [default to null]
 **includeInSnippet** | **boolean** |  | [optional] [default to null]

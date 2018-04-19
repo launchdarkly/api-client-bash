@@ -112,7 +112,7 @@ Modify a webhook by ID.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **resourceId** | **string** | The resource ID. |
- **patchDelta** | [**array[PatchDelta]**](PatchDelta.md) | Requires a JSON Patch representation of the desired changes to the project. 'http://jsonpatch.com/' |
+ **patchDelta** | [**array[PatchOperation]**](PatchOperation.md) | Requires a JSON Patch representation of the desired changes to the project. 'http://jsonpatch.com/' |
 
 ### Return type
 

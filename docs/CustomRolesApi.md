@@ -112,7 +112,7 @@ Modify a custom role by key.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customRoleKey** | **string** | The custom role key. |
- **patchDelta** | [**array[PatchDelta]**](PatchDelta.md) | Requires a JSON Patch representation of the desired changes to the project. 'http://jsonpatch.com/' |
+ **patchDelta** | [**array[PatchOperation]**](PatchOperation.md) | Requires a JSON Patch representation of the desired changes to the project. 'http://jsonpatch.com/' |
 
 ### Return type
 

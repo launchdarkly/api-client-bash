@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **_links** | [**Links**](Links.md) |  | [optional] [default to null]
-**_id** | **string** |  | [optional] [default to null]
+**_id** | [**Id**](Id.md) |  | [optional] [default to null]
 **key** | **string** |  | [optional] [default to null]
 **name** | **string** |  | [optional] [default to null]
 **apiKey** | **string** |  | [optional] [default to null]
