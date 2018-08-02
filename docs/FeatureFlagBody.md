@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | [default to null]
 **key** | **string** |  | [default to null]
+**description** | **string** |  | [optional] [default to null]
 **variations** | [**array[Variation]**](Variation.md) |  | [default to null]
 **temporary** | **boolean** |  | [optional] [default to null]
 **tags** | **array[string]** |  | [optional] [default to null]
