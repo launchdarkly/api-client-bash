@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **maintainerId** | **string** |  | [optional] [default to null]
 **tags** | **array[string]** |  | [optional] [default to null]
 **variations** | [**array[Variation]**](Variation.md) |  | [optional] [default to null]
+**customProperties** | [**CustomProperties**](CustomProperties.md) |  | [optional] [default to null]
 **_links** | [**Links**](Links.md) |  | [optional] [default to null]
 **_maintainer** | [**Member**](Member.md) |  | [optional] [default to null]
 **environments** | [**map[String, FeatureFlagConfig]**](FeatureFlagConfig.md) |  | [optional] [default to null]
