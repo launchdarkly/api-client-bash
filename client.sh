@@ -8,7 +8,7 @@
 # ! swagger-codegen (https://github.com/swagger-api/swagger-codegen)
 # ! FROM SWAGGER SPECIFICATION IN JSON.
 # !
-# ! Generated on: 2018-10-12T03:53:42.148Z
+# ! Generated on: 2018-10-17T21:13:17.542Z
 # !
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
