@@ -8,7 +8,7 @@
 # ! swagger-codegen (https://github.com/swagger-api/swagger-codegen)
 # ! FROM SWAGGER SPECIFICATION IN JSON.
 # !
-# ! Generated on: 2018-10-17T21:13:17.542Z
+# ! Generated on: 2018-10-26T18:20:21.240Z
 # !
 # !
 # ! System wide installation:
@@ -136,7 +136,7 @@ _()
     operation_parameters["getFeatureFlagStatuses"]="projectKey= environmentKey= "
     operation_parameters["getFeatureFlags"]="projectKey= env= tag= "
     operation_parameters["patchFeatureFlag"]="projectKey= featureFlagKey= "
-    operation_parameters["postFeatureFlag"]="projectKey= "
+    operation_parameters["postFeatureFlag"]="projectKey= clone= "
     operation_parameters["deleteProject"]="projectKey= "
     operation_parameters["getProject"]="projectKey= "
     operation_parameters["getProjects"]=""

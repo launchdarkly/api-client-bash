@@ -8,7 +8,7 @@
 # ! swagger-codegen (https://github.com/swagger-api/swagger-codegen)
 # ! FROM SWAGGER SPECIFICATION IN JSON.
 # !
-# ! Generated on: 2018-10-17T21:13:17.542Z
+# ! Generated on: 2018-10-26T18:20:21.240Z
 # !
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -134,6 +134,7 @@ operation_parameters_minimum_occurrences["patchFeatureFlag:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["patchFeatureFlag:::patchComment"]=1
 operation_parameters_minimum_occurrences["postFeatureFlag:::projectKey"]=1
 operation_parameters_minimum_occurrences["postFeatureFlag:::featureFlagBody"]=1
+operation_parameters_minimum_occurrences["postFeatureFlag:::clone"]=0
 operation_parameters_minimum_occurrences["deleteProject:::projectKey"]=1
 operation_parameters_minimum_occurrences["getProject:::projectKey"]=1
 operation_parameters_minimum_occurrences["patchProject:::projectKey"]=1
@@ -240,6 +241,7 @@ operation_parameters_maximum_occurrences["patchFeatureFlag:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["patchFeatureFlag:::patchComment"]=0
 operation_parameters_maximum_occurrences["postFeatureFlag:::projectKey"]=0
 operation_parameters_maximum_occurrences["postFeatureFlag:::featureFlagBody"]=0
+operation_parameters_maximum_occurrences["postFeatureFlag:::clone"]=0
 operation_parameters_maximum_occurrences["deleteProject:::projectKey"]=0
 operation_parameters_maximum_occurrences["getProject:::projectKey"]=0
 operation_parameters_maximum_occurrences["patchProject:::projectKey"]=0
@@ -343,6 +345,7 @@ operation_parameters_collection_type["patchFeatureFlag:::featureFlagKey"]=""
 operation_parameters_collection_type["patchFeatureFlag:::patchComment"]=""
 operation_parameters_collection_type["postFeatureFlag:::projectKey"]=""
 operation_parameters_collection_type["postFeatureFlag:::featureFlagBody"]=""
+operation_parameters_collection_type["postFeatureFlag:::clone"]=""
 operation_parameters_collection_type["deleteProject:::projectKey"]=""
 operation_parameters_collection_type["getProject:::projectKey"]=""
 operation_parameters_collection_type["patchProject:::projectKey"]=""
@@ -748,7 +751,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.9)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.10)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -909,7 +912,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.9)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.10)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -929,7 +932,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 2.0.9)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 2.0.10)${OFF}"
     echo ""
 }
 
@@ -1323,6 +1326,8 @@ print_postFeatureFlag_help() {
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}clone${OFF} ${BLUE}[string]${OFF}${OFF} - The key of the feature flag to be cloned. The key identifies the flag in your code.  For example, setting clone=flagKey will copy the full targeting configuration for all environments (including on/off state) from the original flag to the new flag.${YELLOW} Specify as: clone=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Create a new feature flag." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
@@ -2788,7 +2793,7 @@ call_postFeatureFlag() {
     local path_parameter_names=(projectKey)
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=(  )
+    local query_parameter_names=(clone  )
     local path
 
     if ! path=$(build_request_path "/api/v2/flags/{projectKey}" path_parameter_names query_parameter_names); then

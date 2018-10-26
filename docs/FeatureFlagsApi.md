@@ -209,7 +209,7 @@ Creates a new feature flag.
 
 ### Example
 ```bash
- postFeatureFlag projectKey=value
+ postFeatureFlag projectKey=value  clone=value
 ```
 
 ### Parameters
@@ -218,6 +218,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
  **featureFlagBody** | [**FeatureFlagBody**](FeatureFlagBody.md) | Create a new feature flag. |
+ **clone** | **string** | The key of the feature flag to be cloned. The key identifies the flag in your code.  For example, setting clone=flagKey will copy the full targeting configuration for all environments (including on/off state) from the original flag to the new flag. | [optional]
 
 ### Return type
 

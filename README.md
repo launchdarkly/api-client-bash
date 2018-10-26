@@ -163,7 +163,7 @@ Class | Method | HTTP request | Description
  - [CustomRoleKeyOrId](docs/CustomRoleKeyOrId.md)
  - [CustomRoles](docs/CustomRoles.md)
  - [Environment](docs/Environment.md)
- - [EnvironmentBody](docs/EnvironmentBody.md)
+ - [EnvironmentPost](docs/EnvironmentPost.md)
  - [Fallthrough](docs/Fallthrough.md)
  - [FeatureFlag](docs/FeatureFlag.md)
  - [FeatureFlagBody](docs/FeatureFlagBody.md)

@@ -10,7 +10,7 @@
 # !
 # ! Based on: https://github.com/Valodim/zsh-curl-completion/blob/master/_curl
 # !
-# ! Generated on: 2018-10-17T21:13:17.542Z
+# ! Generated on: 2018-10-26T18:20:21.240Z
 # !
 # !
 # ! Installation:
@@ -476,7 +476,8 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-                    )
+          "clone=:[QUERY] The key of the feature flag to be cloned. The key identifies the flag in your code.  For example, setting clone&#x3D;flagKey will copy the full targeting configuration for all environments (including on/off state) from the original flag to the new flag."
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       deleteProject)

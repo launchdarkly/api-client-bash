@@ -118,7 +118,7 @@ Create a new environment in a specified project with a given name, key, and swat
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
- **environmentBody** | [**EnvironmentBody**](EnvironmentBody.md) | New environment. |
+ **environmentBody** | [**EnvironmentPost**](EnvironmentPost.md) | New environment. |
 
 ### Return type
 

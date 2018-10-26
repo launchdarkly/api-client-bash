@@ -1,4 +1,4 @@
-# environmentBody
+# EnvironmentPost
 
 ## Properties
 Name | Type | Description | Notes
