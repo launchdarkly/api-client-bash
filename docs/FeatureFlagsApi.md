@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**FeatureFlag**](FeatureFlag.md)
 
 ### Authorization
 
