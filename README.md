@@ -110,6 +110,7 @@ Class | Method | HTTP request | Description
 *EnvironmentsApi* | [**getEnvironment**](docs/EnvironmentsApi.md#getenvironment) | **GET** /projects/{projectKey}/environments/{environmentKey} | Get an environment given a project and key.
 *EnvironmentsApi* | [**patchEnvironment**](docs/EnvironmentsApi.md#patchenvironment) | **PATCH** /projects/{projectKey}/environments/{environmentKey} | Modify an environment by ID.
 *EnvironmentsApi* | [**postEnvironment**](docs/EnvironmentsApi.md#postenvironment) | **POST** /projects/{projectKey}/environments | Create a new environment in a specified project with a given name, key, and swatch color.
+*FeatureFlagsApi* | [**copyFeatureFlag**](docs/FeatureFlagsApi.md#copyfeatureflag) | **POST** /flags/{projectKey}/{environmentKey}/{featureFlagKey}/copy | Copies the feature flag configuration from one environment to the same feature flag in another environment.
 *FeatureFlagsApi* | [**deleteFeatureFlag**](docs/FeatureFlagsApi.md#deletefeatureflag) | **DELETE** /flags/{projectKey}/{featureFlagKey} | Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.
 *FeatureFlagsApi* | [**getFeatureFlag**](docs/FeatureFlagsApi.md#getfeatureflag) | **GET** /flags/{projectKey}/{featureFlagKey} | Get a single feature flag by key.
 *FeatureFlagsApi* | [**getFeatureFlagStatus**](docs/FeatureFlagsApi.md#getfeatureflagstatus) | **GET** /flag-statuses/{projectKey}/{environmentKey}/{featureFlagKey} | Get the status for a particular feature flag.
@@ -155,7 +156,6 @@ Class | Method | HTTP request | Description
  - [AuditLogEntry](docs/AuditLogEntry.md)
  - [AuditLogEntry_target](docs/AuditLogEntry_target.md)
  - [Clause](docs/Clause.md)
- - [CustomProperties](docs/CustomProperties.md)
  - [CustomProperty](docs/CustomProperty.md)
  - [CustomPropertyValues](docs/CustomPropertyValues.md)
  - [CustomRole](docs/CustomRole.md)

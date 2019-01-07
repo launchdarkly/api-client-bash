@@ -8,7 +8,7 @@
 # ! swagger-codegen (https://github.com/swagger-api/swagger-codegen)
 # ! FROM SWAGGER SPECIFICATION IN JSON.
 # !
-# ! Generated on: 2018-12-04T04:08:32.377Z
+# ! Generated on: 2019-01-07T23:25:27.048Z
 # !
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -116,6 +116,9 @@ operation_parameters_minimum_occurrences["patchEnvironment:::environmentKey"]=1
 operation_parameters_minimum_occurrences["patchEnvironment:::patchDelta"]=1
 operation_parameters_minimum_occurrences["postEnvironment:::projectKey"]=1
 operation_parameters_minimum_occurrences["postEnvironment:::environmentBody"]=1
+operation_parameters_minimum_occurrences["copyFeatureFlag:::projectKey"]=1
+operation_parameters_minimum_occurrences["copyFeatureFlag:::environmentKey"]=1
+operation_parameters_minimum_occurrences["copyFeatureFlag:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["deleteFeatureFlag:::projectKey"]=1
 operation_parameters_minimum_occurrences["deleteFeatureFlag:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["getFeatureFlag:::projectKey"]=1
@@ -223,6 +226,9 @@ operation_parameters_maximum_occurrences["patchEnvironment:::environmentKey"]=0
 operation_parameters_maximum_occurrences["patchEnvironment:::patchDelta"]=0
 operation_parameters_maximum_occurrences["postEnvironment:::projectKey"]=0
 operation_parameters_maximum_occurrences["postEnvironment:::environmentBody"]=0
+operation_parameters_maximum_occurrences["copyFeatureFlag:::projectKey"]=0
+operation_parameters_maximum_occurrences["copyFeatureFlag:::environmentKey"]=0
+operation_parameters_maximum_occurrences["copyFeatureFlag:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["deleteFeatureFlag:::projectKey"]=0
 operation_parameters_maximum_occurrences["deleteFeatureFlag:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["getFeatureFlag:::projectKey"]=0
@@ -327,6 +333,9 @@ operation_parameters_collection_type["patchEnvironment:::environmentKey"]=""
 operation_parameters_collection_type["patchEnvironment:::patchDelta"]=
 operation_parameters_collection_type["postEnvironment:::projectKey"]=""
 operation_parameters_collection_type["postEnvironment:::environmentBody"]=""
+operation_parameters_collection_type["copyFeatureFlag:::projectKey"]=""
+operation_parameters_collection_type["copyFeatureFlag:::environmentKey"]=""
+operation_parameters_collection_type["copyFeatureFlag:::featureFlagKey"]=""
 operation_parameters_collection_type["deleteFeatureFlag:::projectKey"]=""
 operation_parameters_collection_type["deleteFeatureFlag:::featureFlagKey"]=""
 operation_parameters_collection_type["getFeatureFlag:::projectKey"]=""
@@ -751,7 +760,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.10)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.12)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -813,6 +822,7 @@ echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[featureFlags]${OFF}"
 read -r -d '' ops <<EOF
+  ${CYAN}copyFeatureFlag${OFF};Copies the feature flag configuration from one environment to the same feature flag in another environment. (AUTH)
   ${CYAN}deleteFeatureFlag${OFF};Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application. (AUTH)
   ${CYAN}getFeatureFlag${OFF};Get a single feature flag by key. (AUTH)
   ${CYAN}getFeatureFlagStatus${OFF};Get the status for a particular feature flag. (AUTH)
@@ -912,7 +922,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.10)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.12)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -932,7 +942,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 2.0.10)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 2.0.12)${OFF}"
     echo ""
 }
 
@@ -1176,6 +1186,30 @@ print_postEnvironment_help() {
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=201
     echo -e "${result_color_table[${code:0:1}]}  201;Resource created.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=409
+    echo -e "${result_color_table[${code:0:1}]}  409;Status conflict.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for copyFeatureFlag operation
+#
+##############################################################################
+print_copyFeatureFlag_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}copyFeatureFlag - Copies the feature flag configuration from one environment to the same feature flag in another environment.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Flag confguration copy response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=400
     echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
@@ -2521,6 +2555,42 @@ call_postEnvironment() {
         else
             eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
         fi
+    fi
+}
+
+##############################################################################
+#
+# Call copyFeatureFlag operation
+#
+##############################################################################
+call_copyFeatureFlag() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey featureFlagKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/flags/{projectKey}/{environmentKey}/{featureFlagKey}/copy" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     fi
 }
 
@@ -4376,6 +4446,9 @@ case $key in
     postEnvironment)
     operation="postEnvironment"
     ;;
+    copyFeatureFlag)
+    operation="copyFeatureFlag"
+    ;;
     deleteFeatureFlag)
     operation="deleteFeatureFlag"
     ;;
@@ -4597,6 +4670,9 @@ case $operation in
     ;;
     postEnvironment)
     call_postEnvironment
+    ;;
+    copyFeatureFlag)
+    call_copyFeatureFlag
     ;;
     deleteFeatureFlag)
     call_deleteFeatureFlag

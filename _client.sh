@@ -10,7 +10,7 @@
 # !
 # ! Based on: https://github.com/Valodim/zsh-curl-completion/blob/master/_curl
 # !
-# ! Generated on: 2018-12-04T04:08:32.377Z
+# ! Generated on: 2019-01-07T23:25:27.048Z
 # !
 # !
 # ! Installation:
@@ -305,7 +305,8 @@ case $state in
             "postCustomRole[Create a new custom role.]"             "deleteEnvironment[Delete an environment in a specific project.]" \
             "getEnvironment[Get an environment given a project and key.]" \
             "patchEnvironment[Modify an environment by ID.]" \
-            "postEnvironment[Create a new environment in a specified project with a given name, key, and swatch color.]"             "deleteFeatureFlag[Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.]" \
+            "postEnvironment[Create a new environment in a specified project with a given name, key, and swatch color.]"             "copyFeatureFlag[Copies the feature flag configuration from one environment to the same feature flag in another environment.]" \
+            "deleteFeatureFlag[Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.]" \
             "getFeatureFlag[Get a single feature flag by key.]" \
             "getFeatureFlagStatus[Get the status for a particular feature flag.]" \
             "getFeatureFlagStatuses[Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.]" \
@@ -418,6 +419,15 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      copyFeatureFlag)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
