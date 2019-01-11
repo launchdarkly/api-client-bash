@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **maintainerId** | **string** |  | [optional] [default to null]
 **tags** | **array[string]** |  | [optional] [default to null]
 **variations** | [**array[Variation]**](Variation.md) |  | [optional] [default to null]
+**goalIds** | **array[string]** |  | [optional] [default to null]
 **_version** | **integer** |  | [optional] [default to null]
 **customProperties** | [**map[String, CustomProperty]**](CustomProperty.md) |  | [optional] [default to null]
 **_links** | [**Links**](Links.md) |  | [optional] [default to null]
