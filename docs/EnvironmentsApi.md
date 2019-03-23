@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**Environment**](Environment.md)
 
 ### Authorization
 

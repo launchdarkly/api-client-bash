@@ -150,17 +150,13 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [Action](docs/Action.md)
- - [Actions](docs/Actions.md)
  - [AuditLogEntries](docs/AuditLogEntries.md)
  - [AuditLogEntry](docs/AuditLogEntry.md)
  - [AuditLogEntry_target](docs/AuditLogEntry_target.md)
  - [Clause](docs/Clause.md)
  - [CustomProperty](docs/CustomProperty.md)
- - [CustomPropertyValues](docs/CustomPropertyValues.md)
  - [CustomRole](docs/CustomRole.md)
  - [CustomRoleBody](docs/CustomRoleBody.md)
- - [CustomRoleKeyOrId](docs/CustomRoleKeyOrId.md)
  - [CustomRoles](docs/CustomRoles.md)
  - [Environment](docs/Environment.md)
  - [EnvironmentPost](docs/EnvironmentPost.md)
@@ -184,8 +180,6 @@ Class | Method | HTTP request | Description
  - [Project](docs/Project.md)
  - [ProjectBody](docs/ProjectBody.md)
  - [Projects](docs/Projects.md)
- - [Resource](docs/Resource.md)
- - [Resources](docs/Resources.md)
  - [Role](docs/Role.md)
  - [Rollout](docs/Rollout.md)
  - [Rule](docs/Rule.md)

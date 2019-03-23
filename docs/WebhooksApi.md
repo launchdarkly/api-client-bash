@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**Webhook**](Webhook.md)
 
 ### Authorization
 

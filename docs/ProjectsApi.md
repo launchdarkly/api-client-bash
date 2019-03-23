@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**Project**](Project.md)
 
 ### Authorization
 

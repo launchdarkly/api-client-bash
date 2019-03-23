@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**UserSegment**](UserSegment.md)
 
 ### Authorization
 

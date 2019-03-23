@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-(empty response body)
+[**CustomRole**](CustomRole.md)
 
 ### Authorization
 
