@@ -425,7 +425,6 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
 "featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0

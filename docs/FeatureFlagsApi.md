@@ -4,7 +4,7 @@ All URIs are relative to */api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**copyFeatureFlag**](FeatureFlagsApi.md#copyFeatureFlag) | **POST** /flags/{projectKey}/{environmentKey}/{featureFlagKey}/copy | Copies the feature flag configuration from one environment to the same feature flag in another environment.
+[**copyFeatureFlag**](FeatureFlagsApi.md#copyFeatureFlag) | **POST** /flags/{projectKey}/{featureFlagKey}/copy | Copies the feature flag configuration from one environment to the same feature flag in another environment.
 [**deleteFeatureFlag**](FeatureFlagsApi.md#deleteFeatureFlag) | **DELETE** /flags/{projectKey}/{featureFlagKey} | Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.
 [**getFeatureFlag**](FeatureFlagsApi.md#getFeatureFlag) | **GET** /flags/{projectKey}/{featureFlagKey} | Get a single feature flag by key.
 [**getFeatureFlagStatus**](FeatureFlagsApi.md#getFeatureFlagStatus) | **GET** /flag-statuses/{projectKey}/{environmentKey}/{featureFlagKey} | Get the status for a particular feature flag.
@@ -20,7 +20,7 @@ Copies the feature flag configuration from one environment to the same feature f
 
 ### Example
 ```bash
- copyFeatureFlag projectKey=value environmentKey=value featureFlagKey=value
+ copyFeatureFlag projectKey=value featureFlagKey=value
 ```
 
 ### Parameters
@@ -28,8 +28,8 @@ Copies the feature flag configuration from one environment to the same feature f
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
- **environmentKey** | **string** | The environment key, used to tie together flag configuration and users under one environment so they can be managed together. |
  **featureFlagKey** | **string** | The feature flag's key. The key identifies the flag in your code. |
+ **featureFlagCopyBody** | [**FeatureFlagCopyBody**](FeatureFlagCopyBody.md) | Copy feature flag configurations between environments. |
 
 ### Return type
 
