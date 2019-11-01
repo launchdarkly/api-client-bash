@@ -308,6 +308,7 @@ case $state in
             "deleteFeatureFlag[Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.]" \
             "getFeatureFlag[Get a single feature flag by key.]" \
             "getFeatureFlagStatus[Get the status for a particular feature flag.]" \
+            "getFeatureFlagStatusAcrossEnvironments[[BETA] Get the status for a particular feature flag across environments]" \
             "getFeatureFlagStatuses[Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.]" \
             "getFeatureFlags[Get a list of all features in the given project.]" \
             "patchFeatureFlag[Perform a partial update to a feature.]" \
@@ -319,7 +320,16 @@ case $state in
             "getMember[Get a single team member by ID.]" \
             "getMembers[Returns a list of all members in the account.]" \
             "patchMember[Modify a team member by ID.]" \
-            "postMembers[Invite new members.]"             "deleteUserSegment[Delete a user segment.]" \
+            "postMembers[Invite new members.]"             "getEvaluations[[BETA] Get events usage by event id and the feature flag key.]" \
+            "getEvent[[BETA] Get events usage by event type.]" \
+            "getEvents[[BETA] Get events usage endpoints.]" \
+            "getMAU[[BETA] Get monthly active user data.]" \
+            "getMAUByCategory[[BETA] Get monthly active user data by category.]" \
+            "getStream[[BETA] Get a stream endpoint and return timeseries data.]" \
+            "getStreamBySDK[[BETA] Get a stream timeseries data by source show sdk version metadata.]" \
+            "getStreamSDKVersion[[BETA] Get a stream timeseries data by source and show all sdk version associated.]" \
+            "getStreams[[BETA] Returns a list of all streams.]" \
+            "getUsage[[BETA] Returns of the usage endpoints available.]"             "deleteUserSegment[Delete a user segment.]" \
             "getUserSegment[Get a single user segment by key.]" \
             "getUserSegments[Get a list of all user segments in the given project.]" \
             "patchUserSegment[Perform a partial update to a user segment.]" \
@@ -455,6 +465,14 @@ case $state in
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      getFeatureFlagStatusAcrossEnvironments)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       getFeatureFlagStatuses)
         local -a _op_arguments
         _op_arguments=(
@@ -555,6 +573,72 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       postMembers)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getEvaluations)
+        local -a _op_arguments
+        _op_arguments=(
+          "envId=:[PATH] The environment id for the flag evaluations in question."
+"flagKey=:[PATH] The key of the flag we want metrics for."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getEvent)
+        local -a _op_arguments
+        _op_arguments=(
+          "type=:[PATH] The type of event we would like to track."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getEvents)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getMAU)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getMAUByCategory)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getStream)
+        local -a _op_arguments
+        _op_arguments=(
+          "source=:[PATH] The source of where the stream comes from."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getStreamBySDK)
+        local -a _op_arguments
+        _op_arguments=(
+          "source=:[PATH] The source of where the stream comes from."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getStreamSDKVersion)
+        local -a _op_arguments
+        _op_arguments=(
+          "source=:[PATH] The source of where the stream comes from."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getStreams)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getUsage)
         local -a _op_arguments
         _op_arguments=(
                               )

@@ -83,6 +83,7 @@ _()
     operations["deleteFeatureFlag"]=1
     operations["getFeatureFlag"]=1
     operations["getFeatureFlagStatus"]=1
+    operations["getFeatureFlagStatusAcrossEnvironments"]=1
     operations["getFeatureFlagStatuses"]=1
     operations["getFeatureFlags"]=1
     operations["patchFeatureFlag"]=1
@@ -98,6 +99,16 @@ _()
     operations["getMembers"]=1
     operations["patchMember"]=1
     operations["postMembers"]=1
+    operations["getEvaluations"]=1
+    operations["getEvent"]=1
+    operations["getEvents"]=1
+    operations["getMAU"]=1
+    operations["getMAUByCategory"]=1
+    operations["getStream"]=1
+    operations["getStreamBySDK"]=1
+    operations["getStreamSDKVersion"]=1
+    operations["getStreams"]=1
+    operations["getUsage"]=1
     operations["deleteUserSegment"]=1
     operations["getUserSegment"]=1
     operations["getUserSegments"]=1
@@ -134,6 +145,7 @@ _()
     operation_parameters["deleteFeatureFlag"]="projectKey= featureFlagKey= "
     operation_parameters["getFeatureFlag"]="projectKey= featureFlagKey= env= "
     operation_parameters["getFeatureFlagStatus"]="projectKey= environmentKey= featureFlagKey= "
+    operation_parameters["getFeatureFlagStatusAcrossEnvironments"]="projectKey= featureFlagKey= "
     operation_parameters["getFeatureFlagStatuses"]="projectKey= environmentKey= "
     operation_parameters["getFeatureFlags"]="projectKey= env= tag= "
     operation_parameters["patchFeatureFlag"]="projectKey= featureFlagKey= "
@@ -149,6 +161,16 @@ _()
     operation_parameters["getMembers"]=""
     operation_parameters["patchMember"]="memberId= "
     operation_parameters["postMembers"]=""
+    operation_parameters["getEvaluations"]="envId= flagKey= "
+    operation_parameters["getEvent"]="type= "
+    operation_parameters["getEvents"]=""
+    operation_parameters["getMAU"]=""
+    operation_parameters["getMAUByCategory"]=""
+    operation_parameters["getStream"]="source= "
+    operation_parameters["getStreamBySDK"]="source= "
+    operation_parameters["getStreamSDKVersion"]="source= "
+    operation_parameters["getStreams"]=""
+    operation_parameters["getUsage"]=""
     operation_parameters["deleteUserSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["getUserSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["getUserSegments"]="projectKey= environmentKey= tag= "
