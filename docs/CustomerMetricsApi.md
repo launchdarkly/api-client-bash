@@ -1,24 +1,24 @@
-# UsageApi
+# CustomerMetricsApi
 
 All URIs are relative to */api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getEvaluations**](UsageApi.md#getEvaluations) | **GET** /usage/evaluations/{envId}/{flagKey} | [BETA] Get events usage by event id and the feature flag key.
-[**getEvent**](UsageApi.md#getEvent) | **GET** /usage/events/{type} | [BETA] Get events usage by event type.
-[**getEvents**](UsageApi.md#getEvents) | **GET** /usage/events | [BETA] Get events usage endpoints.
-[**getMAU**](UsageApi.md#getMAU) | **GET** /usage/mau | [BETA] Get monthly active user data.
-[**getMAUByCategory**](UsageApi.md#getMAUByCategory) | **GET** /usage/mau/bycategory | [BETA] Get monthly active user data by category.
-[**getStream**](UsageApi.md#getStream) | **GET** /usage/streams/{source} | [BETA] Get a stream endpoint and return timeseries data.
-[**getStreamBySDK**](UsageApi.md#getStreamBySDK) | **GET** /usage/streams/{source}/bysdkversion | [BETA] Get a stream timeseries data by source show sdk version metadata.
-[**getStreamSDKVersion**](UsageApi.md#getStreamSDKVersion) | **GET** /usage/streams/{source}/sdkversions | [BETA] Get a stream timeseries data by source and show all sdk version associated.
-[**getStreams**](UsageApi.md#getStreams) | **GET** /usage/streams | [BETA] Returns a list of all streams.
-[**getUsage**](UsageApi.md#getUsage) | **GET** /usage | [BETA] Returns of the usage endpoints available.
+[**getEvaluations**](CustomerMetricsApi.md#getEvaluations) | **GET** /usage/evaluations/{envId}/{flagKey} | Get events usage by event id and the feature flag key.
+[**getEvent**](CustomerMetricsApi.md#getEvent) | **GET** /usage/events/{type} | Get events usage by event type.
+[**getEvents**](CustomerMetricsApi.md#getEvents) | **GET** /usage/events | Get events usage endpoints.
+[**getMAU**](CustomerMetricsApi.md#getMAU) | **GET** /usage/mau | Get monthly active user data.
+[**getMAUByCategory**](CustomerMetricsApi.md#getMAUByCategory) | **GET** /usage/mau/bycategory | Get monthly active user data by category.
+[**getStream**](CustomerMetricsApi.md#getStream) | **GET** /usage/streams/{source} | Get a stream endpoint and return timeseries data.
+[**getStreamBySDK**](CustomerMetricsApi.md#getStreamBySDK) | **GET** /usage/streams/{source}/bysdkversion | Get a stream timeseries data by source show sdk version metadata.
+[**getStreamSDKVersion**](CustomerMetricsApi.md#getStreamSDKVersion) | **GET** /usage/streams/{source}/sdkversions | Get a stream timeseries data by source and show all sdk version associated.
+[**getStreams**](CustomerMetricsApi.md#getStreams) | **GET** /usage/streams | Returns a list of all streams.
+[**getUsage**](CustomerMetricsApi.md#getUsage) | **GET** /usage | Returns of the usage endpoints available.
 
 
 ## **getEvaluations**
 
-[BETA] Get events usage by event id and the feature flag key.
+Get events usage by event id and the feature flag key.
 
 ### Example
 ```bash
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ## **getEvent**
 
-[BETA] Get events usage by event type.
+Get events usage by event type.
 
 ### Example
 ```bash
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ## **getEvents**
 
-[BETA] Get events usage endpoints.
+Get events usage endpoints.
 
 ### Example
 ```bash
@@ -106,7 +106,7 @@ This endpoint does not need any parameter.
 
 ## **getMAU**
 
-[BETA] Get monthly active user data.
+Get monthly active user data.
 
 ### Example
 ```bash
@@ -133,7 +133,7 @@ This endpoint does not need any parameter.
 
 ## **getMAUByCategory**
 
-[BETA] Get monthly active user data by category.
+Get monthly active user data by category.
 
 ### Example
 ```bash
@@ -160,7 +160,7 @@ This endpoint does not need any parameter.
 
 ## **getStream**
 
-[BETA] Get a stream endpoint and return timeseries data.
+Get a stream endpoint and return timeseries data.
 
 ### Example
 ```bash
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 
 ## **getStreamBySDK**
 
-[BETA] Get a stream timeseries data by source show sdk version metadata.
+Get a stream timeseries data by source show sdk version metadata.
 
 ### Example
 ```bash
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 
 ## **getStreamSDKVersion**
 
-[BETA] Get a stream timeseries data by source and show all sdk version associated.
+Get a stream timeseries data by source and show all sdk version associated.
 
 ### Example
 ```bash
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ## **getStreams**
 
-[BETA] Returns a list of all streams.
+Returns a list of all streams.
 
 ### Example
 ```bash
@@ -277,7 +277,7 @@ This endpoint does not need any parameter.
 
 ## **getUsage**
 
-[BETA] Returns of the usage endpoints available.
+Returns of the usage endpoints available.
 
 ### Example
 ```bash

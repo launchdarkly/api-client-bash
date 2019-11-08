@@ -301,14 +301,27 @@ case $state in
             "getCustomRole[Get one custom role by key.]" \
             "getCustomRoles[Return a complete list of custom roles.]" \
             "patchCustomRole[Modify a custom role by key.]" \
-            "postCustomRole[Create a new custom role.]"             "deleteEnvironment[Delete an environment in a specific project.]" \
+            "postCustomRole[Create a new custom role.]"             "getEvaluations[Get events usage by event id and the feature flag key.]" \
+            "getEvent[Get events usage by event type.]" \
+            "getEvents[Get events usage endpoints.]" \
+            "getMAU[Get monthly active user data.]" \
+            "getMAUByCategory[Get monthly active user data by category.]" \
+            "getStream[Get a stream endpoint and return timeseries data.]" \
+            "getStreamBySDK[Get a stream timeseries data by source show sdk version metadata.]" \
+            "getStreamSDKVersion[Get a stream timeseries data by source and show all sdk version associated.]" \
+            "getStreams[Returns a list of all streams.]" \
+            "getUsage[Returns of the usage endpoints available.]"             "deleteDestination[Get a single data export destination by ID]" \
+            "getDestination[Get a single data export destination by ID]" \
+            "getDestinations[Returns a list of all data export destinations.]" \
+            "patchDestination[Perform a partial update to a data export destination.]" \
+            "postDestination[Create a new data export destination]"             "deleteEnvironment[Delete an environment in a specific project.]" \
             "getEnvironment[Get an environment given a project and key.]" \
             "patchEnvironment[Modify an environment by ID.]" \
             "postEnvironment[Create a new environment in a specified project with a given name, key, and swatch color.]"             "copyFeatureFlag[Copies the feature flag configuration from one environment to the same feature flag in another environment.]" \
             "deleteFeatureFlag[Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.]" \
             "getFeatureFlag[Get a single feature flag by key.]" \
             "getFeatureFlagStatus[Get the status for a particular feature flag.]" \
-            "getFeatureFlagStatusAcrossEnvironments[[BETA] Get the status for a particular feature flag across environments]" \
+            "getFeatureFlagStatusAcrossEnvironments[Get the status for a particular feature flag across environments]" \
             "getFeatureFlagStatuses[Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.]" \
             "getFeatureFlags[Get a list of all features in the given project.]" \
             "patchFeatureFlag[Perform a partial update to a feature.]" \
@@ -320,16 +333,7 @@ case $state in
             "getMember[Get a single team member by ID.]" \
             "getMembers[Returns a list of all members in the account.]" \
             "patchMember[Modify a team member by ID.]" \
-            "postMembers[Invite new members.]"             "getEvaluations[[BETA] Get events usage by event id and the feature flag key.]" \
-            "getEvent[[BETA] Get events usage by event type.]" \
-            "getEvents[[BETA] Get events usage endpoints.]" \
-            "getMAU[[BETA] Get monthly active user data.]" \
-            "getMAUByCategory[[BETA] Get monthly active user data by category.]" \
-            "getStream[[BETA] Get a stream endpoint and return timeseries data.]" \
-            "getStreamBySDK[[BETA] Get a stream timeseries data by source show sdk version metadata.]" \
-            "getStreamSDKVersion[[BETA] Get a stream timeseries data by source and show all sdk version associated.]" \
-            "getStreams[[BETA] Returns a list of all streams.]" \
-            "getUsage[[BETA] Returns of the usage endpoints available.]"             "deleteUserSegment[Delete a user segment.]" \
+            "postMembers[Invite new members.]"             "deleteUserSegment[Delete a user segment.]" \
             "getUserSegment[Get a single user segment by key.]" \
             "getUserSegments[Get a list of all user segments in the given project.]" \
             "patchUserSegment[Perform a partial update to a user segment.]" \
@@ -398,6 +402,113 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
                               )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getEvaluations)
+        local -a _op_arguments
+        _op_arguments=(
+          "envId=:[PATH] The environment id for the flag evaluations in question."
+"flagKey=:[PATH] The key of the flag we want metrics for."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getEvent)
+        local -a _op_arguments
+        _op_arguments=(
+          "type=:[PATH] The type of event we would like to track."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getEvents)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getMAU)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getMAUByCategory)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getStream)
+        local -a _op_arguments
+        _op_arguments=(
+          "source=:[PATH] The source of where the stream comes from."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getStreamBySDK)
+        local -a _op_arguments
+        _op_arguments=(
+          "source=:[PATH] The source of where the stream comes from."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getStreamSDKVersion)
+        local -a _op_arguments
+        _op_arguments=(
+          "source=:[PATH] The source of where the stream comes from."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getStreams)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getUsage)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      deleteDestination)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"destinationId=:[PATH] The data export destination ID."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getDestination)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"destinationId=:[PATH] The data export destination ID."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getDestinations)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      patchDestination)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"destinationId=:[PATH] The data export destination ID."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      postDestination)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       deleteEnvironment)
@@ -573,72 +684,6 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       postMembers)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getEvaluations)
-        local -a _op_arguments
-        _op_arguments=(
-          "envId=:[PATH] The environment id for the flag evaluations in question."
-"flagKey=:[PATH] The key of the flag we want metrics for."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getEvent)
-        local -a _op_arguments
-        _op_arguments=(
-          "type=:[PATH] The type of event we would like to track."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getEvents)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getMAU)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getMAUByCategory)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getStream)
-        local -a _op_arguments
-        _op_arguments=(
-          "source=:[PATH] The source of where the stream comes from."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getStreamBySDK)
-        local -a _op_arguments
-        _op_arguments=(
-          "source=:[PATH] The source of where the stream comes from."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getStreamSDKVersion)
-        local -a _op_arguments
-        _op_arguments=(
-          "source=:[PATH] The source of where the stream comes from."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getStreams)
-        local -a _op_arguments
-        _op_arguments=(
-                              )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getUsage)
         local -a _op_arguments
         _op_arguments=(
                               )

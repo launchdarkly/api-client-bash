@@ -106,6 +106,21 @@ Class | Method | HTTP request | Description
 *CustomRolesApi* | [**getCustomRoles**](docs/CustomRolesApi.md#getcustomroles) | **GET** /roles | Return a complete list of custom roles.
 *CustomRolesApi* | [**patchCustomRole**](docs/CustomRolesApi.md#patchcustomrole) | **PATCH** /roles/{customRoleKey} | Modify a custom role by key.
 *CustomRolesApi* | [**postCustomRole**](docs/CustomRolesApi.md#postcustomrole) | **POST** /roles | Create a new custom role.
+*CustomerMetricsApi* | [**getEvaluations**](docs/CustomerMetricsApi.md#getevaluations) | **GET** /usage/evaluations/{envId}/{flagKey} | Get events usage by event id and the feature flag key.
+*CustomerMetricsApi* | [**getEvent**](docs/CustomerMetricsApi.md#getevent) | **GET** /usage/events/{type} | Get events usage by event type.
+*CustomerMetricsApi* | [**getEvents**](docs/CustomerMetricsApi.md#getevents) | **GET** /usage/events | Get events usage endpoints.
+*CustomerMetricsApi* | [**getMAU**](docs/CustomerMetricsApi.md#getmau) | **GET** /usage/mau | Get monthly active user data.
+*CustomerMetricsApi* | [**getMAUByCategory**](docs/CustomerMetricsApi.md#getmaubycategory) | **GET** /usage/mau/bycategory | Get monthly active user data by category.
+*CustomerMetricsApi* | [**getStream**](docs/CustomerMetricsApi.md#getstream) | **GET** /usage/streams/{source} | Get a stream endpoint and return timeseries data.
+*CustomerMetricsApi* | [**getStreamBySDK**](docs/CustomerMetricsApi.md#getstreambysdk) | **GET** /usage/streams/{source}/bysdkversion | Get a stream timeseries data by source show sdk version metadata.
+*CustomerMetricsApi* | [**getStreamSDKVersion**](docs/CustomerMetricsApi.md#getstreamsdkversion) | **GET** /usage/streams/{source}/sdkversions | Get a stream timeseries data by source and show all sdk version associated.
+*CustomerMetricsApi* | [**getStreams**](docs/CustomerMetricsApi.md#getstreams) | **GET** /usage/streams | Returns a list of all streams.
+*CustomerMetricsApi* | [**getUsage**](docs/CustomerMetricsApi.md#getusage) | **GET** /usage | Returns of the usage endpoints available.
+*DataExportDestinationsApi* | [**deleteDestination**](docs/DataExportDestinationsApi.md#deletedestination) | **DELETE** /destinations/{projectKey}/{environmentKey}/{destinationId} | Get a single data export destination by ID
+*DataExportDestinationsApi* | [**getDestination**](docs/DataExportDestinationsApi.md#getdestination) | **GET** /destinations/{projectKey}/{environmentKey}/{destinationId} | Get a single data export destination by ID
+*DataExportDestinationsApi* | [**getDestinations**](docs/DataExportDestinationsApi.md#getdestinations) | **GET** /destinations | Returns a list of all data export destinations.
+*DataExportDestinationsApi* | [**patchDestination**](docs/DataExportDestinationsApi.md#patchdestination) | **PATCH** /destinations/{projectKey}/{environmentKey}/{destinationId} | Perform a partial update to a data export destination.
+*DataExportDestinationsApi* | [**postDestination**](docs/DataExportDestinationsApi.md#postdestination) | **POST** /destinations/{projectKey}/{environmentKey} | Create a new data export destination
 *EnvironmentsApi* | [**deleteEnvironment**](docs/EnvironmentsApi.md#deleteenvironment) | **DELETE** /projects/{projectKey}/environments/{environmentKey} | Delete an environment in a specific project.
 *EnvironmentsApi* | [**getEnvironment**](docs/EnvironmentsApi.md#getenvironment) | **GET** /projects/{projectKey}/environments/{environmentKey} | Get an environment given a project and key.
 *EnvironmentsApi* | [**patchEnvironment**](docs/EnvironmentsApi.md#patchenvironment) | **PATCH** /projects/{projectKey}/environments/{environmentKey} | Modify an environment by ID.
@@ -114,7 +129,7 @@ Class | Method | HTTP request | Description
 *FeatureFlagsApi* | [**deleteFeatureFlag**](docs/FeatureFlagsApi.md#deletefeatureflag) | **DELETE** /flags/{projectKey}/{featureFlagKey} | Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.
 *FeatureFlagsApi* | [**getFeatureFlag**](docs/FeatureFlagsApi.md#getfeatureflag) | **GET** /flags/{projectKey}/{featureFlagKey} | Get a single feature flag by key.
 *FeatureFlagsApi* | [**getFeatureFlagStatus**](docs/FeatureFlagsApi.md#getfeatureflagstatus) | **GET** /flag-statuses/{projectKey}/{environmentKey}/{featureFlagKey} | Get the status for a particular feature flag.
-*FeatureFlagsApi* | [**getFeatureFlagStatusAcrossEnvironments**](docs/FeatureFlagsApi.md#getfeatureflagstatusacrossenvironments) | **GET** /flag-status/{projectKey}/{featureFlagKey} | [BETA] Get the status for a particular feature flag across environments
+*FeatureFlagsApi* | [**getFeatureFlagStatusAcrossEnvironments**](docs/FeatureFlagsApi.md#getfeatureflagstatusacrossenvironments) | **GET** /flag-status/{projectKey}/{featureFlagKey} | Get the status for a particular feature flag across environments
 *FeatureFlagsApi* | [**getFeatureFlagStatuses**](docs/FeatureFlagsApi.md#getfeatureflagstatuses) | **GET** /flag-statuses/{projectKey}/{environmentKey} | Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.
 *FeatureFlagsApi* | [**getFeatureFlags**](docs/FeatureFlagsApi.md#getfeatureflags) | **GET** /flags/{projectKey} | Get a list of all features in the given project.
 *FeatureFlagsApi* | [**patchFeatureFlag**](docs/FeatureFlagsApi.md#patchfeatureflag) | **PATCH** /flags/{projectKey}/{featureFlagKey} | Perform a partial update to a feature.
@@ -130,16 +145,6 @@ Class | Method | HTTP request | Description
 *TeamMembersApi* | [**getMembers**](docs/TeamMembersApi.md#getmembers) | **GET** /members | Returns a list of all members in the account.
 *TeamMembersApi* | [**patchMember**](docs/TeamMembersApi.md#patchmember) | **PATCH** /members/{memberId} | Modify a team member by ID.
 *TeamMembersApi* | [**postMembers**](docs/TeamMembersApi.md#postmembers) | **POST** /members | Invite new members.
-*UsageApi* | [**getEvaluations**](docs/UsageApi.md#getevaluations) | **GET** /usage/evaluations/{envId}/{flagKey} | [BETA] Get events usage by event id and the feature flag key.
-*UsageApi* | [**getEvent**](docs/UsageApi.md#getevent) | **GET** /usage/events/{type} | [BETA] Get events usage by event type.
-*UsageApi* | [**getEvents**](docs/UsageApi.md#getevents) | **GET** /usage/events | [BETA] Get events usage endpoints.
-*UsageApi* | [**getMAU**](docs/UsageApi.md#getmau) | **GET** /usage/mau | [BETA] Get monthly active user data.
-*UsageApi* | [**getMAUByCategory**](docs/UsageApi.md#getmaubycategory) | **GET** /usage/mau/bycategory | [BETA] Get monthly active user data by category.
-*UsageApi* | [**getStream**](docs/UsageApi.md#getstream) | **GET** /usage/streams/{source} | [BETA] Get a stream endpoint and return timeseries data.
-*UsageApi* | [**getStreamBySDK**](docs/UsageApi.md#getstreambysdk) | **GET** /usage/streams/{source}/bysdkversion | [BETA] Get a stream timeseries data by source show sdk version metadata.
-*UsageApi* | [**getStreamSDKVersion**](docs/UsageApi.md#getstreamsdkversion) | **GET** /usage/streams/{source}/sdkversions | [BETA] Get a stream timeseries data by source and show all sdk version associated.
-*UsageApi* | [**getStreams**](docs/UsageApi.md#getstreams) | **GET** /usage/streams | [BETA] Returns a list of all streams.
-*UsageApi* | [**getUsage**](docs/UsageApi.md#getusage) | **GET** /usage | [BETA] Returns of the usage endpoints available.
 *UserSegmentsApi* | [**deleteUserSegment**](docs/UserSegmentsApi.md#deleteusersegment) | **DELETE** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Delete a user segment.
 *UserSegmentsApi* | [**getUserSegment**](docs/UserSegmentsApi.md#getusersegment) | **GET** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Get a single user segment by key.
 *UserSegmentsApi* | [**getUserSegments**](docs/UserSegmentsApi.md#getusersegments) | **GET** /segments/{projectKey}/{environmentKey} | Get a list of all user segments in the given project.
@@ -171,6 +176,13 @@ Class | Method | HTTP request | Description
  - [CustomRole](docs/CustomRole.md)
  - [CustomRoleBody](docs/CustomRoleBody.md)
  - [CustomRoles](docs/CustomRoles.md)
+ - [Destination](docs/Destination.md)
+ - [DestinationAmazonKinesis](docs/DestinationAmazonKinesis.md)
+ - [DestinationBody](docs/DestinationBody.md)
+ - [DestinationGooglePubSub](docs/DestinationGooglePubSub.md)
+ - [DestinationMParticle](docs/DestinationMParticle.md)
+ - [DestinationSegment](docs/DestinationSegment.md)
+ - [Destinations](docs/Destinations.md)
  - [Environment](docs/Environment.md)
  - [EnvironmentPost](docs/EnvironmentPost.md)
  - [EvaluationUsageError](docs/EvaluationUsageError.md)

@@ -106,6 +106,25 @@ operation_parameters_minimum_occurrences["getCustomRole:::customRoleKey"]=1
 operation_parameters_minimum_occurrences["patchCustomRole:::customRoleKey"]=1
 operation_parameters_minimum_occurrences["patchCustomRole:::patchDelta"]=1
 operation_parameters_minimum_occurrences["postCustomRole:::customRoleBody"]=1
+operation_parameters_minimum_occurrences["getEvaluations:::envId"]=1
+operation_parameters_minimum_occurrences["getEvaluations:::flagKey"]=1
+operation_parameters_minimum_occurrences["getEvent:::type"]=1
+operation_parameters_minimum_occurrences["getStream:::source"]=1
+operation_parameters_minimum_occurrences["getStreamBySDK:::source"]=1
+operation_parameters_minimum_occurrences["getStreamSDKVersion:::source"]=1
+operation_parameters_minimum_occurrences["deleteDestination:::projectKey"]=1
+operation_parameters_minimum_occurrences["deleteDestination:::environmentKey"]=1
+operation_parameters_minimum_occurrences["deleteDestination:::destinationId"]=1
+operation_parameters_minimum_occurrences["getDestination:::projectKey"]=1
+operation_parameters_minimum_occurrences["getDestination:::environmentKey"]=1
+operation_parameters_minimum_occurrences["getDestination:::destinationId"]=1
+operation_parameters_minimum_occurrences["patchDestination:::projectKey"]=1
+operation_parameters_minimum_occurrences["patchDestination:::environmentKey"]=1
+operation_parameters_minimum_occurrences["patchDestination:::destinationId"]=1
+operation_parameters_minimum_occurrences["patchDestination:::PatchOnly"]=1
+operation_parameters_minimum_occurrences["postDestination:::projectKey"]=1
+operation_parameters_minimum_occurrences["postDestination:::environmentKey"]=1
+operation_parameters_minimum_occurrences["postDestination:::destinationBody"]=1
 operation_parameters_minimum_occurrences["deleteEnvironment:::projectKey"]=1
 operation_parameters_minimum_occurrences["deleteEnvironment:::environmentKey"]=1
 operation_parameters_minimum_occurrences["getEnvironment:::projectKey"]=1
@@ -149,12 +168,6 @@ operation_parameters_minimum_occurrences["getMember:::memberId"]=1
 operation_parameters_minimum_occurrences["patchMember:::memberId"]=1
 operation_parameters_minimum_occurrences["patchMember:::patchDelta"]=1
 operation_parameters_minimum_occurrences["postMembers:::membersBody"]=1
-operation_parameters_minimum_occurrences["getEvaluations:::envId"]=1
-operation_parameters_minimum_occurrences["getEvaluations:::flagKey"]=1
-operation_parameters_minimum_occurrences["getEvent:::type"]=1
-operation_parameters_minimum_occurrences["getStream:::source"]=1
-operation_parameters_minimum_occurrences["getStreamBySDK:::source"]=1
-operation_parameters_minimum_occurrences["getStreamSDKVersion:::source"]=1
 operation_parameters_minimum_occurrences["deleteUserSegment:::projectKey"]=1
 operation_parameters_minimum_occurrences["deleteUserSegment:::environmentKey"]=1
 operation_parameters_minimum_occurrences["deleteUserSegment:::userSegmentKey"]=1
@@ -224,6 +237,25 @@ operation_parameters_maximum_occurrences["getCustomRole:::customRoleKey"]=0
 operation_parameters_maximum_occurrences["patchCustomRole:::customRoleKey"]=0
 operation_parameters_maximum_occurrences["patchCustomRole:::patchDelta"]=0
 operation_parameters_maximum_occurrences["postCustomRole:::customRoleBody"]=0
+operation_parameters_maximum_occurrences["getEvaluations:::envId"]=0
+operation_parameters_maximum_occurrences["getEvaluations:::flagKey"]=0
+operation_parameters_maximum_occurrences["getEvent:::type"]=0
+operation_parameters_maximum_occurrences["getStream:::source"]=0
+operation_parameters_maximum_occurrences["getStreamBySDK:::source"]=0
+operation_parameters_maximum_occurrences["getStreamSDKVersion:::source"]=0
+operation_parameters_maximum_occurrences["deleteDestination:::projectKey"]=0
+operation_parameters_maximum_occurrences["deleteDestination:::environmentKey"]=0
+operation_parameters_maximum_occurrences["deleteDestination:::destinationId"]=0
+operation_parameters_maximum_occurrences["getDestination:::projectKey"]=0
+operation_parameters_maximum_occurrences["getDestination:::environmentKey"]=0
+operation_parameters_maximum_occurrences["getDestination:::destinationId"]=0
+operation_parameters_maximum_occurrences["patchDestination:::projectKey"]=0
+operation_parameters_maximum_occurrences["patchDestination:::environmentKey"]=0
+operation_parameters_maximum_occurrences["patchDestination:::destinationId"]=0
+operation_parameters_maximum_occurrences["patchDestination:::PatchOnly"]=0
+operation_parameters_maximum_occurrences["postDestination:::projectKey"]=0
+operation_parameters_maximum_occurrences["postDestination:::environmentKey"]=0
+operation_parameters_maximum_occurrences["postDestination:::destinationBody"]=0
 operation_parameters_maximum_occurrences["deleteEnvironment:::projectKey"]=0
 operation_parameters_maximum_occurrences["deleteEnvironment:::environmentKey"]=0
 operation_parameters_maximum_occurrences["getEnvironment:::projectKey"]=0
@@ -267,12 +299,6 @@ operation_parameters_maximum_occurrences["getMember:::memberId"]=0
 operation_parameters_maximum_occurrences["patchMember:::memberId"]=0
 operation_parameters_maximum_occurrences["patchMember:::patchDelta"]=0
 operation_parameters_maximum_occurrences["postMembers:::membersBody"]=0
-operation_parameters_maximum_occurrences["getEvaluations:::envId"]=0
-operation_parameters_maximum_occurrences["getEvaluations:::flagKey"]=0
-operation_parameters_maximum_occurrences["getEvent:::type"]=0
-operation_parameters_maximum_occurrences["getStream:::source"]=0
-operation_parameters_maximum_occurrences["getStreamBySDK:::source"]=0
-operation_parameters_maximum_occurrences["getStreamSDKVersion:::source"]=0
 operation_parameters_maximum_occurrences["deleteUserSegment:::projectKey"]=0
 operation_parameters_maximum_occurrences["deleteUserSegment:::environmentKey"]=0
 operation_parameters_maximum_occurrences["deleteUserSegment:::userSegmentKey"]=0
@@ -339,6 +365,25 @@ operation_parameters_collection_type["getCustomRole:::customRoleKey"]=""
 operation_parameters_collection_type["patchCustomRole:::customRoleKey"]=""
 operation_parameters_collection_type["patchCustomRole:::patchDelta"]=
 operation_parameters_collection_type["postCustomRole:::customRoleBody"]=""
+operation_parameters_collection_type["getEvaluations:::envId"]=""
+operation_parameters_collection_type["getEvaluations:::flagKey"]=""
+operation_parameters_collection_type["getEvent:::type"]=""
+operation_parameters_collection_type["getStream:::source"]=""
+operation_parameters_collection_type["getStreamBySDK:::source"]=""
+operation_parameters_collection_type["getStreamSDKVersion:::source"]=""
+operation_parameters_collection_type["deleteDestination:::projectKey"]=""
+operation_parameters_collection_type["deleteDestination:::environmentKey"]=""
+operation_parameters_collection_type["deleteDestination:::destinationId"]=""
+operation_parameters_collection_type["getDestination:::projectKey"]=""
+operation_parameters_collection_type["getDestination:::environmentKey"]=""
+operation_parameters_collection_type["getDestination:::destinationId"]=""
+operation_parameters_collection_type["patchDestination:::projectKey"]=""
+operation_parameters_collection_type["patchDestination:::environmentKey"]=""
+operation_parameters_collection_type["patchDestination:::destinationId"]=""
+operation_parameters_collection_type["patchDestination:::PatchOnly"]=
+operation_parameters_collection_type["postDestination:::projectKey"]=""
+operation_parameters_collection_type["postDestination:::environmentKey"]=""
+operation_parameters_collection_type["postDestination:::destinationBody"]=""
 operation_parameters_collection_type["deleteEnvironment:::projectKey"]=""
 operation_parameters_collection_type["deleteEnvironment:::environmentKey"]=""
 operation_parameters_collection_type["getEnvironment:::projectKey"]=""
@@ -382,12 +427,6 @@ operation_parameters_collection_type["getMember:::memberId"]=""
 operation_parameters_collection_type["patchMember:::memberId"]=""
 operation_parameters_collection_type["patchMember:::patchDelta"]=
 operation_parameters_collection_type["postMembers:::membersBody"]=
-operation_parameters_collection_type["getEvaluations:::envId"]=""
-operation_parameters_collection_type["getEvaluations:::flagKey"]=""
-operation_parameters_collection_type["getEvent:::type"]=""
-operation_parameters_collection_type["getStream:::source"]=""
-operation_parameters_collection_type["getStreamBySDK:::source"]=""
-operation_parameters_collection_type["getStreamSDKVersion:::source"]=""
 operation_parameters_collection_type["deleteUserSegment:::projectKey"]=""
 operation_parameters_collection_type["deleteUserSegment:::environmentKey"]=""
 operation_parameters_collection_type["deleteUserSegment:::userSegmentKey"]=""
@@ -783,7 +822,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.20)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.21)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -834,6 +873,31 @@ read -r -d '' ops <<EOF
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
+    echo -e "${BOLD}${WHITE}[customerMetrics]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}getEvaluations${OFF};Get events usage by event id and the feature flag key. (AUTH)
+  ${CYAN}getEvent${OFF};Get events usage by event type. (AUTH)
+  ${CYAN}getEvents${OFF};Get events usage endpoints. (AUTH)
+  ${CYAN}getMAU${OFF};Get monthly active user data. (AUTH)
+  ${CYAN}getMAUByCategory${OFF};Get monthly active user data by category. (AUTH)
+  ${CYAN}getStream${OFF};Get a stream endpoint and return timeseries data. (AUTH)
+  ${CYAN}getStreamBySDK${OFF};Get a stream timeseries data by source show sdk version metadata. (AUTH)
+  ${CYAN}getStreamSDKVersion${OFF};Get a stream timeseries data by source and show all sdk version associated. (AUTH)
+  ${CYAN}getStreams${OFF};Returns a list of all streams. (AUTH)
+  ${CYAN}getUsage${OFF};Returns of the usage endpoints available. (AUTH)
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
+    echo -e "${BOLD}${WHITE}[dataExportDestinations]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}deleteDestination${OFF};Get a single data export destination by ID (AUTH)
+  ${CYAN}getDestination${OFF};Get a single data export destination by ID (AUTH)
+  ${CYAN}getDestinations${OFF};Returns a list of all data export destinations. (AUTH)
+  ${CYAN}patchDestination${OFF};Perform a partial update to a data export destination. (AUTH)
+  ${CYAN}postDestination${OFF};Create a new data export destination (AUTH)
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
     echo -e "${BOLD}${WHITE}[environments]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}deleteEnvironment${OFF};Delete an environment in a specific project. (AUTH)
@@ -849,7 +913,7 @@ read -r -d '' ops <<EOF
   ${CYAN}deleteFeatureFlag${OFF};Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application. (AUTH)
   ${CYAN}getFeatureFlag${OFF};Get a single feature flag by key. (AUTH)
   ${CYAN}getFeatureFlagStatus${OFF};Get the status for a particular feature flag. (AUTH)
-  ${CYAN}getFeatureFlagStatusAcrossEnvironments${OFF};[BETA] Get the status for a particular feature flag across environments (AUTH)
+  ${CYAN}getFeatureFlagStatusAcrossEnvironments${OFF};Get the status for a particular feature flag across environments (AUTH)
   ${CYAN}getFeatureFlagStatuses${OFF};Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag. (AUTH)
   ${CYAN}getFeatureFlags${OFF};Get a list of all features in the given project. (AUTH)
   ${CYAN}patchFeatureFlag${OFF};Perform a partial update to a feature. (AUTH)
@@ -880,21 +944,6 @@ read -r -d '' ops <<EOF
   ${CYAN}getMembers${OFF};Returns a list of all members in the account. (AUTH)
   ${CYAN}patchMember${OFF};Modify a team member by ID. (AUTH)
   ${CYAN}postMembers${OFF};Invite new members. (AUTH)
-EOF
-echo "  $ops" | column -t -s ';'
-    echo ""
-    echo -e "${BOLD}${WHITE}[usage]${OFF}"
-read -r -d '' ops <<EOF
-  ${CYAN}getEvaluations${OFF};[BETA] Get events usage by event id and the feature flag key. (AUTH)
-  ${CYAN}getEvent${OFF};[BETA] Get events usage by event type. (AUTH)
-  ${CYAN}getEvents${OFF};[BETA] Get events usage endpoints. (AUTH)
-  ${CYAN}getMAU${OFF};[BETA] Get monthly active user data. (AUTH)
-  ${CYAN}getMAUByCategory${OFF};[BETA] Get monthly active user data by category. (AUTH)
-  ${CYAN}getStream${OFF};[BETA] Get a stream endpoint and return timeseries data. (AUTH)
-  ${CYAN}getStreamBySDK${OFF};[BETA] Get a stream timeseries data by source show sdk version metadata. (AUTH)
-  ${CYAN}getStreamSDKVersion${OFF};[BETA] Get a stream timeseries data by source and show all sdk version associated. (AUTH)
-  ${CYAN}getStreams${OFF};[BETA] Returns a list of all streams. (AUTH)
-  ${CYAN}getUsage${OFF};[BETA] Returns of the usage endpoints available. (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -961,7 +1010,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.20)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.21)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -981,7 +1030,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 2.0.20)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 2.0.21)${OFF}"
     echo ""
 }
 
@@ -1132,6 +1181,300 @@ print_postCustomRole_help() {
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=201
     echo -e "${result_color_table[${code:0:1}]}  201;Custom role response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=409
+    echo -e "${result_color_table[${code:0:1}]}  409;Status conflict.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getEvaluations operation
+#
+##############################################################################
+print_getEvaluations_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getEvaluations - Get events usage by event id and the feature flag key.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}envId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment id for the flag evaluations in question. ${YELLOW}Specify as: envId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}flagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The key of the flag we want metrics for. ${YELLOW}Specify as: flagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Returns timeseries data and all sdk versions.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;The environment or flag you requested could not be found${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getEvent operation
+#
+##############################################################################
+print_getEvent_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getEvent - Get events usage by event type.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}type${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The type of event we would like to track. ${YELLOW}Specify as: type=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Returns timeseries data and all sdk versions.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;The stream source you requested could not be found${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getEvents operation
+#
+##############################################################################
+print_getEvents_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getEvents - Get events usage endpoints.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Returns timeseries data and all sdk versions.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getMAU operation
+#
+##############################################################################
+print_getMAU_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getMAU - Get monthly active user data.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Returns timeseries data and all sdk versions.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getMAUByCategory operation
+#
+##############################################################################
+print_getMAUByCategory_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getMAUByCategory - Get monthly active user data by category.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Returns timeseries data and all sdk versions.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getStream operation
+#
+##############################################################################
+print_getStream_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getStream - Get a stream endpoint and return timeseries data.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}source${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The source of where the stream comes from. ${YELLOW}Specify as: source=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Responds with time series data on stream usage.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;The stream source you requested could not be found${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getStreamBySDK operation
+#
+##############################################################################
+print_getStreamBySDK_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getStreamBySDK - Get a stream timeseries data by source show sdk version metadata.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}source${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The source of where the stream comes from. ${YELLOW}Specify as: source=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Returns timeseries data and metadata on sdk version.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;The stream source you requested could not be found${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getStreamSDKVersion operation
+#
+##############################################################################
+print_getStreamSDKVersion_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getStreamSDKVersion - Get a stream timeseries data by source and show all sdk version associated.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}source${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The source of where the stream comes from. ${YELLOW}Specify as: source=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Returns timeseries data and all sdk versions.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;The stream source you requested could not be found${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getStreams operation
+#
+##############################################################################
+print_getStreams_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getStreams - Returns a list of all streams.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Stream usage endpoints${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getUsage operation
+#
+##############################################################################
+print_getUsage_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getUsage - Returns of the usage endpoints available.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Usage endpoints${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for deleteDestination operation
+#
+##############################################################################
+print_deleteDestination_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}deleteDestination - Get a single data export destination by ID${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}destinationId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The data export destination ID. ${YELLOW}Specify as: destinationId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=204
+    echo -e "${result_color_table[${code:0:1}]}  204;Action completed successfully.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getDestination operation
+#
+##############################################################################
+print_getDestination_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getDestination - Get a single data export destination by ID${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}destinationId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The data export destination ID. ${YELLOW}Specify as: destinationId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Destination response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getDestinations operation
+#
+##############################################################################
+print_getDestinations_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getDestinations - Returns a list of all data export destinations.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Destinations response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for patchDestination operation
+#
+##############################################################################
+print_patchDestination_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}patchDestination - Perform a partial update to a data export destination.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}destinationId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The data export destination ID. ${YELLOW}Specify as: destinationId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Requires a JSON Patch representation of the desired changes to the project. 'http://jsonpatch.com/' Feature flag patches also support JSON Merge Patch format. 'https://tools.ietf.org/html/rfc7386' The addition of comments is also supported." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Destination response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=409
+    echo -e "${result_color_table[${code:0:1}]}  409;Status conflict.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for postDestination operation
+#
+##############################################################################
+print_postDestination_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}postDestination - Create a new data export destination${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Create a new data export destination." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Destination response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=400
     echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
@@ -1328,7 +1671,7 @@ print_getFeatureFlagStatus_help() {
 ##############################################################################
 print_getFeatureFlagStatusAcrossEnvironments_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}getFeatureFlagStatusAcrossEnvironments - [BETA] Get the status for a particular feature flag across environments${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}getFeatureFlagStatusAcrossEnvironments - Get the status for a particular feature flag across environments${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1663,187 +2006,6 @@ print_postMembers_help() {
     echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=409
     echo -e "${result_color_table[${code:0:1}]}  409;Status conflict.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getEvaluations operation
-#
-##############################################################################
-print_getEvaluations_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getEvaluations - [BETA] Get events usage by event id and the feature flag key.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}envId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment id for the flag evaluations in question. ${YELLOW}Specify as: envId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}flagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The key of the flag we want metrics for. ${YELLOW}Specify as: flagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Returns timeseries data and all sdk versions.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=403
-    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=404
-    echo -e "${result_color_table[${code:0:1}]}  404;The environment or flag you requested could not be found${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getEvent operation
-#
-##############################################################################
-print_getEvent_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getEvent - [BETA] Get events usage by event type.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}type${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The type of event we would like to track. ${YELLOW}Specify as: type=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Returns timeseries data and all sdk versions.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=403
-    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=404
-    echo -e "${result_color_table[${code:0:1}]}  404;The stream source you requested could not be found${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getEvents operation
-#
-##############################################################################
-print_getEvents_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getEvents - [BETA] Get events usage endpoints.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Returns timeseries data and all sdk versions.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=403
-    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getMAU operation
-#
-##############################################################################
-print_getMAU_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getMAU - [BETA] Get monthly active user data.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Returns timeseries data and all sdk versions.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=403
-    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getMAUByCategory operation
-#
-##############################################################################
-print_getMAUByCategory_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getMAUByCategory - [BETA] Get monthly active user data by category.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Returns timeseries data and all sdk versions.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=403
-    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getStream operation
-#
-##############################################################################
-print_getStream_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getStream - [BETA] Get a stream endpoint and return timeseries data.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}source${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The source of where the stream comes from. ${YELLOW}Specify as: source=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Responds with time series data on stream usage.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=403
-    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=404
-    echo -e "${result_color_table[${code:0:1}]}  404;The stream source you requested could not be found${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getStreamBySDK operation
-#
-##############################################################################
-print_getStreamBySDK_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getStreamBySDK - [BETA] Get a stream timeseries data by source show sdk version metadata.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}source${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The source of where the stream comes from. ${YELLOW}Specify as: source=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Returns timeseries data and metadata on sdk version.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=403
-    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=404
-    echo -e "${result_color_table[${code:0:1}]}  404;The stream source you requested could not be found${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getStreamSDKVersion operation
-#
-##############################################################################
-print_getStreamSDKVersion_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getStreamSDKVersion - [BETA] Get a stream timeseries data by source and show all sdk version associated.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}source${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The source of where the stream comes from. ${YELLOW}Specify as: source=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Returns timeseries data and all sdk versions.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=403
-    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=404
-    echo -e "${result_color_table[${code:0:1}]}  404;The stream source you requested could not be found${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getStreams operation
-#
-##############################################################################
-print_getStreams_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getStreams - [BETA] Returns a list of all streams.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Stream usage endpoints${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=403
-    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getUsage operation
-#
-##############################################################################
-print_getUsage_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getUsage - [BETA] Returns of the usage endpoints available.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Usage endpoints${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=403
-    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -2509,6 +2671,630 @@ call_postCustomRole() {
     local path
 
     if ! path=$(build_request_path "/api/v2/roles" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the Swagger specification
+    # if values produces and consumes are defined unambigously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call getEvaluations operation
+#
+##############################################################################
+call_getEvaluations() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(envId flagKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/usage/evaluations/{envId}/{flagKey}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getEvent operation
+#
+##############################################################################
+call_getEvent() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(type)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/usage/events/{type}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getEvents operation
+#
+##############################################################################
+call_getEvents() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/usage/events" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getMAU operation
+#
+##############################################################################
+call_getMAU() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/usage/mau" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getMAUByCategory operation
+#
+##############################################################################
+call_getMAUByCategory() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/usage/mau/bycategory" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getStream operation
+#
+##############################################################################
+call_getStream() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(source)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/usage/streams/{source}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getStreamBySDK operation
+#
+##############################################################################
+call_getStreamBySDK() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(source)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/usage/streams/{source}/bysdkversion" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getStreamSDKVersion operation
+#
+##############################################################################
+call_getStreamSDKVersion() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(source)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/usage/streams/{source}/sdkversions" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getStreams operation
+#
+##############################################################################
+call_getStreams() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/usage/streams" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getUsage operation
+#
+##############################################################################
+call_getUsage() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/usage" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call deleteDestination operation
+#
+##############################################################################
+call_deleteDestination() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey destinationId)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/destinations/{projectKey}/{environmentKey}/{destinationId}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getDestination operation
+#
+##############################################################################
+call_getDestination() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey destinationId)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/destinations/{projectKey}/{environmentKey}/{destinationId}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getDestinations operation
+#
+##############################################################################
+call_getDestinations() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/destinations" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call patchDestination operation
+#
+##############################################################################
+call_patchDestination() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey destinationId)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/destinations/{projectKey}/{environmentKey}/{destinationId}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PATCH"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the Swagger specification
+    # if values produces and consumes are defined unambigously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call postDestination operation
+#
+##############################################################################
+call_postDestination() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/destinations/{projectKey}/{environmentKey}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -3816,366 +4602,6 @@ call_postMembers() {
 
 ##############################################################################
 #
-# Call getEvaluations operation
-#
-##############################################################################
-call_getEvaluations() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(envId flagKey)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v2/usage/evaluations/{envId}/{flagKey}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getEvent operation
-#
-##############################################################################
-call_getEvent() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(type)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v2/usage/events/{type}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getEvents operation
-#
-##############################################################################
-call_getEvents() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v2/usage/events" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getMAU operation
-#
-##############################################################################
-call_getMAU() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v2/usage/mau" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getMAUByCategory operation
-#
-##############################################################################
-call_getMAUByCategory() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v2/usage/mau/bycategory" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getStream operation
-#
-##############################################################################
-call_getStream() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(source)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v2/usage/streams/{source}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getStreamBySDK operation
-#
-##############################################################################
-call_getStreamBySDK() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(source)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v2/usage/streams/{source}/bysdkversion" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getStreamSDKVersion operation
-#
-##############################################################################
-call_getStreamSDKVersion() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(source)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v2/usage/streams/{source}/sdkversions" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getStreams operation
-#
-##############################################################################
-call_getStreams() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v2/usage/streams" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getUsage operation
-#
-##############################################################################
-call_getUsage() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=()
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v2/usage" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
 # Call deleteUserSegment operation
 #
 ##############################################################################
@@ -5114,6 +5540,51 @@ case $key in
     postCustomRole)
     operation="postCustomRole"
     ;;
+    getEvaluations)
+    operation="getEvaluations"
+    ;;
+    getEvent)
+    operation="getEvent"
+    ;;
+    getEvents)
+    operation="getEvents"
+    ;;
+    getMAU)
+    operation="getMAU"
+    ;;
+    getMAUByCategory)
+    operation="getMAUByCategory"
+    ;;
+    getStream)
+    operation="getStream"
+    ;;
+    getStreamBySDK)
+    operation="getStreamBySDK"
+    ;;
+    getStreamSDKVersion)
+    operation="getStreamSDKVersion"
+    ;;
+    getStreams)
+    operation="getStreams"
+    ;;
+    getUsage)
+    operation="getUsage"
+    ;;
+    deleteDestination)
+    operation="deleteDestination"
+    ;;
+    getDestination)
+    operation="getDestination"
+    ;;
+    getDestinations)
+    operation="getDestinations"
+    ;;
+    patchDestination)
+    operation="patchDestination"
+    ;;
+    postDestination)
+    operation="postDestination"
+    ;;
     deleteEnvironment)
     operation="deleteEnvironment"
     ;;
@@ -5185,36 +5656,6 @@ case $key in
     ;;
     postMembers)
     operation="postMembers"
-    ;;
-    getEvaluations)
-    operation="getEvaluations"
-    ;;
-    getEvent)
-    operation="getEvent"
-    ;;
-    getEvents)
-    operation="getEvents"
-    ;;
-    getMAU)
-    operation="getMAU"
-    ;;
-    getMAUByCategory)
-    operation="getMAUByCategory"
-    ;;
-    getStream)
-    operation="getStream"
-    ;;
-    getStreamBySDK)
-    operation="getStreamBySDK"
-    ;;
-    getStreamSDKVersion)
-    operation="getStreamSDKVersion"
-    ;;
-    getStreams)
-    operation="getStreams"
-    ;;
-    getUsage)
-    operation="getUsage"
     ;;
     deleteUserSegment)
     operation="deleteUserSegment"
@@ -5372,6 +5813,51 @@ case $operation in
     postCustomRole)
     call_postCustomRole
     ;;
+    getEvaluations)
+    call_getEvaluations
+    ;;
+    getEvent)
+    call_getEvent
+    ;;
+    getEvents)
+    call_getEvents
+    ;;
+    getMAU)
+    call_getMAU
+    ;;
+    getMAUByCategory)
+    call_getMAUByCategory
+    ;;
+    getStream)
+    call_getStream
+    ;;
+    getStreamBySDK)
+    call_getStreamBySDK
+    ;;
+    getStreamSDKVersion)
+    call_getStreamSDKVersion
+    ;;
+    getStreams)
+    call_getStreams
+    ;;
+    getUsage)
+    call_getUsage
+    ;;
+    deleteDestination)
+    call_deleteDestination
+    ;;
+    getDestination)
+    call_getDestination
+    ;;
+    getDestinations)
+    call_getDestinations
+    ;;
+    patchDestination)
+    call_patchDestination
+    ;;
+    postDestination)
+    call_postDestination
+    ;;
     deleteEnvironment)
     call_deleteEnvironment
     ;;
@@ -5443,36 +5929,6 @@ case $operation in
     ;;
     postMembers)
     call_postMembers
-    ;;
-    getEvaluations)
-    call_getEvaluations
-    ;;
-    getEvent)
-    call_getEvent
-    ;;
-    getEvents)
-    call_getEvents
-    ;;
-    getMAU)
-    call_getMAU
-    ;;
-    getMAUByCategory)
-    call_getMAUByCategory
-    ;;
-    getStream)
-    call_getStream
-    ;;
-    getStreamBySDK)
-    call_getStreamBySDK
-    ;;
-    getStreamSDKVersion)
-    call_getStreamSDKVersion
-    ;;
-    getStreams)
-    call_getStreams
-    ;;
-    getUsage)
-    call_getUsage
     ;;
     deleteUserSegment)
     call_deleteUserSegment

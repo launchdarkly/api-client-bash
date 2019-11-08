@@ -75,6 +75,21 @@ _()
     operations["getCustomRoles"]=1
     operations["patchCustomRole"]=1
     operations["postCustomRole"]=1
+    operations["getEvaluations"]=1
+    operations["getEvent"]=1
+    operations["getEvents"]=1
+    operations["getMAU"]=1
+    operations["getMAUByCategory"]=1
+    operations["getStream"]=1
+    operations["getStreamBySDK"]=1
+    operations["getStreamSDKVersion"]=1
+    operations["getStreams"]=1
+    operations["getUsage"]=1
+    operations["deleteDestination"]=1
+    operations["getDestination"]=1
+    operations["getDestinations"]=1
+    operations["patchDestination"]=1
+    operations["postDestination"]=1
     operations["deleteEnvironment"]=1
     operations["getEnvironment"]=1
     operations["patchEnvironment"]=1
@@ -99,16 +114,6 @@ _()
     operations["getMembers"]=1
     operations["patchMember"]=1
     operations["postMembers"]=1
-    operations["getEvaluations"]=1
-    operations["getEvent"]=1
-    operations["getEvents"]=1
-    operations["getMAU"]=1
-    operations["getMAUByCategory"]=1
-    operations["getStream"]=1
-    operations["getStreamBySDK"]=1
-    operations["getStreamSDKVersion"]=1
-    operations["getStreams"]=1
-    operations["getUsage"]=1
     operations["deleteUserSegment"]=1
     operations["getUserSegment"]=1
     operations["getUserSegments"]=1
@@ -137,6 +142,21 @@ _()
     operation_parameters["getCustomRoles"]=""
     operation_parameters["patchCustomRole"]="customRoleKey= "
     operation_parameters["postCustomRole"]=""
+    operation_parameters["getEvaluations"]="envId= flagKey= "
+    operation_parameters["getEvent"]="type= "
+    operation_parameters["getEvents"]=""
+    operation_parameters["getMAU"]=""
+    operation_parameters["getMAUByCategory"]=""
+    operation_parameters["getStream"]="source= "
+    operation_parameters["getStreamBySDK"]="source= "
+    operation_parameters["getStreamSDKVersion"]="source= "
+    operation_parameters["getStreams"]=""
+    operation_parameters["getUsage"]=""
+    operation_parameters["deleteDestination"]="projectKey= environmentKey= destinationId= "
+    operation_parameters["getDestination"]="projectKey= environmentKey= destinationId= "
+    operation_parameters["getDestinations"]=""
+    operation_parameters["patchDestination"]="projectKey= environmentKey= destinationId= "
+    operation_parameters["postDestination"]="projectKey= environmentKey= "
     operation_parameters["deleteEnvironment"]="projectKey= environmentKey= "
     operation_parameters["getEnvironment"]="projectKey= environmentKey= "
     operation_parameters["patchEnvironment"]="projectKey= environmentKey= "
@@ -161,16 +181,6 @@ _()
     operation_parameters["getMembers"]=""
     operation_parameters["patchMember"]="memberId= "
     operation_parameters["postMembers"]=""
-    operation_parameters["getEvaluations"]="envId= flagKey= "
-    operation_parameters["getEvent"]="type= "
-    operation_parameters["getEvents"]=""
-    operation_parameters["getMAU"]=""
-    operation_parameters["getMAUByCategory"]=""
-    operation_parameters["getStream"]="source= "
-    operation_parameters["getStreamBySDK"]="source= "
-    operation_parameters["getStreamSDKVersion"]="source= "
-    operation_parameters["getStreams"]=""
-    operation_parameters["getUsage"]=""
     operation_parameters["deleteUserSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["getUserSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["getUserSegments"]="projectKey= environmentKey= tag= "
