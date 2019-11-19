@@ -167,7 +167,7 @@ _()
     operation_parameters["getFeatureFlagStatus"]="projectKey= environmentKey= featureFlagKey= "
     operation_parameters["getFeatureFlagStatusAcrossEnvironments"]="projectKey= featureFlagKey= "
     operation_parameters["getFeatureFlagStatuses"]="projectKey= environmentKey= "
-    operation_parameters["getFeatureFlags"]="projectKey= env= tag= "
+    operation_parameters["getFeatureFlags"]="projectKey= env= summary= archived= tag= "
     operation_parameters["patchFeatureFlag"]="projectKey= featureFlagKey= "
     operation_parameters["postFeatureFlag"]="projectKey= clone= "
     operation_parameters["deleteProject"]="projectKey= "

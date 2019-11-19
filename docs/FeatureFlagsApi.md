@@ -210,7 +210,7 @@ Get a list of all features in the given project.
 
 ### Example
 ```bash
- getFeatureFlags projectKey=value  env=value  tag=value
+ getFeatureFlags projectKey=value  env=value  summary=value  archived=value  tag=value
 ```
 
 ### Parameters
@@ -219,6 +219,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
  **env** | **string** | By default, each feature will include configurations for each environment. You can filter environments with the env query parameter. For example, setting env=production will restrict the returned configurations to just your production environment. | [optional]
+ **summary** | **string** | By default in api version >= 1, flags will _not_ include their list of prerequisites, targets or rules.  Set summary=0 to include these fields for each flag returned. | [optional]
+ **archived** | **string** | When set to 1, archived flags will be included in the list of flags returned.  By default, archived flags are not included in the list of flags. | [optional]
  **tag** | **string** | Filter by tag. A tag can be used to group flags across projects. | [optional]
 
 ### Return type
