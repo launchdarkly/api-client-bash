@@ -597,8 +597,10 @@ case $state in
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
           "env=:[QUERY] By default, each feature will include configurations for each environment. You can filter environments with the env query parameter. For example, setting env&#x3D;production will restrict the returned configurations to just your production environment."
-"summary=:[QUERY] By default in api version &gt;&#x3D; 1, flags will _not_ include their list of prerequisites, targets or rules.  Set summary&#x3D;0 to include these fields for each flag returned."
-"archived=:[QUERY] When set to 1, archived flags will be included in the list of flags returned.  By default, archived flags are not included in the list of flags."
+"summary=true:[QUERY] By default in api version &gt;&#x3D; 1, flags will _not_ include their list of prerequisites, targets or rules.  Set summary&#x3D;0 to include these fields for each flag returned."
+          "summary=false:[QUERY] By default in api version &gt;&#x3D; 1, flags will _not_ include their list of prerequisites, targets or rules.  Set summary&#x3D;0 to include these fields for each flag returned."
+"archived=true:[QUERY] When set to 1, archived flags will be included in the list of flags returned.  By default, archived flags are not included in the list of flags."
+          "archived=false:[QUERY] When set to 1, archived flags will be included in the list of flags returned.  By default, archived flags are not included in the list of flags."
 "tag=:[QUERY] Filter by tag. A tag can be used to group flags across projects."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0

@@ -828,7 +828,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.22)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.23)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1016,7 +1016,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.22)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.23)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -1036,7 +1036,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 2.0.22)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 2.0.23)${OFF}"
     echo ""
 }
 
@@ -1723,9 +1723,9 @@ print_getFeatureFlags_help() {
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}env${OFF} ${BLUE}[string]${OFF}${OFF} - By default, each feature will include configurations for each environment. You can filter environments with the env query parameter. For example, setting env=production will restrict the returned configurations to just your production environment.${YELLOW} Specify as: env=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}summary${OFF} ${BLUE}[string]${OFF}${OFF} - By default in api version >= 1, flags will _not_ include their list of prerequisites, targets or rules.  Set summary=0 to include these fields for each flag returned.${YELLOW} Specify as: summary=value${OFF}" \
+    echo -e "  * ${GREEN}summary${OFF} ${BLUE}[boolean]${OFF}${OFF} - By default in api version >= 1, flags will _not_ include their list of prerequisites, targets or rules.  Set summary=0 to include these fields for each flag returned.${YELLOW} Specify as: summary=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}archived${OFF} ${BLUE}[string]${OFF}${OFF} - When set to 1, archived flags will be included in the list of flags returned.  By default, archived flags are not included in the list of flags.${YELLOW} Specify as: archived=value${OFF}" \
+    echo -e "  * ${GREEN}archived${OFF} ${BLUE}[boolean]${OFF}${OFF} - When set to 1, archived flags will be included in the list of flags returned.  By default, archived flags are not included in the list of flags.${YELLOW} Specify as: archived=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}tag${OFF} ${BLUE}[string]${OFF}${OFF} - Filter by tag. A tag can be used to group flags across projects.${YELLOW} Specify as: tag=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'

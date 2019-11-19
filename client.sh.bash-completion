@@ -201,6 +201,16 @@ _()
 
     # An associative array of possible values for enum parameters
     declare -A operation_parameters_enum_values
+    operation_parameters_enum_values["getFeatureFlags::summary"]="true false"
+    operation_parameters_enum_values["getFeatureFlags::archived"]="true false"
+    operation_parameters_enum_values["getFeatureFlags::summary"]="true false"
+    operation_parameters_enum_values["getFeatureFlags::archived"]="true false"
+    operation_parameters_enum_values["getFeatureFlags::summary"]="true false"
+    operation_parameters_enum_values["getFeatureFlags::archived"]="true false"
+    operation_parameters_enum_values["getFeatureFlags::summary"]="true false"
+    operation_parameters_enum_values["getFeatureFlags::archived"]="true false"
+    operation_parameters_enum_values["getFeatureFlags::summary"]="true false"
+    operation_parameters_enum_values["getFeatureFlags::archived"]="true false"
 
     #
     # Check if this is OSX and use special __osx_init_completion function
