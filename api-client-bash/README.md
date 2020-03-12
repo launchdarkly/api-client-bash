@@ -220,7 +220,6 @@ Class | Method | HTTP request | Description
  - [Rule](docs/Rule.md)
  - [Site](docs/Site.md)
  - [Statement](docs/Statement.md)
- - [Statements](docs/Statements.md)
  - [Stream](docs/Stream.md)
  - [StreamBySDK](docs/StreamBySDK.md)
  - [StreamBySDKLinks](docs/StreamBySDKLinks.md)
