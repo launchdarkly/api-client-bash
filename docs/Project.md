@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **_id** | [**Id**](Id.md) |  | [optional] [default to null]
 **key** | **string** |  | [optional] [default to null]
 **name** | **string** |  | [optional] [default to null]
+**includeInSnippetByDefault** | **boolean** |  | [optional] [default to null]
 **environments** | [**array[Environment]**](Environment.md) |  | [optional] [default to null]
 **tags** | **array[string]** |  | [optional] [default to null]
 
