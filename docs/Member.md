@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **email** | **string** |  | [optional] [default to null]
 **firstName** | **string** |  | [optional] [default to null]
 **lastName** | **string** |  | [optional] [default to null]
+**_verified** | **boolean** |  | [optional] [default to null]
 **_pendingInvite** | **boolean** |  | [optional] [default to null]
 **isBeta** | **boolean** |  | [optional] [default to null]
 **customRoles** | [**array[Id]**](Id.md) |  | [optional] [default to null]

@@ -141,6 +141,7 @@ Class | Method | HTTP request | Description
 *ProjectsApi* | [**postProject**](docs/ProjectsApi.md#postproject) | **POST** /projects | Create a new project with the given key and name.
 *RootApi* | [**getRoot**](docs/RootApi.md#getroot) | **GET** / | 
 *TeamMembersApi* | [**deleteMember**](docs/TeamMembersApi.md#deletemember) | **DELETE** /members/{memberId} | Delete a team member by ID.
+*TeamMembersApi* | [**getMe**](docs/TeamMembersApi.md#getme) | **GET** /members/me | Get the current team member associated with the token
 *TeamMembersApi* | [**getMember**](docs/TeamMembersApi.md#getmember) | **GET** /members/{memberId} | Get a single team member by ID.
 *TeamMembersApi* | [**getMembers**](docs/TeamMembersApi.md#getmembers) | **GET** /members | Returns a list of all members in the account.
 *TeamMembersApi* | [**patchMember**](docs/TeamMembersApi.md#patchmember) | **PATCH** /members/{memberId} | Modify a team member by ID.

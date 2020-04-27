@@ -153,6 +153,10 @@ operation_parameters_minimum_occurrences["getFeatureFlags:::projectKey"]=1
 operation_parameters_minimum_occurrences["getFeatureFlags:::env"]=0
 operation_parameters_minimum_occurrences["getFeatureFlags:::summary"]=0
 operation_parameters_minimum_occurrences["getFeatureFlags:::archived"]=0
+operation_parameters_minimum_occurrences["getFeatureFlags:::limit"]=0
+operation_parameters_minimum_occurrences["getFeatureFlags:::number"]=0
+operation_parameters_minimum_occurrences["getFeatureFlags:::filter"]=0
+operation_parameters_minimum_occurrences["getFeatureFlags:::sort"]=0
 operation_parameters_minimum_occurrences["getFeatureFlags:::tag"]=0
 operation_parameters_minimum_occurrences["patchFeatureFlag:::projectKey"]=1
 operation_parameters_minimum_occurrences["patchFeatureFlag:::featureFlagKey"]=1
@@ -167,6 +171,10 @@ operation_parameters_minimum_occurrences["patchProject:::patchDelta"]=1
 operation_parameters_minimum_occurrences["postProject:::projectBody"]=1
 operation_parameters_minimum_occurrences["deleteMember:::memberId"]=1
 operation_parameters_minimum_occurrences["getMember:::memberId"]=1
+operation_parameters_minimum_occurrences["getMembers:::limit"]=0
+operation_parameters_minimum_occurrences["getMembers:::number"]=0
+operation_parameters_minimum_occurrences["getMembers:::filter"]=0
+operation_parameters_minimum_occurrences["getMembers:::sort"]=0
 operation_parameters_minimum_occurrences["patchMember:::memberId"]=1
 operation_parameters_minimum_occurrences["patchMember:::patchDelta"]=1
 operation_parameters_minimum_occurrences["postMembers:::membersBody"]=1
@@ -286,6 +294,10 @@ operation_parameters_maximum_occurrences["getFeatureFlags:::projectKey"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::env"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::summary"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::archived"]=0
+operation_parameters_maximum_occurrences["getFeatureFlags:::limit"]=0
+operation_parameters_maximum_occurrences["getFeatureFlags:::number"]=0
+operation_parameters_maximum_occurrences["getFeatureFlags:::filter"]=0
+operation_parameters_maximum_occurrences["getFeatureFlags:::sort"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::tag"]=0
 operation_parameters_maximum_occurrences["patchFeatureFlag:::projectKey"]=0
 operation_parameters_maximum_occurrences["patchFeatureFlag:::featureFlagKey"]=0
@@ -300,6 +312,10 @@ operation_parameters_maximum_occurrences["patchProject:::patchDelta"]=0
 operation_parameters_maximum_occurrences["postProject:::projectBody"]=0
 operation_parameters_maximum_occurrences["deleteMember:::memberId"]=0
 operation_parameters_maximum_occurrences["getMember:::memberId"]=0
+operation_parameters_maximum_occurrences["getMembers:::limit"]=0
+operation_parameters_maximum_occurrences["getMembers:::number"]=0
+operation_parameters_maximum_occurrences["getMembers:::filter"]=0
+operation_parameters_maximum_occurrences["getMembers:::sort"]=0
 operation_parameters_maximum_occurrences["patchMember:::memberId"]=0
 operation_parameters_maximum_occurrences["patchMember:::patchDelta"]=0
 operation_parameters_maximum_occurrences["postMembers:::membersBody"]=0
@@ -404,7 +420,7 @@ operation_parameters_collection_type["deleteFeatureFlag:::projectKey"]=""
 operation_parameters_collection_type["deleteFeatureFlag:::featureFlagKey"]=""
 operation_parameters_collection_type["getFeatureFlag:::projectKey"]=""
 operation_parameters_collection_type["getFeatureFlag:::featureFlagKey"]=""
-operation_parameters_collection_type["getFeatureFlag:::env"]=""
+operation_parameters_collection_type["getFeatureFlag:::env"]="multi"
 operation_parameters_collection_type["getFeatureFlagStatus:::projectKey"]=""
 operation_parameters_collection_type["getFeatureFlagStatus:::environmentKey"]=""
 operation_parameters_collection_type["getFeatureFlagStatus:::featureFlagKey"]=""
@@ -413,9 +429,13 @@ operation_parameters_collection_type["getFeatureFlagStatusAcrossEnvironments:::f
 operation_parameters_collection_type["getFeatureFlagStatuses:::projectKey"]=""
 operation_parameters_collection_type["getFeatureFlagStatuses:::environmentKey"]=""
 operation_parameters_collection_type["getFeatureFlags:::projectKey"]=""
-operation_parameters_collection_type["getFeatureFlags:::env"]=""
+operation_parameters_collection_type["getFeatureFlags:::env"]="multi"
 operation_parameters_collection_type["getFeatureFlags:::summary"]=""
 operation_parameters_collection_type["getFeatureFlags:::archived"]=""
+operation_parameters_collection_type["getFeatureFlags:::limit"]=""
+operation_parameters_collection_type["getFeatureFlags:::number"]=""
+operation_parameters_collection_type["getFeatureFlags:::filter"]=""
+operation_parameters_collection_type["getFeatureFlags:::sort"]=""
 operation_parameters_collection_type["getFeatureFlags:::tag"]=""
 operation_parameters_collection_type["patchFeatureFlag:::projectKey"]=""
 operation_parameters_collection_type["patchFeatureFlag:::featureFlagKey"]=""
@@ -430,6 +450,10 @@ operation_parameters_collection_type["patchProject:::patchDelta"]=
 operation_parameters_collection_type["postProject:::projectBody"]=""
 operation_parameters_collection_type["deleteMember:::memberId"]=""
 operation_parameters_collection_type["getMember:::memberId"]=""
+operation_parameters_collection_type["getMembers:::limit"]=""
+operation_parameters_collection_type["getMembers:::number"]=""
+operation_parameters_collection_type["getMembers:::filter"]=""
+operation_parameters_collection_type["getMembers:::sort"]=""
 operation_parameters_collection_type["patchMember:::memberId"]=""
 operation_parameters_collection_type["patchMember:::patchDelta"]=
 operation_parameters_collection_type["postMembers:::membersBody"]=
@@ -828,7 +852,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.33)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.0.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -946,6 +970,7 @@ echo "  $ops" | column -t -s ';'
     echo -e "${BOLD}${WHITE}[teamMembers]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}deleteMember${OFF};Delete a team member by ID. (AUTH)
+  ${CYAN}getMe${OFF};Get the current team member associated with the token (AUTH)
   ${CYAN}getMember${OFF};Get a single team member by ID. (AUTH)
   ${CYAN}getMembers${OFF};Returns a list of all members in the account. (AUTH)
   ${CYAN}patchMember${OFF};Modify a team member by ID. (AUTH)
@@ -1016,7 +1041,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 2.0.33)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.0.0)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -1036,7 +1061,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 2.0.33)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 3.0.0)${OFF}"
     echo ""
 }
 
@@ -1639,7 +1664,7 @@ print_getFeatureFlag_help() {
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}env${OFF} ${BLUE}[string]${OFF}${OFF} - By default, each feature will include configurations for each environment. You can filter environments with the env query parameter. For example, setting env=production will restrict the returned configurations to just your production environment.${YELLOW} Specify as: env=value${OFF}" \
+    echo -e "  * ${GREEN}env${OFF} ${BLUE}[array[string]]${OFF}${OFF} - By default, each feature will include configurations for each environment. You can filter environments with the env query parameter. For example, setting env=[\"production\"] will restrict the returned configurations to just your production environment.${YELLOW} Specify as: env=value1 env=value2 env=...${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -1721,11 +1746,19 @@ print_getFeatureFlags_help() {
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}env${OFF} ${BLUE}[string]${OFF}${OFF} - By default, each feature will include configurations for each environment. You can filter environments with the env query parameter. For example, setting env=production will restrict the returned configurations to just your production environment.${YELLOW} Specify as: env=value${OFF}" \
+    echo -e "  * ${GREEN}env${OFF} ${BLUE}[array[string]]${OFF}${OFF} - By default, each feature will include configurations for each environment. You can filter environments with the env query parameter. For example, setting env=[\"production\"] will restrict the returned configurations to just your production environment.${YELLOW} Specify as: env=value1 env=value2 env=...${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}summary${OFF} ${BLUE}[boolean]${OFF}${OFF} - By default in api version >= 1, flags will _not_ include their list of prerequisites, targets or rules.  Set summary=0 to include these fields for each flag returned.${YELLOW} Specify as: summary=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}archived${OFF} ${BLUE}[boolean]${OFF}${OFF} - When set to 1, archived flags will be included in the list of flags returned.  By default, archived flags are not included in the list of flags.${YELLOW} Specify as: archived=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}limit${OFF} ${BLUE}[integer]${OFF}${OFF} - The number of objects to return. Defaults to -1, which returns everything.${YELLOW} Specify as: limit=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}number${OFF} ${BLUE}[boolean]${OFF}${OFF} - Where to start in the list. This is for use with pagination. For example, an offset of 10 would skip the first 10 items and then return the next limit items.${YELLOW} Specify as: number=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF}${OFF} - A comma-separated list of filters. Each filter is of the form field:value.${YELLOW} Specify as: filter=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}sort${OFF} ${BLUE}[string]${OFF}${OFF} - A comma-separated list of fields to sort by. A field prefixed by a - will be sorted in descending order.${YELLOW} Specify as: sort=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}tag${OFF} ${BLUE}[string]${OFF}${OFF} - Filter by tag. A tag can be used to group flags across projects.${YELLOW} Specify as: tag=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1934,6 +1967,24 @@ print_deleteMember_help() {
 }
 ##############################################################################
 #
+# Print help for getMe operation
+#
+##############################################################################
+print_getMe_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getMe - Get the current team member associated with the token${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Member response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for getMember operation
 #
 ##############################################################################
@@ -1961,6 +2012,15 @@ print_getMembers_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getMembers - Returns a list of all members in the account.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}limit${OFF} ${BLUE}[integer]${OFF}${OFF} - The number of objects to return. Defaults to -1, which returns everything.${YELLOW} Specify as: limit=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}number${OFF} ${BLUE}[boolean]${OFF}${OFF} - Where to start in the list. This is for use with pagination. For example, an offset of 10 would skip the first 10 items and then return the next limit items.${YELLOW} Specify as: number=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF}${OFF} - A comma-separated list of filters. Each filter is of the form field:value.${YELLOW} Specify as: filter=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}sort${OFF} ${BLUE}[string]${OFF}${OFF} - A comma-separated list of fields to sort by. A field prefixed by a - will be sorted in descending order.${YELLOW} Specify as: sort=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -3865,7 +3925,7 @@ call_getFeatureFlags() {
     local path_parameter_names=(projectKey)
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=(env summary archived tag  )
+    local query_parameter_names=(env summary archived limit number filter sort tag  )
     local path
 
     if ! path=$(build_request_path "/api/v2/flags/{projectKey}" path_parameter_names query_parameter_names); then
@@ -4384,6 +4444,42 @@ call_deleteMember() {
 
 ##############################################################################
 #
+# Call getMe operation
+#
+##############################################################################
+call_getMe() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/members/me" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call getMember operation
 #
 ##############################################################################
@@ -4429,7 +4525,7 @@ call_getMembers() {
     local path_parameter_names=()
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=(  )
+    local query_parameter_names=(limit number filter sort  )
     local path
 
     if ! path=$(build_request_path "/api/v2/members" path_parameter_names query_parameter_names); then
@@ -5655,6 +5751,9 @@ case $key in
     deleteMember)
     operation="deleteMember"
     ;;
+    getMe)
+    operation="getMe"
+    ;;
     getMember)
     operation="getMember"
     ;;
@@ -5927,6 +6026,9 @@ case $operation in
     ;;
     deleteMember)
     call_deleteMember
+    ;;
+    getMe)
+    call_getMe
     ;;
     getMember)
     call_getMember
