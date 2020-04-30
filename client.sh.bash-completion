@@ -96,11 +96,13 @@ _()
     operations["postEnvironment"]=1
     operations["copyFeatureFlag"]=1
     operations["deleteFeatureFlag"]=1
+    operations["getExpiringUserTargets"]=1
     operations["getFeatureFlag"]=1
     operations["getFeatureFlagStatus"]=1
     operations["getFeatureFlagStatusAcrossEnvironments"]=1
     operations["getFeatureFlagStatuses"]=1
     operations["getFeatureFlags"]=1
+    operations["patchExpiringUserTargets"]=1
     operations["patchFeatureFlag"]=1
     operations["postFeatureFlag"]=1
     operations["deleteProject"]=1
@@ -120,8 +122,10 @@ _()
     operations["getUserSegments"]=1
     operations["patchUserSegment"]=1
     operations["postUserSegment"]=1
+    operations["getExpiringUserTargetsForUser"]=1
     operations["getUserFlagSetting"]=1
     operations["getUserFlagSettings"]=1
+    operations["patchExpiringUserTargetsForFlags"]=1
     operations["putFlagSetting"]=1
     operations["deleteUser"]=1
     operations["getSearchUsers"]=1
@@ -164,11 +168,13 @@ _()
     operation_parameters["postEnvironment"]="projectKey= "
     operation_parameters["copyFeatureFlag"]="projectKey= featureFlagKey= "
     operation_parameters["deleteFeatureFlag"]="projectKey= featureFlagKey= "
+    operation_parameters["getExpiringUserTargets"]="projectKey= environmentKey= featureFlagKey= "
     operation_parameters["getFeatureFlag"]="projectKey= featureFlagKey= env= "
     operation_parameters["getFeatureFlagStatus"]="projectKey= environmentKey= featureFlagKey= "
     operation_parameters["getFeatureFlagStatusAcrossEnvironments"]="projectKey= featureFlagKey= "
     operation_parameters["getFeatureFlagStatuses"]="projectKey= environmentKey= "
     operation_parameters["getFeatureFlags"]="projectKey= env= summary= archived= limit= number= filter= sort= tag= "
+    operation_parameters["patchExpiringUserTargets"]="projectKey= environmentKey= featureFlagKey= "
     operation_parameters["patchFeatureFlag"]="projectKey= featureFlagKey= "
     operation_parameters["postFeatureFlag"]="projectKey= clone= "
     operation_parameters["deleteProject"]="projectKey= "
@@ -188,8 +194,10 @@ _()
     operation_parameters["getUserSegments"]="projectKey= environmentKey= tag= "
     operation_parameters["patchUserSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["postUserSegment"]="projectKey= environmentKey= "
+    operation_parameters["getExpiringUserTargetsForUser"]="projectKey= environmentKey= userKey= "
     operation_parameters["getUserFlagSetting"]="projectKey= environmentKey= userKey= featureFlagKey= "
     operation_parameters["getUserFlagSettings"]="projectKey= environmentKey= userKey= "
+    operation_parameters["patchExpiringUserTargetsForFlags"]="projectKey= environmentKey= userKey= "
     operation_parameters["putFlagSetting"]="projectKey= environmentKey= userKey= featureFlagKey= "
     operation_parameters["deleteUser"]="projectKey= environmentKey= userKey= "
     operation_parameters["getSearchUsers"]="projectKey= environmentKey= q= limit= offset= after= "

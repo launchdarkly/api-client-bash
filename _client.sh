@@ -319,11 +319,13 @@ case $state in
             "patchEnvironment[Modify an environment by ID.]" \
             "postEnvironment[Create a new environment in a specified project with a given name, key, and swatch color.]"             "copyFeatureFlag[Copies the feature flag configuration from one environment to the same feature flag in another environment.]" \
             "deleteFeatureFlag[Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.]" \
+            "getExpiringUserTargets[Get expiring user targets for feature flag]" \
             "getFeatureFlag[Get a single feature flag by key.]" \
             "getFeatureFlagStatus[Get the status for a particular feature flag.]" \
             "getFeatureFlagStatusAcrossEnvironments[Get the status for a particular feature flag across environments]" \
             "getFeatureFlagStatuses[Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.]" \
             "getFeatureFlags[Get a list of all features in the given project.]" \
+            "patchExpiringUserTargets[Update, add, or delete expiring user targets on feature flag]" \
             "patchFeatureFlag[Perform a partial update to a feature.]" \
             "postFeatureFlag[Creates a new feature flag.]"             "deleteProject[Delete a project by key. Caution-- deleting a project will delete all associated environments and feature flags. You cannot delete the last project in an account.]" \
             "getProject[Fetch a single project by key.]" \
@@ -338,8 +340,10 @@ case $state in
             "getUserSegment[Get a single user segment by key.]" \
             "getUserSegments[Get a list of all user segments in the given project.]" \
             "patchUserSegment[Perform a partial update to a user segment.]" \
-            "postUserSegment[Creates a new user segment.]"             "getUserFlagSetting[Fetch a single flag setting for a user by key.]" \
+            "postUserSegment[Creates a new user segment.]"             "getExpiringUserTargetsForUser[Get expiring dates on flags for user]" \
+            "getUserFlagSetting[Fetch a single flag setting for a user by key.]" \
             "getUserFlagSettings[Fetch a single flag setting for a user by key.]" \
+            "patchExpiringUserTargetsForFlags[Update, add, or delete expiring user targets for a single user on all flags]" \
             "putFlagSetting[Specifically enable or disable a feature flag for a user based on their key.]"             "deleteUser[Delete a user by ID.]" \
             "getSearchUsers[Search users in LaunchDarkly based on their last active date, or a search query. It should not be used to enumerate all users in LaunchDarkly-- use the List users API resource.]" \
             "getUser[Get a user by key.]" \
@@ -559,6 +563,15 @@ case $state in
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      getExpiringUserTargets)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       getFeatureFlag)
         local -a _op_arguments
         _op_arguments=(
@@ -609,6 +622,15 @@ case $state in
 "sort=:[QUERY] A comma-separated list of fields to sort by. A field prefixed by a - will be sorted in descending order."
 "tag=:[QUERY] Filter by tag. A tag can be used to group flags across projects."
           )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      patchExpiringUserTargets)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
+                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       patchFeatureFlag)
@@ -754,6 +776,15 @@ case $state in
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      getExpiringUserTargetsForUser)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"userKey=:[PATH] The user&#39;s key."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       getUserFlagSetting)
         local -a _op_arguments
         _op_arguments=(
@@ -765,6 +796,15 @@ case $state in
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       getUserFlagSettings)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"userKey=:[PATH] The user&#39;s key."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      patchExpiringUserTargetsForFlags)
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."

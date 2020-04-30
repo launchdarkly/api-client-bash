@@ -139,6 +139,9 @@ operation_parameters_minimum_occurrences["copyFeatureFlag:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["copyFeatureFlag:::featureFlagCopyBody"]=1
 operation_parameters_minimum_occurrences["deleteFeatureFlag:::projectKey"]=1
 operation_parameters_minimum_occurrences["deleteFeatureFlag:::featureFlagKey"]=1
+operation_parameters_minimum_occurrences["getExpiringUserTargets:::projectKey"]=1
+operation_parameters_minimum_occurrences["getExpiringUserTargets:::environmentKey"]=1
+operation_parameters_minimum_occurrences["getExpiringUserTargets:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["getFeatureFlag:::projectKey"]=1
 operation_parameters_minimum_occurrences["getFeatureFlag:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["getFeatureFlag:::env"]=0
@@ -158,6 +161,10 @@ operation_parameters_minimum_occurrences["getFeatureFlags:::number"]=0
 operation_parameters_minimum_occurrences["getFeatureFlags:::filter"]=0
 operation_parameters_minimum_occurrences["getFeatureFlags:::sort"]=0
 operation_parameters_minimum_occurrences["getFeatureFlags:::tag"]=0
+operation_parameters_minimum_occurrences["patchExpiringUserTargets:::projectKey"]=1
+operation_parameters_minimum_occurrences["patchExpiringUserTargets:::environmentKey"]=1
+operation_parameters_minimum_occurrences["patchExpiringUserTargets:::featureFlagKey"]=1
+operation_parameters_minimum_occurrences["patchExpiringUserTargets:::patchComment"]=1
 operation_parameters_minimum_occurrences["patchFeatureFlag:::projectKey"]=1
 operation_parameters_minimum_occurrences["patchFeatureFlag:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["patchFeatureFlag:::patchComment"]=1
@@ -194,6 +201,9 @@ operation_parameters_minimum_occurrences["patchUserSegment:::PatchOnly"]=1
 operation_parameters_minimum_occurrences["postUserSegment:::projectKey"]=1
 operation_parameters_minimum_occurrences["postUserSegment:::environmentKey"]=1
 operation_parameters_minimum_occurrences["postUserSegment:::userSegmentBody"]=1
+operation_parameters_minimum_occurrences["getExpiringUserTargetsForUser:::projectKey"]=1
+operation_parameters_minimum_occurrences["getExpiringUserTargetsForUser:::environmentKey"]=1
+operation_parameters_minimum_occurrences["getExpiringUserTargetsForUser:::userKey"]=1
 operation_parameters_minimum_occurrences["getUserFlagSetting:::projectKey"]=1
 operation_parameters_minimum_occurrences["getUserFlagSetting:::environmentKey"]=1
 operation_parameters_minimum_occurrences["getUserFlagSetting:::userKey"]=1
@@ -201,6 +211,10 @@ operation_parameters_minimum_occurrences["getUserFlagSetting:::featureFlagKey"]=
 operation_parameters_minimum_occurrences["getUserFlagSettings:::projectKey"]=1
 operation_parameters_minimum_occurrences["getUserFlagSettings:::environmentKey"]=1
 operation_parameters_minimum_occurrences["getUserFlagSettings:::userKey"]=1
+operation_parameters_minimum_occurrences["patchExpiringUserTargetsForFlags:::projectKey"]=1
+operation_parameters_minimum_occurrences["patchExpiringUserTargetsForFlags:::environmentKey"]=1
+operation_parameters_minimum_occurrences["patchExpiringUserTargetsForFlags:::userKey"]=1
+operation_parameters_minimum_occurrences["patchExpiringUserTargetsForFlags:::patchComment"]=1
 operation_parameters_minimum_occurrences["putFlagSetting:::projectKey"]=1
 operation_parameters_minimum_occurrences["putFlagSetting:::environmentKey"]=1
 operation_parameters_minimum_occurrences["putFlagSetting:::userKey"]=1
@@ -280,6 +294,9 @@ operation_parameters_maximum_occurrences["copyFeatureFlag:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["copyFeatureFlag:::featureFlagCopyBody"]=0
 operation_parameters_maximum_occurrences["deleteFeatureFlag:::projectKey"]=0
 operation_parameters_maximum_occurrences["deleteFeatureFlag:::featureFlagKey"]=0
+operation_parameters_maximum_occurrences["getExpiringUserTargets:::projectKey"]=0
+operation_parameters_maximum_occurrences["getExpiringUserTargets:::environmentKey"]=0
+operation_parameters_maximum_occurrences["getExpiringUserTargets:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["getFeatureFlag:::projectKey"]=0
 operation_parameters_maximum_occurrences["getFeatureFlag:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["getFeatureFlag:::env"]=0
@@ -299,6 +316,10 @@ operation_parameters_maximum_occurrences["getFeatureFlags:::number"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::filter"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::sort"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::tag"]=0
+operation_parameters_maximum_occurrences["patchExpiringUserTargets:::projectKey"]=0
+operation_parameters_maximum_occurrences["patchExpiringUserTargets:::environmentKey"]=0
+operation_parameters_maximum_occurrences["patchExpiringUserTargets:::featureFlagKey"]=0
+operation_parameters_maximum_occurrences["patchExpiringUserTargets:::patchComment"]=0
 operation_parameters_maximum_occurrences["patchFeatureFlag:::projectKey"]=0
 operation_parameters_maximum_occurrences["patchFeatureFlag:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["patchFeatureFlag:::patchComment"]=0
@@ -335,6 +356,9 @@ operation_parameters_maximum_occurrences["patchUserSegment:::PatchOnly"]=0
 operation_parameters_maximum_occurrences["postUserSegment:::projectKey"]=0
 operation_parameters_maximum_occurrences["postUserSegment:::environmentKey"]=0
 operation_parameters_maximum_occurrences["postUserSegment:::userSegmentBody"]=0
+operation_parameters_maximum_occurrences["getExpiringUserTargetsForUser:::projectKey"]=0
+operation_parameters_maximum_occurrences["getExpiringUserTargetsForUser:::environmentKey"]=0
+operation_parameters_maximum_occurrences["getExpiringUserTargetsForUser:::userKey"]=0
 operation_parameters_maximum_occurrences["getUserFlagSetting:::projectKey"]=0
 operation_parameters_maximum_occurrences["getUserFlagSetting:::environmentKey"]=0
 operation_parameters_maximum_occurrences["getUserFlagSetting:::userKey"]=0
@@ -342,6 +366,10 @@ operation_parameters_maximum_occurrences["getUserFlagSetting:::featureFlagKey"]=
 operation_parameters_maximum_occurrences["getUserFlagSettings:::projectKey"]=0
 operation_parameters_maximum_occurrences["getUserFlagSettings:::environmentKey"]=0
 operation_parameters_maximum_occurrences["getUserFlagSettings:::userKey"]=0
+operation_parameters_maximum_occurrences["patchExpiringUserTargetsForFlags:::projectKey"]=0
+operation_parameters_maximum_occurrences["patchExpiringUserTargetsForFlags:::environmentKey"]=0
+operation_parameters_maximum_occurrences["patchExpiringUserTargetsForFlags:::userKey"]=0
+operation_parameters_maximum_occurrences["patchExpiringUserTargetsForFlags:::patchComment"]=0
 operation_parameters_maximum_occurrences["putFlagSetting:::projectKey"]=0
 operation_parameters_maximum_occurrences["putFlagSetting:::environmentKey"]=0
 operation_parameters_maximum_occurrences["putFlagSetting:::userKey"]=0
@@ -418,6 +446,9 @@ operation_parameters_collection_type["copyFeatureFlag:::featureFlagKey"]=""
 operation_parameters_collection_type["copyFeatureFlag:::featureFlagCopyBody"]=""
 operation_parameters_collection_type["deleteFeatureFlag:::projectKey"]=""
 operation_parameters_collection_type["deleteFeatureFlag:::featureFlagKey"]=""
+operation_parameters_collection_type["getExpiringUserTargets:::projectKey"]=""
+operation_parameters_collection_type["getExpiringUserTargets:::environmentKey"]=""
+operation_parameters_collection_type["getExpiringUserTargets:::featureFlagKey"]=""
 operation_parameters_collection_type["getFeatureFlag:::projectKey"]=""
 operation_parameters_collection_type["getFeatureFlag:::featureFlagKey"]=""
 operation_parameters_collection_type["getFeatureFlag:::env"]="multi"
@@ -437,6 +468,10 @@ operation_parameters_collection_type["getFeatureFlags:::number"]=""
 operation_parameters_collection_type["getFeatureFlags:::filter"]=""
 operation_parameters_collection_type["getFeatureFlags:::sort"]=""
 operation_parameters_collection_type["getFeatureFlags:::tag"]=""
+operation_parameters_collection_type["patchExpiringUserTargets:::projectKey"]=""
+operation_parameters_collection_type["patchExpiringUserTargets:::environmentKey"]=""
+operation_parameters_collection_type["patchExpiringUserTargets:::featureFlagKey"]=""
+operation_parameters_collection_type["patchExpiringUserTargets:::patchComment"]=""
 operation_parameters_collection_type["patchFeatureFlag:::projectKey"]=""
 operation_parameters_collection_type["patchFeatureFlag:::featureFlagKey"]=""
 operation_parameters_collection_type["patchFeatureFlag:::patchComment"]=""
@@ -473,6 +508,9 @@ operation_parameters_collection_type["patchUserSegment:::PatchOnly"]=
 operation_parameters_collection_type["postUserSegment:::projectKey"]=""
 operation_parameters_collection_type["postUserSegment:::environmentKey"]=""
 operation_parameters_collection_type["postUserSegment:::userSegmentBody"]=""
+operation_parameters_collection_type["getExpiringUserTargetsForUser:::projectKey"]=""
+operation_parameters_collection_type["getExpiringUserTargetsForUser:::environmentKey"]=""
+operation_parameters_collection_type["getExpiringUserTargetsForUser:::userKey"]=""
 operation_parameters_collection_type["getUserFlagSetting:::projectKey"]=""
 operation_parameters_collection_type["getUserFlagSetting:::environmentKey"]=""
 operation_parameters_collection_type["getUserFlagSetting:::userKey"]=""
@@ -480,6 +518,10 @@ operation_parameters_collection_type["getUserFlagSetting:::featureFlagKey"]=""
 operation_parameters_collection_type["getUserFlagSettings:::projectKey"]=""
 operation_parameters_collection_type["getUserFlagSettings:::environmentKey"]=""
 operation_parameters_collection_type["getUserFlagSettings:::userKey"]=""
+operation_parameters_collection_type["patchExpiringUserTargetsForFlags:::projectKey"]=""
+operation_parameters_collection_type["patchExpiringUserTargetsForFlags:::environmentKey"]=""
+operation_parameters_collection_type["patchExpiringUserTargetsForFlags:::userKey"]=""
+operation_parameters_collection_type["patchExpiringUserTargetsForFlags:::patchComment"]=""
 operation_parameters_collection_type["putFlagSetting:::projectKey"]=""
 operation_parameters_collection_type["putFlagSetting:::environmentKey"]=""
 operation_parameters_collection_type["putFlagSetting:::userKey"]=""
@@ -852,7 +894,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.0.0)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.1.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -941,11 +983,13 @@ echo "  $ops" | column -t -s ';'
 read -r -d '' ops <<EOF
   ${CYAN}copyFeatureFlag${OFF};Copies the feature flag configuration from one environment to the same feature flag in another environment. (AUTH)
   ${CYAN}deleteFeatureFlag${OFF};Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application. (AUTH)
+  ${CYAN}getExpiringUserTargets${OFF};Get expiring user targets for feature flag (AUTH)
   ${CYAN}getFeatureFlag${OFF};Get a single feature flag by key. (AUTH)
   ${CYAN}getFeatureFlagStatus${OFF};Get the status for a particular feature flag. (AUTH)
   ${CYAN}getFeatureFlagStatusAcrossEnvironments${OFF};Get the status for a particular feature flag across environments (AUTH)
   ${CYAN}getFeatureFlagStatuses${OFF};Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag. (AUTH)
   ${CYAN}getFeatureFlags${OFF};Get a list of all features in the given project. (AUTH)
+  ${CYAN}patchExpiringUserTargets${OFF};Update, add, or delete expiring user targets on feature flag (AUTH)
   ${CYAN}patchFeatureFlag${OFF};Perform a partial update to a feature. (AUTH)
   ${CYAN}postFeatureFlag${OFF};Creates a new feature flag. (AUTH)
 EOF
@@ -990,8 +1034,10 @@ echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[userSettings]${OFF}"
 read -r -d '' ops <<EOF
+  ${CYAN}getExpiringUserTargetsForUser${OFF};Get expiring dates on flags for user (AUTH)
   ${CYAN}getUserFlagSetting${OFF};Fetch a single flag setting for a user by key. (AUTH)
   ${CYAN}getUserFlagSettings${OFF};Fetch a single flag setting for a user by key. (AUTH)
+  ${CYAN}patchExpiringUserTargetsForFlags${OFF};Update, add, or delete expiring user targets for a single user on all flags (AUTH)
   ${CYAN}putFlagSetting${OFF};Specifically enable or disable a feature flag for a user based on their key. (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
@@ -1041,7 +1087,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.0.0)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.1.0)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -1061,7 +1107,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 3.0.0)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 3.1.0)${OFF}"
     echo ""
 }
 
@@ -1654,6 +1700,26 @@ print_deleteFeatureFlag_help() {
 }
 ##############################################################################
 #
+# Print help for getExpiringUserTargets operation
+#
+##############################################################################
+print_getExpiringUserTargets_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getExpiringUserTargets - Get expiring user targets for feature flag${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;User targets of the requested feature flag.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for getFeatureFlag operation
 #
 ##############################################################################
@@ -1768,6 +1834,34 @@ print_getFeatureFlags_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;Flags response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for patchExpiringUserTargets operation
+#
+##############################################################################
+print_patchExpiringUserTargets_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}patchExpiringUserTargets - Update, add, or delete expiring user targets on feature flag${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Requires a JSON Patch representation of the desired changes to the project, and an optional comment. 'http://jsonpatch.com/' Feature flag patches also support JSON Merge Patch format. 'https://tools.ietf.org/html/rfc7386' The addition of comments is also supported." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;User targeting expirations on feature flag response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=409
+    echo -e "${result_color_table[${code:0:1}]}  409;Status conflict.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -2197,6 +2291,26 @@ print_postUserSegment_help() {
 }
 ##############################################################################
 #
+# Print help for getExpiringUserTargetsForUser operation
+#
+##############################################################################
+print_getExpiringUserTargetsForUser_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getExpiringUserTargetsForUser - Get expiring dates on flags for user${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}userKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The user's key. ${YELLOW}Specify as: userKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;User targets of the requested feature flag.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for getUserFlagSetting operation
 #
 ##############################################################################
@@ -2239,6 +2353,34 @@ print_getUserFlagSettings_help() {
     echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for patchExpiringUserTargetsForFlags operation
+#
+##############################################################################
+print_patchExpiringUserTargetsForFlags_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}patchExpiringUserTargetsForFlags - Update, add, or delete expiring user targets for a single user on all flags${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}userKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The user's key. ${YELLOW}Specify as: userKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Requires a JSON Patch representation of the desired changes to the project, and an optional comment. 'http://jsonpatch.com/' Feature flag patches also support JSON Merge Patch format. 'https://tools.ietf.org/html/rfc7386' The addition of comments is also supported." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;User Targeting expiration for single user on all flags response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=409
+    echo -e "${result_color_table[${code:0:1}]}  409;Status conflict.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -3772,6 +3914,42 @@ call_deleteFeatureFlag() {
 
 ##############################################################################
 #
+# Call getExpiringUserTargets operation
+#
+##############################################################################
+call_getExpiringUserTargets() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey featureFlagKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/flags/{projectKey}/{featureFlagKey}/expiring-user-targets/{environmentKey}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call getFeatureFlag operation
 #
 ##############################################################################
@@ -3947,6 +4125,84 @@ call_getFeatureFlags() {
         echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     else
         eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call patchExpiringUserTargets operation
+#
+##############################################################################
+call_patchExpiringUserTargets() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey featureFlagKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/flags/{projectKey}/{featureFlagKey}/expiring-user-targets/{environmentKey}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PATCH"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the Swagger specification
+    # if values produces and consumes are defined unambigously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
     fi
 }
 
@@ -4972,6 +5228,42 @@ call_postUserSegment() {
 
 ##############################################################################
 #
+# Call getExpiringUserTargetsForUser operation
+#
+##############################################################################
+call_getExpiringUserTargetsForUser() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey userKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/users/{projectKey}/{userKey}/expiring-user-targets/{environmentKey}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call getUserFlagSetting operation
 #
 ##############################################################################
@@ -5039,6 +5331,84 @@ call_getUserFlagSettings() {
         echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     else
         eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call patchExpiringUserTargetsForFlags operation
+#
+##############################################################################
+call_patchExpiringUserTargetsForFlags() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey userKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/users/{projectKey}/{userKey}/expiring-user-targets/{environmentKey}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PATCH"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the Swagger specification
+    # if values produces and consumes are defined unambigously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
     fi
 }
 
@@ -5709,6 +6079,9 @@ case $key in
     deleteFeatureFlag)
     operation="deleteFeatureFlag"
     ;;
+    getExpiringUserTargets)
+    operation="getExpiringUserTargets"
+    ;;
     getFeatureFlag)
     operation="getFeatureFlag"
     ;;
@@ -5723,6 +6096,9 @@ case $key in
     ;;
     getFeatureFlags)
     operation="getFeatureFlags"
+    ;;
+    patchExpiringUserTargets)
+    operation="patchExpiringUserTargets"
     ;;
     patchFeatureFlag)
     operation="patchFeatureFlag"
@@ -5781,11 +6157,17 @@ case $key in
     postUserSegment)
     operation="postUserSegment"
     ;;
+    getExpiringUserTargetsForUser)
+    operation="getExpiringUserTargetsForUser"
+    ;;
     getUserFlagSetting)
     operation="getUserFlagSetting"
     ;;
     getUserFlagSettings)
     operation="getUserFlagSettings"
+    ;;
+    patchExpiringUserTargetsForFlags)
+    operation="patchExpiringUserTargetsForFlags"
     ;;
     putFlagSetting)
     operation="putFlagSetting"
@@ -5985,6 +6367,9 @@ case $operation in
     deleteFeatureFlag)
     call_deleteFeatureFlag
     ;;
+    getExpiringUserTargets)
+    call_getExpiringUserTargets
+    ;;
     getFeatureFlag)
     call_getFeatureFlag
     ;;
@@ -5999,6 +6384,9 @@ case $operation in
     ;;
     getFeatureFlags)
     call_getFeatureFlags
+    ;;
+    patchExpiringUserTargets)
+    call_patchExpiringUserTargets
     ;;
     patchFeatureFlag)
     call_patchFeatureFlag
@@ -6057,11 +6445,17 @@ case $operation in
     postUserSegment)
     call_postUserSegment
     ;;
+    getExpiringUserTargetsForUser)
+    call_getExpiringUserTargetsForUser
+    ;;
     getUserFlagSetting)
     call_getUserFlagSetting
     ;;
     getUserFlagSettings)
     call_getUserFlagSettings
+    ;;
+    patchExpiringUserTargetsForFlags)
+    call_patchExpiringUserTargetsForFlags
     ;;
     putFlagSetting)
     call_putFlagSetting
