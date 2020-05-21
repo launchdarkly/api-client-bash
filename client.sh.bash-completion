@@ -118,8 +118,10 @@ _()
     operations["patchMember"]=1
     operations["postMembers"]=1
     operations["deleteUserSegment"]=1
+    operations["getExpiringUserTargetsOnSegment"]=1
     operations["getUserSegment"]=1
     operations["getUserSegments"]=1
+    operations["patchExpiringUserTargetsOnSegment"]=1
     operations["patchUserSegment"]=1
     operations["postUserSegment"]=1
     operations["getExpiringUserTargetsForUser"]=1
@@ -173,7 +175,7 @@ _()
     operation_parameters["getFeatureFlagStatus"]="projectKey= environmentKey= featureFlagKey= "
     operation_parameters["getFeatureFlagStatusAcrossEnvironments"]="projectKey= featureFlagKey= "
     operation_parameters["getFeatureFlagStatuses"]="projectKey= environmentKey= "
-    operation_parameters["getFeatureFlags"]="projectKey= env= summary= archived= limit= number= filter= sort= tag= "
+    operation_parameters["getFeatureFlags"]="projectKey= env= summary= archived= limit= offset= filter= sort= tag= "
     operation_parameters["patchExpiringUserTargets"]="projectKey= environmentKey= featureFlagKey= "
     operation_parameters["patchFeatureFlag"]="projectKey= featureFlagKey= "
     operation_parameters["postFeatureFlag"]="projectKey= clone= "
@@ -186,12 +188,14 @@ _()
     operation_parameters["deleteMember"]="memberId= "
     operation_parameters["getMe"]=""
     operation_parameters["getMember"]="memberId= "
-    operation_parameters["getMembers"]="limit= number= filter= sort= "
+    operation_parameters["getMembers"]="limit= offset= filter= sort= "
     operation_parameters["patchMember"]="memberId= "
     operation_parameters["postMembers"]=""
     operation_parameters["deleteUserSegment"]="projectKey= environmentKey= userSegmentKey= "
+    operation_parameters["getExpiringUserTargetsOnSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["getUserSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["getUserSegments"]="projectKey= environmentKey= tag= "
+    operation_parameters["patchExpiringUserTargetsOnSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["patchUserSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["postUserSegment"]="projectKey= environmentKey= "
     operation_parameters["getExpiringUserTargetsForUser"]="projectKey= environmentKey= userKey= "
@@ -213,35 +217,22 @@ _()
     declare -A operation_parameters_enum_values
     operation_parameters_enum_values["getFeatureFlags::summary"]="true false"
     operation_parameters_enum_values["getFeatureFlags::archived"]="true false"
-    operation_parameters_enum_values["getFeatureFlags::number"]="true false"
     operation_parameters_enum_values["getFeatureFlags::summary"]="true false"
     operation_parameters_enum_values["getFeatureFlags::archived"]="true false"
-    operation_parameters_enum_values["getFeatureFlags::number"]="true false"
     operation_parameters_enum_values["getFeatureFlags::summary"]="true false"
     operation_parameters_enum_values["getFeatureFlags::archived"]="true false"
-    operation_parameters_enum_values["getFeatureFlags::number"]="true false"
     operation_parameters_enum_values["getFeatureFlags::summary"]="true false"
     operation_parameters_enum_values["getFeatureFlags::archived"]="true false"
-    operation_parameters_enum_values["getFeatureFlags::number"]="true false"
     operation_parameters_enum_values["getFeatureFlags::summary"]="true false"
     operation_parameters_enum_values["getFeatureFlags::archived"]="true false"
-    operation_parameters_enum_values["getFeatureFlags::number"]="true false"
     operation_parameters_enum_values["getFeatureFlags::summary"]="true false"
     operation_parameters_enum_values["getFeatureFlags::archived"]="true false"
-    operation_parameters_enum_values["getFeatureFlags::number"]="true false"
     operation_parameters_enum_values["getFeatureFlags::summary"]="true false"
     operation_parameters_enum_values["getFeatureFlags::archived"]="true false"
-    operation_parameters_enum_values["getFeatureFlags::number"]="true false"
     operation_parameters_enum_values["getFeatureFlags::summary"]="true false"
     operation_parameters_enum_values["getFeatureFlags::archived"]="true false"
-    operation_parameters_enum_values["getFeatureFlags::number"]="true false"
     operation_parameters_enum_values["getFeatureFlags::summary"]="true false"
     operation_parameters_enum_values["getFeatureFlags::archived"]="true false"
-    operation_parameters_enum_values["getFeatureFlags::number"]="true false"
-    operation_parameters_enum_values["getMembers::number"]="true false"
-    operation_parameters_enum_values["getMembers::number"]="true false"
-    operation_parameters_enum_values["getMembers::number"]="true false"
-    operation_parameters_enum_values["getMembers::number"]="true false"
 
     #
     # Check if this is OSX and use special __osx_init_completion function

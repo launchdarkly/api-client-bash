@@ -105,7 +105,7 @@ Returns a list of all members in the account.
 
 ### Example
 ```bash
- getMembers  limit=value  number=value  filter=value  sort=value
+ getMembers  limit=value  offset=value  filter=value  sort=value
 ```
 
 ### Parameters
@@ -113,7 +113,7 @@ Returns a list of all members in the account.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **integer** | The number of objects to return. Defaults to -1, which returns everything. | [optional]
- **number** | **boolean** | Where to start in the list. This is for use with pagination. For example, an offset of 10 would skip the first 10 items and then return the next limit items. | [optional]
+ **offset** | **integer** | Where to start in the list. This is for use with pagination. For example, an offset of 10 would skip the first 10 items and then return the next limit items. | [optional]
  **filter** | **string** | A comma-separated list of filters. Each filter is of the form field:value. | [optional]
  **sort** | **string** | A comma-separated list of fields to sort by. A field prefixed by a - will be sorted in descending order. | [optional]
 

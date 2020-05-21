@@ -157,14 +157,14 @@ operation_parameters_minimum_occurrences["getFeatureFlags:::env"]=0
 operation_parameters_minimum_occurrences["getFeatureFlags:::summary"]=0
 operation_parameters_minimum_occurrences["getFeatureFlags:::archived"]=0
 operation_parameters_minimum_occurrences["getFeatureFlags:::limit"]=0
-operation_parameters_minimum_occurrences["getFeatureFlags:::number"]=0
+operation_parameters_minimum_occurrences["getFeatureFlags:::offset"]=0
 operation_parameters_minimum_occurrences["getFeatureFlags:::filter"]=0
 operation_parameters_minimum_occurrences["getFeatureFlags:::sort"]=0
 operation_parameters_minimum_occurrences["getFeatureFlags:::tag"]=0
 operation_parameters_minimum_occurrences["patchExpiringUserTargets:::projectKey"]=1
 operation_parameters_minimum_occurrences["patchExpiringUserTargets:::environmentKey"]=1
 operation_parameters_minimum_occurrences["patchExpiringUserTargets:::featureFlagKey"]=1
-operation_parameters_minimum_occurrences["patchExpiringUserTargets:::patchComment"]=1
+operation_parameters_minimum_occurrences["patchExpiringUserTargets:::SemanticPatchWithComment"]=1
 operation_parameters_minimum_occurrences["patchFeatureFlag:::projectKey"]=1
 operation_parameters_minimum_occurrences["patchFeatureFlag:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["patchFeatureFlag:::patchComment"]=1
@@ -179,7 +179,7 @@ operation_parameters_minimum_occurrences["postProject:::projectBody"]=1
 operation_parameters_minimum_occurrences["deleteMember:::memberId"]=1
 operation_parameters_minimum_occurrences["getMember:::memberId"]=1
 operation_parameters_minimum_occurrences["getMembers:::limit"]=0
-operation_parameters_minimum_occurrences["getMembers:::number"]=0
+operation_parameters_minimum_occurrences["getMembers:::offset"]=0
 operation_parameters_minimum_occurrences["getMembers:::filter"]=0
 operation_parameters_minimum_occurrences["getMembers:::sort"]=0
 operation_parameters_minimum_occurrences["patchMember:::memberId"]=1
@@ -188,12 +188,19 @@ operation_parameters_minimum_occurrences["postMembers:::membersBody"]=1
 operation_parameters_minimum_occurrences["deleteUserSegment:::projectKey"]=1
 operation_parameters_minimum_occurrences["deleteUserSegment:::environmentKey"]=1
 operation_parameters_minimum_occurrences["deleteUserSegment:::userSegmentKey"]=1
+operation_parameters_minimum_occurrences["getExpiringUserTargetsOnSegment:::projectKey"]=1
+operation_parameters_minimum_occurrences["getExpiringUserTargetsOnSegment:::environmentKey"]=1
+operation_parameters_minimum_occurrences["getExpiringUserTargetsOnSegment:::userSegmentKey"]=1
 operation_parameters_minimum_occurrences["getUserSegment:::projectKey"]=1
 operation_parameters_minimum_occurrences["getUserSegment:::environmentKey"]=1
 operation_parameters_minimum_occurrences["getUserSegment:::userSegmentKey"]=1
 operation_parameters_minimum_occurrences["getUserSegments:::projectKey"]=1
 operation_parameters_minimum_occurrences["getUserSegments:::environmentKey"]=1
 operation_parameters_minimum_occurrences["getUserSegments:::tag"]=0
+operation_parameters_minimum_occurrences["patchExpiringUserTargetsOnSegment:::projectKey"]=1
+operation_parameters_minimum_occurrences["patchExpiringUserTargetsOnSegment:::environmentKey"]=1
+operation_parameters_minimum_occurrences["patchExpiringUserTargetsOnSegment:::userSegmentKey"]=1
+operation_parameters_minimum_occurrences["patchExpiringUserTargetsOnSegment:::SemanticPatchWithComment"]=1
 operation_parameters_minimum_occurrences["patchUserSegment:::projectKey"]=1
 operation_parameters_minimum_occurrences["patchUserSegment:::environmentKey"]=1
 operation_parameters_minimum_occurrences["patchUserSegment:::userSegmentKey"]=1
@@ -214,7 +221,7 @@ operation_parameters_minimum_occurrences["getUserFlagSettings:::userKey"]=1
 operation_parameters_minimum_occurrences["patchExpiringUserTargetsForFlags:::projectKey"]=1
 operation_parameters_minimum_occurrences["patchExpiringUserTargetsForFlags:::environmentKey"]=1
 operation_parameters_minimum_occurrences["patchExpiringUserTargetsForFlags:::userKey"]=1
-operation_parameters_minimum_occurrences["patchExpiringUserTargetsForFlags:::patchComment"]=1
+operation_parameters_minimum_occurrences["patchExpiringUserTargetsForFlags:::SemanticPatchWithComment"]=1
 operation_parameters_minimum_occurrences["putFlagSetting:::projectKey"]=1
 operation_parameters_minimum_occurrences["putFlagSetting:::environmentKey"]=1
 operation_parameters_minimum_occurrences["putFlagSetting:::userKey"]=1
@@ -312,14 +319,14 @@ operation_parameters_maximum_occurrences["getFeatureFlags:::env"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::summary"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::archived"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::limit"]=0
-operation_parameters_maximum_occurrences["getFeatureFlags:::number"]=0
+operation_parameters_maximum_occurrences["getFeatureFlags:::offset"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::filter"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::sort"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::tag"]=0
 operation_parameters_maximum_occurrences["patchExpiringUserTargets:::projectKey"]=0
 operation_parameters_maximum_occurrences["patchExpiringUserTargets:::environmentKey"]=0
 operation_parameters_maximum_occurrences["patchExpiringUserTargets:::featureFlagKey"]=0
-operation_parameters_maximum_occurrences["patchExpiringUserTargets:::patchComment"]=0
+operation_parameters_maximum_occurrences["patchExpiringUserTargets:::SemanticPatchWithComment"]=0
 operation_parameters_maximum_occurrences["patchFeatureFlag:::projectKey"]=0
 operation_parameters_maximum_occurrences["patchFeatureFlag:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["patchFeatureFlag:::patchComment"]=0
@@ -334,7 +341,7 @@ operation_parameters_maximum_occurrences["postProject:::projectBody"]=0
 operation_parameters_maximum_occurrences["deleteMember:::memberId"]=0
 operation_parameters_maximum_occurrences["getMember:::memberId"]=0
 operation_parameters_maximum_occurrences["getMembers:::limit"]=0
-operation_parameters_maximum_occurrences["getMembers:::number"]=0
+operation_parameters_maximum_occurrences["getMembers:::offset"]=0
 operation_parameters_maximum_occurrences["getMembers:::filter"]=0
 operation_parameters_maximum_occurrences["getMembers:::sort"]=0
 operation_parameters_maximum_occurrences["patchMember:::memberId"]=0
@@ -343,12 +350,19 @@ operation_parameters_maximum_occurrences["postMembers:::membersBody"]=0
 operation_parameters_maximum_occurrences["deleteUserSegment:::projectKey"]=0
 operation_parameters_maximum_occurrences["deleteUserSegment:::environmentKey"]=0
 operation_parameters_maximum_occurrences["deleteUserSegment:::userSegmentKey"]=0
+operation_parameters_maximum_occurrences["getExpiringUserTargetsOnSegment:::projectKey"]=0
+operation_parameters_maximum_occurrences["getExpiringUserTargetsOnSegment:::environmentKey"]=0
+operation_parameters_maximum_occurrences["getExpiringUserTargetsOnSegment:::userSegmentKey"]=0
 operation_parameters_maximum_occurrences["getUserSegment:::projectKey"]=0
 operation_parameters_maximum_occurrences["getUserSegment:::environmentKey"]=0
 operation_parameters_maximum_occurrences["getUserSegment:::userSegmentKey"]=0
 operation_parameters_maximum_occurrences["getUserSegments:::projectKey"]=0
 operation_parameters_maximum_occurrences["getUserSegments:::environmentKey"]=0
 operation_parameters_maximum_occurrences["getUserSegments:::tag"]=0
+operation_parameters_maximum_occurrences["patchExpiringUserTargetsOnSegment:::projectKey"]=0
+operation_parameters_maximum_occurrences["patchExpiringUserTargetsOnSegment:::environmentKey"]=0
+operation_parameters_maximum_occurrences["patchExpiringUserTargetsOnSegment:::userSegmentKey"]=0
+operation_parameters_maximum_occurrences["patchExpiringUserTargetsOnSegment:::SemanticPatchWithComment"]=0
 operation_parameters_maximum_occurrences["patchUserSegment:::projectKey"]=0
 operation_parameters_maximum_occurrences["patchUserSegment:::environmentKey"]=0
 operation_parameters_maximum_occurrences["patchUserSegment:::userSegmentKey"]=0
@@ -369,7 +383,7 @@ operation_parameters_maximum_occurrences["getUserFlagSettings:::userKey"]=0
 operation_parameters_maximum_occurrences["patchExpiringUserTargetsForFlags:::projectKey"]=0
 operation_parameters_maximum_occurrences["patchExpiringUserTargetsForFlags:::environmentKey"]=0
 operation_parameters_maximum_occurrences["patchExpiringUserTargetsForFlags:::userKey"]=0
-operation_parameters_maximum_occurrences["patchExpiringUserTargetsForFlags:::patchComment"]=0
+operation_parameters_maximum_occurrences["patchExpiringUserTargetsForFlags:::SemanticPatchWithComment"]=0
 operation_parameters_maximum_occurrences["putFlagSetting:::projectKey"]=0
 operation_parameters_maximum_occurrences["putFlagSetting:::environmentKey"]=0
 operation_parameters_maximum_occurrences["putFlagSetting:::userKey"]=0
@@ -464,14 +478,14 @@ operation_parameters_collection_type["getFeatureFlags:::env"]="multi"
 operation_parameters_collection_type["getFeatureFlags:::summary"]=""
 operation_parameters_collection_type["getFeatureFlags:::archived"]=""
 operation_parameters_collection_type["getFeatureFlags:::limit"]=""
-operation_parameters_collection_type["getFeatureFlags:::number"]=""
+operation_parameters_collection_type["getFeatureFlags:::offset"]=""
 operation_parameters_collection_type["getFeatureFlags:::filter"]=""
 operation_parameters_collection_type["getFeatureFlags:::sort"]=""
 operation_parameters_collection_type["getFeatureFlags:::tag"]=""
 operation_parameters_collection_type["patchExpiringUserTargets:::projectKey"]=""
 operation_parameters_collection_type["patchExpiringUserTargets:::environmentKey"]=""
 operation_parameters_collection_type["patchExpiringUserTargets:::featureFlagKey"]=""
-operation_parameters_collection_type["patchExpiringUserTargets:::patchComment"]=""
+operation_parameters_collection_type["patchExpiringUserTargets:::SemanticPatchWithComment"]=""
 operation_parameters_collection_type["patchFeatureFlag:::projectKey"]=""
 operation_parameters_collection_type["patchFeatureFlag:::featureFlagKey"]=""
 operation_parameters_collection_type["patchFeatureFlag:::patchComment"]=""
@@ -486,7 +500,7 @@ operation_parameters_collection_type["postProject:::projectBody"]=""
 operation_parameters_collection_type["deleteMember:::memberId"]=""
 operation_parameters_collection_type["getMember:::memberId"]=""
 operation_parameters_collection_type["getMembers:::limit"]=""
-operation_parameters_collection_type["getMembers:::number"]=""
+operation_parameters_collection_type["getMembers:::offset"]=""
 operation_parameters_collection_type["getMembers:::filter"]=""
 operation_parameters_collection_type["getMembers:::sort"]=""
 operation_parameters_collection_type["patchMember:::memberId"]=""
@@ -495,12 +509,19 @@ operation_parameters_collection_type["postMembers:::membersBody"]=
 operation_parameters_collection_type["deleteUserSegment:::projectKey"]=""
 operation_parameters_collection_type["deleteUserSegment:::environmentKey"]=""
 operation_parameters_collection_type["deleteUserSegment:::userSegmentKey"]=""
+operation_parameters_collection_type["getExpiringUserTargetsOnSegment:::projectKey"]=""
+operation_parameters_collection_type["getExpiringUserTargetsOnSegment:::environmentKey"]=""
+operation_parameters_collection_type["getExpiringUserTargetsOnSegment:::userSegmentKey"]=""
 operation_parameters_collection_type["getUserSegment:::projectKey"]=""
 operation_parameters_collection_type["getUserSegment:::environmentKey"]=""
 operation_parameters_collection_type["getUserSegment:::userSegmentKey"]=""
 operation_parameters_collection_type["getUserSegments:::projectKey"]=""
 operation_parameters_collection_type["getUserSegments:::environmentKey"]=""
 operation_parameters_collection_type["getUserSegments:::tag"]=""
+operation_parameters_collection_type["patchExpiringUserTargetsOnSegment:::projectKey"]=""
+operation_parameters_collection_type["patchExpiringUserTargetsOnSegment:::environmentKey"]=""
+operation_parameters_collection_type["patchExpiringUserTargetsOnSegment:::userSegmentKey"]=""
+operation_parameters_collection_type["patchExpiringUserTargetsOnSegment:::SemanticPatchWithComment"]=""
 operation_parameters_collection_type["patchUserSegment:::projectKey"]=""
 operation_parameters_collection_type["patchUserSegment:::environmentKey"]=""
 operation_parameters_collection_type["patchUserSegment:::userSegmentKey"]=""
@@ -521,7 +542,7 @@ operation_parameters_collection_type["getUserFlagSettings:::userKey"]=""
 operation_parameters_collection_type["patchExpiringUserTargetsForFlags:::projectKey"]=""
 operation_parameters_collection_type["patchExpiringUserTargetsForFlags:::environmentKey"]=""
 operation_parameters_collection_type["patchExpiringUserTargetsForFlags:::userKey"]=""
-operation_parameters_collection_type["patchExpiringUserTargetsForFlags:::patchComment"]=""
+operation_parameters_collection_type["patchExpiringUserTargetsForFlags:::SemanticPatchWithComment"]=""
 operation_parameters_collection_type["putFlagSetting:::projectKey"]=""
 operation_parameters_collection_type["putFlagSetting:::environmentKey"]=""
 operation_parameters_collection_type["putFlagSetting:::userKey"]=""
@@ -894,7 +915,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.1.0)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.2.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1025,8 +1046,10 @@ echo "  $ops" | column -t -s ';'
     echo -e "${BOLD}${WHITE}[userSegments]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}deleteUserSegment${OFF};Delete a user segment. (AUTH)
+  ${CYAN}getExpiringUserTargetsOnSegment${OFF};Get expiring user targets for user segment (AUTH)
   ${CYAN}getUserSegment${OFF};Get a single user segment by key. (AUTH)
   ${CYAN}getUserSegments${OFF};Get a list of all user segments in the given project. (AUTH)
+  ${CYAN}patchExpiringUserTargetsOnSegment${OFF};Update, add, or delete expiring user targets on user segment (AUTH)
   ${CYAN}patchUserSegment${OFF};Perform a partial update to a user segment. (AUTH)
   ${CYAN}postUserSegment${OFF};Creates a new user segment. (AUTH)
 EOF
@@ -1087,7 +1110,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.1.0)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.2.0)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -1107,7 +1130,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 3.1.0)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 3.2.0)${OFF}"
     echo ""
 }
 
@@ -1820,7 +1843,7 @@ print_getFeatureFlags_help() {
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}limit${OFF} ${BLUE}[integer]${OFF}${OFF} - The number of objects to return. Defaults to -1, which returns everything.${YELLOW} Specify as: limit=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}number${OFF} ${BLUE}[boolean]${OFF}${OFF} - Where to start in the list. This is for use with pagination. For example, an offset of 10 would skip the first 10 items and then return the next limit items.${YELLOW} Specify as: number=value${OFF}" \
+    echo -e "  * ${GREEN}offset${OFF} ${BLUE}[integer]${OFF}${OFF} - Where to start in the list. This is for use with pagination. For example, an offset of 10 would skip the first 10 items and then return the next limit items.${YELLOW} Specify as: offset=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF}${OFF} - A comma-separated list of filters. Each filter is of the form field:value.${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1848,7 +1871,7 @@ print_patchExpiringUserTargets_help() {
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Requires a JSON Patch representation of the desired changes to the project, and an optional comment. 'http://jsonpatch.com/' Feature flag patches also support JSON Merge Patch format. 'https://tools.ietf.org/html/rfc7386' The addition of comments is also supported." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Requires a Semantic Patch representation of the desired changes to the resource. 'https://apidocs.launchdarkly.com/reference#updates-via-semantic-patches'. The addition of comments is also supported." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2109,7 +2132,7 @@ print_getMembers_help() {
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}limit${OFF} ${BLUE}[integer]${OFF}${OFF} - The number of objects to return. Defaults to -1, which returns everything.${YELLOW} Specify as: limit=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}number${OFF} ${BLUE}[boolean]${OFF}${OFF} - Where to start in the list. This is for use with pagination. For example, an offset of 10 would skip the first 10 items and then return the next limit items.${YELLOW} Specify as: number=value${OFF}" \
+    echo -e "  * ${GREEN}offset${OFF} ${BLUE}[integer]${OFF}${OFF} - Where to start in the list. This is for use with pagination. For example, an offset of 10 would skip the first 10 items and then return the next limit items.${YELLOW} Specify as: offset=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}filter${OFF} ${BLUE}[string]${OFF}${OFF} - A comma-separated list of filters. Each filter is of the form field:value.${YELLOW} Specify as: filter=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2195,6 +2218,28 @@ print_deleteUserSegment_help() {
 }
 ##############################################################################
 #
+# Print help for getExpiringUserTargetsOnSegment operation
+#
+##############################################################################
+print_getExpiringUserTargetsOnSegment_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getExpiringUserTargetsOnSegment - Get expiring user targets for user segment${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}userSegmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The user segment's key. The key identifies the user segment in your code. ${YELLOW}Specify as: userSegmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;User targeting expirations on user segment response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for getUserSegment operation
 #
 ##############################################################################
@@ -2235,6 +2280,34 @@ print_getUserSegments_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;Segments response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for patchExpiringUserTargetsOnSegment operation
+#
+##############################################################################
+print_patchExpiringUserTargetsOnSegment_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}patchExpiringUserTargetsOnSegment - Update, add, or delete expiring user targets on user segment${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}userSegmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The user segment's key. The key identifies the user segment in your code. ${YELLOW}Specify as: userSegmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Requires a Semantic Patch representation of the desired changes to the resource. 'https://apidocs.launchdarkly.com/reference#updates-via-semantic-patches'. The addition of comments is also supported." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;User targeting expirations on user segment response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=409
+    echo -e "${result_color_table[${code:0:1}]}  409;Status conflict.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -2367,7 +2440,7 @@ print_patchExpiringUserTargetsForFlags_help() {
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}userKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The user's key. ${YELLOW}Specify as: userKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Requires a JSON Patch representation of the desired changes to the project, and an optional comment. 'http://jsonpatch.com/' Feature flag patches also support JSON Merge Patch format. 'https://tools.ietf.org/html/rfc7386' The addition of comments is also supported." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Requires a Semantic Patch representation of the desired changes to the resource. 'https://apidocs.launchdarkly.com/reference#updates-via-semantic-patches'. The addition of comments is also supported." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -4103,7 +4176,7 @@ call_getFeatureFlags() {
     local path_parameter_names=(projectKey)
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=(env summary archived limit number filter sort tag  )
+    local query_parameter_names=(env summary archived limit offset filter sort tag  )
     local path
 
     if ! path=$(build_request_path "/api/v2/flags/{projectKey}" path_parameter_names query_parameter_names); then
@@ -4781,7 +4854,7 @@ call_getMembers() {
     local path_parameter_names=()
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=(limit number filter sort  )
+    local query_parameter_names=(limit offset filter sort  )
     local path
 
     if ! path=$(build_request_path "/api/v2/members" path_parameter_names query_parameter_names); then
@@ -5000,6 +5073,42 @@ call_deleteUserSegment() {
 
 ##############################################################################
 #
+# Call getExpiringUserTargetsOnSegment operation
+#
+##############################################################################
+call_getExpiringUserTargetsOnSegment() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey userSegmentKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/segments/{projectKey}/{userSegmentKey}/expiring-user-targets/{environmentKey}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call getUserSegment operation
 #
 ##############################################################################
@@ -5067,6 +5176,84 @@ call_getUserSegments() {
         echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     else
         eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call patchExpiringUserTargetsOnSegment operation
+#
+##############################################################################
+call_patchExpiringUserTargetsOnSegment() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey userSegmentKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/segments/{projectKey}/{userSegmentKey}/expiring-user-targets/{environmentKey}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PATCH"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the Swagger specification
+    # if values produces and consumes are defined unambigously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
     fi
 }
 
@@ -6145,11 +6332,17 @@ case $key in
     deleteUserSegment)
     operation="deleteUserSegment"
     ;;
+    getExpiringUserTargetsOnSegment)
+    operation="getExpiringUserTargetsOnSegment"
+    ;;
     getUserSegment)
     operation="getUserSegment"
     ;;
     getUserSegments)
     operation="getUserSegments"
+    ;;
+    patchExpiringUserTargetsOnSegment)
+    operation="patchExpiringUserTargetsOnSegment"
     ;;
     patchUserSegment)
     operation="patchUserSegment"
@@ -6433,11 +6626,17 @@ case $operation in
     deleteUserSegment)
     call_deleteUserSegment
     ;;
+    getExpiringUserTargetsOnSegment)
+    call_getExpiringUserTargetsOnSegment
+    ;;
     getUserSegment)
     call_getUserSegment
     ;;
     getUserSegments)
     call_getUserSegments
+    ;;
+    patchExpiringUserTargetsOnSegment)
+    call_patchExpiringUserTargetsOnSegment
     ;;
     patchUserSegment)
     call_patchUserSegment

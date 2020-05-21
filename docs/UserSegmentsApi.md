@@ -5,8 +5,10 @@ All URIs are relative to */api/v2*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**deleteUserSegment**](UserSegmentsApi.md#deleteUserSegment) | **DELETE** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Delete a user segment.
+[**getExpiringUserTargetsOnSegment**](UserSegmentsApi.md#getExpiringUserTargetsOnSegment) | **GET** /segments/{projectKey}/{userSegmentKey}/expiring-user-targets/{environmentKey} | Get expiring user targets for user segment
 [**getUserSegment**](UserSegmentsApi.md#getUserSegment) | **GET** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Get a single user segment by key.
 [**getUserSegments**](UserSegmentsApi.md#getUserSegments) | **GET** /segments/{projectKey}/{environmentKey} | Get a list of all user segments in the given project.
+[**patchExpiringUserTargetsOnSegment**](UserSegmentsApi.md#patchExpiringUserTargetsOnSegment) | **PATCH** /segments/{projectKey}/{userSegmentKey}/expiring-user-targets/{environmentKey} | Update, add, or delete expiring user targets on user segment
 [**patchUserSegment**](UserSegmentsApi.md#patchUserSegment) | **PATCH** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Perform a partial update to a user segment.
 [**postUserSegment**](UserSegmentsApi.md#postUserSegment) | **POST** /segments/{projectKey}/{environmentKey} | Creates a new user segment.
 
@@ -31,6 +33,38 @@ Name | Type | Description  | Notes
 ### Return type
 
 (empty response body)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+## **getExpiringUserTargetsOnSegment**
+
+Get expiring user targets for user segment
+
+### Example
+```bash
+ getExpiringUserTargetsOnSegment projectKey=value environmentKey=value userSegmentKey=value
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
+ **environmentKey** | **string** | The environment key, used to tie together flag configuration and users under one environment so they can be managed together. |
+ **userSegmentKey** | **string** | The user segment's key. The key identifies the user segment in your code. |
+
+### Return type
+
+[**UserTargetingExpirationForSegment**](UserTargetingExpirationForSegment.md)
 
 ### Authorization
 
@@ -95,6 +129,39 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UserSegments**](UserSegments.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+## **patchExpiringUserTargetsOnSegment**
+
+Update, add, or delete expiring user targets on user segment
+
+### Example
+```bash
+ patchExpiringUserTargetsOnSegment projectKey=value environmentKey=value userSegmentKey=value
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
+ **environmentKey** | **string** | The environment key, used to tie together flag configuration and users under one environment so they can be managed together. |
+ **userSegmentKey** | **string** | The user segment's key. The key identifies the user segment in your code. |
+ **semanticPatchWithComment** | **map** | Requires a Semantic Patch representation of the desired changes to the resource. 'https://apidocs.launchdarkly.com/reference#updates-via-semantic-patches'. The addition of comments is also supported. |
+
+### Return type
+
+[**UserTargetingExpirationForSegment**](UserTargetingExpirationForSegment.md)
 
 ### Authorization
 

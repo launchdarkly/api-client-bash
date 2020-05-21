@@ -337,8 +337,10 @@ case $state in
             "getMembers[Returns a list of all members in the account.]" \
             "patchMember[Modify a team member by ID.]" \
             "postMembers[Invite new members.]"             "deleteUserSegment[Delete a user segment.]" \
+            "getExpiringUserTargetsOnSegment[Get expiring user targets for user segment]" \
             "getUserSegment[Get a single user segment by key.]" \
             "getUserSegments[Get a list of all user segments in the given project.]" \
+            "patchExpiringUserTargetsOnSegment[Update, add, or delete expiring user targets on user segment]" \
             "patchUserSegment[Perform a partial update to a user segment.]" \
             "postUserSegment[Creates a new user segment.]"             "getExpiringUserTargetsForUser[Get expiring dates on flags for user]" \
             "getUserFlagSetting[Fetch a single flag setting for a user by key.]" \
@@ -616,8 +618,7 @@ case $state in
 "archived=true:[QUERY] When set to 1, archived flags will be included in the list of flags returned.  By default, archived flags are not included in the list of flags."
           "archived=false:[QUERY] When set to 1, archived flags will be included in the list of flags returned.  By default, archived flags are not included in the list of flags."
 "limit=:[QUERY] The number of objects to return. Defaults to -1, which returns everything."
-"number=true:[QUERY] Where to start in the list. This is for use with pagination. For example, an offset of 10 would skip the first 10 items and then return the next limit items."
-          "number=false:[QUERY] Where to start in the list. This is for use with pagination. For example, an offset of 10 would skip the first 10 items and then return the next limit items."
+"offset=:[QUERY] Where to start in the list. This is for use with pagination. For example, an offset of 10 would skip the first 10 items and then return the next limit items."
 "filter=:[QUERY] A comma-separated list of filters. Each filter is of the form field:value."
 "sort=:[QUERY] A comma-separated list of fields to sort by. A field prefixed by a - will be sorted in descending order."
 "tag=:[QUERY] Filter by tag. A tag can be used to group flags across projects."
@@ -712,8 +713,7 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
                     "limit=:[QUERY] The number of objects to return. Defaults to -1, which returns everything."
-"number=true:[QUERY] Where to start in the list. This is for use with pagination. For example, an offset of 10 would skip the first 10 items and then return the next limit items."
-          "number=false:[QUERY] Where to start in the list. This is for use with pagination. For example, an offset of 10 would skip the first 10 items and then return the next limit items."
+"offset=:[QUERY] Where to start in the list. This is for use with pagination. For example, an offset of 10 would skip the first 10 items and then return the next limit items."
 "filter=:[QUERY] A comma-separated list of filters. Each filter is of the form field:value."
 "sort=:[QUERY] A comma-separated list of fields to sort by. A field prefixed by a - will be sorted in descending order."
           )
@@ -741,6 +741,15 @@ case $state in
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      getExpiringUserTargetsOnSegment)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"userSegmentKey=:[PATH] The user segment&#39;s key. The key identifies the user segment in your code."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       getUserSegment)
         local -a _op_arguments
         _op_arguments=(
@@ -757,6 +766,15 @@ case $state in
 "environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
           "tag=:[QUERY] Filter by tag. A tag can be used to group flags across projects."
           )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      patchExpiringUserTargetsOnSegment)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"userSegmentKey=:[PATH] The user segment&#39;s key. The key identifies the user segment in your code."
+                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       patchUserSegment)

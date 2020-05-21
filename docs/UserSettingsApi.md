@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
  **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
  **environmentKey** | **string** | The environment key, used to tie together flag configuration and users under one environment so they can be managed together. |
  **userKey** | **string** | The user's key. |
- **patchComment** | [**PatchComment**](PatchComment.md) | Requires a JSON Patch representation of the desired changes to the project, and an optional comment. 'http://jsonpatch.com/' Feature flag patches also support JSON Merge Patch format. 'https://tools.ietf.org/html/rfc7386' The addition of comments is also supported. |
+ **semanticPatchWithComment** | **map** | Requires a Semantic Patch representation of the desired changes to the resource. 'https://apidocs.launchdarkly.com/reference#updates-via-semantic-patches'. The addition of comments is also supported. |
 
 ### Return type
 

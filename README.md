@@ -149,8 +149,10 @@ Class | Method | HTTP request | Description
 *TeamMembersApi* | [**patchMember**](docs/TeamMembersApi.md#patchmember) | **PATCH** /members/{memberId} | Modify a team member by ID.
 *TeamMembersApi* | [**postMembers**](docs/TeamMembersApi.md#postmembers) | **POST** /members | Invite new members.
 *UserSegmentsApi* | [**deleteUserSegment**](docs/UserSegmentsApi.md#deleteusersegment) | **DELETE** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Delete a user segment.
+*UserSegmentsApi* | [**getExpiringUserTargetsOnSegment**](docs/UserSegmentsApi.md#getexpiringusertargetsonsegment) | **GET** /segments/{projectKey}/{userSegmentKey}/expiring-user-targets/{environmentKey} | Get expiring user targets for user segment
 *UserSegmentsApi* | [**getUserSegment**](docs/UserSegmentsApi.md#getusersegment) | **GET** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Get a single user segment by key.
 *UserSegmentsApi* | [**getUserSegments**](docs/UserSegmentsApi.md#getusersegments) | **GET** /segments/{projectKey}/{environmentKey} | Get a list of all user segments in the given project.
+*UserSegmentsApi* | [**patchExpiringUserTargetsOnSegment**](docs/UserSegmentsApi.md#patchexpiringusertargetsonsegment) | **PATCH** /segments/{projectKey}/{userSegmentKey}/expiring-user-targets/{environmentKey} | Update, add, or delete expiring user targets on user segment
 *UserSegmentsApi* | [**patchUserSegment**](docs/UserSegmentsApi.md#patchusersegment) | **PATCH** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Perform a partial update to a user segment.
 *UserSegmentsApi* | [**postUserSegment**](docs/UserSegmentsApi.md#postusersegment) | **POST** /segments/{projectKey}/{environmentKey} | Creates a new user segment.
 *UserSettingsApi* | [**getExpiringUserTargetsForUser**](docs/UserSettingsApi.md#getexpiringusertargetsforuser) | **GET** /users/{projectKey}/{userKey}/expiring-user-targets/{environmentKey} | Get expiring dates on flags for user
@@ -224,6 +226,8 @@ Class | Method | HTTP request | Description
  - [Role](docs/Role.md)
  - [Rollout](docs/Rollout.md)
  - [Rule](docs/Rule.md)
+ - [SemanticPatchOperation](docs/SemanticPatchOperation.md)
+ - [SemanticPatchOperation_instructions](docs/SemanticPatchOperation_instructions.md)
  - [Site](docs/Site.md)
  - [Statement](docs/Statement.md)
  - [Stream](docs/Stream.md)
@@ -253,6 +257,7 @@ Class | Method | HTTP request | Description
  - [UserSettingsBody](docs/UserSettingsBody.md)
  - [UserTargetingExpirationForFlag](docs/UserTargetingExpirationForFlag.md)
  - [UserTargetingExpirationForFlags](docs/UserTargetingExpirationForFlags.md)
+ - [UserTargetingExpirationForSegment](docs/UserTargetingExpirationForSegment.md)
  - [UserTargetingExpirationOnFlagsForUser](docs/UserTargetingExpirationOnFlagsForUser.md)
  - [UserTargetingExpirationResourceIdForFlag](docs/UserTargetingExpirationResourceIdForFlag.md)
  - [Users](docs/Users.md)
