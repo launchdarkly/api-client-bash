@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**_id** | **string** |  | [optional] [default to null]
 **name** | **string** |  | [optional] [default to null]
 **description** | **string** |  | [optional] [default to null]
 **value** | **map** |  | [default to null]
