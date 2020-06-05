@@ -22,8 +22,8 @@ Get a list of all audit log entries. The query parameters allow you to restrict 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **before** | **integer** | A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have before this timestamp. | [optional]
- **after** | **integer** | A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have occured after this timestamp. | [optional]
- **q** | **string** | Text to search for. You can search for the full or partial name of the resource involved or fullpartial email address of the member who made the change. | [optional]
+ **after** | **integer** | A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have occurred after this timestamp. | [optional]
+ **q** | **string** | Text to search for. You can search for the full or partial name of the resource involved or full or partial email address of the member who made the change. | [optional]
  **limit** | **integer** | A limit on the number of audit log entries to be returned, between 1 and 20. | [optional]
  **spec** | **string** | A resource specifier, allowing you to filter audit log listings by resource. | [optional]
 

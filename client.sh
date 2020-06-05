@@ -915,7 +915,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.3.1)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.3.2)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1110,7 +1110,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.3.1)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.3.2)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -1130,7 +1130,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 3.3.1)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 3.3.2)${OFF}"
     echo ""
 }
 
@@ -1146,9 +1146,9 @@ print_getAuditLogEntries_help() {
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}before${OFF} ${BLUE}[integer]${OFF}${OFF} - A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have before this timestamp.${YELLOW} Specify as: before=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}after${OFF} ${BLUE}[integer]${OFF}${OFF} - A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have occured after this timestamp.${YELLOW} Specify as: after=value${OFF}" \
+    echo -e "  * ${GREEN}after${OFF} ${BLUE}[integer]${OFF}${OFF} - A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have occurred after this timestamp.${YELLOW} Specify as: after=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}q${OFF} ${BLUE}[string]${OFF}${OFF} - Text to search for. You can search for the full or partial name of the resource involved or fullpartial email address of the member who made the change.${YELLOW} Specify as: q=value${OFF}" \
+    echo -e "  * ${GREEN}q${OFF} ${BLUE}[string]${OFF}${OFF} - Text to search for. You can search for the full or partial name of the resource involved or full or partial email address of the member who made the change.${YELLOW} Specify as: q=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}limit${OFF} ${BLUE}[integer]${OFF}${OFF} - A limit on the number of audit log entries to be returned, between 1 and 20.${YELLOW} Specify as: limit=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2522,7 +2522,7 @@ print_getSearchUsers_help() {
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}offset${OFF} ${BLUE}[integer]${OFF}${OFF} - Specifies the first item to return in the collection.${YELLOW} Specify as: offset=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}after${OFF} ${BLUE}[integer]${OFF}${OFF} - A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have occured after this timestamp.${YELLOW} Specify as: after=value${OFF}" \
+    echo -e "  * ${GREEN}after${OFF} ${BLUE}[integer]${OFF}${OFF} - A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have occurred after this timestamp.${YELLOW} Specify as: after=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"

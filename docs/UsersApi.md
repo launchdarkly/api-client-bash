@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
  **q** | **string** | Search query. | [optional]
  **limit** | **integer** | Pagination limit. | [optional]
  **offset** | **integer** | Specifies the first item to return in the collection. | [optional]
- **after** | **integer** | A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have occured after this timestamp. | [optional]
+ **after** | **integer** | A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have occurred after this timestamp. | [optional]
 
 ### Return type
 

@@ -364,8 +364,8 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
                     "before=:[QUERY] A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have before this timestamp."
-"after=:[QUERY] A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have occured after this timestamp."
-"q=:[QUERY] Text to search for. You can search for the full or partial name of the resource involved or fullpartial email address of the member who made the change."
+"after=:[QUERY] A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have occurred after this timestamp."
+"q=:[QUERY] Text to search for. You can search for the full or partial name of the resource involved or full or partial email address of the member who made the change."
 "limit=:[QUERY] A limit on the number of audit log entries to be returned, between 1 and 20."
 "spec=:[QUERY] A resource specifier, allowing you to filter audit log listings by resource."
           )
@@ -858,7 +858,7 @@ case $state in
           "q=:[QUERY] Search query."
 "limit=:[QUERY] Pagination limit."
 "offset=:[QUERY] Specifies the first item to return in the collection."
-"after=:[QUERY] A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have occured after this timestamp."
+"after=:[QUERY] A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have occurred after this timestamp."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
