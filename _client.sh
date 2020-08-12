@@ -296,7 +296,12 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "getAuditLogEntries[Get a list of all audit log entries. The query parameters allow you to restrict the returned results by date ranges, resource specifiers, or a full-text search query.]" \
+            "deleteToken[Delete an access token by ID.]" \
+            "getToken[Get a single access token by ID.]" \
+            "getTokens[Returns a list of tokens in the account.]" \
+            "patchToken[Modify an access tokenby ID.]" \
+            "postToken[Create a new token.]" \
+            "resetToken[Reset an access token's secret key with an optional expiry time for the old key.]"             "getAuditLogEntries[Get a list of all audit log entries. The query parameters allow you to restrict the returned results by date ranges, resource specifiers, or a full-text search query.]" \
             "getAuditLogEntry[Use this endpoint to fetch a single audit log entry by its resouce ID.]"             "deleteCustomRole[Delete a custom role by key.]" \
             "getCustomRole[Get one custom role by key.]" \
             "getCustomRoles[Return a complete list of custom roles.]" \
@@ -360,6 +365,49 @@ case $state in
     ;;
   args)
     case $line[1] in
+      deleteToken)
+        local -a _op_arguments
+        _op_arguments=(
+          "tokenId=:[PATH] The access token ID."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getToken)
+        local -a _op_arguments
+        _op_arguments=(
+          "tokenId=:[PATH] The access token ID."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getTokens)
+        local -a _op_arguments
+        _op_arguments=(
+                    "showAll=true:[QUERY] If set to true, and the authentication access token has the \&quot;Admin\&quot; role, personal access tokens for all members will be retrieved."
+          "showAll=false:[QUERY] If set to true, and the authentication access token has the \&quot;Admin\&quot; role, personal access tokens for all members will be retrieved."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      patchToken)
+        local -a _op_arguments
+        _op_arguments=(
+          "tokenId=:[PATH] The access token ID."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      postToken)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resetToken)
+        local -a _op_arguments
+        _op_arguments=(
+          "tokenId=:[PATH] The access token ID."
+          "expiry=:[QUERY] An expiration time for the old token key, expressed as a Unix epoch time in milliseconds. By default, the token will expire immediately."
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       getAuditLogEntries)
         local -a _op_arguments
         _op_arguments=(
@@ -615,8 +663,8 @@ case $state in
           "env=:[QUERY] By default, each feature will include configurations for each environment. You can filter environments with the env query parameter. For example, setting env&#x3D;[\&quot;production\&quot;] will restrict the returned configurations to just your production environment."
 "summary=true:[QUERY] By default in api version &gt;&#x3D; 1, flags will _not_ include their list of prerequisites, targets or rules.  Set summary&#x3D;0 to include these fields for each flag returned."
           "summary=false:[QUERY] By default in api version &gt;&#x3D; 1, flags will _not_ include their list of prerequisites, targets or rules.  Set summary&#x3D;0 to include these fields for each flag returned."
-"archived=true:[QUERY] When set to 1, archived flags will be included in the list of flags returned.  By default, archived flags are not included in the list of flags."
-          "archived=false:[QUERY] When set to 1, archived flags will be included in the list of flags returned.  By default, archived flags are not included in the list of flags."
+"archived=true:[QUERY] When set to 1, only archived flags will be included in the list of flags returned.  By default, archived flags are not included in the list of flags."
+          "archived=false:[QUERY] When set to 1, only archived flags will be included in the list of flags returned.  By default, archived flags are not included in the list of flags."
 "limit=:[QUERY] The number of objects to return. Defaults to -1, which returns everything."
 "offset=:[QUERY] Where to start in the list. This is for use with pagination. For example, an offset of 10 would skip the first 10 items and then return the next limit items."
 "filter=:[QUERY] A comma-separated list of filters. Each filter is of the form field:value."

@@ -99,6 +99,12 @@ All URIs are relative to */api/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AccessTokensApi* | [**deleteToken**](docs/AccessTokensApi.md#deletetoken) | **DELETE** /tokens/{tokenId} | Delete an access token by ID.
+*AccessTokensApi* | [**getToken**](docs/AccessTokensApi.md#gettoken) | **GET** /tokens/{tokenId} | Get a single access token by ID.
+*AccessTokensApi* | [**getTokens**](docs/AccessTokensApi.md#gettokens) | **GET** /tokens | Returns a list of tokens in the account.
+*AccessTokensApi* | [**patchToken**](docs/AccessTokensApi.md#patchtoken) | **PATCH** /tokens/{tokenId} | Modify an access tokenby ID.
+*AccessTokensApi* | [**postToken**](docs/AccessTokensApi.md#posttoken) | **POST** /tokens | Create a new token.
+*AccessTokensApi* | [**resetToken**](docs/AccessTokensApi.md#resettoken) | **POST** /tokens/{tokenId}/reset | Reset an access token&#39;s secret key with an optional expiry time for the old key.
 *AuditLogApi* | [**getAuditLogEntries**](docs/AuditLogApi.md#getauditlogentries) | **GET** /auditlog | Get a list of all audit log entries. The query parameters allow you to restrict the returned results by date ranges, resource specifiers, or a full-text search query.
 *AuditLogApi* | [**getAuditLogEntry**](docs/AuditLogApi.md#getauditlogentry) | **GET** /auditlog/{resourceId} | Use this endpoint to fetch a single audit log entry by its resouce ID.
 *CustomRolesApi* | [**deleteCustomRole**](docs/CustomRolesApi.md#deletecustomrole) | **DELETE** /roles/{customRoleKey} | Delete a custom role by key.
@@ -243,6 +249,9 @@ Class | Method | HTTP request | Description
  - [StreamUsageSeries](docs/StreamUsageSeries.md)
  - [Streams](docs/Streams.md)
  - [Target](docs/Target.md)
+ - [Token](docs/Token.md)
+ - [TokenBody](docs/TokenBody.md)
+ - [Tokens](docs/Tokens.md)
  - [Usage](docs/Usage.md)
  - [UsageError](docs/UsageError.md)
  - [UsageLinks](docs/UsageLinks.md)
