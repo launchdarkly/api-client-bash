@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **environments** | [**map[String, FeatureFlagConfig]**](FeatureFlagConfig.md) |  | [optional] [default to null]
 **archivedDate** | **integer** |  | [optional] [default to null]
 **archived** | **boolean** |  | [optional] [default to null]
+**clientSideAvailability** | [**ClientSideAvailability**](ClientSideAvailability.md) |  | [optional] [default to null]
 **defaults** | [**Defaults**](Defaults.md) |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

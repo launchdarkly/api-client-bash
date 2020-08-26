@@ -183,6 +183,7 @@ Class | Method | HTTP request | Description
  - [AuditLogEntry](docs/AuditLogEntry.md)
  - [AuditLogEntry_target](docs/AuditLogEntry_target.md)
  - [Clause](docs/Clause.md)
+ - [ClientSideAvailability](docs/ClientSideAvailability.md)
  - [CopyActions](docs/CopyActions.md)
  - [CustomProperty](docs/CustomProperty.md)
  - [CustomPropertyValues](docs/CustomPropertyValues.md)
