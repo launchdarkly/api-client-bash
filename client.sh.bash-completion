@@ -116,6 +116,12 @@ _()
     operations["getProjects"]=1
     operations["patchProject"]=1
     operations["postProject"]=1
+    operations["deleteRelayProxyConfig"]=1
+    operations["getRelayProxyConfig"]=1
+    operations["getRelayProxyConfigs"]=1
+    operations["patchRelayProxyConfig"]=1
+    operations["postRelayAutoConfig"]=1
+    operations["resetRelayProxyConfig"]=1
     operations["getRoot"]=1
     operations["deleteMember"]=1
     operations["getMe"]=1
@@ -130,6 +136,7 @@ _()
     operations["patchExpiringUserTargetsOnSegment"]=1
     operations["patchUserSegment"]=1
     operations["postUserSegment"]=1
+    operations["updatedUnboundedSegmentTargets"]=1
     operations["getExpiringUserTargetsForUser"]=1
     operations["getUserFlagSetting"]=1
     operations["getUserFlagSettings"]=1
@@ -196,6 +203,12 @@ _()
     operation_parameters["getProjects"]=""
     operation_parameters["patchProject"]="projectKey= "
     operation_parameters["postProject"]=""
+    operation_parameters["deleteRelayProxyConfig"]="id= "
+    operation_parameters["getRelayProxyConfig"]="id= "
+    operation_parameters["getRelayProxyConfigs"]=""
+    operation_parameters["patchRelayProxyConfig"]="id= "
+    operation_parameters["postRelayAutoConfig"]=""
+    operation_parameters["resetRelayProxyConfig"]="id= expiry= "
     operation_parameters["getRoot"]=""
     operation_parameters["deleteMember"]="memberId= "
     operation_parameters["getMe"]=""
@@ -210,6 +223,7 @@ _()
     operation_parameters["patchExpiringUserTargetsOnSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["patchUserSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["postUserSegment"]="projectKey= environmentKey= "
+    operation_parameters["updatedUnboundedSegmentTargets"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["getExpiringUserTargetsForUser"]="projectKey= environmentKey= userKey= "
     operation_parameters["getUserFlagSetting"]="projectKey= environmentKey= userKey= featureFlagKey= "
     operation_parameters["getUserFlagSettings"]="projectKey= environmentKey= userKey= "

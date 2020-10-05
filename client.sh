@@ -184,6 +184,13 @@ operation_parameters_minimum_occurrences["getProject:::projectKey"]=1
 operation_parameters_minimum_occurrences["patchProject:::projectKey"]=1
 operation_parameters_minimum_occurrences["patchProject:::patchDelta"]=1
 operation_parameters_minimum_occurrences["postProject:::projectBody"]=1
+operation_parameters_minimum_occurrences["deleteRelayProxyConfig:::id"]=1
+operation_parameters_minimum_occurrences["getRelayProxyConfig:::id"]=1
+operation_parameters_minimum_occurrences["patchRelayProxyConfig:::id"]=1
+operation_parameters_minimum_occurrences["patchRelayProxyConfig:::patchDelta"]=1
+operation_parameters_minimum_occurrences["postRelayAutoConfig:::relayProxyConfigBody"]=1
+operation_parameters_minimum_occurrences["resetRelayProxyConfig:::id"]=1
+operation_parameters_minimum_occurrences["resetRelayProxyConfig:::expiry"]=0
 operation_parameters_minimum_occurrences["deleteMember:::memberId"]=1
 operation_parameters_minimum_occurrences["getMember:::memberId"]=1
 operation_parameters_minimum_occurrences["getMembers:::limit"]=0
@@ -216,6 +223,10 @@ operation_parameters_minimum_occurrences["patchUserSegment:::PatchOnly"]=1
 operation_parameters_minimum_occurrences["postUserSegment:::projectKey"]=1
 operation_parameters_minimum_occurrences["postUserSegment:::environmentKey"]=1
 operation_parameters_minimum_occurrences["postUserSegment:::userSegmentBody"]=1
+operation_parameters_minimum_occurrences["updatedUnboundedSegmentTargets:::projectKey"]=1
+operation_parameters_minimum_occurrences["updatedUnboundedSegmentTargets:::environmentKey"]=1
+operation_parameters_minimum_occurrences["updatedUnboundedSegmentTargets:::userSegmentKey"]=1
+operation_parameters_minimum_occurrences["updatedUnboundedSegmentTargets:::unboundedSegmentTargetsBody"]=1
 operation_parameters_minimum_occurrences["getExpiringUserTargetsForUser:::projectKey"]=1
 operation_parameters_minimum_occurrences["getExpiringUserTargetsForUser:::environmentKey"]=1
 operation_parameters_minimum_occurrences["getExpiringUserTargetsForUser:::userKey"]=1
@@ -354,6 +365,13 @@ operation_parameters_maximum_occurrences["getProject:::projectKey"]=0
 operation_parameters_maximum_occurrences["patchProject:::projectKey"]=0
 operation_parameters_maximum_occurrences["patchProject:::patchDelta"]=0
 operation_parameters_maximum_occurrences["postProject:::projectBody"]=0
+operation_parameters_maximum_occurrences["deleteRelayProxyConfig:::id"]=0
+operation_parameters_maximum_occurrences["getRelayProxyConfig:::id"]=0
+operation_parameters_maximum_occurrences["patchRelayProxyConfig:::id"]=0
+operation_parameters_maximum_occurrences["patchRelayProxyConfig:::patchDelta"]=0
+operation_parameters_maximum_occurrences["postRelayAutoConfig:::relayProxyConfigBody"]=0
+operation_parameters_maximum_occurrences["resetRelayProxyConfig:::id"]=0
+operation_parameters_maximum_occurrences["resetRelayProxyConfig:::expiry"]=0
 operation_parameters_maximum_occurrences["deleteMember:::memberId"]=0
 operation_parameters_maximum_occurrences["getMember:::memberId"]=0
 operation_parameters_maximum_occurrences["getMembers:::limit"]=0
@@ -386,6 +404,10 @@ operation_parameters_maximum_occurrences["patchUserSegment:::PatchOnly"]=0
 operation_parameters_maximum_occurrences["postUserSegment:::projectKey"]=0
 operation_parameters_maximum_occurrences["postUserSegment:::environmentKey"]=0
 operation_parameters_maximum_occurrences["postUserSegment:::userSegmentBody"]=0
+operation_parameters_maximum_occurrences["updatedUnboundedSegmentTargets:::projectKey"]=0
+operation_parameters_maximum_occurrences["updatedUnboundedSegmentTargets:::environmentKey"]=0
+operation_parameters_maximum_occurrences["updatedUnboundedSegmentTargets:::userSegmentKey"]=0
+operation_parameters_maximum_occurrences["updatedUnboundedSegmentTargets:::unboundedSegmentTargetsBody"]=0
 operation_parameters_maximum_occurrences["getExpiringUserTargetsForUser:::projectKey"]=0
 operation_parameters_maximum_occurrences["getExpiringUserTargetsForUser:::environmentKey"]=0
 operation_parameters_maximum_occurrences["getExpiringUserTargetsForUser:::userKey"]=0
@@ -521,6 +543,13 @@ operation_parameters_collection_type["getProject:::projectKey"]=""
 operation_parameters_collection_type["patchProject:::projectKey"]=""
 operation_parameters_collection_type["patchProject:::patchDelta"]=
 operation_parameters_collection_type["postProject:::projectBody"]=""
+operation_parameters_collection_type["deleteRelayProxyConfig:::id"]=""
+operation_parameters_collection_type["getRelayProxyConfig:::id"]=""
+operation_parameters_collection_type["patchRelayProxyConfig:::id"]=""
+operation_parameters_collection_type["patchRelayProxyConfig:::patchDelta"]=
+operation_parameters_collection_type["postRelayAutoConfig:::relayProxyConfigBody"]=""
+operation_parameters_collection_type["resetRelayProxyConfig:::id"]=""
+operation_parameters_collection_type["resetRelayProxyConfig:::expiry"]=""
 operation_parameters_collection_type["deleteMember:::memberId"]=""
 operation_parameters_collection_type["getMember:::memberId"]=""
 operation_parameters_collection_type["getMembers:::limit"]=""
@@ -553,6 +582,10 @@ operation_parameters_collection_type["patchUserSegment:::PatchOnly"]=
 operation_parameters_collection_type["postUserSegment:::projectKey"]=""
 operation_parameters_collection_type["postUserSegment:::environmentKey"]=""
 operation_parameters_collection_type["postUserSegment:::userSegmentBody"]=""
+operation_parameters_collection_type["updatedUnboundedSegmentTargets:::projectKey"]=""
+operation_parameters_collection_type["updatedUnboundedSegmentTargets:::environmentKey"]=""
+operation_parameters_collection_type["updatedUnboundedSegmentTargets:::userSegmentKey"]=""
+operation_parameters_collection_type["updatedUnboundedSegmentTargets:::unboundedSegmentTargetsBody"]=""
 operation_parameters_collection_type["getExpiringUserTargetsForUser:::projectKey"]=""
 operation_parameters_collection_type["getExpiringUserTargetsForUser:::environmentKey"]=""
 operation_parameters_collection_type["getExpiringUserTargetsForUser:::userKey"]=""
@@ -939,7 +972,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.5.0)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.6.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -978,7 +1011,7 @@ read -r -d '' ops <<EOF
   ${CYAN}deleteToken${OFF};Delete an access token by ID. (AUTH)
   ${CYAN}getToken${OFF};Get a single access token by ID. (AUTH)
   ${CYAN}getTokens${OFF};Returns a list of tokens in the account. (AUTH)
-  ${CYAN}patchToken${OFF};Modify an access tokenby ID. (AUTH)
+  ${CYAN}patchToken${OFF};Modify an access token by ID. (AUTH)
   ${CYAN}postToken${OFF};Create a new token. (AUTH)
   ${CYAN}resetToken${OFF};Reset an access token's secret key with an optional expiry time for the old key. (AUTH)
 EOF
@@ -1061,6 +1094,17 @@ read -r -d '' ops <<EOF
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
+    echo -e "${BOLD}${WHITE}[relayProxyConfigurations]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}deleteRelayProxyConfig${OFF};Delete a relay proxy configuration by ID. (AUTH)
+  ${CYAN}getRelayProxyConfig${OFF};Get a single relay proxy configuration by ID. (AUTH)
+  ${CYAN}getRelayProxyConfigs${OFF};Returns a list of relay proxy configurations in the account. (AUTH)
+  ${CYAN}patchRelayProxyConfig${OFF};Modify a relay proxy configuration by ID. (AUTH)
+  ${CYAN}postRelayAutoConfig${OFF};Create a new relay proxy config. (AUTH)
+  ${CYAN}resetRelayProxyConfig${OFF};Reset a relay proxy configuration's secret key with an optional expiry time for the old key. (AUTH)
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
     echo -e "${BOLD}${WHITE}[root]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}getRoot${OFF}; (AUTH)
@@ -1087,6 +1131,7 @@ read -r -d '' ops <<EOF
   ${CYAN}patchExpiringUserTargetsOnSegment${OFF};Update, add, or delete expiring user targets on user segment (AUTH)
   ${CYAN}patchUserSegment${OFF};Perform a partial update to a user segment. (AUTH)
   ${CYAN}postUserSegment${OFF};Creates a new user segment. (AUTH)
+  ${CYAN}updatedUnboundedSegmentTargets${OFF};Update targets included or excluded in an unbounded segment (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -1145,7 +1190,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.5.0)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.6.0)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -1165,7 +1210,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 3.5.0)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 3.6.0)${OFF}"
     echo ""
 }
 
@@ -1235,7 +1280,7 @@ print_getTokens_help() {
 ##############################################################################
 print_patchToken_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}patchToken - Modify an access tokenby ID.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}patchToken - Modify an access token by ID.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}tokenId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The access token ID. ${YELLOW}Specify as: tokenId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2211,6 +2256,125 @@ print_postProject_help() {
 }
 ##############################################################################
 #
+# Print help for deleteRelayProxyConfig operation
+#
+##############################################################################
+print_deleteRelayProxyConfig_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}deleteRelayProxyConfig - Delete a relay proxy configuration by ID.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The relay proxy configuration ID ${YELLOW}Specify as: id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=204
+    echo -e "${result_color_table[${code:0:1}]}  204;Action completed successfully.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getRelayProxyConfig operation
+#
+##############################################################################
+print_getRelayProxyConfig_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getRelayProxyConfig - Get a single relay proxy configuration by ID.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The relay proxy configuration ID ${YELLOW}Specify as: id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Relay proxy config response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getRelayProxyConfigs operation
+#
+##############################################################################
+print_getRelayProxyConfigs_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getRelayProxyConfigs - Returns a list of relay proxy configurations in the account.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Relay proxy configs response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for patchRelayProxyConfig operation
+#
+##############################################################################
+print_patchRelayProxyConfig_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}patchRelayProxyConfig - Modify a relay proxy configuration by ID.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The relay proxy configuration ID ${YELLOW}Specify as: id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Requires a JSON Patch representation of the desired changes to the project. 'http://jsonpatch.com/'" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Relay proxy config response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=409
+    echo -e "${result_color_table[${code:0:1}]}  409;Status conflict.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for postRelayAutoConfig operation
+#
+##############################################################################
+print_postRelayAutoConfig_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}postRelayAutoConfig - Create a new relay proxy config.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Create a new relay proxy configuration" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Relay proxy config response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;Access to the requested resource was denied.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for resetRelayProxyConfig operation
+#
+##############################################################################
+print_resetRelayProxyConfig_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}resetRelayProxyConfig - Reset a relay proxy configuration's secret key with an optional expiry time for the old key.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}id${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The relay proxy configuration ID ${YELLOW}Specify as: id=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}expiry${OFF} ${BLUE}[integer]${OFF}${OFF} - An expiration time for the old relay proxy configuration key, expressed as a Unix epoch time in milliseconds. By default, the relay proxy configuration will expire immediately${YELLOW} Specify as: expiry=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Relay proxy config response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for getRoot operation
 #
 ##############################################################################
@@ -2526,6 +2690,30 @@ print_postUserSegment_help() {
     echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=409
     echo -e "${result_color_table[${code:0:1}]}  409;Status conflict.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for updatedUnboundedSegmentTargets operation
+#
+##############################################################################
+print_updatedUnboundedSegmentTargets_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}updatedUnboundedSegmentTargets - Update targets included or excluded in an unbounded segment${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}userSegmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The user segment's key. The key identifies the user segment in your code. ${YELLOW}Specify as: userSegmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Add or remove user targets to the included or excluded lists on an unbounded segment" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=204
+    echo -e "${result_color_table[${code:0:1}]}  204;Action completed successfully.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -5166,6 +5354,306 @@ call_postProject() {
 
 ##############################################################################
 #
+# Call deleteRelayProxyConfig operation
+#
+##############################################################################
+call_deleteRelayProxyConfig() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/account/relay-auto-configs/{id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getRelayProxyConfig operation
+#
+##############################################################################
+call_getRelayProxyConfig() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/account/relay-auto-configs/{id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getRelayProxyConfigs operation
+#
+##############################################################################
+call_getRelayProxyConfigs() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/account/relay-auto-configs" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call patchRelayProxyConfig operation
+#
+##############################################################################
+call_patchRelayProxyConfig() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/account/relay-auto-configs/{id}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PATCH"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the Swagger specification
+    # if values produces and consumes are defined unambigously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call postRelayAutoConfig operation
+#
+##############################################################################
+call_postRelayAutoConfig() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/account/relay-auto-configs" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the Swagger specification
+    # if values produces and consumes are defined unambigously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call resetRelayProxyConfig operation
+#
+##############################################################################
+call_resetRelayProxyConfig() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(id)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(expiry  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/account/relay-auto-configs/{id}/reset" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call getRoot operation
 #
 ##############################################################################
@@ -5815,6 +6303,84 @@ call_postUserSegment() {
     local path
 
     if ! path=$(build_request_path "/api/v2/segments/{projectKey}/{environmentKey}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the Swagger specification
+    # if values produces and consumes are defined unambigously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call updatedUnboundedSegmentTargets operation
+#
+##############################################################################
+call_updatedUnboundedSegmentTargets() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey userSegmentKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/segments/{projectKey}/{environmentKey}/{userSegmentKey}/unbounded-users" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -6791,6 +7357,24 @@ case $key in
     postProject)
     operation="postProject"
     ;;
+    deleteRelayProxyConfig)
+    operation="deleteRelayProxyConfig"
+    ;;
+    getRelayProxyConfig)
+    operation="getRelayProxyConfig"
+    ;;
+    getRelayProxyConfigs)
+    operation="getRelayProxyConfigs"
+    ;;
+    patchRelayProxyConfig)
+    operation="patchRelayProxyConfig"
+    ;;
+    postRelayAutoConfig)
+    operation="postRelayAutoConfig"
+    ;;
+    resetRelayProxyConfig)
+    operation="resetRelayProxyConfig"
+    ;;
     getRoot)
     operation="getRoot"
     ;;
@@ -6832,6 +7416,9 @@ case $key in
     ;;
     postUserSegment)
     operation="postUserSegment"
+    ;;
+    updatedUnboundedSegmentTargets)
+    operation="updatedUnboundedSegmentTargets"
     ;;
     getExpiringUserTargetsForUser)
     operation="getExpiringUserTargetsForUser"
@@ -7103,6 +7690,24 @@ case $operation in
     postProject)
     call_postProject
     ;;
+    deleteRelayProxyConfig)
+    call_deleteRelayProxyConfig
+    ;;
+    getRelayProxyConfig)
+    call_getRelayProxyConfig
+    ;;
+    getRelayProxyConfigs)
+    call_getRelayProxyConfigs
+    ;;
+    patchRelayProxyConfig)
+    call_patchRelayProxyConfig
+    ;;
+    postRelayAutoConfig)
+    call_postRelayAutoConfig
+    ;;
+    resetRelayProxyConfig)
+    call_resetRelayProxyConfig
+    ;;
     getRoot)
     call_getRoot
     ;;
@@ -7144,6 +7749,9 @@ case $operation in
     ;;
     postUserSegment)
     call_postUserSegment
+    ;;
+    updatedUnboundedSegmentTargets)
+    call_updatedUnboundedSegmentTargets
     ;;
     getExpiringUserTargetsForUser)
     call_getExpiringUserTargetsForUser

@@ -299,7 +299,7 @@ case $state in
             "deleteToken[Delete an access token by ID.]" \
             "getToken[Get a single access token by ID.]" \
             "getTokens[Returns a list of tokens in the account.]" \
-            "patchToken[Modify an access tokenby ID.]" \
+            "patchToken[Modify an access token by ID.]" \
             "postToken[Create a new token.]" \
             "resetToken[Reset an access token's secret key with an optional expiry time for the old key.]"             "getAuditLogEntries[Get a list of all audit log entries. The query parameters allow you to restrict the returned results by date ranges, resource specifiers, or a full-text search query.]" \
             "getAuditLogEntry[Use this endpoint to fetch a single audit log entry by its resouce ID.]"             "deleteCustomRole[Delete a custom role by key.]" \
@@ -336,7 +336,12 @@ case $state in
             "getProject[Fetch a single project by key.]" \
             "getProjects[Returns a list of all projects in the account.]" \
             "patchProject[Modify a project by ID.]" \
-            "postProject[Create a new project with the given key and name.]"             "getRoot[]"             "deleteMember[Delete a team member by ID.]" \
+            "postProject[Create a new project with the given key and name.]"             "deleteRelayProxyConfig[Delete a relay proxy configuration by ID.]" \
+            "getRelayProxyConfig[Get a single relay proxy configuration by ID.]" \
+            "getRelayProxyConfigs[Returns a list of relay proxy configurations in the account.]" \
+            "patchRelayProxyConfig[Modify a relay proxy configuration by ID.]" \
+            "postRelayAutoConfig[Create a new relay proxy config.]" \
+            "resetRelayProxyConfig[Reset a relay proxy configuration's secret key with an optional expiry time for the old key.]"             "getRoot[]"             "deleteMember[Delete a team member by ID.]" \
             "getMe[Get the current team member associated with the token]" \
             "getMember[Get a single team member by ID.]" \
             "getMembers[Returns a list of all members in the account.]" \
@@ -347,7 +352,8 @@ case $state in
             "getUserSegments[Get a list of all user segments in the given project.]" \
             "patchExpiringUserTargetsOnSegment[Update, add, or delete expiring user targets on user segment]" \
             "patchUserSegment[Perform a partial update to a user segment.]" \
-            "postUserSegment[Creates a new user segment.]"             "getExpiringUserTargetsForUser[Get expiring dates on flags for user]" \
+            "postUserSegment[Creates a new user segment.]" \
+            "updatedUnboundedSegmentTargets[Update targets included or excluded in an unbounded segment]"             "getExpiringUserTargetsForUser[Get expiring dates on flags for user]" \
             "getUserFlagSetting[Fetch a single flag setting for a user by key.]" \
             "getUserFlagSettings[Fetch a single flag setting for a user by key.]" \
             "patchExpiringUserTargetsForFlags[Update, add, or delete expiring user targets for a single user on all flags]" \
@@ -731,6 +737,47 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      deleteRelayProxyConfig)
+        local -a _op_arguments
+        _op_arguments=(
+          "id=:[PATH] The relay proxy configuration ID"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getRelayProxyConfig)
+        local -a _op_arguments
+        _op_arguments=(
+          "id=:[PATH] The relay proxy configuration ID"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getRelayProxyConfigs)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      patchRelayProxyConfig)
+        local -a _op_arguments
+        _op_arguments=(
+          "id=:[PATH] The relay proxy configuration ID"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      postRelayAutoConfig)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      resetRelayProxyConfig)
+        local -a _op_arguments
+        _op_arguments=(
+          "id=:[PATH] The relay proxy configuration ID"
+          "expiry=:[QUERY] An expiration time for the old relay proxy configuration key, expressed as a Unix epoch time in milliseconds. By default, the relay proxy configuration will expire immediately"
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       getRoot)
         local -a _op_arguments
         _op_arguments=(
@@ -839,6 +886,15 @@ case $state in
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      updatedUnboundedSegmentTargets)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"userSegmentKey=:[PATH] The user segment&#39;s key. The key identifies the user segment in your code."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;

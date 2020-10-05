@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **included** | **array[string]** |  | [optional] [default to null]
 **excluded** | **array[string]** |  | [optional] [default to null]
 **rules** | [**array[UserSegmentRule]**](UserSegmentRule.md) |  | [optional] [default to null]
+**unbounded** | **boolean** |  | [optional] [default to null]
 **version** | **integer** |  | [optional] [default to null]
 **_links** | [**Links**](Links.md) |  | [optional] [default to null]
 **_flags** | [**array[FlagListItem]**](FlagListItem.md) |  | [optional] [default to null]

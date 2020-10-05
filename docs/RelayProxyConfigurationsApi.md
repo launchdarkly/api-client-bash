@@ -1,31 +1,31 @@
-# AccessTokensApi
+# RelayProxyConfigurationsApi
 
 All URIs are relative to */api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteToken**](AccessTokensApi.md#deleteToken) | **DELETE** /tokens/{tokenId} | Delete an access token by ID.
-[**getToken**](AccessTokensApi.md#getToken) | **GET** /tokens/{tokenId} | Get a single access token by ID.
-[**getTokens**](AccessTokensApi.md#getTokens) | **GET** /tokens | Returns a list of tokens in the account.
-[**patchToken**](AccessTokensApi.md#patchToken) | **PATCH** /tokens/{tokenId} | Modify an access token by ID.
-[**postToken**](AccessTokensApi.md#postToken) | **POST** /tokens | Create a new token.
-[**resetToken**](AccessTokensApi.md#resetToken) | **POST** /tokens/{tokenId}/reset | Reset an access token&#39;s secret key with an optional expiry time for the old key.
+[**deleteRelayProxyConfig**](RelayProxyConfigurationsApi.md#deleteRelayProxyConfig) | **DELETE** /account/relay-auto-configs/{id} | Delete a relay proxy configuration by ID.
+[**getRelayProxyConfig**](RelayProxyConfigurationsApi.md#getRelayProxyConfig) | **GET** /account/relay-auto-configs/{id} | Get a single relay proxy configuration by ID.
+[**getRelayProxyConfigs**](RelayProxyConfigurationsApi.md#getRelayProxyConfigs) | **GET** /account/relay-auto-configs | Returns a list of relay proxy configurations in the account.
+[**patchRelayProxyConfig**](RelayProxyConfigurationsApi.md#patchRelayProxyConfig) | **PATCH** /account/relay-auto-configs/{id} | Modify a relay proxy configuration by ID.
+[**postRelayAutoConfig**](RelayProxyConfigurationsApi.md#postRelayAutoConfig) | **POST** /account/relay-auto-configs | Create a new relay proxy config.
+[**resetRelayProxyConfig**](RelayProxyConfigurationsApi.md#resetRelayProxyConfig) | **POST** /account/relay-auto-configs/{id}/reset | Reset a relay proxy configuration&#39;s secret key with an optional expiry time for the old key.
 
 
-## **deleteToken**
+## **deleteRelayProxyConfig**
 
-Delete an access token by ID.
+Delete a relay proxy configuration by ID.
 
 ### Example
 ```bash
- deleteToken tokenId=value
+ deleteRelayProxyConfig id=value
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tokenId** | **string** | The access token ID. |
+ **id** | **string** | The relay proxy configuration ID |
 
 ### Return type
 
@@ -42,24 +42,24 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## **getToken**
+## **getRelayProxyConfig**
 
-Get a single access token by ID.
+Get a single relay proxy configuration by ID.
 
 ### Example
 ```bash
- getToken tokenId=value
+ getRelayProxyConfig id=value
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tokenId** | **string** | The access token ID. |
+ **id** | **string** | The relay proxy configuration ID |
 
 ### Return type
 
-[**Token**](Token.md)
+[**RelayProxyConfig**](RelayProxyConfig.md)
 
 ### Authorization
 
@@ -72,24 +72,21 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## **getTokens**
+## **getRelayProxyConfigs**
 
-Returns a list of tokens in the account.
+Returns a list of relay proxy configurations in the account.
 
 ### Example
 ```bash
- getTokens  showAll=value
+ getRelayProxyConfigs
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **showAll** | **boolean** | If set to true, and the authentication access token has the \"Admin\" role, personal access tokens for all members will be retrieved. | [optional]
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**Tokens**](Tokens.md)
+[**RelayProxyConfigs**](RelayProxyConfigs.md)
 
 ### Authorization
 
@@ -102,25 +99,25 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## **patchToken**
+## **patchRelayProxyConfig**
 
-Modify an access token by ID.
+Modify a relay proxy configuration by ID.
 
 ### Example
 ```bash
- patchToken tokenId=value
+ patchRelayProxyConfig id=value
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tokenId** | **string** | The access token ID. |
+ **id** | **string** | The relay proxy configuration ID |
  **patchDelta** | [**array[PatchOperation]**](PatchOperation.md) | Requires a JSON Patch representation of the desired changes to the project. 'http://jsonpatch.com/' |
 
 ### Return type
 
-[**Token**](Token.md)
+[**RelayProxyConfig**](RelayProxyConfig.md)
 
 ### Authorization
 
@@ -133,24 +130,24 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## **postToken**
+## **postRelayAutoConfig**
 
-Create a new token.
+Create a new relay proxy config.
 
 ### Example
 ```bash
- postToken
+ postRelayAutoConfig
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tokenBody** | [**TokenBody**](TokenBody.md) | Create a new access token. |
+ **relayProxyConfigBody** | [**RelayProxyConfigBody**](RelayProxyConfigBody.md) | Create a new relay proxy configuration |
 
 ### Return type
 
-[**Token**](Token.md)
+[**RelayProxyConfig**](RelayProxyConfig.md)
 
 ### Authorization
 
@@ -163,25 +160,25 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## **resetToken**
+## **resetRelayProxyConfig**
 
-Reset an access token's secret key with an optional expiry time for the old key.
+Reset a relay proxy configuration's secret key with an optional expiry time for the old key.
 
 ### Example
 ```bash
- resetToken tokenId=value  expiry=value
+ resetRelayProxyConfig id=value  expiry=value
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tokenId** | **string** | The access token ID. |
- **expiry** | **integer** | An expiration time for the old token key, expressed as a Unix epoch time in milliseconds. By default, the token will expire immediately. | [optional]
+ **id** | **string** | The relay proxy configuration ID |
+ **expiry** | **integer** | An expiration time for the old relay proxy configuration key, expressed as a Unix epoch time in milliseconds. By default, the relay proxy configuration will expire immediately | [optional]
 
 ### Return type
 
-[**Token**](Token.md)
+[**RelayProxyConfig**](RelayProxyConfig.md)
 
 ### Authorization
 

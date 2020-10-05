@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**patchExpiringUserTargetsOnSegment**](UserSegmentsApi.md#patchExpiringUserTargetsOnSegment) | **PATCH** /segments/{projectKey}/{userSegmentKey}/expiring-user-targets/{environmentKey} | Update, add, or delete expiring user targets on user segment
 [**patchUserSegment**](UserSegmentsApi.md#patchUserSegment) | **PATCH** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Perform a partial update to a user segment.
 [**postUserSegment**](UserSegmentsApi.md#postUserSegment) | **POST** /segments/{projectKey}/{environmentKey} | Creates a new user segment.
+[**updatedUnboundedSegmentTargets**](UserSegmentsApi.md#updatedUnboundedSegmentTargets) | **POST** /segments/{projectKey}/{environmentKey}/{userSegmentKey}/unbounded-users | Update targets included or excluded in an unbounded segment
 
 
 ## **deleteUserSegment**
@@ -227,6 +228,39 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UserSegment**](UserSegment.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+## **updatedUnboundedSegmentTargets**
+
+Update targets included or excluded in an unbounded segment
+
+### Example
+```bash
+ updatedUnboundedSegmentTargets projectKey=value environmentKey=value userSegmentKey=value
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
+ **environmentKey** | **string** | The environment key, used to tie together flag configuration and users under one environment so they can be managed together. |
+ **userSegmentKey** | **string** | The user segment's key. The key identifies the user segment in your code. |
+ **unboundedSegmentTargetsBody** | [**UnboundedSegmentTargetsBody**](UnboundedSegmentTargetsBody.md) | Add or remove user targets to the included or excluded lists on an unbounded segment |
+
+### Return type
+
+(empty response body)
 
 ### Authorization
 

@@ -102,7 +102,7 @@ Class | Method | HTTP request | Description
 *AccessTokensApi* | [**deleteToken**](docs/AccessTokensApi.md#deletetoken) | **DELETE** /tokens/{tokenId} | Delete an access token by ID.
 *AccessTokensApi* | [**getToken**](docs/AccessTokensApi.md#gettoken) | **GET** /tokens/{tokenId} | Get a single access token by ID.
 *AccessTokensApi* | [**getTokens**](docs/AccessTokensApi.md#gettokens) | **GET** /tokens | Returns a list of tokens in the account.
-*AccessTokensApi* | [**patchToken**](docs/AccessTokensApi.md#patchtoken) | **PATCH** /tokens/{tokenId} | Modify an access tokenby ID.
+*AccessTokensApi* | [**patchToken**](docs/AccessTokensApi.md#patchtoken) | **PATCH** /tokens/{tokenId} | Modify an access token by ID.
 *AccessTokensApi* | [**postToken**](docs/AccessTokensApi.md#posttoken) | **POST** /tokens | Create a new token.
 *AccessTokensApi* | [**resetToken**](docs/AccessTokensApi.md#resettoken) | **POST** /tokens/{tokenId}/reset | Reset an access token&#39;s secret key with an optional expiry time for the old key.
 *AuditLogApi* | [**getAuditLogEntries**](docs/AuditLogApi.md#getauditlogentries) | **GET** /auditlog | Get a list of all audit log entries. The query parameters allow you to restrict the returned results by date ranges, resource specifiers, or a full-text search query.
@@ -147,6 +147,12 @@ Class | Method | HTTP request | Description
 *ProjectsApi* | [**getProjects**](docs/ProjectsApi.md#getprojects) | **GET** /projects | Returns a list of all projects in the account.
 *ProjectsApi* | [**patchProject**](docs/ProjectsApi.md#patchproject) | **PATCH** /projects/{projectKey} | Modify a project by ID.
 *ProjectsApi* | [**postProject**](docs/ProjectsApi.md#postproject) | **POST** /projects | Create a new project with the given key and name.
+*RelayProxyConfigurationsApi* | [**deleteRelayProxyConfig**](docs/RelayProxyConfigurationsApi.md#deleterelayproxyconfig) | **DELETE** /account/relay-auto-configs/{id} | Delete a relay proxy configuration by ID.
+*RelayProxyConfigurationsApi* | [**getRelayProxyConfig**](docs/RelayProxyConfigurationsApi.md#getrelayproxyconfig) | **GET** /account/relay-auto-configs/{id} | Get a single relay proxy configuration by ID.
+*RelayProxyConfigurationsApi* | [**getRelayProxyConfigs**](docs/RelayProxyConfigurationsApi.md#getrelayproxyconfigs) | **GET** /account/relay-auto-configs | Returns a list of relay proxy configurations in the account.
+*RelayProxyConfigurationsApi* | [**patchRelayProxyConfig**](docs/RelayProxyConfigurationsApi.md#patchrelayproxyconfig) | **PATCH** /account/relay-auto-configs/{id} | Modify a relay proxy configuration by ID.
+*RelayProxyConfigurationsApi* | [**postRelayAutoConfig**](docs/RelayProxyConfigurationsApi.md#postrelayautoconfig) | **POST** /account/relay-auto-configs | Create a new relay proxy config.
+*RelayProxyConfigurationsApi* | [**resetRelayProxyConfig**](docs/RelayProxyConfigurationsApi.md#resetrelayproxyconfig) | **POST** /account/relay-auto-configs/{id}/reset | Reset a relay proxy configuration&#39;s secret key with an optional expiry time for the old key.
 *RootApi* | [**getRoot**](docs/RootApi.md#getroot) | **GET** / | 
 *TeamMembersApi* | [**deleteMember**](docs/TeamMembersApi.md#deletemember) | **DELETE** /members/{memberId} | Delete a team member by ID.
 *TeamMembersApi* | [**getMe**](docs/TeamMembersApi.md#getme) | **GET** /members/me | Get the current team member associated with the token
@@ -161,6 +167,7 @@ Class | Method | HTTP request | Description
 *UserSegmentsApi* | [**patchExpiringUserTargetsOnSegment**](docs/UserSegmentsApi.md#patchexpiringusertargetsonsegment) | **PATCH** /segments/{projectKey}/{userSegmentKey}/expiring-user-targets/{environmentKey} | Update, add, or delete expiring user targets on user segment
 *UserSegmentsApi* | [**patchUserSegment**](docs/UserSegmentsApi.md#patchusersegment) | **PATCH** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Perform a partial update to a user segment.
 *UserSegmentsApi* | [**postUserSegment**](docs/UserSegmentsApi.md#postusersegment) | **POST** /segments/{projectKey}/{environmentKey} | Creates a new user segment.
+*UserSegmentsApi* | [**updatedUnboundedSegmentTargets**](docs/UserSegmentsApi.md#updatedunboundedsegmenttargets) | **POST** /segments/{projectKey}/{environmentKey}/{userSegmentKey}/unbounded-users | Update targets included or excluded in an unbounded segment
 *UserSettingsApi* | [**getExpiringUserTargetsForUser**](docs/UserSettingsApi.md#getexpiringusertargetsforuser) | **GET** /users/{projectKey}/{userKey}/expiring-user-targets/{environmentKey} | Get expiring dates on flags for user
 *UserSettingsApi* | [**getUserFlagSetting**](docs/UserSettingsApi.md#getuserflagsetting) | **GET** /users/{projectKey}/{environmentKey}/{userKey}/flags/{featureFlagKey} | Fetch a single flag setting for a user by key.
 *UserSettingsApi* | [**getUserFlagSettings**](docs/UserSettingsApi.md#getuserflagsettings) | **GET** /users/{projectKey}/{environmentKey}/{userKey}/flags | Fetch a single flag setting for a user by key.
@@ -208,6 +215,10 @@ Class | Method | HTTP request | Description
  - [FeatureFlagConfig](docs/FeatureFlagConfig.md)
  - [FeatureFlagCopyBody](docs/FeatureFlagCopyBody.md)
  - [FeatureFlagCopyObject](docs/FeatureFlagCopyObject.md)
+ - [FeatureFlagScheduledChange](docs/FeatureFlagScheduledChange.md)
+ - [FeatureFlagScheduledChanges](docs/FeatureFlagScheduledChanges.md)
+ - [FeatureFlagScheduledChangesConflicts](docs/FeatureFlagScheduledChangesConflicts.md)
+ - [FeatureFlagScheduledChangesConflicts_instructions](docs/FeatureFlagScheduledChangesConflicts_instructions.md)
  - [FeatureFlagStatus](docs/FeatureFlagStatus.md)
  - [FeatureFlagStatusAcrossEnvironments](docs/FeatureFlagStatusAcrossEnvironments.md)
  - [FeatureFlagStatusForQueriedEnvironment](docs/FeatureFlagStatusForQueriedEnvironment.md)
@@ -230,11 +241,16 @@ Class | Method | HTTP request | Description
  - [Project](docs/Project.md)
  - [ProjectBody](docs/ProjectBody.md)
  - [Projects](docs/Projects.md)
+ - [RelayProxyConfig](docs/RelayProxyConfig.md)
+ - [RelayProxyConfigBody](docs/RelayProxyConfigBody.md)
+ - [RelayProxyConfigs](docs/RelayProxyConfigs.md)
  - [Role](docs/Role.md)
  - [Rollout](docs/Rollout.md)
  - [Rule](docs/Rule.md)
+ - [ScheduledChangesFeatureFlagConflict](docs/ScheduledChangesFeatureFlagConflict.md)
+ - [SemanticPatchInstruction](docs/SemanticPatchInstruction.md)
+ - [SemanticPatchInstruction_inner](docs/SemanticPatchInstruction_inner.md)
  - [SemanticPatchOperation](docs/SemanticPatchOperation.md)
- - [SemanticPatchOperation_instructions](docs/SemanticPatchOperation_instructions.md)
  - [Site](docs/Site.md)
  - [Statement](docs/Statement.md)
  - [Stream](docs/Stream.md)
@@ -253,6 +269,8 @@ Class | Method | HTTP request | Description
  - [Token](docs/Token.md)
  - [TokenBody](docs/TokenBody.md)
  - [Tokens](docs/Tokens.md)
+ - [UnboundedSegmentTargetChanges](docs/UnboundedSegmentTargetChanges.md)
+ - [UnboundedSegmentTargetsBody](docs/UnboundedSegmentTargetsBody.md)
  - [Usage](docs/Usage.md)
  - [UsageError](docs/UsageError.md)
  - [UsageLinks](docs/UsageLinks.md)

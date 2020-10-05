@@ -1,10 +1,10 @@
-# SemanticPatchOperation
+# FeatureFlagScheduledChanges
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**comment** | **string** |  | [optional] [default to null]
-**instructions** | [**SemanticPatchInstruction**](SemanticPatchInstruction.md) |  | [default to null]
+**_links** | [**Links**](Links.md) |  | [optional] [default to null]
+**items** | [**array[FeatureFlagScheduledChange]**](FeatureFlagScheduledChange.md) |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
