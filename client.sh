@@ -142,6 +142,12 @@ operation_parameters_minimum_occurrences["patchEnvironment:::environmentKey"]=1
 operation_parameters_minimum_occurrences["patchEnvironment:::patchDelta"]=1
 operation_parameters_minimum_occurrences["postEnvironment:::projectKey"]=1
 operation_parameters_minimum_occurrences["postEnvironment:::environmentBody"]=1
+operation_parameters_minimum_occurrences["resetEnvironmentMobileKey:::projectKey"]=1
+operation_parameters_minimum_occurrences["resetEnvironmentMobileKey:::environmentKey"]=1
+operation_parameters_minimum_occurrences["resetEnvironmentMobileKey:::expiry"]=0
+operation_parameters_minimum_occurrences["resetEnvironmentSDKKey:::projectKey"]=1
+operation_parameters_minimum_occurrences["resetEnvironmentSDKKey:::environmentKey"]=1
+operation_parameters_minimum_occurrences["resetEnvironmentSDKKey:::expiry"]=0
 operation_parameters_minimum_occurrences["copyFeatureFlag:::projectKey"]=1
 operation_parameters_minimum_occurrences["copyFeatureFlag:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["copyFeatureFlag:::featureFlagCopyBody"]=1
@@ -323,6 +329,12 @@ operation_parameters_maximum_occurrences["patchEnvironment:::environmentKey"]=0
 operation_parameters_maximum_occurrences["patchEnvironment:::patchDelta"]=0
 operation_parameters_maximum_occurrences["postEnvironment:::projectKey"]=0
 operation_parameters_maximum_occurrences["postEnvironment:::environmentBody"]=0
+operation_parameters_maximum_occurrences["resetEnvironmentMobileKey:::projectKey"]=0
+operation_parameters_maximum_occurrences["resetEnvironmentMobileKey:::environmentKey"]=0
+operation_parameters_maximum_occurrences["resetEnvironmentMobileKey:::expiry"]=0
+operation_parameters_maximum_occurrences["resetEnvironmentSDKKey:::projectKey"]=0
+operation_parameters_maximum_occurrences["resetEnvironmentSDKKey:::environmentKey"]=0
+operation_parameters_maximum_occurrences["resetEnvironmentSDKKey:::expiry"]=0
 operation_parameters_maximum_occurrences["copyFeatureFlag:::projectKey"]=0
 operation_parameters_maximum_occurrences["copyFeatureFlag:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["copyFeatureFlag:::featureFlagCopyBody"]=0
@@ -501,6 +513,12 @@ operation_parameters_collection_type["patchEnvironment:::environmentKey"]=""
 operation_parameters_collection_type["patchEnvironment:::patchDelta"]=
 operation_parameters_collection_type["postEnvironment:::projectKey"]=""
 operation_parameters_collection_type["postEnvironment:::environmentBody"]=""
+operation_parameters_collection_type["resetEnvironmentMobileKey:::projectKey"]=""
+operation_parameters_collection_type["resetEnvironmentMobileKey:::environmentKey"]=""
+operation_parameters_collection_type["resetEnvironmentMobileKey:::expiry"]=""
+operation_parameters_collection_type["resetEnvironmentSDKKey:::projectKey"]=""
+operation_parameters_collection_type["resetEnvironmentSDKKey:::environmentKey"]=""
+operation_parameters_collection_type["resetEnvironmentSDKKey:::expiry"]=""
 operation_parameters_collection_type["copyFeatureFlag:::projectKey"]=""
 operation_parameters_collection_type["copyFeatureFlag:::featureFlagKey"]=""
 operation_parameters_collection_type["copyFeatureFlag:::featureFlagCopyBody"]=""
@@ -972,7 +990,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.6.0)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.7.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1065,6 +1083,8 @@ read -r -d '' ops <<EOF
   ${CYAN}getEnvironment${OFF};Get an environment given a project and key. (AUTH)
   ${CYAN}patchEnvironment${OFF};Modify an environment by ID. (AUTH)
   ${CYAN}postEnvironment${OFF};Create a new environment in a specified project with a given name, key, and swatch color. (AUTH)
+  ${CYAN}resetEnvironmentMobileKey${OFF};Reset an environment's mobile key with an optional expiry time for the old key. (AUTH)
+  ${CYAN}resetEnvironmentSDKKey${OFF};Reset an environment's SDK key with an optional expiry time for the old key. (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -1190,7 +1210,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.6.0)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.7.0)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -1210,7 +1230,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 3.6.0)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 3.7.0)${OFF}"
     echo ""
 }
 
@@ -1882,6 +1902,52 @@ print_postEnvironment_help() {
     echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=409
+    echo -e "${result_color_table[${code:0:1}]}  409;Status conflict.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for resetEnvironmentMobileKey operation
+#
+##############################################################################
+print_resetEnvironmentMobileKey_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}resetEnvironmentMobileKey - Reset an environment's mobile key with an optional expiry time for the old key.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}expiry${OFF} ${BLUE}[integer]${OFF}${OFF} - An expiration time for the old environment SDK or mobile key, expressed as a Unix epoch time in milliseconds. By default, the key will expire immediately${YELLOW} Specify as: expiry=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Environment response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=409
+    echo -e "${result_color_table[${code:0:1}]}  409;Status conflict.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for resetEnvironmentSDKKey operation
+#
+##############################################################################
+print_resetEnvironmentSDKKey_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}resetEnvironmentSDKKey - Reset an environment's SDK key with an optional expiry time for the old key.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}expiry${OFF} ${BLUE}[integer]${OFF}${OFF} - An expiration time for the old environment SDK or mobile key, expressed as a Unix epoch time in milliseconds. By default, the key will expire immediately${YELLOW} Specify as: expiry=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Environment response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=409
     echo -e "${result_color_table[${code:0:1}]}  409;Status conflict.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -4521,6 +4587,78 @@ call_postEnvironment() {
         else
             eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
         fi
+    fi
+}
+
+##############################################################################
+#
+# Call resetEnvironmentMobileKey operation
+#
+##############################################################################
+call_resetEnvironmentMobileKey() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(expiry  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/environments/{environmentKey}/mobileKey" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call resetEnvironmentSDKKey operation
+#
+##############################################################################
+call_resetEnvironmentSDKKey() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(expiry  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/environments/{environmentKey}/apiKey" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     fi
 }
 
@@ -7309,6 +7447,12 @@ case $key in
     postEnvironment)
     operation="postEnvironment"
     ;;
+    resetEnvironmentMobileKey)
+    operation="resetEnvironmentMobileKey"
+    ;;
+    resetEnvironmentSDKKey)
+    operation="resetEnvironmentSDKKey"
+    ;;
     copyFeatureFlag)
     operation="copyFeatureFlag"
     ;;
@@ -7641,6 +7785,12 @@ case $operation in
     ;;
     postEnvironment)
     call_postEnvironment
+    ;;
+    resetEnvironmentMobileKey)
+    call_resetEnvironmentMobileKey
+    ;;
+    resetEnvironmentSDKKey)
+    call_resetEnvironmentSDKKey
     ;;
     copyFeatureFlag)
     call_copyFeatureFlag

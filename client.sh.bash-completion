@@ -100,6 +100,8 @@ _()
     operations["getEnvironment"]=1
     operations["patchEnvironment"]=1
     operations["postEnvironment"]=1
+    operations["resetEnvironmentMobileKey"]=1
+    operations["resetEnvironmentSDKKey"]=1
     operations["copyFeatureFlag"]=1
     operations["deleteFeatureFlag"]=1
     operations["getExpiringUserTargets"]=1
@@ -187,6 +189,8 @@ _()
     operation_parameters["getEnvironment"]="projectKey= environmentKey= "
     operation_parameters["patchEnvironment"]="projectKey= environmentKey= "
     operation_parameters["postEnvironment"]="projectKey= "
+    operation_parameters["resetEnvironmentMobileKey"]="projectKey= environmentKey= expiry= "
+    operation_parameters["resetEnvironmentSDKKey"]="projectKey= environmentKey= expiry= "
     operation_parameters["copyFeatureFlag"]="projectKey= featureFlagKey= "
     operation_parameters["deleteFeatureFlag"]="projectKey= featureFlagKey= "
     operation_parameters["getExpiringUserTargets"]="projectKey= environmentKey= featureFlagKey= "
