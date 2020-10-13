@@ -990,7 +990,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.7.0)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.7.1)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1083,7 +1083,7 @@ read -r -d '' ops <<EOF
   ${CYAN}getEnvironment${OFF};Get an environment given a project and key. (AUTH)
   ${CYAN}patchEnvironment${OFF};Modify an environment by ID. (AUTH)
   ${CYAN}postEnvironment${OFF};Create a new environment in a specified project with a given name, key, and swatch color. (AUTH)
-  ${CYAN}resetEnvironmentMobileKey${OFF};Reset an environment's mobile key with an optional expiry time for the old key. (AUTH)
+  ${CYAN}resetEnvironmentMobileKey${OFF};Reset an environment's mobile key. The optional expiry for the old key is deprecated for this endpoint, so the old key will always expire immediately. (AUTH)
   ${CYAN}resetEnvironmentSDKKey${OFF};Reset an environment's SDK key with an optional expiry time for the old key. (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
@@ -1210,7 +1210,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.7.0)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.7.1)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -1230,7 +1230,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 3.7.0)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 3.7.1)${OFF}"
     echo ""
 }
 
@@ -1912,12 +1912,12 @@ print_postEnvironment_help() {
 ##############################################################################
 print_resetEnvironmentMobileKey_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}resetEnvironmentMobileKey - Reset an environment's mobile key with an optional expiry time for the old key.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}resetEnvironmentMobileKey - Reset an environment's mobile key. The optional expiry for the old key is deprecated for this endpoint, so the old key will always expire immediately.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}expiry${OFF} ${BLUE}[integer]${OFF}${OFF} - An expiration time for the old environment SDK or mobile key, expressed as a Unix epoch time in milliseconds. By default, the key will expire immediately${YELLOW} Specify as: expiry=value${OFF}" \
+    echo -e "  * ${GREEN}expiry${OFF} ${BLUE}[integer]${OFF}${OFF} - The expiry parameter is deprecated for this endpoint, so the old mobile key will always expire immediately. This parameter will be removed in an upcoming major API client version.${YELLOW} Specify as: expiry=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -1940,7 +1940,7 @@ print_resetEnvironmentSDKKey_help() {
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}expiry${OFF} ${BLUE}[integer]${OFF}${OFF} - An expiration time for the old environment SDK or mobile key, expressed as a Unix epoch time in milliseconds. By default, the key will expire immediately${YELLOW} Specify as: expiry=value${OFF}" \
+    echo -e "  * ${GREEN}expiry${OFF} ${BLUE}[integer]${OFF}${OFF} - An expiration time for the old environment SDK key, expressed as a Unix epoch time in milliseconds. By default, the key will expire immediately.${YELLOW} Specify as: expiry=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"

@@ -323,7 +323,7 @@ case $state in
             "getEnvironment[Get an environment given a project and key.]" \
             "patchEnvironment[Modify an environment by ID.]" \
             "postEnvironment[Create a new environment in a specified project with a given name, key, and swatch color.]" \
-            "resetEnvironmentMobileKey[Reset an environment's mobile key with an optional expiry time for the old key.]" \
+            "resetEnvironmentMobileKey[Reset an environment's mobile key. The optional expiry for the old key is deprecated for this endpoint, so the old key will always expire immediately.]" \
             "resetEnvironmentSDKKey[Reset an environment's SDK key with an optional expiry time for the old key.]"             "copyFeatureFlag[Copies the feature flag configuration from one environment to the same feature flag in another environment.]" \
             "deleteFeatureFlag[Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.]" \
             "getExpiringUserTargets[Get expiring user targets for feature flag]" \
@@ -610,7 +610,7 @@ case $state in
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
-          "expiry=:[QUERY] An expiration time for the old environment SDK or mobile key, expressed as a Unix epoch time in milliseconds. By default, the key will expire immediately"
+          "expiry=:[QUERY] The expiry parameter is deprecated for this endpoint, so the old mobile key will always expire immediately. This parameter will be removed in an upcoming major API client version."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -619,7 +619,7 @@ case $state in
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
-          "expiry=:[QUERY] An expiration time for the old environment SDK or mobile key, expressed as a Unix epoch time in milliseconds. By default, the key will expire immediately"
+          "expiry=:[QUERY] An expiration time for the old environment SDK key, expressed as a Unix epoch time in milliseconds. By default, the key will expire immediately."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
