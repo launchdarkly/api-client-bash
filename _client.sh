@@ -334,7 +334,12 @@ case $state in
             "getFeatureFlags[Get a list of all features in the given project.]" \
             "patchExpiringUserTargets[Update, add, or delete expiring user targets on feature flag]" \
             "patchFeatureFlag[Perform a partial update to a feature.]" \
-            "postFeatureFlag[Creates a new feature flag.]"             "deleteProject[Delete a project by key. Caution-- deleting a project will delete all associated environments and feature flags. You cannot delete the last project in an account.]" \
+            "postFeatureFlag[Creates a new feature flag.]"             "deleteIntegrationSubscription[Delete an integration subscription by ID.]" \
+            "getIntegrationSubscription[Get a single integration subscription by ID.]" \
+            "getIntegrationSubscriptions[Get a list of all configured integrations of a given kind.]" \
+            "getIntegrations[Get a list of all configured audit log event integrations associated with this account.]" \
+            "patchIntegrationSubscription[Modify an integration subscription by ID.]" \
+            "postIntegrationSubscription[Create a new integration subscription of a given kind.]"             "deleteProject[Delete a project by key. Caution-- deleting a project will delete all associated environments and feature flags. You cannot delete the last project in an account.]" \
             "getProject[Fetch a single project by key.]" \
             "getProjects[Returns a list of all projects in the account.]" \
             "patchProject[Modify a project by ID.]" \
@@ -722,6 +727,50 @@ case $state in
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
           "clone=:[QUERY] The key of the feature flag to be cloned. The key identifies the flag in your code.  For example, setting clone&#x3D;flagKey will copy the full targeting configuration for all environments (including on/off state) from the original flag to the new flag."
           )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      deleteIntegrationSubscription)
+        local -a _op_arguments
+        _op_arguments=(
+          "integrationKey=:[PATH] The key used to specify the integration kind."
+"integrationId=:[PATH] The integration ID."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getIntegrationSubscription)
+        local -a _op_arguments
+        _op_arguments=(
+          "integrationKey=:[PATH] The key used to specify the integration kind."
+"integrationId=:[PATH] The integration ID."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getIntegrationSubscriptions)
+        local -a _op_arguments
+        _op_arguments=(
+          "integrationKey=:[PATH] The key used to specify the integration kind."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getIntegrations)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      patchIntegrationSubscription)
+        local -a _op_arguments
+        _op_arguments=(
+          "integrationKey=:[PATH] The key used to specify the integration kind."
+"integrationId=:[PATH] The integration ID."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      postIntegrationSubscription)
+        local -a _op_arguments
+        _op_arguments=(
+          "integrationKey=:[PATH] The key used to specify the integration kind."
+                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       deleteProject)

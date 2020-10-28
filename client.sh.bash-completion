@@ -113,6 +113,12 @@ _()
     operations["patchExpiringUserTargets"]=1
     operations["patchFeatureFlag"]=1
     operations["postFeatureFlag"]=1
+    operations["deleteIntegrationSubscription"]=1
+    operations["getIntegrationSubscription"]=1
+    operations["getIntegrationSubscriptions"]=1
+    operations["getIntegrations"]=1
+    operations["patchIntegrationSubscription"]=1
+    operations["postIntegrationSubscription"]=1
     operations["deleteProject"]=1
     operations["getProject"]=1
     operations["getProjects"]=1
@@ -202,6 +208,12 @@ _()
     operation_parameters["patchExpiringUserTargets"]="projectKey= environmentKey= featureFlagKey= "
     operation_parameters["patchFeatureFlag"]="projectKey= featureFlagKey= "
     operation_parameters["postFeatureFlag"]="projectKey= clone= "
+    operation_parameters["deleteIntegrationSubscription"]="integrationKey= integrationId= "
+    operation_parameters["getIntegrationSubscription"]="integrationKey= integrationId= "
+    operation_parameters["getIntegrationSubscriptions"]="integrationKey= "
+    operation_parameters["getIntegrations"]=""
+    operation_parameters["patchIntegrationSubscription"]="integrationKey= integrationId= "
+    operation_parameters["postIntegrationSubscription"]="integrationKey= "
     operation_parameters["deleteProject"]="projectKey= "
     operation_parameters["getProject"]="projectKey= "
     operation_parameters["getProjects"]=""

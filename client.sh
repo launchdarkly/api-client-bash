@@ -185,6 +185,16 @@ operation_parameters_minimum_occurrences["patchFeatureFlag:::patchComment"]=1
 operation_parameters_minimum_occurrences["postFeatureFlag:::projectKey"]=1
 operation_parameters_minimum_occurrences["postFeatureFlag:::featureFlagBody"]=1
 operation_parameters_minimum_occurrences["postFeatureFlag:::clone"]=0
+operation_parameters_minimum_occurrences["deleteIntegrationSubscription:::integrationKey"]=1
+operation_parameters_minimum_occurrences["deleteIntegrationSubscription:::integrationId"]=1
+operation_parameters_minimum_occurrences["getIntegrationSubscription:::integrationKey"]=1
+operation_parameters_minimum_occurrences["getIntegrationSubscription:::integrationId"]=1
+operation_parameters_minimum_occurrences["getIntegrationSubscriptions:::integrationKey"]=1
+operation_parameters_minimum_occurrences["patchIntegrationSubscription:::integrationKey"]=1
+operation_parameters_minimum_occurrences["patchIntegrationSubscription:::integrationId"]=1
+operation_parameters_minimum_occurrences["patchIntegrationSubscription:::patchDelta"]=1
+operation_parameters_minimum_occurrences["postIntegrationSubscription:::integrationKey"]=1
+operation_parameters_minimum_occurrences["postIntegrationSubscription:::subscriptionBody"]=1
 operation_parameters_minimum_occurrences["deleteProject:::projectKey"]=1
 operation_parameters_minimum_occurrences["getProject:::projectKey"]=1
 operation_parameters_minimum_occurrences["patchProject:::projectKey"]=1
@@ -372,6 +382,16 @@ operation_parameters_maximum_occurrences["patchFeatureFlag:::patchComment"]=0
 operation_parameters_maximum_occurrences["postFeatureFlag:::projectKey"]=0
 operation_parameters_maximum_occurrences["postFeatureFlag:::featureFlagBody"]=0
 operation_parameters_maximum_occurrences["postFeatureFlag:::clone"]=0
+operation_parameters_maximum_occurrences["deleteIntegrationSubscription:::integrationKey"]=0
+operation_parameters_maximum_occurrences["deleteIntegrationSubscription:::integrationId"]=0
+operation_parameters_maximum_occurrences["getIntegrationSubscription:::integrationKey"]=0
+operation_parameters_maximum_occurrences["getIntegrationSubscription:::integrationId"]=0
+operation_parameters_maximum_occurrences["getIntegrationSubscriptions:::integrationKey"]=0
+operation_parameters_maximum_occurrences["patchIntegrationSubscription:::integrationKey"]=0
+operation_parameters_maximum_occurrences["patchIntegrationSubscription:::integrationId"]=0
+operation_parameters_maximum_occurrences["patchIntegrationSubscription:::patchDelta"]=0
+operation_parameters_maximum_occurrences["postIntegrationSubscription:::integrationKey"]=0
+operation_parameters_maximum_occurrences["postIntegrationSubscription:::subscriptionBody"]=0
 operation_parameters_maximum_occurrences["deleteProject:::projectKey"]=0
 operation_parameters_maximum_occurrences["getProject:::projectKey"]=0
 operation_parameters_maximum_occurrences["patchProject:::projectKey"]=0
@@ -556,6 +576,16 @@ operation_parameters_collection_type["patchFeatureFlag:::patchComment"]=""
 operation_parameters_collection_type["postFeatureFlag:::projectKey"]=""
 operation_parameters_collection_type["postFeatureFlag:::featureFlagBody"]=""
 operation_parameters_collection_type["postFeatureFlag:::clone"]=""
+operation_parameters_collection_type["deleteIntegrationSubscription:::integrationKey"]=""
+operation_parameters_collection_type["deleteIntegrationSubscription:::integrationId"]=""
+operation_parameters_collection_type["getIntegrationSubscription:::integrationKey"]=""
+operation_parameters_collection_type["getIntegrationSubscription:::integrationId"]=""
+operation_parameters_collection_type["getIntegrationSubscriptions:::integrationKey"]=""
+operation_parameters_collection_type["patchIntegrationSubscription:::integrationKey"]=""
+operation_parameters_collection_type["patchIntegrationSubscription:::integrationId"]=""
+operation_parameters_collection_type["patchIntegrationSubscription:::patchDelta"]=
+operation_parameters_collection_type["postIntegrationSubscription:::integrationKey"]=""
+operation_parameters_collection_type["postIntegrationSubscription:::subscriptionBody"]=""
 operation_parameters_collection_type["deleteProject:::projectKey"]=""
 operation_parameters_collection_type["getProject:::projectKey"]=""
 operation_parameters_collection_type["patchProject:::projectKey"]=""
@@ -990,7 +1020,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.7.1)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.8.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1104,6 +1134,17 @@ read -r -d '' ops <<EOF
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
+    echo -e "${BOLD}${WHITE}[integrations]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}deleteIntegrationSubscription${OFF};Delete an integration subscription by ID. (AUTH)
+  ${CYAN}getIntegrationSubscription${OFF};Get a single integration subscription by ID. (AUTH)
+  ${CYAN}getIntegrationSubscriptions${OFF};Get a list of all configured integrations of a given kind. (AUTH)
+  ${CYAN}getIntegrations${OFF};Get a list of all configured audit log event integrations associated with this account. (AUTH)
+  ${CYAN}patchIntegrationSubscription${OFF};Modify an integration subscription by ID. (AUTH)
+  ${CYAN}postIntegrationSubscription${OFF};Create a new integration subscription of a given kind. (AUTH)
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
     echo -e "${BOLD}${WHITE}[projects]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}deleteProject${OFF};Delete a project by key. Caution-- deleting a project will delete all associated environments and feature flags. You cannot delete the last project in an account. (AUTH)
@@ -1210,7 +1251,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.7.1)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.8.0)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -1230,7 +1271,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 3.7.1)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 3.8.0)${OFF}"
     echo ""
 }
 
@@ -2208,6 +2249,133 @@ print_postFeatureFlag_help() {
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=201
     echo -e "${result_color_table[${code:0:1}]}  201;Flag response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=409
+    echo -e "${result_color_table[${code:0:1}]}  409;Status conflict.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for deleteIntegrationSubscription operation
+#
+##############################################################################
+print_deleteIntegrationSubscription_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}deleteIntegrationSubscription - Delete an integration subscription by ID.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}integrationKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The key used to specify the integration kind. ${YELLOW}Specify as: integrationKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}integrationId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The integration ID. ${YELLOW}Specify as: integrationId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=204
+    echo -e "${result_color_table[${code:0:1}]}  204;Action completed successfully.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getIntegrationSubscription operation
+#
+##############################################################################
+print_getIntegrationSubscription_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getIntegrationSubscription - Get a single integration subscription by ID.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}integrationKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The key used to specify the integration kind. ${YELLOW}Specify as: integrationKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}integrationId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The integration ID. ${YELLOW}Specify as: integrationId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Integrations response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getIntegrationSubscriptions operation
+#
+##############################################################################
+print_getIntegrationSubscriptions_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getIntegrationSubscriptions - Get a list of all configured integrations of a given kind.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}integrationKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The key used to specify the integration kind. ${YELLOW}Specify as: integrationKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Integrations response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getIntegrations operation
+#
+##############################################################################
+print_getIntegrations_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getIntegrations - Get a list of all configured audit log event integrations associated with this account.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Integrations response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for patchIntegrationSubscription operation
+#
+##############################################################################
+print_patchIntegrationSubscription_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}patchIntegrationSubscription - Modify an integration subscription by ID.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}integrationKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The key used to specify the integration kind. ${YELLOW}Specify as: integrationKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}integrationId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The integration ID. ${YELLOW}Specify as: integrationId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Requires a JSON Patch representation of the desired changes to the project. 'http://jsonpatch.com/'" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Integrations response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for postIntegrationSubscription operation
+#
+##############################################################################
+print_postIntegrationSubscription_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}postIntegrationSubscription - Create a new integration subscription of a given kind.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}integrationKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The key used to specify the integration kind. ${YELLOW}Specify as: integrationKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Create a new integration subscription." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Integrations response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=400
     echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
@@ -5228,6 +5396,306 @@ call_postFeatureFlag() {
 
 ##############################################################################
 #
+# Call deleteIntegrationSubscription operation
+#
+##############################################################################
+call_deleteIntegrationSubscription() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(integrationKey integrationId)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/integrations/{integrationKey}/{integrationId}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getIntegrationSubscription operation
+#
+##############################################################################
+call_getIntegrationSubscription() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(integrationKey integrationId)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/integrations/{integrationKey}/{integrationId}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getIntegrationSubscriptions operation
+#
+##############################################################################
+call_getIntegrationSubscriptions() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(integrationKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/integrations/{integrationKey}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getIntegrations operation
+#
+##############################################################################
+call_getIntegrations() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/integrations" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call patchIntegrationSubscription operation
+#
+##############################################################################
+call_patchIntegrationSubscription() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(integrationKey integrationId)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/integrations/{integrationKey}/{integrationId}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PATCH"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the Swagger specification
+    # if values produces and consumes are defined unambigously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call postIntegrationSubscription operation
+#
+##############################################################################
+call_postIntegrationSubscription() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(integrationKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/integrations/{integrationKey}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the Swagger specification
+    # if values produces and consumes are defined unambigously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
 # Call deleteProject operation
 #
 ##############################################################################
@@ -7486,6 +7954,24 @@ case $key in
     postFeatureFlag)
     operation="postFeatureFlag"
     ;;
+    deleteIntegrationSubscription)
+    operation="deleteIntegrationSubscription"
+    ;;
+    getIntegrationSubscription)
+    operation="getIntegrationSubscription"
+    ;;
+    getIntegrationSubscriptions)
+    operation="getIntegrationSubscriptions"
+    ;;
+    getIntegrations)
+    operation="getIntegrations"
+    ;;
+    patchIntegrationSubscription)
+    operation="patchIntegrationSubscription"
+    ;;
+    postIntegrationSubscription)
+    operation="postIntegrationSubscription"
+    ;;
     deleteProject)
     operation="deleteProject"
     ;;
@@ -7824,6 +8310,24 @@ case $operation in
     ;;
     postFeatureFlag)
     call_postFeatureFlag
+    ;;
+    deleteIntegrationSubscription)
+    call_deleteIntegrationSubscription
+    ;;
+    getIntegrationSubscription)
+    call_getIntegrationSubscription
+    ;;
+    getIntegrationSubscriptions)
+    call_getIntegrationSubscriptions
+    ;;
+    getIntegrations)
+    call_getIntegrations
+    ;;
+    patchIntegrationSubscription)
+    call_patchIntegrationSubscription
+    ;;
+    postIntegrationSubscription)
+    call_postIntegrationSubscription
     ;;
     deleteProject)
     call_deleteProject

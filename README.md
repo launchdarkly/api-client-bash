@@ -144,6 +144,12 @@ Class | Method | HTTP request | Description
 *FeatureFlagsApi* | [**patchExpiringUserTargets**](docs/FeatureFlagsApi.md#patchexpiringusertargets) | **PATCH** /flags/{projectKey}/{featureFlagKey}/expiring-user-targets/{environmentKey} | Update, add, or delete expiring user targets on feature flag
 *FeatureFlagsApi* | [**patchFeatureFlag**](docs/FeatureFlagsApi.md#patchfeatureflag) | **PATCH** /flags/{projectKey}/{featureFlagKey} | Perform a partial update to a feature.
 *FeatureFlagsApi* | [**postFeatureFlag**](docs/FeatureFlagsApi.md#postfeatureflag) | **POST** /flags/{projectKey} | Creates a new feature flag.
+*IntegrationsApi* | [**deleteIntegrationSubscription**](docs/IntegrationsApi.md#deleteintegrationsubscription) | **DELETE** /integrations/{integrationKey}/{integrationId} | Delete an integration subscription by ID.
+*IntegrationsApi* | [**getIntegrationSubscription**](docs/IntegrationsApi.md#getintegrationsubscription) | **GET** /integrations/{integrationKey}/{integrationId} | Get a single integration subscription by ID.
+*IntegrationsApi* | [**getIntegrationSubscriptions**](docs/IntegrationsApi.md#getintegrationsubscriptions) | **GET** /integrations/{integrationKey} | Get a list of all configured integrations of a given kind.
+*IntegrationsApi* | [**getIntegrations**](docs/IntegrationsApi.md#getintegrations) | **GET** /integrations | Get a list of all configured audit log event integrations associated with this account.
+*IntegrationsApi* | [**patchIntegrationSubscription**](docs/IntegrationsApi.md#patchintegrationsubscription) | **PATCH** /integrations/{integrationKey}/{integrationId} | Modify an integration subscription by ID.
+*IntegrationsApi* | [**postIntegrationSubscription**](docs/IntegrationsApi.md#postintegrationsubscription) | **POST** /integrations/{integrationKey} | Create a new integration subscription of a given kind.
 *ProjectsApi* | [**deleteProject**](docs/ProjectsApi.md#deleteproject) | **DELETE** /projects/{projectKey} | Delete a project by key. Caution-- deleting a project will delete all associated environments and feature flags. You cannot delete the last project in an account.
 *ProjectsApi* | [**getProject**](docs/ProjectsApi.md#getproject) | **GET** /projects/{projectKey} | Fetch a single project by key.
 *ProjectsApi* | [**getProjects**](docs/ProjectsApi.md#getprojects) | **GET** /projects | Returns a list of all projects in the account.
@@ -227,7 +233,13 @@ Class | Method | HTTP request | Description
  - [FeatureFlagStatuses](docs/FeatureFlagStatuses.md)
  - [FeatureFlags](docs/FeatureFlags.md)
  - [FlagListItem](docs/FlagListItem.md)
+ - [HierarchicalLinks](docs/HierarchicalLinks.md)
  - [Id](docs/Id.md)
+ - [Integration](docs/Integration.md)
+ - [IntegrationSubscription](docs/IntegrationSubscription.md)
+ - [IntegrationSubscription__status](docs/IntegrationSubscription__status.md)
+ - [Integration__links](docs/Integration__links.md)
+ - [Integrations](docs/Integrations.md)
  - [Link](docs/Link.md)
  - [Links](docs/Links.md)
  - [MAU](docs/MAU.md)
@@ -267,6 +279,7 @@ Class | Method | HTTP request | Description
  - [StreamUsageMetadata](docs/StreamUsageMetadata.md)
  - [StreamUsageSeries](docs/StreamUsageSeries.md)
  - [Streams](docs/Streams.md)
+ - [SubscriptionBody](docs/SubscriptionBody.md)
  - [Target](docs/Target.md)
  - [Token](docs/Token.md)
  - [TokenBody](docs/TokenBody.md)
