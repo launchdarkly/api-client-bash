@@ -137,13 +137,18 @@ Class | Method | HTTP request | Description
 *FeatureFlagsApi* | [**deleteFeatureFlag**](docs/FeatureFlagsApi.md#deletefeatureflag) | **DELETE** /flags/{projectKey}/{featureFlagKey} | Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.
 *FeatureFlagsApi* | [**getExpiringUserTargets**](docs/FeatureFlagsApi.md#getexpiringusertargets) | **GET** /flags/{projectKey}/{featureFlagKey}/expiring-user-targets/{environmentKey} | Get expiring user targets for feature flag
 *FeatureFlagsApi* | [**getFeatureFlag**](docs/FeatureFlagsApi.md#getfeatureflag) | **GET** /flags/{projectKey}/{featureFlagKey} | Get a single feature flag by key.
+*FeatureFlagsApi* | [**getFeatureFlagChangeRequest**](docs/FeatureFlagsApi.md#getfeatureflagchangerequest) | **GET** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagChangeRequestId} | Get a single change request for a feature flag
+*FeatureFlagsApi* | [**getFeatureFlagChangeRequests**](docs/FeatureFlagsApi.md#getfeatureflagchangerequests) | **GET** /{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests | Get all change requests for a feature flag
 *FeatureFlagsApi* | [**getFeatureFlagStatus**](docs/FeatureFlagsApi.md#getfeatureflagstatus) | **GET** /flag-statuses/{projectKey}/{environmentKey}/{featureFlagKey} | Get the status for a particular feature flag.
 *FeatureFlagsApi* | [**getFeatureFlagStatusAcrossEnvironments**](docs/FeatureFlagsApi.md#getfeatureflagstatusacrossenvironments) | **GET** /flag-status/{projectKey}/{featureFlagKey} | Get the status for a particular feature flag across environments
 *FeatureFlagsApi* | [**getFeatureFlagStatuses**](docs/FeatureFlagsApi.md#getfeatureflagstatuses) | **GET** /flag-statuses/{projectKey}/{environmentKey} | Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.
 *FeatureFlagsApi* | [**getFeatureFlags**](docs/FeatureFlagsApi.md#getfeatureflags) | **GET** /flags/{projectKey} | Get a list of all features in the given project.
 *FeatureFlagsApi* | [**patchExpiringUserTargets**](docs/FeatureFlagsApi.md#patchexpiringusertargets) | **PATCH** /flags/{projectKey}/{featureFlagKey}/expiring-user-targets/{environmentKey} | Update, add, or delete expiring user targets on feature flag
 *FeatureFlagsApi* | [**patchFeatureFlag**](docs/FeatureFlagsApi.md#patchfeatureflag) | **PATCH** /flags/{projectKey}/{featureFlagKey} | Perform a partial update to a feature.
+*FeatureFlagsApi* | [**postApplyFeatureFlagChangeRequest**](docs/FeatureFlagsApi.md#postapplyfeatureflagchangerequest) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagChangeRequestId}/apply | Apply change request for a feature flag
 *FeatureFlagsApi* | [**postFeatureFlag**](docs/FeatureFlagsApi.md#postfeatureflag) | **POST** /flags/{projectKey} | Creates a new feature flag.
+*FeatureFlagsApi* | [**postFeatureFlagChangeRequest**](docs/FeatureFlagsApi.md#postfeatureflagchangerequest) | **POST** /{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests | 
+*FeatureFlagsApi* | [**postReviewFeatureFlagChangeRequest**](docs/FeatureFlagsApi.md#postreviewfeatureflagchangerequest) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagChangeRequestId}/review | Review change request for a feature flag
 *IntegrationsApi* | [**deleteIntegrationSubscription**](docs/IntegrationsApi.md#deleteintegrationsubscription) | **DELETE** /integrations/{integrationKey}/{integrationId} | Delete an integration subscription by ID.
 *IntegrationsApi* | [**getIntegrationSubscription**](docs/IntegrationsApi.md#getintegrationsubscription) | **GET** /integrations/{integrationKey}/{integrationId} | Get a single integration subscription by ID.
 *IntegrationsApi* | [**getIntegrationSubscriptions**](docs/IntegrationsApi.md#getintegrationsubscriptions) | **GET** /integrations/{integrationKey} | Get a list of all configured integrations of a given kind.
@@ -220,6 +225,13 @@ Class | Method | HTTP request | Description
  - [Fallthrough](docs/Fallthrough.md)
  - [FeatureFlag](docs/FeatureFlag.md)
  - [FeatureFlagBody](docs/FeatureFlagBody.md)
+ - [FeatureFlagChangeRequest](docs/FeatureFlagChangeRequest.md)
+ - [FeatureFlagChangeRequestApplyConfigBody](docs/FeatureFlagChangeRequestApplyConfigBody.md)
+ - [FeatureFlagChangeRequestConfigBody](docs/FeatureFlagChangeRequestConfigBody.md)
+ - [FeatureFlagChangeRequestReview](docs/FeatureFlagChangeRequestReview.md)
+ - [FeatureFlagChangeRequestReviewConfigBody](docs/FeatureFlagChangeRequestReviewConfigBody.md)
+ - [FeatureFlagChangeRequestReviewStatus](docs/FeatureFlagChangeRequestReviewStatus.md)
+ - [FeatureFlagChangeRequests](docs/FeatureFlagChangeRequests.md)
  - [FeatureFlagConfig](docs/FeatureFlagConfig.md)
  - [FeatureFlagCopyBody](docs/FeatureFlagCopyBody.md)
  - [FeatureFlagCopyObject](docs/FeatureFlagCopyObject.md)

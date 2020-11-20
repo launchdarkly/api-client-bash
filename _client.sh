@@ -328,13 +328,18 @@ case $state in
             "deleteFeatureFlag[Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.]" \
             "getExpiringUserTargets[Get expiring user targets for feature flag]" \
             "getFeatureFlag[Get a single feature flag by key.]" \
+            "getFeatureFlagChangeRequest[Get a single change request for a feature flag]" \
+            "getFeatureFlagChangeRequests[Get all change requests for a feature flag]" \
             "getFeatureFlagStatus[Get the status for a particular feature flag.]" \
             "getFeatureFlagStatusAcrossEnvironments[Get the status for a particular feature flag across environments]" \
             "getFeatureFlagStatuses[Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.]" \
             "getFeatureFlags[Get a list of all features in the given project.]" \
             "patchExpiringUserTargets[Update, add, or delete expiring user targets on feature flag]" \
             "patchFeatureFlag[Perform a partial update to a feature.]" \
-            "postFeatureFlag[Creates a new feature flag.]"             "deleteIntegrationSubscription[Delete an integration subscription by ID.]" \
+            "postApplyFeatureFlagChangeRequest[Apply change request for a feature flag]" \
+            "postFeatureFlag[Creates a new feature flag.]" \
+            "postFeatureFlagChangeRequest[]" \
+            "postReviewFeatureFlagChangeRequest[Review change request for a feature flag]"             "deleteIntegrationSubscription[Delete an integration subscription by ID.]" \
             "getIntegrationSubscription[Get a single integration subscription by ID.]" \
             "getIntegrationSubscriptions[Get a list of all configured integrations of a given kind.]" \
             "getIntegrations[Get a list of all configured audit log event integrations associated with this account.]" \
@@ -662,6 +667,25 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      getFeatureFlagChangeRequest)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"featureFlagChangeRequestId=:[PATH] The feature flag change request ID"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getFeatureFlagChangeRequests)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       getFeatureFlagStatus)
         local -a _op_arguments
         _op_arguments=(
@@ -721,12 +745,41 @@ case $state in
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      postApplyFeatureFlagChangeRequest)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"featureFlagChangeRequestId=:[PATH] The feature flag change request ID"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       postFeatureFlag)
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
           "clone=:[QUERY] The key of the feature flag to be cloned. The key identifies the flag in your code.  For example, setting clone&#x3D;flagKey will copy the full targeting configuration for all environments (including on/off state) from the original flag to the new flag."
           )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      postFeatureFlagChangeRequest)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      postReviewFeatureFlagChangeRequest)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"featureFlagChangeRequestId=:[PATH] The feature flag change request ID"
+                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       deleteIntegrationSubscription)
