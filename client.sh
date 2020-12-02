@@ -1083,7 +1083,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.9.0)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.9.1)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1319,7 +1319,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.9.0)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 3.9.1)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -1339,7 +1339,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 3.9.0)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 3.9.1)${OFF}"
     echo ""
 }
 
