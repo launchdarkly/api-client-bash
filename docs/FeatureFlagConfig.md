@@ -16,6 +16,8 @@ Name | Type | Description | Notes
 **prerequisites** | [**array[Prerequisite]**](Prerequisite.md) |  | [optional] [default to null]
 **trackEvents** | **boolean** |  | [optional] [default to null]
 **trackEventsFallthrough** | **boolean** |  | [optional] [default to null]
+**_site** | [**Site**](Site.md) |  | [optional] [default to null]
+**_environmentName** | **string** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
