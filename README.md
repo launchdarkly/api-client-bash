@@ -135,20 +135,21 @@ Class | Method | HTTP request | Description
 *EnvironmentsApi* | [**resetEnvironmentSDKKey**](docs/EnvironmentsApi.md#resetenvironmentsdkkey) | **POST** /projects/{projectKey}/environments/{environmentKey}/apiKey | Reset an environment&#39;s SDK key with an optional expiry time for the old key.
 *FeatureFlagsApi* | [**copyFeatureFlag**](docs/FeatureFlagsApi.md#copyfeatureflag) | **POST** /flags/{projectKey}/{featureFlagKey}/copy | Copies the feature flag configuration from one environment to the same feature flag in another environment.
 *FeatureFlagsApi* | [**deleteFeatureFlag**](docs/FeatureFlagsApi.md#deletefeatureflag) | **DELETE** /flags/{projectKey}/{featureFlagKey} | Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.
+*FeatureFlagsApi* | [**deleteFeatureFlagApprovalRequest**](docs/FeatureFlagsApi.md#deletefeatureflagapprovalrequest) | **DELETE** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId} | Delete an approval request for a feature flag
 *FeatureFlagsApi* | [**getExpiringUserTargets**](docs/FeatureFlagsApi.md#getexpiringusertargets) | **GET** /flags/{projectKey}/{featureFlagKey}/expiring-user-targets/{environmentKey} | Get expiring user targets for feature flag
 *FeatureFlagsApi* | [**getFeatureFlag**](docs/FeatureFlagsApi.md#getfeatureflag) | **GET** /flags/{projectKey}/{featureFlagKey} | Get a single feature flag by key.
-*FeatureFlagsApi* | [**getFeatureFlagChangeRequest**](docs/FeatureFlagsApi.md#getfeatureflagchangerequest) | **GET** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagChangeRequestId} | Get a single change request for a feature flag
-*FeatureFlagsApi* | [**getFeatureFlagChangeRequests**](docs/FeatureFlagsApi.md#getfeatureflagchangerequests) | **GET** /{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests | Get all change requests for a feature flag
+*FeatureFlagsApi* | [**getFeatureFlagApprovalRequest**](docs/FeatureFlagsApi.md#getfeatureflagapprovalrequest) | **GET** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId} | Get a single approval request for a feature flag
+*FeatureFlagsApi* | [**getFeatureFlagApprovalRequests**](docs/FeatureFlagsApi.md#getfeatureflagapprovalrequests) | **GET** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests | Get all approval requests for a feature flag
 *FeatureFlagsApi* | [**getFeatureFlagStatus**](docs/FeatureFlagsApi.md#getfeatureflagstatus) | **GET** /flag-statuses/{projectKey}/{environmentKey}/{featureFlagKey} | Get the status for a particular feature flag.
 *FeatureFlagsApi* | [**getFeatureFlagStatusAcrossEnvironments**](docs/FeatureFlagsApi.md#getfeatureflagstatusacrossenvironments) | **GET** /flag-status/{projectKey}/{featureFlagKey} | Get the status for a particular feature flag across environments
 *FeatureFlagsApi* | [**getFeatureFlagStatuses**](docs/FeatureFlagsApi.md#getfeatureflagstatuses) | **GET** /flag-statuses/{projectKey}/{environmentKey} | Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.
 *FeatureFlagsApi* | [**getFeatureFlags**](docs/FeatureFlagsApi.md#getfeatureflags) | **GET** /flags/{projectKey} | Get a list of all features in the given project.
 *FeatureFlagsApi* | [**patchExpiringUserTargets**](docs/FeatureFlagsApi.md#patchexpiringusertargets) | **PATCH** /flags/{projectKey}/{featureFlagKey}/expiring-user-targets/{environmentKey} | Update, add, or delete expiring user targets on feature flag
 *FeatureFlagsApi* | [**patchFeatureFlag**](docs/FeatureFlagsApi.md#patchfeatureflag) | **PATCH** /flags/{projectKey}/{featureFlagKey} | Perform a partial update to a feature.
-*FeatureFlagsApi* | [**postApplyFeatureFlagChangeRequest**](docs/FeatureFlagsApi.md#postapplyfeatureflagchangerequest) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagChangeRequestId}/apply | Apply change request for a feature flag
+*FeatureFlagsApi* | [**postApplyFeatureFlagApprovalRequest**](docs/FeatureFlagsApi.md#postapplyfeatureflagapprovalrequest) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId}/apply | Apply approval request for a feature flag
 *FeatureFlagsApi* | [**postFeatureFlag**](docs/FeatureFlagsApi.md#postfeatureflag) | **POST** /flags/{projectKey} | Creates a new feature flag.
-*FeatureFlagsApi* | [**postFeatureFlagChangeRequest**](docs/FeatureFlagsApi.md#postfeatureflagchangerequest) | **POST** /{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests | 
-*FeatureFlagsApi* | [**postReviewFeatureFlagChangeRequest**](docs/FeatureFlagsApi.md#postreviewfeatureflagchangerequest) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagChangeRequestId}/review | Review change request for a feature flag
+*FeatureFlagsApi* | [**postFeatureFlagApprovalRequest**](docs/FeatureFlagsApi.md#postfeatureflagapprovalrequest) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId} | Create an approval request for a feature flag
+*FeatureFlagsApi* | [**postReviewFeatureFlagApprovalRequest**](docs/FeatureFlagsApi.md#postreviewfeatureflagapprovalrequest) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId}/review | Review approval request for a feature flag
 *IntegrationsApi* | [**deleteIntegrationSubscription**](docs/IntegrationsApi.md#deleteintegrationsubscription) | **DELETE** /integrations/{integrationKey}/{integrationId} | Delete an integration subscription by ID.
 *IntegrationsApi* | [**getIntegrationSubscription**](docs/IntegrationsApi.md#getintegrationsubscription) | **GET** /integrations/{integrationKey}/{integrationId} | Get a single integration subscription by ID.
 *IntegrationsApi* | [**getIntegrationSubscriptions**](docs/IntegrationsApi.md#getintegrationsubscriptions) | **GET** /integrations/{integrationKey} | Get a list of all configured integrations of a given kind.
@@ -220,18 +221,19 @@ Class | Method | HTTP request | Description
  - [Destinations](docs/Destinations.md)
  - [Environment](docs/Environment.md)
  - [EnvironmentPost](docs/EnvironmentPost.md)
+ - [Environment_approvalSettings](docs/Environment_approvalSettings.md)
  - [EvaluationUsageError](docs/EvaluationUsageError.md)
  - [Events](docs/Events.md)
  - [Fallthrough](docs/Fallthrough.md)
  - [FeatureFlag](docs/FeatureFlag.md)
+ - [FeatureFlagApprovalRequest](docs/FeatureFlagApprovalRequest.md)
+ - [FeatureFlagApprovalRequestApplyConfigBody](docs/FeatureFlagApprovalRequestApplyConfigBody.md)
+ - [FeatureFlagApprovalRequestConfigBody](docs/FeatureFlagApprovalRequestConfigBody.md)
+ - [FeatureFlagApprovalRequestReview](docs/FeatureFlagApprovalRequestReview.md)
+ - [FeatureFlagApprovalRequestReviewConfigBody](docs/FeatureFlagApprovalRequestReviewConfigBody.md)
+ - [FeatureFlagApprovalRequestReviewStatus](docs/FeatureFlagApprovalRequestReviewStatus.md)
+ - [FeatureFlagApprovalRequests](docs/FeatureFlagApprovalRequests.md)
  - [FeatureFlagBody](docs/FeatureFlagBody.md)
- - [FeatureFlagChangeRequest](docs/FeatureFlagChangeRequest.md)
- - [FeatureFlagChangeRequestApplyConfigBody](docs/FeatureFlagChangeRequestApplyConfigBody.md)
- - [FeatureFlagChangeRequestConfigBody](docs/FeatureFlagChangeRequestConfigBody.md)
- - [FeatureFlagChangeRequestReview](docs/FeatureFlagChangeRequestReview.md)
- - [FeatureFlagChangeRequestReviewConfigBody](docs/FeatureFlagChangeRequestReviewConfigBody.md)
- - [FeatureFlagChangeRequestReviewStatus](docs/FeatureFlagChangeRequestReviewStatus.md)
- - [FeatureFlagChangeRequests](docs/FeatureFlagChangeRequests.md)
  - [FeatureFlagConfig](docs/FeatureFlagConfig.md)
  - [FeatureFlagCopyBody](docs/FeatureFlagCopyBody.md)
  - [FeatureFlagCopyObject](docs/FeatureFlagCopyObject.md)

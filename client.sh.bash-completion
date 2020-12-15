@@ -104,20 +104,21 @@ _()
     operations["resetEnvironmentSDKKey"]=1
     operations["copyFeatureFlag"]=1
     operations["deleteFeatureFlag"]=1
+    operations["deleteFeatureFlagApprovalRequest"]=1
     operations["getExpiringUserTargets"]=1
     operations["getFeatureFlag"]=1
-    operations["getFeatureFlagChangeRequest"]=1
-    operations["getFeatureFlagChangeRequests"]=1
+    operations["getFeatureFlagApprovalRequest"]=1
+    operations["getFeatureFlagApprovalRequests"]=1
     operations["getFeatureFlagStatus"]=1
     operations["getFeatureFlagStatusAcrossEnvironments"]=1
     operations["getFeatureFlagStatuses"]=1
     operations["getFeatureFlags"]=1
     operations["patchExpiringUserTargets"]=1
     operations["patchFeatureFlag"]=1
-    operations["postApplyFeatureFlagChangeRequest"]=1
+    operations["postApplyFeatureFlagApprovalRequest"]=1
     operations["postFeatureFlag"]=1
-    operations["postFeatureFlagChangeRequest"]=1
-    operations["postReviewFeatureFlagChangeRequest"]=1
+    operations["postFeatureFlagApprovalRequest"]=1
+    operations["postReviewFeatureFlagApprovalRequest"]=1
     operations["deleteIntegrationSubscription"]=1
     operations["getIntegrationSubscription"]=1
     operations["getIntegrationSubscriptions"]=1
@@ -204,20 +205,21 @@ _()
     operation_parameters["resetEnvironmentSDKKey"]="projectKey= environmentKey= expiry= "
     operation_parameters["copyFeatureFlag"]="projectKey= featureFlagKey= "
     operation_parameters["deleteFeatureFlag"]="projectKey= featureFlagKey= "
+    operation_parameters["deleteFeatureFlagApprovalRequest"]="projectKey= environmentKey= featureFlagKey= featureFlagApprovalRequestId= "
     operation_parameters["getExpiringUserTargets"]="projectKey= environmentKey= featureFlagKey= "
     operation_parameters["getFeatureFlag"]="projectKey= featureFlagKey= env= "
-    operation_parameters["getFeatureFlagChangeRequest"]="projectKey= featureFlagKey= environmentKey= featureFlagChangeRequestId= "
-    operation_parameters["getFeatureFlagChangeRequests"]="projectKey= featureFlagKey= environmentKey= "
+    operation_parameters["getFeatureFlagApprovalRequest"]="projectKey= featureFlagKey= environmentKey= featureFlagApprovalRequestId= "
+    operation_parameters["getFeatureFlagApprovalRequests"]="projectKey= featureFlagKey= environmentKey= "
     operation_parameters["getFeatureFlagStatus"]="projectKey= environmentKey= featureFlagKey= "
     operation_parameters["getFeatureFlagStatusAcrossEnvironments"]="projectKey= featureFlagKey= "
     operation_parameters["getFeatureFlagStatuses"]="projectKey= environmentKey= "
     operation_parameters["getFeatureFlags"]="projectKey= env= summary= archived= limit= offset= filter= sort= tag= "
     operation_parameters["patchExpiringUserTargets"]="projectKey= environmentKey= featureFlagKey= "
     operation_parameters["patchFeatureFlag"]="projectKey= featureFlagKey= "
-    operation_parameters["postApplyFeatureFlagChangeRequest"]="projectKey= featureFlagKey= environmentKey= featureFlagChangeRequestId= "
+    operation_parameters["postApplyFeatureFlagApprovalRequest"]="projectKey= featureFlagKey= environmentKey= featureFlagApprovalRequestId= "
     operation_parameters["postFeatureFlag"]="projectKey= clone= "
-    operation_parameters["postFeatureFlagChangeRequest"]="projectKey= featureFlagKey= environmentKey= "
-    operation_parameters["postReviewFeatureFlagChangeRequest"]="projectKey= featureFlagKey= environmentKey= featureFlagChangeRequestId= "
+    operation_parameters["postFeatureFlagApprovalRequest"]="projectKey= featureFlagKey= environmentKey= featureFlagApprovalRequestId= "
+    operation_parameters["postReviewFeatureFlagApprovalRequest"]="projectKey= featureFlagKey= environmentKey= featureFlagApprovalRequestId= "
     operation_parameters["deleteIntegrationSubscription"]="integrationKey= integrationId= "
     operation_parameters["getIntegrationSubscription"]="integrationKey= integrationId= "
     operation_parameters["getIntegrationSubscriptions"]="integrationKey= "

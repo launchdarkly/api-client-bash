@@ -6,20 +6,21 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**copyFeatureFlag**](FeatureFlagsApi.md#copyFeatureFlag) | **POST** /flags/{projectKey}/{featureFlagKey}/copy | Copies the feature flag configuration from one environment to the same feature flag in another environment.
 [**deleteFeatureFlag**](FeatureFlagsApi.md#deleteFeatureFlag) | **DELETE** /flags/{projectKey}/{featureFlagKey} | Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.
+[**deleteFeatureFlagApprovalRequest**](FeatureFlagsApi.md#deleteFeatureFlagApprovalRequest) | **DELETE** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId} | Delete an approval request for a feature flag
 [**getExpiringUserTargets**](FeatureFlagsApi.md#getExpiringUserTargets) | **GET** /flags/{projectKey}/{featureFlagKey}/expiring-user-targets/{environmentKey} | Get expiring user targets for feature flag
 [**getFeatureFlag**](FeatureFlagsApi.md#getFeatureFlag) | **GET** /flags/{projectKey}/{featureFlagKey} | Get a single feature flag by key.
-[**getFeatureFlagChangeRequest**](FeatureFlagsApi.md#getFeatureFlagChangeRequest) | **GET** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagChangeRequestId} | Get a single change request for a feature flag
-[**getFeatureFlagChangeRequests**](FeatureFlagsApi.md#getFeatureFlagChangeRequests) | **GET** /{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests | Get all change requests for a feature flag
+[**getFeatureFlagApprovalRequest**](FeatureFlagsApi.md#getFeatureFlagApprovalRequest) | **GET** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId} | Get a single approval request for a feature flag
+[**getFeatureFlagApprovalRequests**](FeatureFlagsApi.md#getFeatureFlagApprovalRequests) | **GET** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests | Get all approval requests for a feature flag
 [**getFeatureFlagStatus**](FeatureFlagsApi.md#getFeatureFlagStatus) | **GET** /flag-statuses/{projectKey}/{environmentKey}/{featureFlagKey} | Get the status for a particular feature flag.
 [**getFeatureFlagStatusAcrossEnvironments**](FeatureFlagsApi.md#getFeatureFlagStatusAcrossEnvironments) | **GET** /flag-status/{projectKey}/{featureFlagKey} | Get the status for a particular feature flag across environments
 [**getFeatureFlagStatuses**](FeatureFlagsApi.md#getFeatureFlagStatuses) | **GET** /flag-statuses/{projectKey}/{environmentKey} | Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.
 [**getFeatureFlags**](FeatureFlagsApi.md#getFeatureFlags) | **GET** /flags/{projectKey} | Get a list of all features in the given project.
 [**patchExpiringUserTargets**](FeatureFlagsApi.md#patchExpiringUserTargets) | **PATCH** /flags/{projectKey}/{featureFlagKey}/expiring-user-targets/{environmentKey} | Update, add, or delete expiring user targets on feature flag
 [**patchFeatureFlag**](FeatureFlagsApi.md#patchFeatureFlag) | **PATCH** /flags/{projectKey}/{featureFlagKey} | Perform a partial update to a feature.
-[**postApplyFeatureFlagChangeRequest**](FeatureFlagsApi.md#postApplyFeatureFlagChangeRequest) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagChangeRequestId}/apply | Apply change request for a feature flag
+[**postApplyFeatureFlagApprovalRequest**](FeatureFlagsApi.md#postApplyFeatureFlagApprovalRequest) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId}/apply | Apply approval request for a feature flag
 [**postFeatureFlag**](FeatureFlagsApi.md#postFeatureFlag) | **POST** /flags/{projectKey} | Creates a new feature flag.
-[**postFeatureFlagChangeRequest**](FeatureFlagsApi.md#postFeatureFlagChangeRequest) | **POST** /{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests | 
-[**postReviewFeatureFlagChangeRequest**](FeatureFlagsApi.md#postReviewFeatureFlagChangeRequest) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagChangeRequestId}/review | Review change request for a feature flag
+[**postFeatureFlagApprovalRequest**](FeatureFlagsApi.md#postFeatureFlagApprovalRequest) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId} | Create an approval request for a feature flag
+[**postReviewFeatureFlagApprovalRequest**](FeatureFlagsApi.md#postReviewFeatureFlagApprovalRequest) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId}/review | Review approval request for a feature flag
 
 
 ## **copyFeatureFlag**
@@ -69,6 +70,40 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
  **featureFlagKey** | **string** | The feature flag's key. The key identifies the flag in your code. |
+
+### Return type
+
+(empty response body)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+## **deleteFeatureFlagApprovalRequest**
+
+Delete an approval request for a feature flag
+
+### Example
+```bash
+ deleteFeatureFlagApprovalRequest projectKey=value environmentKey=value featureFlagKey=value featureFlagApprovalRequestId=value
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
+ **environmentKey** | **string** | The environment key, used to tie together flag configuration and users under one environment so they can be managed together. |
+ **featureFlagKey** | **string** | The feature flag's key. The key identifies the flag in your code. |
+ **featureFlagApprovalRequestId** | **string** | The feature flag approval request ID |
+ **featureFlagApprovalRequestConfigBody** | [**FeatureFlagApprovalRequestConfigBody**](FeatureFlagApprovalRequestConfigBody.md) | Create a new feature flag approval request | [optional]
 
 ### Return type
 
@@ -149,13 +184,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## **getFeatureFlagChangeRequest**
+## **getFeatureFlagApprovalRequest**
 
-Get a single change request for a feature flag
+Get a single approval request for a feature flag
 
 ### Example
 ```bash
- getFeatureFlagChangeRequest projectKey=value featureFlagKey=value environmentKey=value featureFlagChangeRequestId=value
+ getFeatureFlagApprovalRequest projectKey=value featureFlagKey=value environmentKey=value featureFlagApprovalRequestId=value
 ```
 
 ### Parameters
@@ -165,11 +200,11 @@ Name | Type | Description  | Notes
  **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
  **featureFlagKey** | **string** | The feature flag's key. The key identifies the flag in your code. |
  **environmentKey** | **string** | The environment key, used to tie together flag configuration and users under one environment so they can be managed together. |
- **featureFlagChangeRequestId** | **string** | The feature flag change request ID |
+ **featureFlagApprovalRequestId** | **string** | The feature flag approval request ID |
 
 ### Return type
 
-[**FeatureFlagChangeRequests**](FeatureFlagChangeRequests.md)
+[**FeatureFlagApprovalRequests**](FeatureFlagApprovalRequests.md)
 
 ### Authorization
 
@@ -182,13 +217,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## **getFeatureFlagChangeRequests**
+## **getFeatureFlagApprovalRequests**
 
-Get all change requests for a feature flag
+Get all approval requests for a feature flag
 
 ### Example
 ```bash
- getFeatureFlagChangeRequests projectKey=value featureFlagKey=value environmentKey=value
+ getFeatureFlagApprovalRequests projectKey=value featureFlagKey=value environmentKey=value
 ```
 
 ### Parameters
@@ -201,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FeatureFlagChangeRequests**](FeatureFlagChangeRequests.md)
+[**FeatureFlagApprovalRequests**](FeatureFlagApprovalRequests.md)
 
 ### Authorization
 
@@ -411,13 +446,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## **postApplyFeatureFlagChangeRequest**
+## **postApplyFeatureFlagApprovalRequest**
 
-Apply change request for a feature flag
+Apply approval request for a feature flag
 
 ### Example
 ```bash
- postApplyFeatureFlagChangeRequest projectKey=value featureFlagKey=value environmentKey=value featureFlagChangeRequestId=value
+ postApplyFeatureFlagApprovalRequest projectKey=value featureFlagKey=value environmentKey=value featureFlagApprovalRequestId=value
 ```
 
 ### Parameters
@@ -427,12 +462,12 @@ Name | Type | Description  | Notes
  **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
  **featureFlagKey** | **string** | The feature flag's key. The key identifies the flag in your code. |
  **environmentKey** | **string** | The environment key, used to tie together flag configuration and users under one environment so they can be managed together. |
- **featureFlagChangeRequestId** | **string** | The feature flag change request ID |
- **featureFlagChangeRequestApplyConfigBody** | [**FeatureFlagChangeRequestApplyConfigBody**](FeatureFlagChangeRequestApplyConfigBody.md) | Apply a new feature flag change request |
+ **featureFlagApprovalRequestId** | **string** | The feature flag approval request ID |
+ **featureFlagApprovalRequestApplyConfigBody** | [**FeatureFlagApprovalRequestApplyConfigBody**](FeatureFlagApprovalRequestApplyConfigBody.md) | Apply a new feature flag approval request |
 
 ### Return type
 
-[**FeatureFlagChangeRequests**](FeatureFlagChangeRequests.md)
+[**FeatureFlagApprovalRequests**](FeatureFlagApprovalRequests.md)
 
 ### Authorization
 
@@ -477,13 +512,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## **postFeatureFlagChangeRequest**
+## **postFeatureFlagApprovalRequest**
 
-
+Create an approval request for a feature flag
 
 ### Example
 ```bash
- postFeatureFlagChangeRequest projectKey=value featureFlagKey=value environmentKey=value
+ postFeatureFlagApprovalRequest projectKey=value featureFlagKey=value environmentKey=value featureFlagApprovalRequestId=value
 ```
 
 ### Parameters
@@ -493,11 +528,12 @@ Name | Type | Description  | Notes
  **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
  **featureFlagKey** | **string** | The feature flag's key. The key identifies the flag in your code. |
  **environmentKey** | **string** | The environment key, used to tie together flag configuration and users under one environment so they can be managed together. |
- **featureFlagChangeRequestConfigBody** | [**FeatureFlagChangeRequestConfigBody**](FeatureFlagChangeRequestConfigBody.md) | Create a new feature flag change request | [optional]
+ **featureFlagApprovalRequestId** | **string** | The feature flag approval request ID |
+ **featureFlagApprovalRequestConfigBody** | [**FeatureFlagApprovalRequestConfigBody**](FeatureFlagApprovalRequestConfigBody.md) | Create a new feature flag approval request | [optional]
 
 ### Return type
 
-[**FeatureFlagChangeRequest**](FeatureFlagChangeRequest.md)
+[**FeatureFlagApprovalRequest**](FeatureFlagApprovalRequest.md)
 
 ### Authorization
 
@@ -510,13 +546,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## **postReviewFeatureFlagChangeRequest**
+## **postReviewFeatureFlagApprovalRequest**
 
-Review change request for a feature flag
+Review approval request for a feature flag
 
 ### Example
 ```bash
- postReviewFeatureFlagChangeRequest projectKey=value featureFlagKey=value environmentKey=value featureFlagChangeRequestId=value
+ postReviewFeatureFlagApprovalRequest projectKey=value featureFlagKey=value environmentKey=value featureFlagApprovalRequestId=value
 ```
 
 ### Parameters
@@ -526,12 +562,12 @@ Name | Type | Description  | Notes
  **projectKey** | **string** | The project key, used to tie the flags together under one project so they can be managed together. |
  **featureFlagKey** | **string** | The feature flag's key. The key identifies the flag in your code. |
  **environmentKey** | **string** | The environment key, used to tie together flag configuration and users under one environment so they can be managed together. |
- **featureFlagChangeRequestId** | **string** | The feature flag change request ID |
- **featureFlagChangeRequestReviewConfigBody** | [**FeatureFlagChangeRequestReviewConfigBody**](FeatureFlagChangeRequestReviewConfigBody.md) | Review a feature flag change request |
+ **featureFlagApprovalRequestId** | **string** | The feature flag approval request ID |
+ **featureFlagApprovalRequestReviewConfigBody** | [**FeatureFlagApprovalRequestReviewConfigBody**](FeatureFlagApprovalRequestReviewConfigBody.md) | Review a feature flag approval request |
 
 ### Return type
 
-[**FeatureFlagChangeRequests**](FeatureFlagChangeRequests.md)
+[**FeatureFlagApprovalRequests**](FeatureFlagApprovalRequests.md)
 
 ### Authorization
 
