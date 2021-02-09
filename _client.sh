@@ -325,22 +325,28 @@ case $state in
             "postEnvironment[Create a new environment in a specified project with a given name, key, and swatch color.]" \
             "resetEnvironmentMobileKey[Reset an environment's mobile key. The optional expiry for the old key is deprecated for this endpoint, so the old key will always expire immediately.]" \
             "resetEnvironmentSDKKey[Reset an environment's SDK key with an optional expiry time for the old key.]"             "copyFeatureFlag[Copies the feature flag configuration from one environment to the same feature flag in another environment.]" \
+            "deleteApprovalRequest[Delete an approval request for a feature flag config]" \
             "deleteFeatureFlag[Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.]" \
-            "deleteFeatureFlagApprovalRequest[Delete an approval request for a feature flag]" \
+            "deleteFlagConfigScheduledChanges[Delete a scheduled change on a feature flag in an environment.]" \
+            "getApprovalRequest[Get a single approval request for a feature flag config]" \
+            "getApprovalRequests[Get all approval requests for a feature flag config]" \
             "getExpiringUserTargets[Get expiring user targets for feature flag]" \
             "getFeatureFlag[Get a single feature flag by key.]" \
-            "getFeatureFlagApprovalRequest[Get a single approval request for a feature flag]" \
-            "getFeatureFlagApprovalRequests[Get all approval requests for a feature flag]" \
             "getFeatureFlagStatus[Get the status for a particular feature flag.]" \
             "getFeatureFlagStatusAcrossEnvironments[Get the status for a particular feature flag across environments]" \
             "getFeatureFlagStatuses[Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.]" \
             "getFeatureFlags[Get a list of all features in the given project.]" \
+            "getFlagConfigScheduledChange[Get a scheduled change on a feature flag by id.]" \
+            "getFlagConfigScheduledChanges[Get all scheduled workflows for a feature flag by key.]" \
+            "getFlagConfigScheduledChangesConflicts[Lists conflicts between the given instructions and any existing scheduled changes for the feature flag. The actual HTTP verb should be REPORT, not POST.]" \
             "patchExpiringUserTargets[Update, add, or delete expiring user targets on feature flag]" \
             "patchFeatureFlag[Perform a partial update to a feature.]" \
-            "postApplyFeatureFlagApprovalRequest[Apply approval request for a feature flag]" \
+            "patchFlagConfigScheduledChange[Updates an existing scheduled-change on a feature flag in an environment.]" \
+            "postApplyApprovalRequest[Apply approval request for a feature flag config]" \
+            "postApprovalRequest[Create an approval request for a feature flag config]" \
             "postFeatureFlag[Creates a new feature flag.]" \
-            "postFeatureFlagApprovalRequest[Create an approval request for a feature flag]" \
-            "postReviewFeatureFlagApprovalRequest[Review approval request for a feature flag]"             "deleteIntegrationSubscription[Delete an integration subscription by ID.]" \
+            "postFlagConfigScheduledChanges[Creates a new scheduled change for a feature flag.]" \
+            "postReviewApprovalRequest[Review approval request for a feature flag config]"             "deleteIntegrationSubscription[Delete an integration subscription by ID.]" \
             "getIntegrationSubscription[Get a single integration subscription by ID.]" \
             "getIntegrationSubscriptions[Get a list of all configured integrations of a given kind.]" \
             "getIntegrations[Get a list of all configured audit log event integrations associated with this account.]" \
@@ -359,7 +365,7 @@ case $state in
             "getMember[Get a single team member by ID.]" \
             "getMembers[Returns a list of all members in the account.]" \
             "patchMember[Modify a team member by ID.]" \
-            "postMembers[Invite new members.]"             "deleteUserSegment[Delete a user segment.]" \
+            "postMembers[Invite new members.]"             "getUser[Get a user by key.]"             "deleteUserSegment[Delete a user segment.]" \
             "getExpiringUserTargetsOnSegment[Get expiring user targets for user segment]" \
             "getUserSegment[Get a single user segment by key.]" \
             "getUserSegments[Get a list of all user segments in the given project.]" \
@@ -372,7 +378,6 @@ case $state in
             "patchExpiringUserTargetsForFlags[Update, add, or delete expiring user targets for a single user on all flags]" \
             "putFlagSetting[Specifically enable or disable a feature flag for a user based on their key.]"             "deleteUser[Delete a user by ID.]" \
             "getSearchUsers[Search users in LaunchDarkly based on their last active date, or a search query. It should not be used to enumerate all users in LaunchDarkly-- use the List users API resource.]" \
-            "getUser[Get a user by key.]" \
             "getUsers[List all users in the environment. Includes the total count of users. In each page, there will be up to 'limit' users returned (default 20). This is useful for exporting all users in the system for further analysis. Paginated collections will include a next link containing a URL with the next set of elements in the collection.]"             "deleteWebhook[Delete a webhook by ID.]" \
             "getWebhook[Get a webhook by ID.]" \
             "getWebhooks[Fetch a list of all webhooks.]" \
@@ -642,6 +647,16 @@ case $state in
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      deleteApprovalRequest)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
+"approvalRequestId=:[PATH] The approval request ID"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       deleteFeatureFlag)
         local -a _op_arguments
         _op_arguments=(
@@ -650,13 +665,32 @@ case $state in
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      deleteFeatureFlagApprovalRequest)
+      deleteFlagConfigScheduledChanges)
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
 "featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
-"featureFlagApprovalRequestId=:[PATH] The feature flag approval request ID"
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"scheduledChangeId=:[PATH] The id of the scheduled change"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getApprovalRequest)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"approvalRequestId=:[PATH] The approval request ID"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getApprovalRequests)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -676,25 +710,6 @@ case $state in
 "featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
           "env=:[QUERY] By default, each feature will include configurations for each environment. You can filter environments with the env query parameter. For example, setting env&#x3D;[\&quot;production\&quot;] will restrict the returned configurations to just your production environment."
           )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getFeatureFlagApprovalRequest)
-        local -a _op_arguments
-        _op_arguments=(
-          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
-"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
-"featureFlagApprovalRequestId=:[PATH] The feature flag approval request ID"
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getFeatureFlagApprovalRequests)
-        local -a _op_arguments
-        _op_arguments=(
-          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
-"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
-                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       getFeatureFlagStatus)
@@ -739,6 +754,34 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      getFlagConfigScheduledChange)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"scheduledChangeId=:[PATH] The id of the scheduled change"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getFlagConfigScheduledChanges)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getFlagConfigScheduledChangesConflicts)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       patchExpiringUserTargets)
         local -a _op_arguments
         _op_arguments=(
@@ -756,13 +799,33 @@ case $state in
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      postApplyFeatureFlagApprovalRequest)
+      patchFlagConfigScheduledChange)
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
 "environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
-"featureFlagApprovalRequestId=:[PATH] The feature flag approval request ID"
+"scheduledChangeId=:[PATH] The id of the scheduled change"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      postApplyApprovalRequest)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"approvalRequestId=:[PATH] The approval request ID"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      postApprovalRequest)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"approvalRequestId=:[PATH] The approval request ID"
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -774,23 +837,22 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      postFeatureFlagApprovalRequest)
+      postFlagConfigScheduledChanges)
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
 "environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
-"featureFlagApprovalRequestId=:[PATH] The feature flag approval request ID"
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      postReviewFeatureFlagApprovalRequest)
+      postReviewApprovalRequest)
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
 "featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
 "environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
-"featureFlagApprovalRequestId=:[PATH] The feature flag approval request ID"
+"approvalRequestId=:[PATH] The approval request ID"
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -961,6 +1023,15 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      getUser)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"userKey=:[PATH] The user&#39;s key."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       deleteUserSegment)
         local -a _op_arguments
         _op_arguments=(
@@ -1098,15 +1169,6 @@ case $state in
 "offset=:[QUERY] Specifies the first item to return in the collection."
 "after=:[QUERY] A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have occurred after this timestamp."
           )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
-      getUser)
-        local -a _op_arguments
-        _op_arguments=(
-          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
-"userKey=:[PATH] The user&#39;s key."
-                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       getUsers)

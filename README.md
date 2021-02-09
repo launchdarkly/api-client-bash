@@ -134,22 +134,28 @@ Class | Method | HTTP request | Description
 *EnvironmentsApi* | [**resetEnvironmentMobileKey**](docs/EnvironmentsApi.md#resetenvironmentmobilekey) | **POST** /projects/{projectKey}/environments/{environmentKey}/mobileKey | Reset an environment&#39;s mobile key. The optional expiry for the old key is deprecated for this endpoint, so the old key will always expire immediately.
 *EnvironmentsApi* | [**resetEnvironmentSDKKey**](docs/EnvironmentsApi.md#resetenvironmentsdkkey) | **POST** /projects/{projectKey}/environments/{environmentKey}/apiKey | Reset an environment&#39;s SDK key with an optional expiry time for the old key.
 *FeatureFlagsApi* | [**copyFeatureFlag**](docs/FeatureFlagsApi.md#copyfeatureflag) | **POST** /flags/{projectKey}/{featureFlagKey}/copy | Copies the feature flag configuration from one environment to the same feature flag in another environment.
+*FeatureFlagsApi* | [**deleteApprovalRequest**](docs/FeatureFlagsApi.md#deleteapprovalrequest) | **DELETE** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{approvalRequestId} | Delete an approval request for a feature flag config
 *FeatureFlagsApi* | [**deleteFeatureFlag**](docs/FeatureFlagsApi.md#deletefeatureflag) | **DELETE** /flags/{projectKey}/{featureFlagKey} | Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.
-*FeatureFlagsApi* | [**deleteFeatureFlagApprovalRequest**](docs/FeatureFlagsApi.md#deletefeatureflagapprovalrequest) | **DELETE** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId} | Delete an approval request for a feature flag
+*FeatureFlagsApi* | [**deleteFlagConfigScheduledChanges**](docs/FeatureFlagsApi.md#deleteflagconfigscheduledchanges) | **DELETE** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/scheduled-changes/{scheduledChangeId} | Delete a scheduled change on a feature flag in an environment.
+*FeatureFlagsApi* | [**getApprovalRequest**](docs/FeatureFlagsApi.md#getapprovalrequest) | **GET** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{approvalRequestId} | Get a single approval request for a feature flag config
+*FeatureFlagsApi* | [**getApprovalRequests**](docs/FeatureFlagsApi.md#getapprovalrequests) | **GET** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests | Get all approval requests for a feature flag config
 *FeatureFlagsApi* | [**getExpiringUserTargets**](docs/FeatureFlagsApi.md#getexpiringusertargets) | **GET** /flags/{projectKey}/{featureFlagKey}/expiring-user-targets/{environmentKey} | Get expiring user targets for feature flag
 *FeatureFlagsApi* | [**getFeatureFlag**](docs/FeatureFlagsApi.md#getfeatureflag) | **GET** /flags/{projectKey}/{featureFlagKey} | Get a single feature flag by key.
-*FeatureFlagsApi* | [**getFeatureFlagApprovalRequest**](docs/FeatureFlagsApi.md#getfeatureflagapprovalrequest) | **GET** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId} | Get a single approval request for a feature flag
-*FeatureFlagsApi* | [**getFeatureFlagApprovalRequests**](docs/FeatureFlagsApi.md#getfeatureflagapprovalrequests) | **GET** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests | Get all approval requests for a feature flag
 *FeatureFlagsApi* | [**getFeatureFlagStatus**](docs/FeatureFlagsApi.md#getfeatureflagstatus) | **GET** /flag-statuses/{projectKey}/{environmentKey}/{featureFlagKey} | Get the status for a particular feature flag.
 *FeatureFlagsApi* | [**getFeatureFlagStatusAcrossEnvironments**](docs/FeatureFlagsApi.md#getfeatureflagstatusacrossenvironments) | **GET** /flag-status/{projectKey}/{featureFlagKey} | Get the status for a particular feature flag across environments
 *FeatureFlagsApi* | [**getFeatureFlagStatuses**](docs/FeatureFlagsApi.md#getfeatureflagstatuses) | **GET** /flag-statuses/{projectKey}/{environmentKey} | Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag.
 *FeatureFlagsApi* | [**getFeatureFlags**](docs/FeatureFlagsApi.md#getfeatureflags) | **GET** /flags/{projectKey} | Get a list of all features in the given project.
+*FeatureFlagsApi* | [**getFlagConfigScheduledChange**](docs/FeatureFlagsApi.md#getflagconfigscheduledchange) | **GET** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/scheduled-changes/{scheduledChangeId} | Get a scheduled change on a feature flag by id.
+*FeatureFlagsApi* | [**getFlagConfigScheduledChanges**](docs/FeatureFlagsApi.md#getflagconfigscheduledchanges) | **GET** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/scheduled-changes | Get all scheduled workflows for a feature flag by key.
+*FeatureFlagsApi* | [**getFlagConfigScheduledChangesConflicts**](docs/FeatureFlagsApi.md#getflagconfigscheduledchangesconflicts) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/scheduled-changes-conflicts | Lists conflicts between the given instructions and any existing scheduled changes for the feature flag. The actual HTTP verb should be REPORT, not POST.
 *FeatureFlagsApi* | [**patchExpiringUserTargets**](docs/FeatureFlagsApi.md#patchexpiringusertargets) | **PATCH** /flags/{projectKey}/{featureFlagKey}/expiring-user-targets/{environmentKey} | Update, add, or delete expiring user targets on feature flag
 *FeatureFlagsApi* | [**patchFeatureFlag**](docs/FeatureFlagsApi.md#patchfeatureflag) | **PATCH** /flags/{projectKey}/{featureFlagKey} | Perform a partial update to a feature.
-*FeatureFlagsApi* | [**postApplyFeatureFlagApprovalRequest**](docs/FeatureFlagsApi.md#postapplyfeatureflagapprovalrequest) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId}/apply | Apply approval request for a feature flag
+*FeatureFlagsApi* | [**patchFlagConfigScheduledChange**](docs/FeatureFlagsApi.md#patchflagconfigscheduledchange) | **PATCH** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/scheduled-changes/{scheduledChangeId} | Updates an existing scheduled-change on a feature flag in an environment.
+*FeatureFlagsApi* | [**postApplyApprovalRequest**](docs/FeatureFlagsApi.md#postapplyapprovalrequest) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{approvalRequestId}/apply | Apply approval request for a feature flag config
+*FeatureFlagsApi* | [**postApprovalRequest**](docs/FeatureFlagsApi.md#postapprovalrequest) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{approvalRequestId} | Create an approval request for a feature flag config
 *FeatureFlagsApi* | [**postFeatureFlag**](docs/FeatureFlagsApi.md#postfeatureflag) | **POST** /flags/{projectKey} | Creates a new feature flag.
-*FeatureFlagsApi* | [**postFeatureFlagApprovalRequest**](docs/FeatureFlagsApi.md#postfeatureflagapprovalrequest) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId} | Create an approval request for a feature flag
-*FeatureFlagsApi* | [**postReviewFeatureFlagApprovalRequest**](docs/FeatureFlagsApi.md#postreviewfeatureflagapprovalrequest) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId}/review | Review approval request for a feature flag
+*FeatureFlagsApi* | [**postFlagConfigScheduledChanges**](docs/FeatureFlagsApi.md#postflagconfigscheduledchanges) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/scheduled-changes | Creates a new scheduled change for a feature flag.
+*FeatureFlagsApi* | [**postReviewApprovalRequest**](docs/FeatureFlagsApi.md#postreviewapprovalrequest) | **POST** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{approvalRequestId}/review | Review approval request for a feature flag config
 *IntegrationsApi* | [**deleteIntegrationSubscription**](docs/IntegrationsApi.md#deleteintegrationsubscription) | **DELETE** /integrations/{integrationKey}/{integrationId} | Delete an integration subscription by ID.
 *IntegrationsApi* | [**getIntegrationSubscription**](docs/IntegrationsApi.md#getintegrationsubscription) | **GET** /integrations/{integrationKey}/{integrationId} | Get a single integration subscription by ID.
 *IntegrationsApi* | [**getIntegrationSubscriptions**](docs/IntegrationsApi.md#getintegrationsubscriptions) | **GET** /integrations/{integrationKey} | Get a list of all configured integrations of a given kind.
@@ -174,6 +180,7 @@ Class | Method | HTTP request | Description
 *TeamMembersApi* | [**getMembers**](docs/TeamMembersApi.md#getmembers) | **GET** /members | Returns a list of all members in the account.
 *TeamMembersApi* | [**patchMember**](docs/TeamMembersApi.md#patchmember) | **PATCH** /members/{memberId} | Modify a team member by ID.
 *TeamMembersApi* | [**postMembers**](docs/TeamMembersApi.md#postmembers) | **POST** /members | Invite new members.
+*UserRecordApi* | [**getUser**](docs/UserRecordApi.md#getuser) | **GET** /users/{projectKey}/{environmentKey}/{userKey} | Get a user by key.
 *UserSegmentsApi* | [**deleteUserSegment**](docs/UserSegmentsApi.md#deleteusersegment) | **DELETE** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Delete a user segment.
 *UserSegmentsApi* | [**getExpiringUserTargetsOnSegment**](docs/UserSegmentsApi.md#getexpiringusertargetsonsegment) | **GET** /segments/{projectKey}/{userSegmentKey}/expiring-user-targets/{environmentKey} | Get expiring user targets for user segment
 *UserSegmentsApi* | [**getUserSegment**](docs/UserSegmentsApi.md#getusersegment) | **GET** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Get a single user segment by key.
@@ -189,7 +196,6 @@ Class | Method | HTTP request | Description
 *UserSettingsApi* | [**putFlagSetting**](docs/UserSettingsApi.md#putflagsetting) | **PUT** /users/{projectKey}/{environmentKey}/{userKey}/flags/{featureFlagKey} | Specifically enable or disable a feature flag for a user based on their key.
 *UsersApi* | [**deleteUser**](docs/UsersApi.md#deleteuser) | **DELETE** /users/{projectKey}/{environmentKey}/{userKey} | Delete a user by ID.
 *UsersApi* | [**getSearchUsers**](docs/UsersApi.md#getsearchusers) | **GET** /user-search/{projectKey}/{environmentKey} | Search users in LaunchDarkly based on their last active date, or a search query. It should not be used to enumerate all users in LaunchDarkly-- use the List users API resource.
-*UsersApi* | [**getUser**](docs/UsersApi.md#getuser) | **GET** /users/{projectKey}/{environmentKey}/{userKey} | Get a user by key.
 *UsersApi* | [**getUsers**](docs/UsersApi.md#getusers) | **GET** /users/{projectKey}/{environmentKey} | List all users in the environment. Includes the total count of users. In each page, there will be up to &#39;limit&#39; users returned (default 20). This is useful for exporting all users in the system for further analysis. Paginated collections will include a next link containing a URL with the next set of elements in the collection.
 *WebhooksApi* | [**deleteWebhook**](docs/WebhooksApi.md#deletewebhook) | **DELETE** /webhooks/{resourceId} | Delete a webhook by ID.
 *WebhooksApi* | [**getWebhook**](docs/WebhooksApi.md#getwebhook) | **GET** /webhooks/{resourceId} | Get a webhook by ID.
@@ -200,6 +206,13 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [ApprovalRequest](docs/ApprovalRequest.md)
+ - [ApprovalRequestApplyConfigBody](docs/ApprovalRequestApplyConfigBody.md)
+ - [ApprovalRequestConfigBody](docs/ApprovalRequestConfigBody.md)
+ - [ApprovalRequestReview](docs/ApprovalRequestReview.md)
+ - [ApprovalRequestReviewConfigBody](docs/ApprovalRequestReviewConfigBody.md)
+ - [ApprovalRequestReviewStatus](docs/ApprovalRequestReviewStatus.md)
+ - [ApprovalRequests](docs/ApprovalRequests.md)
  - [AuditLogEntries](docs/AuditLogEntries.md)
  - [AuditLogEntry](docs/AuditLogEntry.md)
  - [AuditLogEntry_target](docs/AuditLogEntry_target.md)
@@ -226,13 +239,6 @@ Class | Method | HTTP request | Description
  - [Events](docs/Events.md)
  - [Fallthrough](docs/Fallthrough.md)
  - [FeatureFlag](docs/FeatureFlag.md)
- - [FeatureFlagApprovalRequest](docs/FeatureFlagApprovalRequest.md)
- - [FeatureFlagApprovalRequestApplyConfigBody](docs/FeatureFlagApprovalRequestApplyConfigBody.md)
- - [FeatureFlagApprovalRequestConfigBody](docs/FeatureFlagApprovalRequestConfigBody.md)
- - [FeatureFlagApprovalRequestReview](docs/FeatureFlagApprovalRequestReview.md)
- - [FeatureFlagApprovalRequestReviewConfigBody](docs/FeatureFlagApprovalRequestReviewConfigBody.md)
- - [FeatureFlagApprovalRequestReviewStatus](docs/FeatureFlagApprovalRequestReviewStatus.md)
- - [FeatureFlagApprovalRequests](docs/FeatureFlagApprovalRequests.md)
  - [FeatureFlagBody](docs/FeatureFlagBody.md)
  - [FeatureFlagConfig](docs/FeatureFlagConfig.md)
  - [FeatureFlagCopyBody](docs/FeatureFlagCopyBody.md)
@@ -246,6 +252,9 @@ Class | Method | HTTP request | Description
  - [FeatureFlagStatusForQueriedEnvironment](docs/FeatureFlagStatusForQueriedEnvironment.md)
  - [FeatureFlagStatuses](docs/FeatureFlagStatuses.md)
  - [FeatureFlags](docs/FeatureFlags.md)
+ - [FlagConfigScheduledChangesConflictsBody](docs/FlagConfigScheduledChangesConflictsBody.md)
+ - [FlagConfigScheduledChangesPatchBody](docs/FlagConfigScheduledChangesPatchBody.md)
+ - [FlagConfigScheduledChangesPostBody](docs/FlagConfigScheduledChangesPostBody.md)
  - [FlagListItem](docs/FlagListItem.md)
  - [HierarchicalLinks](docs/HierarchicalLinks.md)
  - [Id](docs/Id.md)
@@ -260,6 +269,7 @@ Class | Method | HTTP request | Description
  - [MAUMetadata](docs/MAUMetadata.md)
  - [MAUbyCategory](docs/MAUbyCategory.md)
  - [Member](docs/Member.md)
+ - [Member__lastSeenMetadata](docs/Member__lastSeenMetadata.md)
  - [Members](docs/Members.md)
  - [MembersBody](docs/MembersBody.md)
  - [PatchComment](docs/PatchComment.md)

@@ -151,26 +151,30 @@ operation_parameters_minimum_occurrences["resetEnvironmentSDKKey:::expiry"]=0
 operation_parameters_minimum_occurrences["copyFeatureFlag:::projectKey"]=1
 operation_parameters_minimum_occurrences["copyFeatureFlag:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["copyFeatureFlag:::featureFlagCopyBody"]=1
+operation_parameters_minimum_occurrences["deleteApprovalRequest:::projectKey"]=1
+operation_parameters_minimum_occurrences["deleteApprovalRequest:::environmentKey"]=1
+operation_parameters_minimum_occurrences["deleteApprovalRequest:::featureFlagKey"]=1
+operation_parameters_minimum_occurrences["deleteApprovalRequest:::approvalRequestId"]=1
+operation_parameters_minimum_occurrences["deleteApprovalRequest:::approvalRequestConfigBody"]=0
 operation_parameters_minimum_occurrences["deleteFeatureFlag:::projectKey"]=1
 operation_parameters_minimum_occurrences["deleteFeatureFlag:::featureFlagKey"]=1
-operation_parameters_minimum_occurrences["deleteFeatureFlagApprovalRequest:::projectKey"]=1
-operation_parameters_minimum_occurrences["deleteFeatureFlagApprovalRequest:::environmentKey"]=1
-operation_parameters_minimum_occurrences["deleteFeatureFlagApprovalRequest:::featureFlagKey"]=1
-operation_parameters_minimum_occurrences["deleteFeatureFlagApprovalRequest:::featureFlagApprovalRequestId"]=1
-operation_parameters_minimum_occurrences["deleteFeatureFlagApprovalRequest:::featureFlagApprovalRequestConfigBody"]=0
+operation_parameters_minimum_occurrences["deleteFlagConfigScheduledChanges:::projectKey"]=1
+operation_parameters_minimum_occurrences["deleteFlagConfigScheduledChanges:::featureFlagKey"]=1
+operation_parameters_minimum_occurrences["deleteFlagConfigScheduledChanges:::environmentKey"]=1
+operation_parameters_minimum_occurrences["deleteFlagConfigScheduledChanges:::scheduledChangeId"]=1
+operation_parameters_minimum_occurrences["getApprovalRequest:::projectKey"]=1
+operation_parameters_minimum_occurrences["getApprovalRequest:::featureFlagKey"]=1
+operation_parameters_minimum_occurrences["getApprovalRequest:::environmentKey"]=1
+operation_parameters_minimum_occurrences["getApprovalRequest:::approvalRequestId"]=1
+operation_parameters_minimum_occurrences["getApprovalRequests:::projectKey"]=1
+operation_parameters_minimum_occurrences["getApprovalRequests:::featureFlagKey"]=1
+operation_parameters_minimum_occurrences["getApprovalRequests:::environmentKey"]=1
 operation_parameters_minimum_occurrences["getExpiringUserTargets:::projectKey"]=1
 operation_parameters_minimum_occurrences["getExpiringUserTargets:::environmentKey"]=1
 operation_parameters_minimum_occurrences["getExpiringUserTargets:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["getFeatureFlag:::projectKey"]=1
 operation_parameters_minimum_occurrences["getFeatureFlag:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["getFeatureFlag:::env"]=0
-operation_parameters_minimum_occurrences["getFeatureFlagApprovalRequest:::projectKey"]=1
-operation_parameters_minimum_occurrences["getFeatureFlagApprovalRequest:::featureFlagKey"]=1
-operation_parameters_minimum_occurrences["getFeatureFlagApprovalRequest:::environmentKey"]=1
-operation_parameters_minimum_occurrences["getFeatureFlagApprovalRequest:::featureFlagApprovalRequestId"]=1
-operation_parameters_minimum_occurrences["getFeatureFlagApprovalRequests:::projectKey"]=1
-operation_parameters_minimum_occurrences["getFeatureFlagApprovalRequests:::featureFlagKey"]=1
-operation_parameters_minimum_occurrences["getFeatureFlagApprovalRequests:::environmentKey"]=1
 operation_parameters_minimum_occurrences["getFeatureFlagStatus:::projectKey"]=1
 operation_parameters_minimum_occurrences["getFeatureFlagStatus:::environmentKey"]=1
 operation_parameters_minimum_occurrences["getFeatureFlagStatus:::featureFlagKey"]=1
@@ -187,6 +191,17 @@ operation_parameters_minimum_occurrences["getFeatureFlags:::offset"]=0
 operation_parameters_minimum_occurrences["getFeatureFlags:::filter"]=0
 operation_parameters_minimum_occurrences["getFeatureFlags:::sort"]=0
 operation_parameters_minimum_occurrences["getFeatureFlags:::tag"]=0
+operation_parameters_minimum_occurrences["getFlagConfigScheduledChange:::projectKey"]=1
+operation_parameters_minimum_occurrences["getFlagConfigScheduledChange:::featureFlagKey"]=1
+operation_parameters_minimum_occurrences["getFlagConfigScheduledChange:::environmentKey"]=1
+operation_parameters_minimum_occurrences["getFlagConfigScheduledChange:::scheduledChangeId"]=1
+operation_parameters_minimum_occurrences["getFlagConfigScheduledChanges:::projectKey"]=1
+operation_parameters_minimum_occurrences["getFlagConfigScheduledChanges:::featureFlagKey"]=1
+operation_parameters_minimum_occurrences["getFlagConfigScheduledChanges:::environmentKey"]=1
+operation_parameters_minimum_occurrences["getFlagConfigScheduledChangesConflicts:::projectKey"]=1
+operation_parameters_minimum_occurrences["getFlagConfigScheduledChangesConflicts:::featureFlagKey"]=1
+operation_parameters_minimum_occurrences["getFlagConfigScheduledChangesConflicts:::environmentKey"]=1
+operation_parameters_minimum_occurrences["getFlagConfigScheduledChangesConflicts:::flagConfigScheduledChangesConflictsBody"]=1
 operation_parameters_minimum_occurrences["patchExpiringUserTargets:::projectKey"]=1
 operation_parameters_minimum_occurrences["patchExpiringUserTargets:::environmentKey"]=1
 operation_parameters_minimum_occurrences["patchExpiringUserTargets:::featureFlagKey"]=1
@@ -194,24 +209,33 @@ operation_parameters_minimum_occurrences["patchExpiringUserTargets:::SemanticPat
 operation_parameters_minimum_occurrences["patchFeatureFlag:::projectKey"]=1
 operation_parameters_minimum_occurrences["patchFeatureFlag:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["patchFeatureFlag:::patchComment"]=1
-operation_parameters_minimum_occurrences["postApplyFeatureFlagApprovalRequest:::projectKey"]=1
-operation_parameters_minimum_occurrences["postApplyFeatureFlagApprovalRequest:::featureFlagKey"]=1
-operation_parameters_minimum_occurrences["postApplyFeatureFlagApprovalRequest:::environmentKey"]=1
-operation_parameters_minimum_occurrences["postApplyFeatureFlagApprovalRequest:::featureFlagApprovalRequestId"]=1
-operation_parameters_minimum_occurrences["postApplyFeatureFlagApprovalRequest:::featureFlagApprovalRequestApplyConfigBody"]=1
+operation_parameters_minimum_occurrences["patchFlagConfigScheduledChange:::projectKey"]=1
+operation_parameters_minimum_occurrences["patchFlagConfigScheduledChange:::featureFlagKey"]=1
+operation_parameters_minimum_occurrences["patchFlagConfigScheduledChange:::flagConfigScheduledChangesPatchBody"]=1
+operation_parameters_minimum_occurrences["patchFlagConfigScheduledChange:::environmentKey"]=1
+operation_parameters_minimum_occurrences["patchFlagConfigScheduledChange:::scheduledChangeId"]=1
+operation_parameters_minimum_occurrences["postApplyApprovalRequest:::projectKey"]=1
+operation_parameters_minimum_occurrences["postApplyApprovalRequest:::featureFlagKey"]=1
+operation_parameters_minimum_occurrences["postApplyApprovalRequest:::environmentKey"]=1
+operation_parameters_minimum_occurrences["postApplyApprovalRequest:::approvalRequestId"]=1
+operation_parameters_minimum_occurrences["postApplyApprovalRequest:::approvalRequestApplyConfigBody"]=1
+operation_parameters_minimum_occurrences["postApprovalRequest:::projectKey"]=1
+operation_parameters_minimum_occurrences["postApprovalRequest:::featureFlagKey"]=1
+operation_parameters_minimum_occurrences["postApprovalRequest:::environmentKey"]=1
+operation_parameters_minimum_occurrences["postApprovalRequest:::approvalRequestId"]=1
+operation_parameters_minimum_occurrences["postApprovalRequest:::approvalRequestConfigBody"]=0
 operation_parameters_minimum_occurrences["postFeatureFlag:::projectKey"]=1
 operation_parameters_minimum_occurrences["postFeatureFlag:::featureFlagBody"]=1
 operation_parameters_minimum_occurrences["postFeatureFlag:::clone"]=0
-operation_parameters_minimum_occurrences["postFeatureFlagApprovalRequest:::projectKey"]=1
-operation_parameters_minimum_occurrences["postFeatureFlagApprovalRequest:::featureFlagKey"]=1
-operation_parameters_minimum_occurrences["postFeatureFlagApprovalRequest:::environmentKey"]=1
-operation_parameters_minimum_occurrences["postFeatureFlagApprovalRequest:::featureFlagApprovalRequestId"]=1
-operation_parameters_minimum_occurrences["postFeatureFlagApprovalRequest:::featureFlagApprovalRequestConfigBody"]=0
-operation_parameters_minimum_occurrences["postReviewFeatureFlagApprovalRequest:::projectKey"]=1
-operation_parameters_minimum_occurrences["postReviewFeatureFlagApprovalRequest:::featureFlagKey"]=1
-operation_parameters_minimum_occurrences["postReviewFeatureFlagApprovalRequest:::environmentKey"]=1
-operation_parameters_minimum_occurrences["postReviewFeatureFlagApprovalRequest:::featureFlagApprovalRequestId"]=1
-operation_parameters_minimum_occurrences["postReviewFeatureFlagApprovalRequest:::featureFlagApprovalRequestReviewConfigBody"]=1
+operation_parameters_minimum_occurrences["postFlagConfigScheduledChanges:::projectKey"]=1
+operation_parameters_minimum_occurrences["postFlagConfigScheduledChanges:::flagConfigScheduledChangesPostBody"]=1
+operation_parameters_minimum_occurrences["postFlagConfigScheduledChanges:::featureFlagKey"]=1
+operation_parameters_minimum_occurrences["postFlagConfigScheduledChanges:::environmentKey"]=1
+operation_parameters_minimum_occurrences["postReviewApprovalRequest:::projectKey"]=1
+operation_parameters_minimum_occurrences["postReviewApprovalRequest:::featureFlagKey"]=1
+operation_parameters_minimum_occurrences["postReviewApprovalRequest:::environmentKey"]=1
+operation_parameters_minimum_occurrences["postReviewApprovalRequest:::approvalRequestId"]=1
+operation_parameters_minimum_occurrences["postReviewApprovalRequest:::approvalRequestReviewConfigBody"]=1
 operation_parameters_minimum_occurrences["deleteIntegrationSubscription:::integrationKey"]=1
 operation_parameters_minimum_occurrences["deleteIntegrationSubscription:::integrationId"]=1
 operation_parameters_minimum_occurrences["getIntegrationSubscription:::integrationKey"]=1
@@ -243,6 +267,9 @@ operation_parameters_minimum_occurrences["getMembers:::sort"]=0
 operation_parameters_minimum_occurrences["patchMember:::memberId"]=1
 operation_parameters_minimum_occurrences["patchMember:::patchDelta"]=1
 operation_parameters_minimum_occurrences["postMembers:::membersBody"]=1
+operation_parameters_minimum_occurrences["getUser:::projectKey"]=1
+operation_parameters_minimum_occurrences["getUser:::environmentKey"]=1
+operation_parameters_minimum_occurrences["getUser:::userKey"]=1
 operation_parameters_minimum_occurrences["deleteUserSegment:::projectKey"]=1
 operation_parameters_minimum_occurrences["deleteUserSegment:::environmentKey"]=1
 operation_parameters_minimum_occurrences["deleteUserSegment:::userSegmentKey"]=1
@@ -298,9 +325,6 @@ operation_parameters_minimum_occurrences["getSearchUsers:::q"]=0
 operation_parameters_minimum_occurrences["getSearchUsers:::limit"]=0
 operation_parameters_minimum_occurrences["getSearchUsers:::offset"]=0
 operation_parameters_minimum_occurrences["getSearchUsers:::after"]=0
-operation_parameters_minimum_occurrences["getUser:::projectKey"]=1
-operation_parameters_minimum_occurrences["getUser:::environmentKey"]=1
-operation_parameters_minimum_occurrences["getUser:::userKey"]=1
 operation_parameters_minimum_occurrences["getUsers:::projectKey"]=1
 operation_parameters_minimum_occurrences["getUsers:::environmentKey"]=1
 operation_parameters_minimum_occurrences["getUsers:::limit"]=0
@@ -375,26 +399,30 @@ operation_parameters_maximum_occurrences["resetEnvironmentSDKKey:::expiry"]=0
 operation_parameters_maximum_occurrences["copyFeatureFlag:::projectKey"]=0
 operation_parameters_maximum_occurrences["copyFeatureFlag:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["copyFeatureFlag:::featureFlagCopyBody"]=0
+operation_parameters_maximum_occurrences["deleteApprovalRequest:::projectKey"]=0
+operation_parameters_maximum_occurrences["deleteApprovalRequest:::environmentKey"]=0
+operation_parameters_maximum_occurrences["deleteApprovalRequest:::featureFlagKey"]=0
+operation_parameters_maximum_occurrences["deleteApprovalRequest:::approvalRequestId"]=0
+operation_parameters_maximum_occurrences["deleteApprovalRequest:::approvalRequestConfigBody"]=0
 operation_parameters_maximum_occurrences["deleteFeatureFlag:::projectKey"]=0
 operation_parameters_maximum_occurrences["deleteFeatureFlag:::featureFlagKey"]=0
-operation_parameters_maximum_occurrences["deleteFeatureFlagApprovalRequest:::projectKey"]=0
-operation_parameters_maximum_occurrences["deleteFeatureFlagApprovalRequest:::environmentKey"]=0
-operation_parameters_maximum_occurrences["deleteFeatureFlagApprovalRequest:::featureFlagKey"]=0
-operation_parameters_maximum_occurrences["deleteFeatureFlagApprovalRequest:::featureFlagApprovalRequestId"]=0
-operation_parameters_maximum_occurrences["deleteFeatureFlagApprovalRequest:::featureFlagApprovalRequestConfigBody"]=0
+operation_parameters_maximum_occurrences["deleteFlagConfigScheduledChanges:::projectKey"]=0
+operation_parameters_maximum_occurrences["deleteFlagConfigScheduledChanges:::featureFlagKey"]=0
+operation_parameters_maximum_occurrences["deleteFlagConfigScheduledChanges:::environmentKey"]=0
+operation_parameters_maximum_occurrences["deleteFlagConfigScheduledChanges:::scheduledChangeId"]=0
+operation_parameters_maximum_occurrences["getApprovalRequest:::projectKey"]=0
+operation_parameters_maximum_occurrences["getApprovalRequest:::featureFlagKey"]=0
+operation_parameters_maximum_occurrences["getApprovalRequest:::environmentKey"]=0
+operation_parameters_maximum_occurrences["getApprovalRequest:::approvalRequestId"]=0
+operation_parameters_maximum_occurrences["getApprovalRequests:::projectKey"]=0
+operation_parameters_maximum_occurrences["getApprovalRequests:::featureFlagKey"]=0
+operation_parameters_maximum_occurrences["getApprovalRequests:::environmentKey"]=0
 operation_parameters_maximum_occurrences["getExpiringUserTargets:::projectKey"]=0
 operation_parameters_maximum_occurrences["getExpiringUserTargets:::environmentKey"]=0
 operation_parameters_maximum_occurrences["getExpiringUserTargets:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["getFeatureFlag:::projectKey"]=0
 operation_parameters_maximum_occurrences["getFeatureFlag:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["getFeatureFlag:::env"]=0
-operation_parameters_maximum_occurrences["getFeatureFlagApprovalRequest:::projectKey"]=0
-operation_parameters_maximum_occurrences["getFeatureFlagApprovalRequest:::featureFlagKey"]=0
-operation_parameters_maximum_occurrences["getFeatureFlagApprovalRequest:::environmentKey"]=0
-operation_parameters_maximum_occurrences["getFeatureFlagApprovalRequest:::featureFlagApprovalRequestId"]=0
-operation_parameters_maximum_occurrences["getFeatureFlagApprovalRequests:::projectKey"]=0
-operation_parameters_maximum_occurrences["getFeatureFlagApprovalRequests:::featureFlagKey"]=0
-operation_parameters_maximum_occurrences["getFeatureFlagApprovalRequests:::environmentKey"]=0
 operation_parameters_maximum_occurrences["getFeatureFlagStatus:::projectKey"]=0
 operation_parameters_maximum_occurrences["getFeatureFlagStatus:::environmentKey"]=0
 operation_parameters_maximum_occurrences["getFeatureFlagStatus:::featureFlagKey"]=0
@@ -411,6 +439,17 @@ operation_parameters_maximum_occurrences["getFeatureFlags:::offset"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::filter"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::sort"]=0
 operation_parameters_maximum_occurrences["getFeatureFlags:::tag"]=0
+operation_parameters_maximum_occurrences["getFlagConfigScheduledChange:::projectKey"]=0
+operation_parameters_maximum_occurrences["getFlagConfigScheduledChange:::featureFlagKey"]=0
+operation_parameters_maximum_occurrences["getFlagConfigScheduledChange:::environmentKey"]=0
+operation_parameters_maximum_occurrences["getFlagConfigScheduledChange:::scheduledChangeId"]=0
+operation_parameters_maximum_occurrences["getFlagConfigScheduledChanges:::projectKey"]=0
+operation_parameters_maximum_occurrences["getFlagConfigScheduledChanges:::featureFlagKey"]=0
+operation_parameters_maximum_occurrences["getFlagConfigScheduledChanges:::environmentKey"]=0
+operation_parameters_maximum_occurrences["getFlagConfigScheduledChangesConflicts:::projectKey"]=0
+operation_parameters_maximum_occurrences["getFlagConfigScheduledChangesConflicts:::featureFlagKey"]=0
+operation_parameters_maximum_occurrences["getFlagConfigScheduledChangesConflicts:::environmentKey"]=0
+operation_parameters_maximum_occurrences["getFlagConfigScheduledChangesConflicts:::flagConfigScheduledChangesConflictsBody"]=0
 operation_parameters_maximum_occurrences["patchExpiringUserTargets:::projectKey"]=0
 operation_parameters_maximum_occurrences["patchExpiringUserTargets:::environmentKey"]=0
 operation_parameters_maximum_occurrences["patchExpiringUserTargets:::featureFlagKey"]=0
@@ -418,24 +457,33 @@ operation_parameters_maximum_occurrences["patchExpiringUserTargets:::SemanticPat
 operation_parameters_maximum_occurrences["patchFeatureFlag:::projectKey"]=0
 operation_parameters_maximum_occurrences["patchFeatureFlag:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["patchFeatureFlag:::patchComment"]=0
-operation_parameters_maximum_occurrences["postApplyFeatureFlagApprovalRequest:::projectKey"]=0
-operation_parameters_maximum_occurrences["postApplyFeatureFlagApprovalRequest:::featureFlagKey"]=0
-operation_parameters_maximum_occurrences["postApplyFeatureFlagApprovalRequest:::environmentKey"]=0
-operation_parameters_maximum_occurrences["postApplyFeatureFlagApprovalRequest:::featureFlagApprovalRequestId"]=0
-operation_parameters_maximum_occurrences["postApplyFeatureFlagApprovalRequest:::featureFlagApprovalRequestApplyConfigBody"]=0
+operation_parameters_maximum_occurrences["patchFlagConfigScheduledChange:::projectKey"]=0
+operation_parameters_maximum_occurrences["patchFlagConfigScheduledChange:::featureFlagKey"]=0
+operation_parameters_maximum_occurrences["patchFlagConfigScheduledChange:::flagConfigScheduledChangesPatchBody"]=0
+operation_parameters_maximum_occurrences["patchFlagConfigScheduledChange:::environmentKey"]=0
+operation_parameters_maximum_occurrences["patchFlagConfigScheduledChange:::scheduledChangeId"]=0
+operation_parameters_maximum_occurrences["postApplyApprovalRequest:::projectKey"]=0
+operation_parameters_maximum_occurrences["postApplyApprovalRequest:::featureFlagKey"]=0
+operation_parameters_maximum_occurrences["postApplyApprovalRequest:::environmentKey"]=0
+operation_parameters_maximum_occurrences["postApplyApprovalRequest:::approvalRequestId"]=0
+operation_parameters_maximum_occurrences["postApplyApprovalRequest:::approvalRequestApplyConfigBody"]=0
+operation_parameters_maximum_occurrences["postApprovalRequest:::projectKey"]=0
+operation_parameters_maximum_occurrences["postApprovalRequest:::featureFlagKey"]=0
+operation_parameters_maximum_occurrences["postApprovalRequest:::environmentKey"]=0
+operation_parameters_maximum_occurrences["postApprovalRequest:::approvalRequestId"]=0
+operation_parameters_maximum_occurrences["postApprovalRequest:::approvalRequestConfigBody"]=0
 operation_parameters_maximum_occurrences["postFeatureFlag:::projectKey"]=0
 operation_parameters_maximum_occurrences["postFeatureFlag:::featureFlagBody"]=0
 operation_parameters_maximum_occurrences["postFeatureFlag:::clone"]=0
-operation_parameters_maximum_occurrences["postFeatureFlagApprovalRequest:::projectKey"]=0
-operation_parameters_maximum_occurrences["postFeatureFlagApprovalRequest:::featureFlagKey"]=0
-operation_parameters_maximum_occurrences["postFeatureFlagApprovalRequest:::environmentKey"]=0
-operation_parameters_maximum_occurrences["postFeatureFlagApprovalRequest:::featureFlagApprovalRequestId"]=0
-operation_parameters_maximum_occurrences["postFeatureFlagApprovalRequest:::featureFlagApprovalRequestConfigBody"]=0
-operation_parameters_maximum_occurrences["postReviewFeatureFlagApprovalRequest:::projectKey"]=0
-operation_parameters_maximum_occurrences["postReviewFeatureFlagApprovalRequest:::featureFlagKey"]=0
-operation_parameters_maximum_occurrences["postReviewFeatureFlagApprovalRequest:::environmentKey"]=0
-operation_parameters_maximum_occurrences["postReviewFeatureFlagApprovalRequest:::featureFlagApprovalRequestId"]=0
-operation_parameters_maximum_occurrences["postReviewFeatureFlagApprovalRequest:::featureFlagApprovalRequestReviewConfigBody"]=0
+operation_parameters_maximum_occurrences["postFlagConfigScheduledChanges:::projectKey"]=0
+operation_parameters_maximum_occurrences["postFlagConfigScheduledChanges:::flagConfigScheduledChangesPostBody"]=0
+operation_parameters_maximum_occurrences["postFlagConfigScheduledChanges:::featureFlagKey"]=0
+operation_parameters_maximum_occurrences["postFlagConfigScheduledChanges:::environmentKey"]=0
+operation_parameters_maximum_occurrences["postReviewApprovalRequest:::projectKey"]=0
+operation_parameters_maximum_occurrences["postReviewApprovalRequest:::featureFlagKey"]=0
+operation_parameters_maximum_occurrences["postReviewApprovalRequest:::environmentKey"]=0
+operation_parameters_maximum_occurrences["postReviewApprovalRequest:::approvalRequestId"]=0
+operation_parameters_maximum_occurrences["postReviewApprovalRequest:::approvalRequestReviewConfigBody"]=0
 operation_parameters_maximum_occurrences["deleteIntegrationSubscription:::integrationKey"]=0
 operation_parameters_maximum_occurrences["deleteIntegrationSubscription:::integrationId"]=0
 operation_parameters_maximum_occurrences["getIntegrationSubscription:::integrationKey"]=0
@@ -467,6 +515,9 @@ operation_parameters_maximum_occurrences["getMembers:::sort"]=0
 operation_parameters_maximum_occurrences["patchMember:::memberId"]=0
 operation_parameters_maximum_occurrences["patchMember:::patchDelta"]=0
 operation_parameters_maximum_occurrences["postMembers:::membersBody"]=0
+operation_parameters_maximum_occurrences["getUser:::projectKey"]=0
+operation_parameters_maximum_occurrences["getUser:::environmentKey"]=0
+operation_parameters_maximum_occurrences["getUser:::userKey"]=0
 operation_parameters_maximum_occurrences["deleteUserSegment:::projectKey"]=0
 operation_parameters_maximum_occurrences["deleteUserSegment:::environmentKey"]=0
 operation_parameters_maximum_occurrences["deleteUserSegment:::userSegmentKey"]=0
@@ -522,9 +573,6 @@ operation_parameters_maximum_occurrences["getSearchUsers:::q"]=0
 operation_parameters_maximum_occurrences["getSearchUsers:::limit"]=0
 operation_parameters_maximum_occurrences["getSearchUsers:::offset"]=0
 operation_parameters_maximum_occurrences["getSearchUsers:::after"]=0
-operation_parameters_maximum_occurrences["getUser:::projectKey"]=0
-operation_parameters_maximum_occurrences["getUser:::environmentKey"]=0
-operation_parameters_maximum_occurrences["getUser:::userKey"]=0
 operation_parameters_maximum_occurrences["getUsers:::projectKey"]=0
 operation_parameters_maximum_occurrences["getUsers:::environmentKey"]=0
 operation_parameters_maximum_occurrences["getUsers:::limit"]=0
@@ -596,26 +644,30 @@ operation_parameters_collection_type["resetEnvironmentSDKKey:::expiry"]=""
 operation_parameters_collection_type["copyFeatureFlag:::projectKey"]=""
 operation_parameters_collection_type["copyFeatureFlag:::featureFlagKey"]=""
 operation_parameters_collection_type["copyFeatureFlag:::featureFlagCopyBody"]=""
+operation_parameters_collection_type["deleteApprovalRequest:::projectKey"]=""
+operation_parameters_collection_type["deleteApprovalRequest:::environmentKey"]=""
+operation_parameters_collection_type["deleteApprovalRequest:::featureFlagKey"]=""
+operation_parameters_collection_type["deleteApprovalRequest:::approvalRequestId"]=""
+operation_parameters_collection_type["deleteApprovalRequest:::approvalRequestConfigBody"]=""
 operation_parameters_collection_type["deleteFeatureFlag:::projectKey"]=""
 operation_parameters_collection_type["deleteFeatureFlag:::featureFlagKey"]=""
-operation_parameters_collection_type["deleteFeatureFlagApprovalRequest:::projectKey"]=""
-operation_parameters_collection_type["deleteFeatureFlagApprovalRequest:::environmentKey"]=""
-operation_parameters_collection_type["deleteFeatureFlagApprovalRequest:::featureFlagKey"]=""
-operation_parameters_collection_type["deleteFeatureFlagApprovalRequest:::featureFlagApprovalRequestId"]=""
-operation_parameters_collection_type["deleteFeatureFlagApprovalRequest:::featureFlagApprovalRequestConfigBody"]=""
+operation_parameters_collection_type["deleteFlagConfigScheduledChanges:::projectKey"]=""
+operation_parameters_collection_type["deleteFlagConfigScheduledChanges:::featureFlagKey"]=""
+operation_parameters_collection_type["deleteFlagConfigScheduledChanges:::environmentKey"]=""
+operation_parameters_collection_type["deleteFlagConfigScheduledChanges:::scheduledChangeId"]=""
+operation_parameters_collection_type["getApprovalRequest:::projectKey"]=""
+operation_parameters_collection_type["getApprovalRequest:::featureFlagKey"]=""
+operation_parameters_collection_type["getApprovalRequest:::environmentKey"]=""
+operation_parameters_collection_type["getApprovalRequest:::approvalRequestId"]=""
+operation_parameters_collection_type["getApprovalRequests:::projectKey"]=""
+operation_parameters_collection_type["getApprovalRequests:::featureFlagKey"]=""
+operation_parameters_collection_type["getApprovalRequests:::environmentKey"]=""
 operation_parameters_collection_type["getExpiringUserTargets:::projectKey"]=""
 operation_parameters_collection_type["getExpiringUserTargets:::environmentKey"]=""
 operation_parameters_collection_type["getExpiringUserTargets:::featureFlagKey"]=""
 operation_parameters_collection_type["getFeatureFlag:::projectKey"]=""
 operation_parameters_collection_type["getFeatureFlag:::featureFlagKey"]=""
 operation_parameters_collection_type["getFeatureFlag:::env"]="multi"
-operation_parameters_collection_type["getFeatureFlagApprovalRequest:::projectKey"]=""
-operation_parameters_collection_type["getFeatureFlagApprovalRequest:::featureFlagKey"]=""
-operation_parameters_collection_type["getFeatureFlagApprovalRequest:::environmentKey"]=""
-operation_parameters_collection_type["getFeatureFlagApprovalRequest:::featureFlagApprovalRequestId"]=""
-operation_parameters_collection_type["getFeatureFlagApprovalRequests:::projectKey"]=""
-operation_parameters_collection_type["getFeatureFlagApprovalRequests:::featureFlagKey"]=""
-operation_parameters_collection_type["getFeatureFlagApprovalRequests:::environmentKey"]=""
 operation_parameters_collection_type["getFeatureFlagStatus:::projectKey"]=""
 operation_parameters_collection_type["getFeatureFlagStatus:::environmentKey"]=""
 operation_parameters_collection_type["getFeatureFlagStatus:::featureFlagKey"]=""
@@ -632,6 +684,17 @@ operation_parameters_collection_type["getFeatureFlags:::offset"]=""
 operation_parameters_collection_type["getFeatureFlags:::filter"]=""
 operation_parameters_collection_type["getFeatureFlags:::sort"]=""
 operation_parameters_collection_type["getFeatureFlags:::tag"]=""
+operation_parameters_collection_type["getFlagConfigScheduledChange:::projectKey"]=""
+operation_parameters_collection_type["getFlagConfigScheduledChange:::featureFlagKey"]=""
+operation_parameters_collection_type["getFlagConfigScheduledChange:::environmentKey"]=""
+operation_parameters_collection_type["getFlagConfigScheduledChange:::scheduledChangeId"]=""
+operation_parameters_collection_type["getFlagConfigScheduledChanges:::projectKey"]=""
+operation_parameters_collection_type["getFlagConfigScheduledChanges:::featureFlagKey"]=""
+operation_parameters_collection_type["getFlagConfigScheduledChanges:::environmentKey"]=""
+operation_parameters_collection_type["getFlagConfigScheduledChangesConflicts:::projectKey"]=""
+operation_parameters_collection_type["getFlagConfigScheduledChangesConflicts:::featureFlagKey"]=""
+operation_parameters_collection_type["getFlagConfigScheduledChangesConflicts:::environmentKey"]=""
+operation_parameters_collection_type["getFlagConfigScheduledChangesConflicts:::flagConfigScheduledChangesConflictsBody"]=""
 operation_parameters_collection_type["patchExpiringUserTargets:::projectKey"]=""
 operation_parameters_collection_type["patchExpiringUserTargets:::environmentKey"]=""
 operation_parameters_collection_type["patchExpiringUserTargets:::featureFlagKey"]=""
@@ -639,24 +702,33 @@ operation_parameters_collection_type["patchExpiringUserTargets:::SemanticPatchWi
 operation_parameters_collection_type["patchFeatureFlag:::projectKey"]=""
 operation_parameters_collection_type["patchFeatureFlag:::featureFlagKey"]=""
 operation_parameters_collection_type["patchFeatureFlag:::patchComment"]=""
-operation_parameters_collection_type["postApplyFeatureFlagApprovalRequest:::projectKey"]=""
-operation_parameters_collection_type["postApplyFeatureFlagApprovalRequest:::featureFlagKey"]=""
-operation_parameters_collection_type["postApplyFeatureFlagApprovalRequest:::environmentKey"]=""
-operation_parameters_collection_type["postApplyFeatureFlagApprovalRequest:::featureFlagApprovalRequestId"]=""
-operation_parameters_collection_type["postApplyFeatureFlagApprovalRequest:::featureFlagApprovalRequestApplyConfigBody"]=""
+operation_parameters_collection_type["patchFlagConfigScheduledChange:::projectKey"]=""
+operation_parameters_collection_type["patchFlagConfigScheduledChange:::featureFlagKey"]=""
+operation_parameters_collection_type["patchFlagConfigScheduledChange:::flagConfigScheduledChangesPatchBody"]=""
+operation_parameters_collection_type["patchFlagConfigScheduledChange:::environmentKey"]=""
+operation_parameters_collection_type["patchFlagConfigScheduledChange:::scheduledChangeId"]=""
+operation_parameters_collection_type["postApplyApprovalRequest:::projectKey"]=""
+operation_parameters_collection_type["postApplyApprovalRequest:::featureFlagKey"]=""
+operation_parameters_collection_type["postApplyApprovalRequest:::environmentKey"]=""
+operation_parameters_collection_type["postApplyApprovalRequest:::approvalRequestId"]=""
+operation_parameters_collection_type["postApplyApprovalRequest:::approvalRequestApplyConfigBody"]=""
+operation_parameters_collection_type["postApprovalRequest:::projectKey"]=""
+operation_parameters_collection_type["postApprovalRequest:::featureFlagKey"]=""
+operation_parameters_collection_type["postApprovalRequest:::environmentKey"]=""
+operation_parameters_collection_type["postApprovalRequest:::approvalRequestId"]=""
+operation_parameters_collection_type["postApprovalRequest:::approvalRequestConfigBody"]=""
 operation_parameters_collection_type["postFeatureFlag:::projectKey"]=""
 operation_parameters_collection_type["postFeatureFlag:::featureFlagBody"]=""
 operation_parameters_collection_type["postFeatureFlag:::clone"]=""
-operation_parameters_collection_type["postFeatureFlagApprovalRequest:::projectKey"]=""
-operation_parameters_collection_type["postFeatureFlagApprovalRequest:::featureFlagKey"]=""
-operation_parameters_collection_type["postFeatureFlagApprovalRequest:::environmentKey"]=""
-operation_parameters_collection_type["postFeatureFlagApprovalRequest:::featureFlagApprovalRequestId"]=""
-operation_parameters_collection_type["postFeatureFlagApprovalRequest:::featureFlagApprovalRequestConfigBody"]=""
-operation_parameters_collection_type["postReviewFeatureFlagApprovalRequest:::projectKey"]=""
-operation_parameters_collection_type["postReviewFeatureFlagApprovalRequest:::featureFlagKey"]=""
-operation_parameters_collection_type["postReviewFeatureFlagApprovalRequest:::environmentKey"]=""
-operation_parameters_collection_type["postReviewFeatureFlagApprovalRequest:::featureFlagApprovalRequestId"]=""
-operation_parameters_collection_type["postReviewFeatureFlagApprovalRequest:::featureFlagApprovalRequestReviewConfigBody"]=""
+operation_parameters_collection_type["postFlagConfigScheduledChanges:::projectKey"]=""
+operation_parameters_collection_type["postFlagConfigScheduledChanges:::flagConfigScheduledChangesPostBody"]=""
+operation_parameters_collection_type["postFlagConfigScheduledChanges:::featureFlagKey"]=""
+operation_parameters_collection_type["postFlagConfigScheduledChanges:::environmentKey"]=""
+operation_parameters_collection_type["postReviewApprovalRequest:::projectKey"]=""
+operation_parameters_collection_type["postReviewApprovalRequest:::featureFlagKey"]=""
+operation_parameters_collection_type["postReviewApprovalRequest:::environmentKey"]=""
+operation_parameters_collection_type["postReviewApprovalRequest:::approvalRequestId"]=""
+operation_parameters_collection_type["postReviewApprovalRequest:::approvalRequestReviewConfigBody"]=""
 operation_parameters_collection_type["deleteIntegrationSubscription:::integrationKey"]=""
 operation_parameters_collection_type["deleteIntegrationSubscription:::integrationId"]=""
 operation_parameters_collection_type["getIntegrationSubscription:::integrationKey"]=""
@@ -688,6 +760,9 @@ operation_parameters_collection_type["getMembers:::sort"]=""
 operation_parameters_collection_type["patchMember:::memberId"]=""
 operation_parameters_collection_type["patchMember:::patchDelta"]=
 operation_parameters_collection_type["postMembers:::membersBody"]=
+operation_parameters_collection_type["getUser:::projectKey"]=""
+operation_parameters_collection_type["getUser:::environmentKey"]=""
+operation_parameters_collection_type["getUser:::userKey"]=""
 operation_parameters_collection_type["deleteUserSegment:::projectKey"]=""
 operation_parameters_collection_type["deleteUserSegment:::environmentKey"]=""
 operation_parameters_collection_type["deleteUserSegment:::userSegmentKey"]=""
@@ -743,9 +818,6 @@ operation_parameters_collection_type["getSearchUsers:::q"]=""
 operation_parameters_collection_type["getSearchUsers:::limit"]=""
 operation_parameters_collection_type["getSearchUsers:::offset"]=""
 operation_parameters_collection_type["getSearchUsers:::after"]=""
-operation_parameters_collection_type["getUser:::projectKey"]=""
-operation_parameters_collection_type["getUser:::environmentKey"]=""
-operation_parameters_collection_type["getUser:::userKey"]=""
 operation_parameters_collection_type["getUsers:::projectKey"]=""
 operation_parameters_collection_type["getUsers:::environmentKey"]=""
 operation_parameters_collection_type["getUsers:::limit"]=""
@@ -1101,7 +1173,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 4.0.0)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 5.0.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1202,22 +1274,28 @@ echo "  $ops" | column -t -s ';'
     echo -e "${BOLD}${WHITE}[featureFlags]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}copyFeatureFlag${OFF};Copies the feature flag configuration from one environment to the same feature flag in another environment. (AUTH)
+  ${CYAN}deleteApprovalRequest${OFF};Delete an approval request for a feature flag config (AUTH)
   ${CYAN}deleteFeatureFlag${OFF};Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application. (AUTH)
-  ${CYAN}deleteFeatureFlagApprovalRequest${OFF};Delete an approval request for a feature flag (AUTH)
+  ${CYAN}deleteFlagConfigScheduledChanges${OFF};Delete a scheduled change on a feature flag in an environment. (AUTH)
+  ${CYAN}getApprovalRequest${OFF};Get a single approval request for a feature flag config (AUTH)
+  ${CYAN}getApprovalRequests${OFF};Get all approval requests for a feature flag config (AUTH)
   ${CYAN}getExpiringUserTargets${OFF};Get expiring user targets for feature flag (AUTH)
   ${CYAN}getFeatureFlag${OFF};Get a single feature flag by key. (AUTH)
-  ${CYAN}getFeatureFlagApprovalRequest${OFF};Get a single approval request for a feature flag (AUTH)
-  ${CYAN}getFeatureFlagApprovalRequests${OFF};Get all approval requests for a feature flag (AUTH)
   ${CYAN}getFeatureFlagStatus${OFF};Get the status for a particular feature flag. (AUTH)
   ${CYAN}getFeatureFlagStatusAcrossEnvironments${OFF};Get the status for a particular feature flag across environments (AUTH)
   ${CYAN}getFeatureFlagStatuses${OFF};Get a list of statuses for all feature flags. The status includes the last time the feature flag was requested, as well as the state of the flag. (AUTH)
   ${CYAN}getFeatureFlags${OFF};Get a list of all features in the given project. (AUTH)
+  ${CYAN}getFlagConfigScheduledChange${OFF};Get a scheduled change on a feature flag by id. (AUTH)
+  ${CYAN}getFlagConfigScheduledChanges${OFF};Get all scheduled workflows for a feature flag by key. (AUTH)
+  ${CYAN}getFlagConfigScheduledChangesConflicts${OFF};Lists conflicts between the given instructions and any existing scheduled changes for the feature flag. The actual HTTP verb should be REPORT, not POST. (AUTH)
   ${CYAN}patchExpiringUserTargets${OFF};Update, add, or delete expiring user targets on feature flag (AUTH)
   ${CYAN}patchFeatureFlag${OFF};Perform a partial update to a feature. (AUTH)
-  ${CYAN}postApplyFeatureFlagApprovalRequest${OFF};Apply approval request for a feature flag (AUTH)
+  ${CYAN}patchFlagConfigScheduledChange${OFF};Updates an existing scheduled-change on a feature flag in an environment. (AUTH)
+  ${CYAN}postApplyApprovalRequest${OFF};Apply approval request for a feature flag config (AUTH)
+  ${CYAN}postApprovalRequest${OFF};Create an approval request for a feature flag config (AUTH)
   ${CYAN}postFeatureFlag${OFF};Creates a new feature flag. (AUTH)
-  ${CYAN}postFeatureFlagApprovalRequest${OFF};Create an approval request for a feature flag (AUTH)
-  ${CYAN}postReviewFeatureFlagApprovalRequest${OFF};Review approval request for a feature flag (AUTH)
+  ${CYAN}postFlagConfigScheduledChanges${OFF};Creates a new scheduled change for a feature flag. (AUTH)
+  ${CYAN}postReviewApprovalRequest${OFF};Review approval request for a feature flag config (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -1270,6 +1348,12 @@ read -r -d '' ops <<EOF
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
+    echo -e "${BOLD}${WHITE}[userRecord]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}getUser${OFF};Get a user by key. (AUTH)
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
     echo -e "${BOLD}${WHITE}[userSegments]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}deleteUserSegment${OFF};Delete a user segment. (AUTH)
@@ -1297,7 +1381,6 @@ echo "  $ops" | column -t -s ';'
 read -r -d '' ops <<EOF
   ${CYAN}deleteUser${OFF};Delete a user by ID. (AUTH)
   ${CYAN}getSearchUsers${OFF};Search users in LaunchDarkly based on their last active date, or a search query. It should not be used to enumerate all users in LaunchDarkly-- use the List users API resource. (AUTH)
-  ${CYAN}getUser${OFF};Get a user by key. (AUTH)
   ${CYAN}getUsers${OFF};List all users in the environment. Includes the total count of users. In each page, there will be up to 'limit' users returned (default 20). This is useful for exporting all users in the system for further analysis. Paginated collections will include a next link containing a URL with the next set of elements in the collection. (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
@@ -1338,7 +1421,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 4.0.0)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 5.0.0)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -1358,7 +1441,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 4.0.0)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 5.0.0)${OFF}"
     echo ""
 }
 
@@ -2106,6 +2189,31 @@ print_copyFeatureFlag_help() {
 }
 ##############################################################################
 #
+# Print help for deleteApprovalRequest operation
+#
+##############################################################################
+print_deleteApprovalRequest_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}deleteApprovalRequest - Delete an approval request for a feature flag config${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}approvalRequestId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The approval request ID ${YELLOW}Specify as: approvalRequestId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF}${OFF} - Create a new approval request" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=204
+    echo -e "${result_color_table[${code:0:1}]}  204;Action completed successfully.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for deleteFeatureFlag operation
 #
 ##############################################################################
@@ -2127,24 +2235,67 @@ print_deleteFeatureFlag_help() {
 }
 ##############################################################################
 #
-# Print help for deleteFeatureFlagApprovalRequest operation
+# Print help for deleteFlagConfigScheduledChanges operation
 #
 ##############################################################################
-print_deleteFeatureFlagApprovalRequest_help() {
+print_deleteFlagConfigScheduledChanges_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}deleteFeatureFlagApprovalRequest - Delete an approval request for a feature flag${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}deleteFlagConfigScheduledChanges - Delete a scheduled change on a feature flag in an environment.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}featureFlagApprovalRequestId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag approval request ID ${YELLOW}Specify as: featureFlagApprovalRequestId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF}${OFF} - Create a new feature flag approval request" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}scheduledChangeId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The id of the scheduled change ${YELLOW}Specify as: scheduledChangeId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=204
     echo -e "${result_color_table[${code:0:1}]}  204;Action completed successfully.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getApprovalRequest operation
+#
+##############################################################################
+print_getApprovalRequest_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getApprovalRequest - Get a single approval request for a feature flag config${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}approvalRequestId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The approval request ID ${YELLOW}Specify as: approvalRequestId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Approval request response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getApprovalRequests operation
+#
+##############################################################################
+print_getApprovalRequests_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getApprovalRequests - Get all approval requests for a feature flag config${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Approval requests response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
@@ -2188,51 +2339,6 @@ print_getFeatureFlag_help() {
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;Flag response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=401
-    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=404
-    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getFeatureFlagApprovalRequest operation
-#
-##############################################################################
-print_getFeatureFlagApprovalRequest_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getFeatureFlagApprovalRequest - Get a single approval request for a feature flag${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}featureFlagApprovalRequestId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag approval request ID ${YELLOW}Specify as: featureFlagApprovalRequestId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Feature flag approval request response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=401
-    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=404
-    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getFeatureFlagApprovalRequests operation
-#
-##############################################################################
-print_getFeatureFlagApprovalRequests_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getFeatureFlagApprovalRequests - Get all approval requests for a feature flag${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Feature flag approval requests response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
@@ -2334,6 +2440,75 @@ print_getFeatureFlags_help() {
 }
 ##############################################################################
 #
+# Print help for getFlagConfigScheduledChange operation
+#
+##############################################################################
+print_getFlagConfigScheduledChange_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getFlagConfigScheduledChange - Get a scheduled change on a feature flag by id.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}scheduledChangeId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The id of the scheduled change ${YELLOW}Specify as: scheduledChangeId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A scheduled change for feature flag response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getFlagConfigScheduledChanges operation
+#
+##############################################################################
+print_getFlagConfigScheduledChanges_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getFlagConfigScheduledChanges - Get all scheduled workflows for a feature flag by key.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;A list of scheduled changes for feature flag response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getFlagConfigScheduledChangesConflicts operation
+#
+##############################################################################
+print_getFlagConfigScheduledChangesConflicts_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getFlagConfigScheduledChangesConflicts - Lists conflicts between the given instructions and any existing scheduled changes for the feature flag. The actual HTTP verb should be REPORT, not POST.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Used to determine if a semantic patch will result in conflicts with scheduled changes on a feature flag." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Scheduled changes conflict response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for patchExpiringUserTargets operation
 #
 ##############################################################################
@@ -2389,24 +2564,76 @@ print_patchFeatureFlag_help() {
 }
 ##############################################################################
 #
-# Print help for postApplyFeatureFlagApprovalRequest operation
+# Print help for patchFlagConfigScheduledChange operation
 #
 ##############################################################################
-print_postApplyFeatureFlagApprovalRequest_help() {
+print_patchFlagConfigScheduledChange_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}postApplyFeatureFlagApprovalRequest - Apply approval request for a feature flag${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}patchFlagConfigScheduledChange - Updates an existing scheduled-change on a feature flag in an environment.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}featureFlagApprovalRequestId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag approval request ID ${YELLOW}Specify as: featureFlagApprovalRequestId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Apply a new feature flag approval request" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}scheduledChangeId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The id of the scheduled change ${YELLOW}Specify as: scheduledChangeId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Update scheduled changes on a feature flag." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;A Scheduled change for feature flag response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=409
+    echo -e "${result_color_table[${code:0:1}]}  409;Status conflict.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for postApplyApprovalRequest operation
+#
+##############################################################################
+print_postApplyApprovalRequest_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}postApplyApprovalRequest - Apply approval request for a feature flag config${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}approvalRequestId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The approval request ID ${YELLOW}Specify as: approvalRequestId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Apply an approval request" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Feature flag approval request applied response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;Approval request applied response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for postApprovalRequest operation
+#
+##############################################################################
+print_postApprovalRequest_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}postApprovalRequest - Create an approval request for a feature flag config${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}approvalRequestId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The approval request ID ${YELLOW}Specify as: approvalRequestId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF}${OFF} - Create a new approval request" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Approval request response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
@@ -2440,49 +2667,50 @@ print_postFeatureFlag_help() {
 }
 ##############################################################################
 #
-# Print help for postFeatureFlagApprovalRequest operation
+# Print help for postFlagConfigScheduledChanges operation
 #
 ##############################################################################
-print_postFeatureFlagApprovalRequest_help() {
+print_postFlagConfigScheduledChanges_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}postFeatureFlagApprovalRequest - Create an approval request for a feature flag${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}postFlagConfigScheduledChanges - Creates a new scheduled change for a feature flag.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}featureFlagApprovalRequestId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag approval request ID ${YELLOW}Specify as: featureFlagApprovalRequestId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF}${OFF} - Create a new feature flag approval request" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Create scheduled changes on a feature flag." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Feature flag approval request response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;A scheduled change for feature flag response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=400
+    echo -e "${result_color_table[${code:0:1}]}  400;Invalid request body.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=404
-    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=409
+    echo -e "${result_color_table[${code:0:1}]}  409;Status conflict.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
-# Print help for postReviewFeatureFlagApprovalRequest operation
+# Print help for postReviewApprovalRequest operation
 #
 ##############################################################################
-print_postReviewFeatureFlagApprovalRequest_help() {
+print_postReviewApprovalRequest_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}postReviewFeatureFlagApprovalRequest - Review approval request for a feature flag${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}postReviewApprovalRequest - Review approval request for a feature flag config${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}featureFlagApprovalRequestId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag approval request ID ${YELLOW}Specify as: featureFlagApprovalRequestId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Review a feature flag approval request" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}approvalRequestId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The approval request ID ${YELLOW}Specify as: approvalRequestId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Review an approval request" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Feature flag approval request reviewed response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  200;Approval request reviewed response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
@@ -2991,6 +3219,28 @@ print_postMembers_help() {
 }
 ##############################################################################
 #
+# Print help for getUser operation
+#
+##############################################################################
+print_getUser_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getUser - Get a user by key.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}userKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The user's key. ${YELLOW}Specify as: userKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;User response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for deleteUserSegment operation
 #
 ##############################################################################
@@ -3349,28 +3599,6 @@ print_getSearchUsers_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;Users response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
-# Print help for getUser operation
-#
-##############################################################################
-print_getUser_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getUser - Get a user by key.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}userKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The user's key. ${YELLOW}Specify as: userKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;User response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=401
-    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=404
-    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -5142,55 +5370,19 @@ call_copyFeatureFlag() {
 
 ##############################################################################
 #
-# Call deleteFeatureFlag operation
+# Call deleteApprovalRequest operation
 #
 ##############################################################################
-call_deleteFeatureFlag() {
+call_deleteApprovalRequest() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local path_parameter_names=(projectKey featureFlagKey)
+    local path_parameter_names=(projectKey environmentKey featureFlagKey approvalRequestId)
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v2/flags/{projectKey}/{featureFlagKey}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="DELETE"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call deleteFeatureFlagApprovalRequest operation
-#
-##############################################################################
-call_deleteFeatureFlagApprovalRequest() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(projectKey environmentKey featureFlagKey featureFlagApprovalRequestId)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{approvalRequestId}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5256,6 +5448,150 @@ call_deleteFeatureFlagApprovalRequest() {
 
 ##############################################################################
 #
+# Call deleteFeatureFlag operation
+#
+##############################################################################
+call_deleteFeatureFlag() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey featureFlagKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/flags/{projectKey}/{featureFlagKey}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call deleteFlagConfigScheduledChanges operation
+#
+##############################################################################
+call_deleteFlagConfigScheduledChanges() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey featureFlagKey environmentKey scheduledChangeId)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/scheduled-changes/{scheduledChangeId}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getApprovalRequest operation
+#
+##############################################################################
+call_getApprovalRequest() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey featureFlagKey environmentKey approvalRequestId)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{approvalRequestId}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getApprovalRequests operation
+#
+##############################################################################
+call_getApprovalRequests() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey featureFlagKey environmentKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call getExpiringUserTargets operation
 #
 ##############################################################################
@@ -5305,78 +5641,6 @@ call_getFeatureFlag() {
     local path
 
     if ! path=$(build_request_path "/api/v2/flags/{projectKey}/{featureFlagKey}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getFeatureFlagApprovalRequest operation
-#
-##############################################################################
-call_getFeatureFlagApprovalRequest() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(projectKey featureFlagKey environmentKey featureFlagApprovalRequestId)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
-# Call getFeatureFlagApprovalRequests operation
-#
-##############################################################################
-call_getFeatureFlagApprovalRequests() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(projectKey featureFlagKey environmentKey)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5544,6 +5808,156 @@ call_getFeatureFlags() {
 
 ##############################################################################
 #
+# Call getFlagConfigScheduledChange operation
+#
+##############################################################################
+call_getFlagConfigScheduledChange() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey featureFlagKey environmentKey scheduledChangeId)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/scheduled-changes/{scheduledChangeId}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getFlagConfigScheduledChanges operation
+#
+##############################################################################
+call_getFlagConfigScheduledChanges() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey featureFlagKey environmentKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/scheduled-changes" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getFlagConfigScheduledChangesConflicts operation
+#
+##############################################################################
+call_getFlagConfigScheduledChangesConflicts() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey featureFlagKey environmentKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/scheduled-changes-conflicts" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the Swagger specification
+    # if values produces and consumes are defined unambigously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
 # Call patchExpiringUserTargets operation
 #
 ##############################################################################
@@ -5700,19 +6114,175 @@ call_patchFeatureFlag() {
 
 ##############################################################################
 #
-# Call postApplyFeatureFlagApprovalRequest operation
+# Call patchFlagConfigScheduledChange operation
 #
 ##############################################################################
-call_postApplyFeatureFlagApprovalRequest() {
+call_patchFlagConfigScheduledChange() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local path_parameter_names=(projectKey featureFlagKey environmentKey featureFlagApprovalRequestId)
+    local path_parameter_names=(projectKey featureFlagKey environmentKey scheduledChangeId)
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId}/apply" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/scheduled-changes/{scheduledChangeId}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PATCH"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the Swagger specification
+    # if values produces and consumes are defined unambigously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call postApplyApprovalRequest operation
+#
+##############################################################################
+call_postApplyApprovalRequest() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey featureFlagKey environmentKey approvalRequestId)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{approvalRequestId}/apply" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the Swagger specification
+    # if values produces and consumes are defined unambigously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call postApprovalRequest operation
+#
+##############################################################################
+call_postApprovalRequest() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey featureFlagKey environmentKey approvalRequestId)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{approvalRequestId}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5856,19 +6426,19 @@ call_postFeatureFlag() {
 
 ##############################################################################
 #
-# Call postFeatureFlagApprovalRequest operation
+# Call postFlagConfigScheduledChanges operation
 #
 ##############################################################################
-call_postFeatureFlagApprovalRequest() {
+call_postFlagConfigScheduledChanges() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local path_parameter_names=(projectKey featureFlagKey environmentKey featureFlagApprovalRequestId)
+    local path_parameter_names=(projectKey featureFlagKey environmentKey)
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId}" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/scheduled-changes" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -5934,19 +6504,19 @@ call_postFeatureFlagApprovalRequest() {
 
 ##############################################################################
 #
-# Call postReviewFeatureFlagApprovalRequest operation
+# Call postReviewApprovalRequest operation
 #
 ##############################################################################
-call_postReviewFeatureFlagApprovalRequest() {
+call_postReviewApprovalRequest() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local path_parameter_names=(projectKey featureFlagKey environmentKey featureFlagApprovalRequestId)
+    local path_parameter_names=(projectKey featureFlagKey environmentKey approvalRequestId)
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{featureFlagApprovalRequestId}/review" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{approvalRequestId}/review" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -7212,6 +7782,42 @@ call_postMembers() {
 
 ##############################################################################
 #
+# Call getUser operation
+#
+##############################################################################
+call_getUser() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey userKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/users/{projectKey}/{environmentKey}/{userKey}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call deleteUserSegment operation
 #
 ##############################################################################
@@ -8004,42 +8610,6 @@ call_getSearchUsers() {
 
 ##############################################################################
 #
-# Call getUser operation
-#
-##############################################################################
-call_getUser() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(projectKey environmentKey userKey)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v2/users/{projectKey}/{environmentKey}/{userKey}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
 # Call getUsers operation
 #
 ##############################################################################
@@ -8540,23 +9110,26 @@ case $key in
     copyFeatureFlag)
     operation="copyFeatureFlag"
     ;;
+    deleteApprovalRequest)
+    operation="deleteApprovalRequest"
+    ;;
     deleteFeatureFlag)
     operation="deleteFeatureFlag"
     ;;
-    deleteFeatureFlagApprovalRequest)
-    operation="deleteFeatureFlagApprovalRequest"
+    deleteFlagConfigScheduledChanges)
+    operation="deleteFlagConfigScheduledChanges"
+    ;;
+    getApprovalRequest)
+    operation="getApprovalRequest"
+    ;;
+    getApprovalRequests)
+    operation="getApprovalRequests"
     ;;
     getExpiringUserTargets)
     operation="getExpiringUserTargets"
     ;;
     getFeatureFlag)
     operation="getFeatureFlag"
-    ;;
-    getFeatureFlagApprovalRequest)
-    operation="getFeatureFlagApprovalRequest"
-    ;;
-    getFeatureFlagApprovalRequests)
-    operation="getFeatureFlagApprovalRequests"
     ;;
     getFeatureFlagStatus)
     operation="getFeatureFlagStatus"
@@ -8570,23 +9143,38 @@ case $key in
     getFeatureFlags)
     operation="getFeatureFlags"
     ;;
+    getFlagConfigScheduledChange)
+    operation="getFlagConfigScheduledChange"
+    ;;
+    getFlagConfigScheduledChanges)
+    operation="getFlagConfigScheduledChanges"
+    ;;
+    getFlagConfigScheduledChangesConflicts)
+    operation="getFlagConfigScheduledChangesConflicts"
+    ;;
     patchExpiringUserTargets)
     operation="patchExpiringUserTargets"
     ;;
     patchFeatureFlag)
     operation="patchFeatureFlag"
     ;;
-    postApplyFeatureFlagApprovalRequest)
-    operation="postApplyFeatureFlagApprovalRequest"
+    patchFlagConfigScheduledChange)
+    operation="patchFlagConfigScheduledChange"
+    ;;
+    postApplyApprovalRequest)
+    operation="postApplyApprovalRequest"
+    ;;
+    postApprovalRequest)
+    operation="postApprovalRequest"
     ;;
     postFeatureFlag)
     operation="postFeatureFlag"
     ;;
-    postFeatureFlagApprovalRequest)
-    operation="postFeatureFlagApprovalRequest"
+    postFlagConfigScheduledChanges)
+    operation="postFlagConfigScheduledChanges"
     ;;
-    postReviewFeatureFlagApprovalRequest)
-    operation="postReviewFeatureFlagApprovalRequest"
+    postReviewApprovalRequest)
+    operation="postReviewApprovalRequest"
     ;;
     deleteIntegrationSubscription)
     operation="deleteIntegrationSubscription"
@@ -8660,6 +9248,9 @@ case $key in
     postMembers)
     operation="postMembers"
     ;;
+    getUser)
+    operation="getUser"
+    ;;
     deleteUserSegment)
     operation="deleteUserSegment"
     ;;
@@ -8704,9 +9295,6 @@ case $key in
     ;;
     getSearchUsers)
     operation="getSearchUsers"
-    ;;
-    getUser)
-    operation="getUser"
     ;;
     getUsers)
     operation="getUsers"
@@ -8915,23 +9503,26 @@ case $operation in
     copyFeatureFlag)
     call_copyFeatureFlag
     ;;
+    deleteApprovalRequest)
+    call_deleteApprovalRequest
+    ;;
     deleteFeatureFlag)
     call_deleteFeatureFlag
     ;;
-    deleteFeatureFlagApprovalRequest)
-    call_deleteFeatureFlagApprovalRequest
+    deleteFlagConfigScheduledChanges)
+    call_deleteFlagConfigScheduledChanges
+    ;;
+    getApprovalRequest)
+    call_getApprovalRequest
+    ;;
+    getApprovalRequests)
+    call_getApprovalRequests
     ;;
     getExpiringUserTargets)
     call_getExpiringUserTargets
     ;;
     getFeatureFlag)
     call_getFeatureFlag
-    ;;
-    getFeatureFlagApprovalRequest)
-    call_getFeatureFlagApprovalRequest
-    ;;
-    getFeatureFlagApprovalRequests)
-    call_getFeatureFlagApprovalRequests
     ;;
     getFeatureFlagStatus)
     call_getFeatureFlagStatus
@@ -8945,23 +9536,38 @@ case $operation in
     getFeatureFlags)
     call_getFeatureFlags
     ;;
+    getFlagConfigScheduledChange)
+    call_getFlagConfigScheduledChange
+    ;;
+    getFlagConfigScheduledChanges)
+    call_getFlagConfigScheduledChanges
+    ;;
+    getFlagConfigScheduledChangesConflicts)
+    call_getFlagConfigScheduledChangesConflicts
+    ;;
     patchExpiringUserTargets)
     call_patchExpiringUserTargets
     ;;
     patchFeatureFlag)
     call_patchFeatureFlag
     ;;
-    postApplyFeatureFlagApprovalRequest)
-    call_postApplyFeatureFlagApprovalRequest
+    patchFlagConfigScheduledChange)
+    call_patchFlagConfigScheduledChange
+    ;;
+    postApplyApprovalRequest)
+    call_postApplyApprovalRequest
+    ;;
+    postApprovalRequest)
+    call_postApprovalRequest
     ;;
     postFeatureFlag)
     call_postFeatureFlag
     ;;
-    postFeatureFlagApprovalRequest)
-    call_postFeatureFlagApprovalRequest
+    postFlagConfigScheduledChanges)
+    call_postFlagConfigScheduledChanges
     ;;
-    postReviewFeatureFlagApprovalRequest)
-    call_postReviewFeatureFlagApprovalRequest
+    postReviewApprovalRequest)
+    call_postReviewApprovalRequest
     ;;
     deleteIntegrationSubscription)
     call_deleteIntegrationSubscription
@@ -9035,6 +9641,9 @@ case $operation in
     postMembers)
     call_postMembers
     ;;
+    getUser)
+    call_getUser
+    ;;
     deleteUserSegment)
     call_deleteUserSegment
     ;;
@@ -9079,9 +9688,6 @@ case $operation in
     ;;
     getSearchUsers)
     call_getSearchUsers
-    ;;
-    getUser)
-    call_getUser
     ;;
     getUsers)
     call_getUsers

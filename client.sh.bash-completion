@@ -103,22 +103,28 @@ _()
     operations["resetEnvironmentMobileKey"]=1
     operations["resetEnvironmentSDKKey"]=1
     operations["copyFeatureFlag"]=1
+    operations["deleteApprovalRequest"]=1
     operations["deleteFeatureFlag"]=1
-    operations["deleteFeatureFlagApprovalRequest"]=1
+    operations["deleteFlagConfigScheduledChanges"]=1
+    operations["getApprovalRequest"]=1
+    operations["getApprovalRequests"]=1
     operations["getExpiringUserTargets"]=1
     operations["getFeatureFlag"]=1
-    operations["getFeatureFlagApprovalRequest"]=1
-    operations["getFeatureFlagApprovalRequests"]=1
     operations["getFeatureFlagStatus"]=1
     operations["getFeatureFlagStatusAcrossEnvironments"]=1
     operations["getFeatureFlagStatuses"]=1
     operations["getFeatureFlags"]=1
+    operations["getFlagConfigScheduledChange"]=1
+    operations["getFlagConfigScheduledChanges"]=1
+    operations["getFlagConfigScheduledChangesConflicts"]=1
     operations["patchExpiringUserTargets"]=1
     operations["patchFeatureFlag"]=1
-    operations["postApplyFeatureFlagApprovalRequest"]=1
+    operations["patchFlagConfigScheduledChange"]=1
+    operations["postApplyApprovalRequest"]=1
+    operations["postApprovalRequest"]=1
     operations["postFeatureFlag"]=1
-    operations["postFeatureFlagApprovalRequest"]=1
-    operations["postReviewFeatureFlagApprovalRequest"]=1
+    operations["postFlagConfigScheduledChanges"]=1
+    operations["postReviewApprovalRequest"]=1
     operations["deleteIntegrationSubscription"]=1
     operations["getIntegrationSubscription"]=1
     operations["getIntegrationSubscriptions"]=1
@@ -143,6 +149,7 @@ _()
     operations["getMembers"]=1
     operations["patchMember"]=1
     operations["postMembers"]=1
+    operations["getUser"]=1
     operations["deleteUserSegment"]=1
     operations["getExpiringUserTargetsOnSegment"]=1
     operations["getUserSegment"]=1
@@ -158,7 +165,6 @@ _()
     operations["putFlagSetting"]=1
     operations["deleteUser"]=1
     operations["getSearchUsers"]=1
-    operations["getUser"]=1
     operations["getUsers"]=1
     operations["deleteWebhook"]=1
     operations["getWebhook"]=1
@@ -204,22 +210,28 @@ _()
     operation_parameters["resetEnvironmentMobileKey"]="projectKey= environmentKey= expiry= "
     operation_parameters["resetEnvironmentSDKKey"]="projectKey= environmentKey= expiry= "
     operation_parameters["copyFeatureFlag"]="projectKey= featureFlagKey= "
+    operation_parameters["deleteApprovalRequest"]="projectKey= environmentKey= featureFlagKey= approvalRequestId= "
     operation_parameters["deleteFeatureFlag"]="projectKey= featureFlagKey= "
-    operation_parameters["deleteFeatureFlagApprovalRequest"]="projectKey= environmentKey= featureFlagKey= featureFlagApprovalRequestId= "
+    operation_parameters["deleteFlagConfigScheduledChanges"]="projectKey= featureFlagKey= environmentKey= scheduledChangeId= "
+    operation_parameters["getApprovalRequest"]="projectKey= featureFlagKey= environmentKey= approvalRequestId= "
+    operation_parameters["getApprovalRequests"]="projectKey= featureFlagKey= environmentKey= "
     operation_parameters["getExpiringUserTargets"]="projectKey= environmentKey= featureFlagKey= "
     operation_parameters["getFeatureFlag"]="projectKey= featureFlagKey= env= "
-    operation_parameters["getFeatureFlagApprovalRequest"]="projectKey= featureFlagKey= environmentKey= featureFlagApprovalRequestId= "
-    operation_parameters["getFeatureFlagApprovalRequests"]="projectKey= featureFlagKey= environmentKey= "
     operation_parameters["getFeatureFlagStatus"]="projectKey= environmentKey= featureFlagKey= "
     operation_parameters["getFeatureFlagStatusAcrossEnvironments"]="projectKey= featureFlagKey= "
     operation_parameters["getFeatureFlagStatuses"]="projectKey= environmentKey= "
     operation_parameters["getFeatureFlags"]="projectKey= env= summary= archived= limit= offset= filter= sort= tag= "
+    operation_parameters["getFlagConfigScheduledChange"]="projectKey= featureFlagKey= environmentKey= scheduledChangeId= "
+    operation_parameters["getFlagConfigScheduledChanges"]="projectKey= featureFlagKey= environmentKey= "
+    operation_parameters["getFlagConfigScheduledChangesConflicts"]="projectKey= featureFlagKey= environmentKey= "
     operation_parameters["patchExpiringUserTargets"]="projectKey= environmentKey= featureFlagKey= "
     operation_parameters["patchFeatureFlag"]="projectKey= featureFlagKey= "
-    operation_parameters["postApplyFeatureFlagApprovalRequest"]="projectKey= featureFlagKey= environmentKey= featureFlagApprovalRequestId= "
+    operation_parameters["patchFlagConfigScheduledChange"]="projectKey= featureFlagKey= environmentKey= scheduledChangeId= "
+    operation_parameters["postApplyApprovalRequest"]="projectKey= featureFlagKey= environmentKey= approvalRequestId= "
+    operation_parameters["postApprovalRequest"]="projectKey= featureFlagKey= environmentKey= approvalRequestId= "
     operation_parameters["postFeatureFlag"]="projectKey= clone= "
-    operation_parameters["postFeatureFlagApprovalRequest"]="projectKey= featureFlagKey= environmentKey= featureFlagApprovalRequestId= "
-    operation_parameters["postReviewFeatureFlagApprovalRequest"]="projectKey= featureFlagKey= environmentKey= featureFlagApprovalRequestId= "
+    operation_parameters["postFlagConfigScheduledChanges"]="projectKey= featureFlagKey= environmentKey= "
+    operation_parameters["postReviewApprovalRequest"]="projectKey= featureFlagKey= environmentKey= approvalRequestId= "
     operation_parameters["deleteIntegrationSubscription"]="integrationKey= integrationId= "
     operation_parameters["getIntegrationSubscription"]="integrationKey= integrationId= "
     operation_parameters["getIntegrationSubscriptions"]="integrationKey= "
@@ -244,6 +256,7 @@ _()
     operation_parameters["getMembers"]="limit= offset= filter= sort= "
     operation_parameters["patchMember"]="memberId= "
     operation_parameters["postMembers"]=""
+    operation_parameters["getUser"]="projectKey= environmentKey= userKey= "
     operation_parameters["deleteUserSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["getExpiringUserTargetsOnSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["getUserSegment"]="projectKey= environmentKey= userSegmentKey= "
@@ -259,7 +272,6 @@ _()
     operation_parameters["putFlagSetting"]="projectKey= environmentKey= userKey= featureFlagKey= "
     operation_parameters["deleteUser"]="projectKey= environmentKey= userKey= "
     operation_parameters["getSearchUsers"]="projectKey= environmentKey= q= limit= offset= after= "
-    operation_parameters["getUser"]="projectKey= environmentKey= userKey= "
     operation_parameters["getUsers"]="projectKey= environmentKey= limit= h= scrollId= "
     operation_parameters["deleteWebhook"]="resourceId= "
     operation_parameters["getWebhook"]="resourceId= "
