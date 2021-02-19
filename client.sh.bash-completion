@@ -149,7 +149,6 @@ _()
     operations["getMembers"]=1
     operations["patchMember"]=1
     operations["postMembers"]=1
-    operations["getUser"]=1
     operations["deleteUserSegment"]=1
     operations["getExpiringUserTargetsOnSegment"]=1
     operations["getUserSegment"]=1
@@ -165,6 +164,7 @@ _()
     operations["putFlagSetting"]=1
     operations["deleteUser"]=1
     operations["getSearchUsers"]=1
+    operations["getUser"]=1
     operations["getUsers"]=1
     operations["deleteWebhook"]=1
     operations["getWebhook"]=1
@@ -256,7 +256,6 @@ _()
     operation_parameters["getMembers"]="limit= offset= filter= sort= "
     operation_parameters["patchMember"]="memberId= "
     operation_parameters["postMembers"]=""
-    operation_parameters["getUser"]="projectKey= environmentKey= userKey= "
     operation_parameters["deleteUserSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["getExpiringUserTargetsOnSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["getUserSegment"]="projectKey= environmentKey= userSegmentKey= "
@@ -272,6 +271,7 @@ _()
     operation_parameters["putFlagSetting"]="projectKey= environmentKey= userKey= featureFlagKey= "
     operation_parameters["deleteUser"]="projectKey= environmentKey= userKey= "
     operation_parameters["getSearchUsers"]="projectKey= environmentKey= q= limit= offset= after= "
+    operation_parameters["getUser"]="projectKey= environmentKey= userKey= "
     operation_parameters["getUsers"]="projectKey= environmentKey= limit= h= scrollId= "
     operation_parameters["deleteWebhook"]="resourceId= "
     operation_parameters["getWebhook"]="resourceId= "

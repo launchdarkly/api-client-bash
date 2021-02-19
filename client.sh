@@ -267,9 +267,6 @@ operation_parameters_minimum_occurrences["getMembers:::sort"]=0
 operation_parameters_minimum_occurrences["patchMember:::memberId"]=1
 operation_parameters_minimum_occurrences["patchMember:::patchDelta"]=1
 operation_parameters_minimum_occurrences["postMembers:::membersBody"]=1
-operation_parameters_minimum_occurrences["getUser:::projectKey"]=1
-operation_parameters_minimum_occurrences["getUser:::environmentKey"]=1
-operation_parameters_minimum_occurrences["getUser:::userKey"]=1
 operation_parameters_minimum_occurrences["deleteUserSegment:::projectKey"]=1
 operation_parameters_minimum_occurrences["deleteUserSegment:::environmentKey"]=1
 operation_parameters_minimum_occurrences["deleteUserSegment:::userSegmentKey"]=1
@@ -325,6 +322,9 @@ operation_parameters_minimum_occurrences["getSearchUsers:::q"]=0
 operation_parameters_minimum_occurrences["getSearchUsers:::limit"]=0
 operation_parameters_minimum_occurrences["getSearchUsers:::offset"]=0
 operation_parameters_minimum_occurrences["getSearchUsers:::after"]=0
+operation_parameters_minimum_occurrences["getUser:::projectKey"]=1
+operation_parameters_minimum_occurrences["getUser:::environmentKey"]=1
+operation_parameters_minimum_occurrences["getUser:::userKey"]=1
 operation_parameters_minimum_occurrences["getUsers:::projectKey"]=1
 operation_parameters_minimum_occurrences["getUsers:::environmentKey"]=1
 operation_parameters_minimum_occurrences["getUsers:::limit"]=0
@@ -515,9 +515,6 @@ operation_parameters_maximum_occurrences["getMembers:::sort"]=0
 operation_parameters_maximum_occurrences["patchMember:::memberId"]=0
 operation_parameters_maximum_occurrences["patchMember:::patchDelta"]=0
 operation_parameters_maximum_occurrences["postMembers:::membersBody"]=0
-operation_parameters_maximum_occurrences["getUser:::projectKey"]=0
-operation_parameters_maximum_occurrences["getUser:::environmentKey"]=0
-operation_parameters_maximum_occurrences["getUser:::userKey"]=0
 operation_parameters_maximum_occurrences["deleteUserSegment:::projectKey"]=0
 operation_parameters_maximum_occurrences["deleteUserSegment:::environmentKey"]=0
 operation_parameters_maximum_occurrences["deleteUserSegment:::userSegmentKey"]=0
@@ -573,6 +570,9 @@ operation_parameters_maximum_occurrences["getSearchUsers:::q"]=0
 operation_parameters_maximum_occurrences["getSearchUsers:::limit"]=0
 operation_parameters_maximum_occurrences["getSearchUsers:::offset"]=0
 operation_parameters_maximum_occurrences["getSearchUsers:::after"]=0
+operation_parameters_maximum_occurrences["getUser:::projectKey"]=0
+operation_parameters_maximum_occurrences["getUser:::environmentKey"]=0
+operation_parameters_maximum_occurrences["getUser:::userKey"]=0
 operation_parameters_maximum_occurrences["getUsers:::projectKey"]=0
 operation_parameters_maximum_occurrences["getUsers:::environmentKey"]=0
 operation_parameters_maximum_occurrences["getUsers:::limit"]=0
@@ -760,9 +760,6 @@ operation_parameters_collection_type["getMembers:::sort"]=""
 operation_parameters_collection_type["patchMember:::memberId"]=""
 operation_parameters_collection_type["patchMember:::patchDelta"]=
 operation_parameters_collection_type["postMembers:::membersBody"]=
-operation_parameters_collection_type["getUser:::projectKey"]=""
-operation_parameters_collection_type["getUser:::environmentKey"]=""
-operation_parameters_collection_type["getUser:::userKey"]=""
 operation_parameters_collection_type["deleteUserSegment:::projectKey"]=""
 operation_parameters_collection_type["deleteUserSegment:::environmentKey"]=""
 operation_parameters_collection_type["deleteUserSegment:::userSegmentKey"]=""
@@ -818,6 +815,9 @@ operation_parameters_collection_type["getSearchUsers:::q"]=""
 operation_parameters_collection_type["getSearchUsers:::limit"]=""
 operation_parameters_collection_type["getSearchUsers:::offset"]=""
 operation_parameters_collection_type["getSearchUsers:::after"]=""
+operation_parameters_collection_type["getUser:::projectKey"]=""
+operation_parameters_collection_type["getUser:::environmentKey"]=""
+operation_parameters_collection_type["getUser:::userKey"]=""
 operation_parameters_collection_type["getUsers:::projectKey"]=""
 operation_parameters_collection_type["getUsers:::environmentKey"]=""
 operation_parameters_collection_type["getUsers:::limit"]=""
@@ -1173,7 +1173,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 5.0.0)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 5.0.1)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1348,12 +1348,6 @@ read -r -d '' ops <<EOF
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
-    echo -e "${BOLD}${WHITE}[userRecord]${OFF}"
-read -r -d '' ops <<EOF
-  ${CYAN}getUser${OFF};Get a user by key. (AUTH)
-EOF
-echo "  $ops" | column -t -s ';'
-    echo ""
     echo -e "${BOLD}${WHITE}[userSegments]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}deleteUserSegment${OFF};Delete a user segment. (AUTH)
@@ -1381,6 +1375,7 @@ echo "  $ops" | column -t -s ';'
 read -r -d '' ops <<EOF
   ${CYAN}deleteUser${OFF};Delete a user by ID. (AUTH)
   ${CYAN}getSearchUsers${OFF};Search users in LaunchDarkly based on their last active date, or a search query. It should not be used to enumerate all users in LaunchDarkly-- use the List users API resource. (AUTH)
+  ${CYAN}getUser${OFF};Get a user by key. (AUTH)
   ${CYAN}getUsers${OFF};List all users in the environment. Includes the total count of users. In each page, there will be up to 'limit' users returned (default 20). This is useful for exporting all users in the system for further analysis. Paginated collections will include a next link containing a URL with the next set of elements in the collection. (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
@@ -1421,7 +1416,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 5.0.0)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 5.0.1)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -1441,7 +1436,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 5.0.0)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 5.0.1)${OFF}"
     echo ""
 }
 
@@ -3219,28 +3214,6 @@ print_postMembers_help() {
 }
 ##############################################################################
 #
-# Print help for getUser operation
-#
-##############################################################################
-print_getUser_help() {
-    echo ""
-    echo -e "${BOLD}${WHITE}getUser - Get a user by key.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e ""
-    echo -e "${BOLD}${WHITE}Parameters${OFF}"
-    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}userKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The user's key. ${YELLOW}Specify as: userKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo ""
-    echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;User response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=401
-    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-    code=404
-    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
-}
-##############################################################################
-#
 # Print help for deleteUserSegment operation
 #
 ##############################################################################
@@ -3599,6 +3572,28 @@ print_getSearchUsers_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;Users response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getUser operation
+#
+##############################################################################
+print_getUser_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getUser - Get a user by key.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}userKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The user's key. ${YELLOW}Specify as: userKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;User response.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -7782,42 +7777,6 @@ call_postMembers() {
 
 ##############################################################################
 #
-# Call getUser operation
-#
-##############################################################################
-call_getUser() {
-    # ignore error about 'path_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local path_parameter_names=(projectKey environmentKey userKey)
-    # ignore error about 'query_parameter_names' being unused; passed by reference
-    # shellcheck disable=SC2034
-    local query_parameter_names=(  )
-    local path
-
-    if ! path=$(build_request_path "/api/v2/users/{projectKey}/{environmentKey}/{userKey}" path_parameter_names query_parameter_names); then
-        ERROR_MSG=$path
-        exit 1
-    fi
-    local method="GET"
-    local headers_curl
-    headers_curl=$(header_arguments_to_curl)
-    if [[ -n $header_accept ]]; then
-        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
-    fi
-
-    local basic_auth_option=""
-    if [[ -n $basic_auth_credential ]]; then
-        basic_auth_option="-u ${basic_auth_credential}"
-    fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    else
-        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
-    fi
-}
-
-##############################################################################
-#
 # Call deleteUserSegment operation
 #
 ##############################################################################
@@ -8610,6 +8569,42 @@ call_getSearchUsers() {
 
 ##############################################################################
 #
+# Call getUser operation
+#
+##############################################################################
+call_getUser() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey userKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/users/{projectKey}/{environmentKey}/{userKey}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call getUsers operation
 #
 ##############################################################################
@@ -9248,9 +9243,6 @@ case $key in
     postMembers)
     operation="postMembers"
     ;;
-    getUser)
-    operation="getUser"
-    ;;
     deleteUserSegment)
     operation="deleteUserSegment"
     ;;
@@ -9295,6 +9287,9 @@ case $key in
     ;;
     getSearchUsers)
     operation="getSearchUsers"
+    ;;
+    getUser)
+    operation="getUser"
     ;;
     getUsers)
     operation="getUsers"
@@ -9641,9 +9636,6 @@ case $operation in
     postMembers)
     call_postMembers
     ;;
-    getUser)
-    call_getUser
-    ;;
     deleteUserSegment)
     call_deleteUserSegment
     ;;
@@ -9688,6 +9680,9 @@ case $operation in
     ;;
     getSearchUsers)
     call_getSearchUsers
+    ;;
+    getUser)
+    call_getUser
     ;;
     getUsers)
     call_getUsers

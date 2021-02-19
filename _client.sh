@@ -365,7 +365,7 @@ case $state in
             "getMember[Get a single team member by ID.]" \
             "getMembers[Returns a list of all members in the account.]" \
             "patchMember[Modify a team member by ID.]" \
-            "postMembers[Invite new members.]"             "getUser[Get a user by key.]"             "deleteUserSegment[Delete a user segment.]" \
+            "postMembers[Invite new members.]"             "deleteUserSegment[Delete a user segment.]" \
             "getExpiringUserTargetsOnSegment[Get expiring user targets for user segment]" \
             "getUserSegment[Get a single user segment by key.]" \
             "getUserSegments[Get a list of all user segments in the given project.]" \
@@ -378,6 +378,7 @@ case $state in
             "patchExpiringUserTargetsForFlags[Update, add, or delete expiring user targets for a single user on all flags]" \
             "putFlagSetting[Specifically enable or disable a feature flag for a user based on their key.]"             "deleteUser[Delete a user by ID.]" \
             "getSearchUsers[Search users in LaunchDarkly based on their last active date, or a search query. It should not be used to enumerate all users in LaunchDarkly-- use the List users API resource.]" \
+            "getUser[Get a user by key.]" \
             "getUsers[List all users in the environment. Includes the total count of users. In each page, there will be up to 'limit' users returned (default 20). This is useful for exporting all users in the system for further analysis. Paginated collections will include a next link containing a URL with the next set of elements in the collection.]"             "deleteWebhook[Delete a webhook by ID.]" \
             "getWebhook[Get a webhook by ID.]" \
             "getWebhooks[Fetch a list of all webhooks.]" \
@@ -1023,15 +1024,6 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      getUser)
-        local -a _op_arguments
-        _op_arguments=(
-          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
-"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
-"userKey=:[PATH] The user&#39;s key."
-                    )
-        _describe -t actions 'operations' _op_arguments -S '' && ret=0
-        ;;
       deleteUserSegment)
         local -a _op_arguments
         _op_arguments=(
@@ -1169,6 +1161,15 @@ case $state in
 "offset=:[QUERY] Specifies the first item to return in the collection."
 "after=:[QUERY] A timestamp filter, expressed as a Unix epoch time in milliseconds. All entries returned will have occurred after this timestamp."
           )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getUser)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"userKey=:[PATH] The user&#39;s key."
+                    )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       getUsers)
