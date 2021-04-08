@@ -156,7 +156,7 @@ _()
     operations["patchExpiringUserTargetsOnSegment"]=1
     operations["patchUserSegment"]=1
     operations["postUserSegment"]=1
-    operations["updatedUnboundedSegmentTargets"]=1
+    operations["updatedBigSegmentTargets"]=1
     operations["getExpiringUserTargetsForUser"]=1
     operations["getUserFlagSetting"]=1
     operations["getUserFlagSettings"]=1
@@ -263,7 +263,7 @@ _()
     operation_parameters["patchExpiringUserTargetsOnSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["patchUserSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["postUserSegment"]="projectKey= environmentKey= "
-    operation_parameters["updatedUnboundedSegmentTargets"]="projectKey= environmentKey= userSegmentKey= "
+    operation_parameters["updatedBigSegmentTargets"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["getExpiringUserTargetsForUser"]="projectKey= environmentKey= userKey= "
     operation_parameters["getUserFlagSetting"]="projectKey= environmentKey= userKey= featureFlagKey= "
     operation_parameters["getUserFlagSettings"]="projectKey= environmentKey= userKey= "

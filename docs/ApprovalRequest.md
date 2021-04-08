@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **allReviews** | [**array[ApprovalRequestReview]**](ApprovalRequestReview.md) |  | [optional] [default to null]
 **notifyMemberIds** | **array[string]** |  | [optional] [default to null]
 **instructions** | [**SemanticPatchInstruction**](SemanticPatchInstruction.md) |  | [optional] [default to null]
+**executionDate** | **integer** |  | [optional] [default to null]
+**operatingOnId** | **string** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

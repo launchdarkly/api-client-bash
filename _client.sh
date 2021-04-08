@@ -372,7 +372,7 @@ case $state in
             "patchExpiringUserTargetsOnSegment[Update, add, or delete expiring user targets on user segment]" \
             "patchUserSegment[Perform a partial update to a user segment.]" \
             "postUserSegment[Creates a new user segment.]" \
-            "updatedUnboundedSegmentTargets[Update targets included or excluded in an unbounded segment]"             "getExpiringUserTargetsForUser[Get expiring dates on flags for user]" \
+            "updatedBigSegmentTargets[Update targets included or excluded in a big segment]"             "getExpiringUserTargetsForUser[Get expiring dates on flags for user]" \
             "getUserFlagSetting[Fetch a single flag setting for a user by key.]" \
             "getUserFlagSettings[Fetch a single flag setting for a user by key.]" \
             "patchExpiringUserTargetsForFlags[Update, add, or delete expiring user targets for a single user on all flags]" \
@@ -1086,7 +1086,7 @@ case $state in
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      updatedUnboundedSegmentTargets)
+      updatedBigSegmentTargets)
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."

@@ -1,10 +1,10 @@
-# FeatureFlagStatuses
+# BigSegmentTargetChanges
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_links** | [**FeatureFlagStatusLinks**](FeatureFlagStatusLinks.md) |  | [optional] [default to null]
-**items** | [**array[FeatureFlagStatus]**](FeatureFlagStatus.md) |  | [optional] [default to null]
+**add** | **array[string]** |  | [optional] [default to null]
+**remove** | **array[string]** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

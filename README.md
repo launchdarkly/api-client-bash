@@ -187,7 +187,7 @@ Class | Method | HTTP request | Description
 *UserSegmentsApi* | [**patchExpiringUserTargetsOnSegment**](docs/UserSegmentsApi.md#patchexpiringusertargetsonsegment) | **PATCH** /segments/{projectKey}/{userSegmentKey}/expiring-user-targets/{environmentKey} | Update, add, or delete expiring user targets on user segment
 *UserSegmentsApi* | [**patchUserSegment**](docs/UserSegmentsApi.md#patchusersegment) | **PATCH** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Perform a partial update to a user segment.
 *UserSegmentsApi* | [**postUserSegment**](docs/UserSegmentsApi.md#postusersegment) | **POST** /segments/{projectKey}/{environmentKey} | Creates a new user segment.
-*UserSegmentsApi* | [**updatedUnboundedSegmentTargets**](docs/UserSegmentsApi.md#updatedunboundedsegmenttargets) | **POST** /segments/{projectKey}/{environmentKey}/{userSegmentKey}/unbounded-users | Update targets included or excluded in an unbounded segment
+*UserSegmentsApi* | [**updatedBigSegmentTargets**](docs/UserSegmentsApi.md#updatedbigsegmenttargets) | **POST** /segments/{projectKey}/{environmentKey}/{userSegmentKey}/users | Update targets included or excluded in a big segment
 *UserSettingsApi* | [**getExpiringUserTargetsForUser**](docs/UserSettingsApi.md#getexpiringusertargetsforuser) | **GET** /users/{projectKey}/{userKey}/expiring-user-targets/{environmentKey} | Get expiring dates on flags for user
 *UserSettingsApi* | [**getUserFlagSetting**](docs/UserSettingsApi.md#getuserflagsetting) | **GET** /users/{projectKey}/{environmentKey}/{userKey}/flags/{featureFlagKey} | Fetch a single flag setting for a user by key.
 *UserSettingsApi* | [**getUserFlagSettings**](docs/UserSettingsApi.md#getuserflagsettings) | **GET** /users/{projectKey}/{environmentKey}/{userKey}/flags | Fetch a single flag setting for a user by key.
@@ -216,6 +216,8 @@ Class | Method | HTTP request | Description
  - [AuditLogEntries](docs/AuditLogEntries.md)
  - [AuditLogEntry](docs/AuditLogEntry.md)
  - [AuditLogEntry_target](docs/AuditLogEntry_target.md)
+ - [BigSegmentTargetChanges](docs/BigSegmentTargetChanges.md)
+ - [BigSegmentTargetsBody](docs/BigSegmentTargetsBody.md)
  - [Clause](docs/Clause.md)
  - [ClientSideAvailability](docs/ClientSideAvailability.md)
  - [CopyActions](docs/CopyActions.md)
@@ -250,6 +252,7 @@ Class | Method | HTTP request | Description
  - [FeatureFlagStatus](docs/FeatureFlagStatus.md)
  - [FeatureFlagStatusAcrossEnvironments](docs/FeatureFlagStatusAcrossEnvironments.md)
  - [FeatureFlagStatusForQueriedEnvironment](docs/FeatureFlagStatusForQueriedEnvironment.md)
+ - [FeatureFlagStatusLinks](docs/FeatureFlagStatusLinks.md)
  - [FeatureFlagStatuses](docs/FeatureFlagStatuses.md)
  - [FeatureFlags](docs/FeatureFlags.md)
  - [FlagConfigScheduledChangesConflictsBody](docs/FlagConfigScheduledChangesConflictsBody.md)
@@ -308,8 +311,6 @@ Class | Method | HTTP request | Description
  - [Token](docs/Token.md)
  - [TokenBody](docs/TokenBody.md)
  - [Tokens](docs/Tokens.md)
- - [UnboundedSegmentTargetChanges](docs/UnboundedSegmentTargetChanges.md)
- - [UnboundedSegmentTargetsBody](docs/UnboundedSegmentTargetsBody.md)
  - [Usage](docs/Usage.md)
  - [UsageError](docs/UsageError.md)
  - [UsageLinks](docs/UsageLinks.md)

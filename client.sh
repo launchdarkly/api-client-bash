@@ -290,10 +290,10 @@ operation_parameters_minimum_occurrences["patchUserSegment:::PatchOnly"]=1
 operation_parameters_minimum_occurrences["postUserSegment:::projectKey"]=1
 operation_parameters_minimum_occurrences["postUserSegment:::environmentKey"]=1
 operation_parameters_minimum_occurrences["postUserSegment:::userSegmentBody"]=1
-operation_parameters_minimum_occurrences["updatedUnboundedSegmentTargets:::projectKey"]=1
-operation_parameters_minimum_occurrences["updatedUnboundedSegmentTargets:::environmentKey"]=1
-operation_parameters_minimum_occurrences["updatedUnboundedSegmentTargets:::userSegmentKey"]=1
-operation_parameters_minimum_occurrences["updatedUnboundedSegmentTargets:::unboundedSegmentTargetsBody"]=1
+operation_parameters_minimum_occurrences["updatedBigSegmentTargets:::projectKey"]=1
+operation_parameters_minimum_occurrences["updatedBigSegmentTargets:::environmentKey"]=1
+operation_parameters_minimum_occurrences["updatedBigSegmentTargets:::userSegmentKey"]=1
+operation_parameters_minimum_occurrences["updatedBigSegmentTargets:::bigSegmentTargetsBody"]=1
 operation_parameters_minimum_occurrences["getExpiringUserTargetsForUser:::projectKey"]=1
 operation_parameters_minimum_occurrences["getExpiringUserTargetsForUser:::environmentKey"]=1
 operation_parameters_minimum_occurrences["getExpiringUserTargetsForUser:::userKey"]=1
@@ -538,10 +538,10 @@ operation_parameters_maximum_occurrences["patchUserSegment:::PatchOnly"]=0
 operation_parameters_maximum_occurrences["postUserSegment:::projectKey"]=0
 operation_parameters_maximum_occurrences["postUserSegment:::environmentKey"]=0
 operation_parameters_maximum_occurrences["postUserSegment:::userSegmentBody"]=0
-operation_parameters_maximum_occurrences["updatedUnboundedSegmentTargets:::projectKey"]=0
-operation_parameters_maximum_occurrences["updatedUnboundedSegmentTargets:::environmentKey"]=0
-operation_parameters_maximum_occurrences["updatedUnboundedSegmentTargets:::userSegmentKey"]=0
-operation_parameters_maximum_occurrences["updatedUnboundedSegmentTargets:::unboundedSegmentTargetsBody"]=0
+operation_parameters_maximum_occurrences["updatedBigSegmentTargets:::projectKey"]=0
+operation_parameters_maximum_occurrences["updatedBigSegmentTargets:::environmentKey"]=0
+operation_parameters_maximum_occurrences["updatedBigSegmentTargets:::userSegmentKey"]=0
+operation_parameters_maximum_occurrences["updatedBigSegmentTargets:::bigSegmentTargetsBody"]=0
 operation_parameters_maximum_occurrences["getExpiringUserTargetsForUser:::projectKey"]=0
 operation_parameters_maximum_occurrences["getExpiringUserTargetsForUser:::environmentKey"]=0
 operation_parameters_maximum_occurrences["getExpiringUserTargetsForUser:::userKey"]=0
@@ -783,10 +783,10 @@ operation_parameters_collection_type["patchUserSegment:::PatchOnly"]=
 operation_parameters_collection_type["postUserSegment:::projectKey"]=""
 operation_parameters_collection_type["postUserSegment:::environmentKey"]=""
 operation_parameters_collection_type["postUserSegment:::userSegmentBody"]=""
-operation_parameters_collection_type["updatedUnboundedSegmentTargets:::projectKey"]=""
-operation_parameters_collection_type["updatedUnboundedSegmentTargets:::environmentKey"]=""
-operation_parameters_collection_type["updatedUnboundedSegmentTargets:::userSegmentKey"]=""
-operation_parameters_collection_type["updatedUnboundedSegmentTargets:::unboundedSegmentTargetsBody"]=""
+operation_parameters_collection_type["updatedBigSegmentTargets:::projectKey"]=""
+operation_parameters_collection_type["updatedBigSegmentTargets:::environmentKey"]=""
+operation_parameters_collection_type["updatedBigSegmentTargets:::userSegmentKey"]=""
+operation_parameters_collection_type["updatedBigSegmentTargets:::bigSegmentTargetsBody"]=""
 operation_parameters_collection_type["getExpiringUserTargetsForUser:::projectKey"]=""
 operation_parameters_collection_type["getExpiringUserTargetsForUser:::environmentKey"]=""
 operation_parameters_collection_type["getExpiringUserTargetsForUser:::userKey"]=""
@@ -1173,7 +1173,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 5.0.2)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 5.0.3)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1357,7 +1357,7 @@ read -r -d '' ops <<EOF
   ${CYAN}patchExpiringUserTargetsOnSegment${OFF};Update, add, or delete expiring user targets on user segment (AUTH)
   ${CYAN}patchUserSegment${OFF};Perform a partial update to a user segment. (AUTH)
   ${CYAN}postUserSegment${OFF};Creates a new user segment. (AUTH)
-  ${CYAN}updatedUnboundedSegmentTargets${OFF};Update targets included or excluded in an unbounded segment (AUTH)
+  ${CYAN}updatedBigSegmentTargets${OFF};Update targets included or excluded in a big segment (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -1416,7 +1416,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 5.0.2)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 5.0.3)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -1436,7 +1436,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 5.0.2)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 5.0.3)${OFF}"
     echo ""
 }
 
@@ -3382,18 +3382,18 @@ print_postUserSegment_help() {
 }
 ##############################################################################
 #
-# Print help for updatedUnboundedSegmentTargets operation
+# Print help for updatedBigSegmentTargets operation
 #
 ##############################################################################
-print_updatedUnboundedSegmentTargets_help() {
+print_updatedBigSegmentTargets_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}updatedUnboundedSegmentTargets - Update targets included or excluded in an unbounded segment${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}updatedBigSegmentTargets - Update targets included or excluded in a big segment${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}userSegmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The user segment's key. The key identifies the user segment in your code. ${YELLOW}Specify as: userSegmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Add or remove user targets to the included or excluded lists on an unbounded segment" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - Add or remove user targets to the included or excluded lists on a big segment. Contact your account manager for early access to this feature." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -8155,10 +8155,10 @@ call_postUserSegment() {
 
 ##############################################################################
 #
-# Call updatedUnboundedSegmentTargets operation
+# Call updatedBigSegmentTargets operation
 #
 ##############################################################################
-call_updatedUnboundedSegmentTargets() {
+call_updatedBigSegmentTargets() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=(projectKey environmentKey userSegmentKey)
@@ -8167,7 +8167,7 @@ call_updatedUnboundedSegmentTargets() {
     local query_parameter_names=(  )
     local path
 
-    if ! path=$(build_request_path "/api/v2/segments/{projectKey}/{environmentKey}/{userSegmentKey}/unbounded-users" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/api/v2/segments/{projectKey}/{environmentKey}/{userSegmentKey}/users" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -9264,8 +9264,8 @@ case $key in
     postUserSegment)
     operation="postUserSegment"
     ;;
-    updatedUnboundedSegmentTargets)
-    operation="updatedUnboundedSegmentTargets"
+    updatedBigSegmentTargets)
+    operation="updatedBigSegmentTargets"
     ;;
     getExpiringUserTargetsForUser)
     operation="getExpiringUserTargetsForUser"
@@ -9657,8 +9657,8 @@ case $operation in
     postUserSegment)
     call_postUserSegment
     ;;
-    updatedUnboundedSegmentTargets)
-    call_updatedUnboundedSegmentTargets
+    updatedBigSegmentTargets)
+    call_updatedBigSegmentTargets
     ;;
     getExpiringUserTargetsForUser)
     call_getExpiringUserTargetsForUser
