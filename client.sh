@@ -162,6 +162,11 @@ operation_parameters_minimum_occurrences["deleteFlagConfigScheduledChanges:::pro
 operation_parameters_minimum_occurrences["deleteFlagConfigScheduledChanges:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["deleteFlagConfigScheduledChanges:::environmentKey"]=1
 operation_parameters_minimum_occurrences["deleteFlagConfigScheduledChanges:::scheduledChangeId"]=1
+operation_parameters_minimum_occurrences["flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet:::projectKey"]=1
+operation_parameters_minimum_occurrences["flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet:::environmentKey"]=1
+operation_parameters_minimum_occurrences["flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet:::featureFlagKey"]=1
+operation_parameters_minimum_occurrences["flagsProjectKeyFeatureFlagKeyDependentFlagsGet:::projectKey"]=1
+operation_parameters_minimum_occurrences["flagsProjectKeyFeatureFlagKeyDependentFlagsGet:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["getApprovalRequest:::projectKey"]=1
 operation_parameters_minimum_occurrences["getApprovalRequest:::featureFlagKey"]=1
 operation_parameters_minimum_occurrences["getApprovalRequest:::environmentKey"]=1
@@ -290,10 +295,10 @@ operation_parameters_minimum_occurrences["patchUserSegment:::PatchOnly"]=1
 operation_parameters_minimum_occurrences["postUserSegment:::projectKey"]=1
 operation_parameters_minimum_occurrences["postUserSegment:::environmentKey"]=1
 operation_parameters_minimum_occurrences["postUserSegment:::userSegmentBody"]=1
-operation_parameters_minimum_occurrences["updatedBigSegmentTargets:::projectKey"]=1
-operation_parameters_minimum_occurrences["updatedBigSegmentTargets:::environmentKey"]=1
-operation_parameters_minimum_occurrences["updatedBigSegmentTargets:::userSegmentKey"]=1
-operation_parameters_minimum_occurrences["updatedBigSegmentTargets:::bigSegmentTargetsBody"]=1
+operation_parameters_minimum_occurrences["updateBigSegmentTargets:::projectKey"]=1
+operation_parameters_minimum_occurrences["updateBigSegmentTargets:::environmentKey"]=1
+operation_parameters_minimum_occurrences["updateBigSegmentTargets:::userSegmentKey"]=1
+operation_parameters_minimum_occurrences["updateBigSegmentTargets:::bigSegmentTargetsBody"]=1
 operation_parameters_minimum_occurrences["getExpiringUserTargetsForUser:::projectKey"]=1
 operation_parameters_minimum_occurrences["getExpiringUserTargetsForUser:::environmentKey"]=1
 operation_parameters_minimum_occurrences["getExpiringUserTargetsForUser:::userKey"]=1
@@ -410,6 +415,11 @@ operation_parameters_maximum_occurrences["deleteFlagConfigScheduledChanges:::pro
 operation_parameters_maximum_occurrences["deleteFlagConfigScheduledChanges:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["deleteFlagConfigScheduledChanges:::environmentKey"]=0
 operation_parameters_maximum_occurrences["deleteFlagConfigScheduledChanges:::scheduledChangeId"]=0
+operation_parameters_maximum_occurrences["flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet:::projectKey"]=0
+operation_parameters_maximum_occurrences["flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet:::environmentKey"]=0
+operation_parameters_maximum_occurrences["flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet:::featureFlagKey"]=0
+operation_parameters_maximum_occurrences["flagsProjectKeyFeatureFlagKeyDependentFlagsGet:::projectKey"]=0
+operation_parameters_maximum_occurrences["flagsProjectKeyFeatureFlagKeyDependentFlagsGet:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["getApprovalRequest:::projectKey"]=0
 operation_parameters_maximum_occurrences["getApprovalRequest:::featureFlagKey"]=0
 operation_parameters_maximum_occurrences["getApprovalRequest:::environmentKey"]=0
@@ -538,10 +548,10 @@ operation_parameters_maximum_occurrences["patchUserSegment:::PatchOnly"]=0
 operation_parameters_maximum_occurrences["postUserSegment:::projectKey"]=0
 operation_parameters_maximum_occurrences["postUserSegment:::environmentKey"]=0
 operation_parameters_maximum_occurrences["postUserSegment:::userSegmentBody"]=0
-operation_parameters_maximum_occurrences["updatedBigSegmentTargets:::projectKey"]=0
-operation_parameters_maximum_occurrences["updatedBigSegmentTargets:::environmentKey"]=0
-operation_parameters_maximum_occurrences["updatedBigSegmentTargets:::userSegmentKey"]=0
-operation_parameters_maximum_occurrences["updatedBigSegmentTargets:::bigSegmentTargetsBody"]=0
+operation_parameters_maximum_occurrences["updateBigSegmentTargets:::projectKey"]=0
+operation_parameters_maximum_occurrences["updateBigSegmentTargets:::environmentKey"]=0
+operation_parameters_maximum_occurrences["updateBigSegmentTargets:::userSegmentKey"]=0
+operation_parameters_maximum_occurrences["updateBigSegmentTargets:::bigSegmentTargetsBody"]=0
 operation_parameters_maximum_occurrences["getExpiringUserTargetsForUser:::projectKey"]=0
 operation_parameters_maximum_occurrences["getExpiringUserTargetsForUser:::environmentKey"]=0
 operation_parameters_maximum_occurrences["getExpiringUserTargetsForUser:::userKey"]=0
@@ -655,6 +665,11 @@ operation_parameters_collection_type["deleteFlagConfigScheduledChanges:::project
 operation_parameters_collection_type["deleteFlagConfigScheduledChanges:::featureFlagKey"]=""
 operation_parameters_collection_type["deleteFlagConfigScheduledChanges:::environmentKey"]=""
 operation_parameters_collection_type["deleteFlagConfigScheduledChanges:::scheduledChangeId"]=""
+operation_parameters_collection_type["flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet:::projectKey"]=""
+operation_parameters_collection_type["flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet:::environmentKey"]=""
+operation_parameters_collection_type["flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet:::featureFlagKey"]=""
+operation_parameters_collection_type["flagsProjectKeyFeatureFlagKeyDependentFlagsGet:::projectKey"]=""
+operation_parameters_collection_type["flagsProjectKeyFeatureFlagKeyDependentFlagsGet:::featureFlagKey"]=""
 operation_parameters_collection_type["getApprovalRequest:::projectKey"]=""
 operation_parameters_collection_type["getApprovalRequest:::featureFlagKey"]=""
 operation_parameters_collection_type["getApprovalRequest:::environmentKey"]=""
@@ -783,10 +798,10 @@ operation_parameters_collection_type["patchUserSegment:::PatchOnly"]=
 operation_parameters_collection_type["postUserSegment:::projectKey"]=""
 operation_parameters_collection_type["postUserSegment:::environmentKey"]=""
 operation_parameters_collection_type["postUserSegment:::userSegmentBody"]=""
-operation_parameters_collection_type["updatedBigSegmentTargets:::projectKey"]=""
-operation_parameters_collection_type["updatedBigSegmentTargets:::environmentKey"]=""
-operation_parameters_collection_type["updatedBigSegmentTargets:::userSegmentKey"]=""
-operation_parameters_collection_type["updatedBigSegmentTargets:::bigSegmentTargetsBody"]=""
+operation_parameters_collection_type["updateBigSegmentTargets:::projectKey"]=""
+operation_parameters_collection_type["updateBigSegmentTargets:::environmentKey"]=""
+operation_parameters_collection_type["updateBigSegmentTargets:::userSegmentKey"]=""
+operation_parameters_collection_type["updateBigSegmentTargets:::bigSegmentTargetsBody"]=""
 operation_parameters_collection_type["getExpiringUserTargetsForUser:::projectKey"]=""
 operation_parameters_collection_type["getExpiringUserTargetsForUser:::environmentKey"]=""
 operation_parameters_collection_type["getExpiringUserTargetsForUser:::userKey"]=""
@@ -1173,7 +1188,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 5.0.3)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 5.1.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1277,6 +1292,8 @@ read -r -d '' ops <<EOF
   ${CYAN}deleteApprovalRequest${OFF};Delete an approval request for a feature flag config (AUTH)
   ${CYAN}deleteFeatureFlag${OFF};Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application. (AUTH)
   ${CYAN}deleteFlagConfigScheduledChanges${OFF};Delete a scheduled change on a feature flag in an environment. (AUTH)
+  ${CYAN}flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet${OFF};Get dependent flags for the flag in the environment specified in path parameters (AUTH)
+  ${CYAN}flagsProjectKeyFeatureFlagKeyDependentFlagsGet${OFF};Get dependent flags across all environments for the flag specified in the path parameters (AUTH)
   ${CYAN}getApprovalRequest${OFF};Get a single approval request for a feature flag config (AUTH)
   ${CYAN}getApprovalRequests${OFF};Get all approval requests for a feature flag config (AUTH)
   ${CYAN}getExpiringUserTargets${OFF};Get expiring user targets for feature flag (AUTH)
@@ -1357,7 +1374,7 @@ read -r -d '' ops <<EOF
   ${CYAN}patchExpiringUserTargetsOnSegment${OFF};Update, add, or delete expiring user targets on user segment (AUTH)
   ${CYAN}patchUserSegment${OFF};Perform a partial update to a user segment. (AUTH)
   ${CYAN}postUserSegment${OFF};Creates a new user segment. (AUTH)
-  ${CYAN}updatedBigSegmentTargets${OFF};Update targets included or excluded in a big segment (AUTH)
+  ${CYAN}updateBigSegmentTargets${OFF};Update targets included or excluded in a big segment (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -1416,7 +1433,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 5.0.3)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 5.1.0)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -1436,7 +1453,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 5.0.3)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 5.1.0)${OFF}"
     echo ""
 }
 
@@ -2248,6 +2265,53 @@ print_deleteFlagConfigScheduledChanges_help() {
     echo -e "${result_color_table[${code:0:1}]}  204;Action completed successfully.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet operation
+#
+##############################################################################
+print_flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet - Get dependent flags for the flag in the environment specified in path parameters${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}environmentKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The environment key, used to tie together flag configuration and users under one environment so they can be managed together. ${YELLOW}Specify as: environmentKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Dependent flags in a single envrionemnt response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for flagsProjectKeyFeatureFlagKeyDependentFlagsGet operation
+#
+##############################################################################
+print_flagsProjectKeyFeatureFlagKeyDependentFlagsGet_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}flagsProjectKeyFeatureFlagKeyDependentFlagsGet - Get dependent flags across all environments for the flag specified in the path parameters${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}featureFlagKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The feature flag's key. The key identifies the flag in your code. ${YELLOW}Specify as: featureFlagKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Dependent flags accross all environemnts in the project response${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;Invalid access token.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;This is a beta API, you must pass beta in the LD-API-Version header to use it.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;Invalid resource specifier.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -3382,12 +3446,12 @@ print_postUserSegment_help() {
 }
 ##############################################################################
 #
-# Print help for updatedBigSegmentTargets operation
+# Print help for updateBigSegmentTargets operation
 #
 ##############################################################################
-print_updatedBigSegmentTargets_help() {
+print_updateBigSegmentTargets_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}updatedBigSegmentTargets - Update targets included or excluded in a big segment${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}updateBigSegmentTargets - Update targets included or excluded in a big segment${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5496,6 +5560,78 @@ call_deleteFlagConfigScheduledChanges() {
         exit 1
     fi
     local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet operation
+#
+##############################################################################
+call_flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey environmentKey featureFlagKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/flags/{projectKey}/{environmentKey}/{featureFlagKey}/dependent-flags" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call flagsProjectKeyFeatureFlagKeyDependentFlagsGet operation
+#
+##############################################################################
+call_flagsProjectKeyFeatureFlagKeyDependentFlagsGet() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(projectKey featureFlagKey)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/api/v2/flags/{projectKey}/{featureFlagKey}/dependent-flags" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
     local headers_curl
     headers_curl=$(header_arguments_to_curl)
     if [[ -n $header_accept ]]; then
@@ -8155,10 +8291,10 @@ call_postUserSegment() {
 
 ##############################################################################
 #
-# Call updatedBigSegmentTargets operation
+# Call updateBigSegmentTargets operation
 #
 ##############################################################################
-call_updatedBigSegmentTargets() {
+call_updateBigSegmentTargets() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=(projectKey environmentKey userSegmentKey)
@@ -9114,6 +9250,12 @@ case $key in
     deleteFlagConfigScheduledChanges)
     operation="deleteFlagConfigScheduledChanges"
     ;;
+    flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet)
+    operation="flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet"
+    ;;
+    flagsProjectKeyFeatureFlagKeyDependentFlagsGet)
+    operation="flagsProjectKeyFeatureFlagKeyDependentFlagsGet"
+    ;;
     getApprovalRequest)
     operation="getApprovalRequest"
     ;;
@@ -9264,8 +9406,8 @@ case $key in
     postUserSegment)
     operation="postUserSegment"
     ;;
-    updatedBigSegmentTargets)
-    operation="updatedBigSegmentTargets"
+    updateBigSegmentTargets)
+    operation="updateBigSegmentTargets"
     ;;
     getExpiringUserTargetsForUser)
     operation="getExpiringUserTargetsForUser"
@@ -9507,6 +9649,12 @@ case $operation in
     deleteFlagConfigScheduledChanges)
     call_deleteFlagConfigScheduledChanges
     ;;
+    flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet)
+    call_flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet
+    ;;
+    flagsProjectKeyFeatureFlagKeyDependentFlagsGet)
+    call_flagsProjectKeyFeatureFlagKeyDependentFlagsGet
+    ;;
     getApprovalRequest)
     call_getApprovalRequest
     ;;
@@ -9657,8 +9805,8 @@ case $operation in
     postUserSegment)
     call_postUserSegment
     ;;
-    updatedBigSegmentTargets)
-    call_updatedBigSegmentTargets
+    updateBigSegmentTargets)
+    call_updateBigSegmentTargets
     ;;
     getExpiringUserTargetsForUser)
     call_getExpiringUserTargetsForUser

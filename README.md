@@ -137,6 +137,8 @@ Class | Method | HTTP request | Description
 *FeatureFlagsApi* | [**deleteApprovalRequest**](docs/FeatureFlagsApi.md#deleteapprovalrequest) | **DELETE** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{approvalRequestId} | Delete an approval request for a feature flag config
 *FeatureFlagsApi* | [**deleteFeatureFlag**](docs/FeatureFlagsApi.md#deletefeatureflag) | **DELETE** /flags/{projectKey}/{featureFlagKey} | Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.
 *FeatureFlagsApi* | [**deleteFlagConfigScheduledChanges**](docs/FeatureFlagsApi.md#deleteflagconfigscheduledchanges) | **DELETE** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/scheduled-changes/{scheduledChangeId} | Delete a scheduled change on a feature flag in an environment.
+*FeatureFlagsApi* | [**flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet**](docs/FeatureFlagsApi.md#flagsprojectkeyenvironmentkeyfeatureflagkeydependentflagsget) | **GET** /flags/{projectKey}/{environmentKey}/{featureFlagKey}/dependent-flags | Get dependent flags for the flag in the environment specified in path parameters
+*FeatureFlagsApi* | [**flagsProjectKeyFeatureFlagKeyDependentFlagsGet**](docs/FeatureFlagsApi.md#flagsprojectkeyfeatureflagkeydependentflagsget) | **GET** /flags/{projectKey}/{featureFlagKey}/dependent-flags | Get dependent flags across all environments for the flag specified in the path parameters
 *FeatureFlagsApi* | [**getApprovalRequest**](docs/FeatureFlagsApi.md#getapprovalrequest) | **GET** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests/{approvalRequestId} | Get a single approval request for a feature flag config
 *FeatureFlagsApi* | [**getApprovalRequests**](docs/FeatureFlagsApi.md#getapprovalrequests) | **GET** /projects/{projectKey}/flags/{featureFlagKey}/environments/{environmentKey}/approval-requests | Get all approval requests for a feature flag config
 *FeatureFlagsApi* | [**getExpiringUserTargets**](docs/FeatureFlagsApi.md#getexpiringusertargets) | **GET** /flags/{projectKey}/{featureFlagKey}/expiring-user-targets/{environmentKey} | Get expiring user targets for feature flag
@@ -187,7 +189,7 @@ Class | Method | HTTP request | Description
 *UserSegmentsApi* | [**patchExpiringUserTargetsOnSegment**](docs/UserSegmentsApi.md#patchexpiringusertargetsonsegment) | **PATCH** /segments/{projectKey}/{userSegmentKey}/expiring-user-targets/{environmentKey} | Update, add, or delete expiring user targets on user segment
 *UserSegmentsApi* | [**patchUserSegment**](docs/UserSegmentsApi.md#patchusersegment) | **PATCH** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Perform a partial update to a user segment.
 *UserSegmentsApi* | [**postUserSegment**](docs/UserSegmentsApi.md#postusersegment) | **POST** /segments/{projectKey}/{environmentKey} | Creates a new user segment.
-*UserSegmentsApi* | [**updatedBigSegmentTargets**](docs/UserSegmentsApi.md#updatedbigsegmenttargets) | **POST** /segments/{projectKey}/{environmentKey}/{userSegmentKey}/users | Update targets included or excluded in a big segment
+*UserSegmentsApi* | [**updateBigSegmentTargets**](docs/UserSegmentsApi.md#updatebigsegmenttargets) | **POST** /segments/{projectKey}/{environmentKey}/{userSegmentKey}/users | Update targets included or excluded in a big segment
 *UserSettingsApi* | [**getExpiringUserTargetsForUser**](docs/UserSettingsApi.md#getexpiringusertargetsforuser) | **GET** /users/{projectKey}/{userKey}/expiring-user-targets/{environmentKey} | Get expiring dates on flags for user
 *UserSettingsApi* | [**getUserFlagSetting**](docs/UserSettingsApi.md#getuserflagsetting) | **GET** /users/{projectKey}/{environmentKey}/{userKey}/flags/{featureFlagKey} | Fetch a single flag setting for a user by key.
 *UserSettingsApi* | [**getUserFlagSettings**](docs/UserSettingsApi.md#getuserflagsettings) | **GET** /users/{projectKey}/{environmentKey}/{userKey}/flags | Fetch a single flag setting for a user by key.
@@ -227,6 +229,12 @@ Class | Method | HTTP request | Description
  - [CustomRoleBody](docs/CustomRoleBody.md)
  - [CustomRoles](docs/CustomRoles.md)
  - [Defaults](docs/Defaults.md)
+ - [DependentFlag](docs/DependentFlag.md)
+ - [DependentFlagEnvironment](docs/DependentFlagEnvironment.md)
+ - [DependentFlagEnvironment__links](docs/DependentFlagEnvironment__links.md)
+ - [DependentFlag__links](docs/DependentFlag__links.md)
+ - [DependentFlagsByEnvironment](docs/DependentFlagsByEnvironment.md)
+ - [DependentFlagsLinks](docs/DependentFlagsLinks.md)
  - [Destination](docs/Destination.md)
  - [DestinationAmazonKinesis](docs/DestinationAmazonKinesis.md)
  - [DestinationBody](docs/DestinationBody.md)
@@ -264,7 +272,6 @@ Class | Method | HTTP request | Description
  - [Integration](docs/Integration.md)
  - [IntegrationSubscription](docs/IntegrationSubscription.md)
  - [IntegrationSubscription__status](docs/IntegrationSubscription__status.md)
- - [Integration__links](docs/Integration__links.md)
  - [Integrations](docs/Integrations.md)
  - [Link](docs/Link.md)
  - [Links](docs/Links.md)
@@ -275,6 +282,8 @@ Class | Method | HTTP request | Description
  - [Member__lastSeenMetadata](docs/Member__lastSeenMetadata.md)
  - [Members](docs/Members.md)
  - [MembersBody](docs/MembersBody.md)
+ - [MultiEnvironmentDependentFlag](docs/MultiEnvironmentDependentFlag.md)
+ - [MultiEnvironmentDependentFlags](docs/MultiEnvironmentDependentFlags.md)
  - [PatchComment](docs/PatchComment.md)
  - [PatchOperation](docs/PatchOperation.md)
  - [Policy](docs/Policy.md)

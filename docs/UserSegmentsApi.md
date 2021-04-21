@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**patchExpiringUserTargetsOnSegment**](UserSegmentsApi.md#patchExpiringUserTargetsOnSegment) | **PATCH** /segments/{projectKey}/{userSegmentKey}/expiring-user-targets/{environmentKey} | Update, add, or delete expiring user targets on user segment
 [**patchUserSegment**](UserSegmentsApi.md#patchUserSegment) | **PATCH** /segments/{projectKey}/{environmentKey}/{userSegmentKey} | Perform a partial update to a user segment.
 [**postUserSegment**](UserSegmentsApi.md#postUserSegment) | **POST** /segments/{projectKey}/{environmentKey} | Creates a new user segment.
-[**updatedBigSegmentTargets**](UserSegmentsApi.md#updatedBigSegmentTargets) | **POST** /segments/{projectKey}/{environmentKey}/{userSegmentKey}/users | Update targets included or excluded in a big segment
+[**updateBigSegmentTargets**](UserSegmentsApi.md#updateBigSegmentTargets) | **POST** /segments/{projectKey}/{environmentKey}/{userSegmentKey}/users | Update targets included or excluded in a big segment
 
 
 ## **deleteUserSegment**
@@ -240,13 +240,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-## **updatedBigSegmentTargets**
+## **updateBigSegmentTargets**
 
 Update targets included or excluded in a big segment
 
 ### Example
 ```bash
- updatedBigSegmentTargets projectKey=value environmentKey=value userSegmentKey=value
+ updateBigSegmentTargets projectKey=value environmentKey=value userSegmentKey=value
 ```
 
 ### Parameters

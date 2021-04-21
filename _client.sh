@@ -328,6 +328,8 @@ case $state in
             "deleteApprovalRequest[Delete an approval request for a feature flag config]" \
             "deleteFeatureFlag[Delete a feature flag in all environments. Be careful-- only delete feature flags that are no longer being used by your application.]" \
             "deleteFlagConfigScheduledChanges[Delete a scheduled change on a feature flag in an environment.]" \
+            "flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet[Get dependent flags for the flag in the environment specified in path parameters]" \
+            "flagsProjectKeyFeatureFlagKeyDependentFlagsGet[Get dependent flags across all environments for the flag specified in the path parameters]" \
             "getApprovalRequest[Get a single approval request for a feature flag config]" \
             "getApprovalRequests[Get all approval requests for a feature flag config]" \
             "getExpiringUserTargets[Get expiring user targets for feature flag]" \
@@ -372,7 +374,7 @@ case $state in
             "patchExpiringUserTargetsOnSegment[Update, add, or delete expiring user targets on user segment]" \
             "patchUserSegment[Perform a partial update to a user segment.]" \
             "postUserSegment[Creates a new user segment.]" \
-            "updatedBigSegmentTargets[Update targets included or excluded in a big segment]"             "getExpiringUserTargetsForUser[Get expiring dates on flags for user]" \
+            "updateBigSegmentTargets[Update targets included or excluded in a big segment]"             "getExpiringUserTargetsForUser[Get expiring dates on flags for user]" \
             "getUserFlagSetting[Fetch a single flag setting for a user by key.]" \
             "getUserFlagSettings[Fetch a single flag setting for a user by key.]" \
             "patchExpiringUserTargetsForFlags[Update, add, or delete expiring user targets for a single user on all flags]" \
@@ -673,6 +675,23 @@ case $state in
 "featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
 "environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
 "scheduledChangeId=:[PATH] The id of the scheduled change"
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"environmentKey=:[PATH] The environment key, used to tie together flag configuration and users under one environment so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      flagsProjectKeyFeatureFlagKeyDependentFlagsGet)
+        local -a _op_arguments
+        _op_arguments=(
+          "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."
+"featureFlagKey=:[PATH] The feature flag&#39;s key. The key identifies the flag in your code."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1086,7 +1105,7 @@ case $state in
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      updatedBigSegmentTargets)
+      updateBigSegmentTargets)
         local -a _op_arguments
         _op_arguments=(
           "projectKey=:[PATH] The project key, used to tie the flags together under one project so they can be managed together."

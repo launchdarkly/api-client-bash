@@ -106,6 +106,8 @@ _()
     operations["deleteApprovalRequest"]=1
     operations["deleteFeatureFlag"]=1
     operations["deleteFlagConfigScheduledChanges"]=1
+    operations["flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet"]=1
+    operations["flagsProjectKeyFeatureFlagKeyDependentFlagsGet"]=1
     operations["getApprovalRequest"]=1
     operations["getApprovalRequests"]=1
     operations["getExpiringUserTargets"]=1
@@ -156,7 +158,7 @@ _()
     operations["patchExpiringUserTargetsOnSegment"]=1
     operations["patchUserSegment"]=1
     operations["postUserSegment"]=1
-    operations["updatedBigSegmentTargets"]=1
+    operations["updateBigSegmentTargets"]=1
     operations["getExpiringUserTargetsForUser"]=1
     operations["getUserFlagSetting"]=1
     operations["getUserFlagSettings"]=1
@@ -213,6 +215,8 @@ _()
     operation_parameters["deleteApprovalRequest"]="projectKey= environmentKey= featureFlagKey= approvalRequestId= "
     operation_parameters["deleteFeatureFlag"]="projectKey= featureFlagKey= "
     operation_parameters["deleteFlagConfigScheduledChanges"]="projectKey= featureFlagKey= environmentKey= scheduledChangeId= "
+    operation_parameters["flagsProjectKeyEnvironmentKeyFeatureFlagKeyDependentFlagsGet"]="projectKey= environmentKey= featureFlagKey= "
+    operation_parameters["flagsProjectKeyFeatureFlagKeyDependentFlagsGet"]="projectKey= featureFlagKey= "
     operation_parameters["getApprovalRequest"]="projectKey= featureFlagKey= environmentKey= approvalRequestId= "
     operation_parameters["getApprovalRequests"]="projectKey= featureFlagKey= environmentKey= "
     operation_parameters["getExpiringUserTargets"]="projectKey= environmentKey= featureFlagKey= "
@@ -263,7 +267,7 @@ _()
     operation_parameters["patchExpiringUserTargetsOnSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["patchUserSegment"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["postUserSegment"]="projectKey= environmentKey= "
-    operation_parameters["updatedBigSegmentTargets"]="projectKey= environmentKey= userSegmentKey= "
+    operation_parameters["updateBigSegmentTargets"]="projectKey= environmentKey= userSegmentKey= "
     operation_parameters["getExpiringUserTargetsForUser"]="projectKey= environmentKey= userKey= "
     operation_parameters["getUserFlagSetting"]="projectKey= environmentKey= userKey= featureFlagKey= "
     operation_parameters["getUserFlagSettings"]="projectKey= environmentKey= userKey= "
