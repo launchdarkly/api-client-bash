@@ -1188,7 +1188,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 5.1.0)${OFF}
+${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 5.3.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1279,7 +1279,7 @@ echo "  $ops" | column -t -s ';'
 read -r -d '' ops <<EOF
   ${CYAN}deleteEnvironment${OFF};Delete an environment in a specific project. (AUTH)
   ${CYAN}getEnvironment${OFF};Get an environment given a project and key. (AUTH)
-  ${CYAN}patchEnvironment${OFF};Modify an environment by ID. (AUTH)
+  ${CYAN}patchEnvironment${OFF};Modify an environment by ID. If you try to patch the environment by setting both required and requiredApprovalTags, it will result in an error. Users can specify either required approvals for all flags in an environment or those with specific tags, but not both. Only customers on an Enterprise plan can require approval for flag updates with either mechanism. (AUTH)
   ${CYAN}postEnvironment${OFF};Create a new environment in a specified project with a given name, key, and swatch color. (AUTH)
   ${CYAN}resetEnvironmentMobileKey${OFF};Reset an environment's mobile key. The optional expiry for the old key is deprecated for this endpoint, so the old key will always expire immediately. (AUTH)
   ${CYAN}resetEnvironmentSDKKey${OFF};Reset an environment's SDK key with an optional expiry time for the old key. (AUTH)
@@ -1433,7 +1433,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://app.launchdarkly.com')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 5.1.0)${OFF}"
+    echo -e "${BOLD}${WHITE}LaunchDarkly REST API command line client (API version 5.3.0)${OFF}"
     echo ""
     echo -e "License: Apache 2.0"
     echo -e "Contact: support@launchdarkly.com"
@@ -1453,7 +1453,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 5.1.0)${OFF}"
+    echo -e "${BOLD}LaunchDarkly REST API command line client (API version 5.3.0)${OFF}"
     echo ""
 }
 
@@ -2084,7 +2084,7 @@ print_getEnvironment_help() {
 ##############################################################################
 print_patchEnvironment_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}patchEnvironment - Modify an environment by ID.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}patchEnvironment - Modify an environment by ID. If you try to patch the environment by setting both required and requiredApprovalTags, it will result in an error. Users can specify either required approvals for all flags in an environment or those with specific tags, but not both. Only customers on an Enterprise plan can require approval for flag updates with either mechanism.${OFF}${BLUE}(AUTH - HEADER)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}projectKey${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF}${OFF} - The project key, used to tie the flags together under one project so they can be managed together. ${YELLOW}Specify as: projectKey=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'

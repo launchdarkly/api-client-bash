@@ -321,7 +321,7 @@ case $state in
             "patchDestination[Perform a partial update to a data export destination.]" \
             "postDestination[Create a new data export destination]"             "deleteEnvironment[Delete an environment in a specific project.]" \
             "getEnvironment[Get an environment given a project and key.]" \
-            "patchEnvironment[Modify an environment by ID.]" \
+            "patchEnvironment[Modify an environment by ID. If you try to patch the environment by setting both required and requiredApprovalTags, it will result in an error. Users can specify either required approvals for all flags in an environment or those with specific tags, but not both. Only customers on an Enterprise plan can require approval for flag updates with either mechanism.]" \
             "postEnvironment[Create a new environment in a specified project with a given name, key, and swatch color.]" \
             "resetEnvironmentMobileKey[Reset an environment's mobile key. The optional expiry for the old key is deprecated for this endpoint, so the old key will always expire immediately.]" \
             "resetEnvironmentSDKKey[Reset an environment's SDK key with an optional expiry time for the old key.]"             "copyFeatureFlag[Copies the feature flag configuration from one environment to the same feature flag in another environment.]" \
