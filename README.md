@@ -6,6 +6,7 @@ This REST API is for custom integrations, data export, or automating your featur
 # LaunchDarkly REST API Bash client - DEPRECATED 
 ## This project repo is no longer being maintained.
 Other maintained [API clients](https://github.com/launchdarkly?q=api-client&type=&language=&sort=) can be found under our LaunchDarkly Github Organization.
+
 ## Overview
 This is a Bash client script for accessing LaunchDarkly REST API service.
 
