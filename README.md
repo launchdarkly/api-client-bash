@@ -3,7 +3,9 @@ generated from our [OpenAPI specification](https://github.com/launchdarkly/ld-op
 
 This REST API is for custom integrations, data export, or automating your feature flag workflows. *DO NOT* use this client library to include feature flags in your web or mobile application. To integrate feature flags with your application, please see the [SDK documentation](https://docs.launchdarkly.com/v2.0/docs)
 
-# LaunchDarkly REST API Bash client
+# LaunchDarkly REST API Bash client - DEPRECATED 
+## This project repo is no longer being maintained.
+Other maintained [API clients](https://github.com/launchdarkly?q=api-client&type=&language=&sort=) can be found under our LaunchDarkly Github Organization.
 
 ## Overview
 This is a Bash client script for accessing LaunchDarkly REST API service.
